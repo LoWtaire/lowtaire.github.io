@@ -3,15 +3,17 @@ name: Update iCal to JSON
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'   # exécutions régulières (UTC)
+    - cron: '*/30 * * * *'   # exécution toutes les 30 min (UTC)
 
 permissions:
   contents: write
 
 env:
-  ICS_URL: ${{ vars.ICS_URL || secrets.ICS_URL }}
+  ICS_URL: ${{ vars.ICS_URL || secrets.ICS_URL }}  # Définis ICS_URL dans Settings → Secrets and variables → Actions
   OUTPUT_FILE: data/latest.json
   TZ: Europe/Paris
+  HORIZON_DAYS: 60
+  PAST_DAYS: 7
 
 jobs:
   build:
@@ -37,6 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/latest.json
           if git diff --quiet --staged; then
             echo "No changes to commit."
