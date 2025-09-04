@@ -1,3 +1,5 @@
+'use strict';
+
 const listEl = document.getElementById('list');
 const statusEl = document.getElementById('status');
 const lastUpdateEl = document.getElementById('lastUpdate');
@@ -5,7 +7,7 @@ const tzEl = document.getElementById('tz');
 const refreshBtn = document.getElementById('refresh');
 const rangeSel = document.getElementById('range');
 
-// IMPORTANT : latest.json est généré à la racine → chemin absolu
+// latest.json est généré à la racine du site
 const FETCH_URL = `/data/latest.json?v=${Date.now()}`;
 
 const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digit', month: 'long' });
@@ -15,8 +17,8 @@ init();
 
 async function init() {
   await loadAndRender();
-  refreshBtn.addEventListener('click', loadAndRender);
-  rangeSel.addEventListener('change', renderFromCache);
+  if (refreshBtn) refreshBtn.addEventListener('click', loadAndRender);
+  if (rangeSel) rangeSel.addEventListener('change', renderFromCache);
 }
 
 let cache = null;
@@ -25,10 +27,10 @@ async function loadAndRender() {
   try {
     statusEl.textContent = 'Chargement…';
     const res = await fetch(FETCH_URL, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
     cache = await res.json();
     tzEl.textContent = cache.timezone || 'Europe/Paris';
-    lastUpdateEl.textContent = cache.generated_at ? `Dernière mise à jour (UTC) : ${cache.generated_at}` : '';
+    lastUpdateEl.textContent = cache.generated_at ? ('Dernière mise à jour (UTC) : ' + cache.generated_at) : '';
     renderFromCache();
     statusEl.textContent = '';
   } catch (e) {
@@ -38,27 +40,31 @@ async function loadAndRender() {
 }
 
 function renderFromCache() {
-  if (!cache) return;
-  const days = rangeSel.value === 'today' ? 1 : Number(rangeSel.value);
+  if (!cache || !cache.events) return;
+
+  const days = (rangeSel && rangeSel.value === 'today') ? 1 : Number(rangeSel ? rangeSel.value : 14);
   const now = new Date();
   const end = new Date(now.getTime() + (days - 1) * 86400000);
 
-  const inRange = cache.events.filter(ev => {
+  const inRange = cache.events.filter(function (ev) {
     const s = new Date(ev.start);
     return s <= end && s >= startOfDay(now);
   });
 
   const groups = groupByDay(inRange);
-  listEl.innerHTML = '';
 
-  for (const [dayKey, events] of groups) {
+  listEl.innerHTML = '';
+  groups.forEach(function (events, dayKey) {
     const d = new Date(dayKey);
     const day = document.createElement('div');
     day.className = 'day';
     day.textContent = cap(fmtDate.format(d));
     listEl.appendChild(day);
-    for (const ev of events) listEl.appendChild(renderEvent(ev));
-  }
+
+    events.forEach(function (ev) {
+      listEl.appendChild(renderEvent(ev));
+    });
+  });
 
   if (groups.size === 0) {
     listEl.innerHTML = '<div class="status">Aucun événement dans la période sélectionnée.</div>';
@@ -68,14 +74,16 @@ function renderFromCache() {
 function renderEvent(ev) {
   const wrap = document.createElement('div');
   wrap.className = 'event';
+
   const s = new Date(ev.start);
   const e = new Date(ev.end);
 
   const time = document.createElement('div');
   time.className = 'time';
-  time.textContent = ev.allDay ? 'Toute la journée' : `${fmtTime.format(s)}\n→ ${fmtTime.format(e)}`;
+  time.textContent = ev.allDay ? 'Toute la journée' : (fmtTime.format(s) + '\n→ ' + fmtTime.format(e));
 
   const info = document.createElement('div');
+
   const title = document.createElement('div');
   title.className = 'title';
   title.textContent = ev.title || '(Sans titre)';
@@ -86,7 +94,7 @@ function renderEvent(ev) {
   if (ev.location) parts.push(ev.location);
   if (ev.status) parts.push(ev.status);
   if (ev.url) parts.push(ev.url);
-  meta.textContent = parts.join(' · ');
+  if (parts.length) meta.textContent = parts.join(' · ');
 
   info.appendChild(title);
   if (parts.length) info.appendChild(meta);
@@ -98,14 +106,23 @@ function renderEvent(ev) {
 
 function groupByDay(events) {
   const map = new Map();
-  for (const ev of events) {
+  events.forEach(function (ev) {
     const key = startOfDay(new Date(ev.start)).toISOString();
     if (!map.has(key)) map.set(key, []);
     map.get(key).push(ev);
-  }
-  for (const [k, arr] of map) arr.sort((a, b) => new Date(a.start) - new Date(b.start));
+  });
+  map.forEach(function (arr) {
+    arr.sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
+  });
   return map;
 }
 
-function startOfDay(d) { const x = new Date(d); x.setHours(0,0,0,0); return x; }
-function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+function startOfDay(d) {
+  const x = new Date(d);
+  x.setHours(0, 0, 0, 0);
+  return x;
+}
+
+function cap(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
