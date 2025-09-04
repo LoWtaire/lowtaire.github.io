@@ -1,0 +1,14 @@
+{
+"name": "ical-to-json-pages",
+"version": "1.0.0",
+"type": "module",
+"scripts": {
+"generate": "node scripts/ics_to_json.mjs"
+},
+"dependencies": {
+"ical-expander": "^3.1.0",
+"ical.js": "^2.0.0",
+"luxon": "^3.5.0",
+"node-fetch": "^3.3.2"
+}
+}
