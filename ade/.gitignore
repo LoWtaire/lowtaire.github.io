@@ -1,7 +1,4 @@
 node_modules/
 .DS_Store
 npm-debug.log*
-
-
-# Fichier généré par le workflow
-/data/.force.txt
+data/.force.txt
