@@ -1,39 +1,36 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Emploi du temps</title>
-<meta name="theme-color" content="#111" />
-<link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emploi du temps</title>
+  <meta name="theme-color" content="#111" />
+  <link rel="stylesheet" href="ade/assets/style.css" />
 </head>
 <body>
-<header class="topbar">
-<h1>Emploi du temps</h1>
-<div class="controls">
-<select id="range">
-<option value="today">Aujourd'hui</option>
-<option value="7">7 jours</option>
-<option value="14" selected>14 jours</option>
-<option value="30">30 jours</option>
-</select>
-<button id="refresh">Rafraîchir</button>
-</div>
-</header>
+  <header class="topbar">
+    <h1>Emploi du temps</h1>
+    <div class="controls">
+      <select id="range">
+        <option value="today">Aujourd'hui</option>
+        <option value="7">7 jours</option>
+        <option value="14" selected>14 jours</option>
+        <option value="30">30 jours</option>
+      </select>
+      <button id="refresh">Rafraîchir</button>
+    </div>
+  </header>
 
+  <main id="app" class="container">
+    <div class="status" id="status">Chargement…</div>
+    <div id="lastUpdate" class="muted"></div>
+    <div id="list"></div>
+  </main>
 
-<main id="app" class="container">
-<div class="status" id="status">Chargement…</div>
-<div id="lastUpdate" class="muted"></div>
-<div id="list"></div>
-</main>
+  <footer class="footer">
+    <small>Source : <code>data/latest.json</code> • Fuseau : <span id="tz"></span></small>
+  </footer>
 
-
-<footer class="footer">
-<small>Source : <code>data/latest.json</code> • Fuseau : <span id="tz"></span></small>
-</footer>
-
-
-<script src="assets/app.js" type="module"></script>
+  <script src="ade/assets/app.js" type="module"></script>
 </body>
 </html>
