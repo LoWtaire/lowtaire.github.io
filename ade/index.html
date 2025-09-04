@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emploi du temps</title>
   <meta name="theme-color" content="#111" />
-  <!-- Chemin relatif depuis /ade/ -->
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -32,7 +31,7 @@
     <small>Source : <code>/data/latest.json</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <!-- Chemin relatif depuis /ade/ -->
-  <script src="assets/app.js" type="module"></script>
+  <!-- ⚠️ cache-buster pour forcer le rechargement du JS -->
+  <script src="assets/app.js?v=3" type="module"></script>
 </body>
 </html>
