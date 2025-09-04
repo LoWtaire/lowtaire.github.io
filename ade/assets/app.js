@@ -5,7 +5,8 @@ const tzEl = document.getElementById('tz');
 const refreshBtn = document.getElementById('refresh');
 const rangeSel = document.getElementById('range');
 
-const FETCH_URL = `data/latest.json?v=${Date.now()}`; // évite un cache trop agressif
+// ⬇️ IMPORTANT : chemin absolu vers le JSON à la racine
+const FETCH_URL = `/data/latest.json?v=${Date.now()}`;
 
 const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digit', month: 'long' });
 const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', hour12: false });
@@ -80,38 +81,4 @@ function renderEvent(ev) {
 
   const info = document.createElement('div');
   const title = document.createElement('div');
-  title.className = 'title';
-  title.textContent = ev.title || '(Sans titre)';
-
-  const meta = document.createElement('div');
-  meta.className = 'meta';
-  const parts = [];
-  if (ev.location) parts.push(ev.location);
-  if (ev.status) parts.push(ev.status);
-  if (ev.url) parts.push(ev.url);
-  meta.textContent = parts.join(' · ');
-
-  info.appendChild(title);
-  if (parts.length) info.appendChild(meta);
-
-  wrap.appendChild(time);
-  wrap.appendChild(info);
-
-  return wrap;
-}
-
-function groupByDay(events) {
-  const map = new Map();
-  for (const ev of events) {
-    const key = startOfDay(new Date(ev.start)).toISOString();
-    if (!map.has(key)) map.set(key, []);
-    map.get(key).push(ev);
-  }
-  for (const [k, arr] of map) {
-    arr.sort((a, b) => new Date(a.start) - new Date(b.start));
-  }
-  return map;
-}
-
-function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
-function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  title.className
