@@ -11,22 +11,20 @@
   <header class="topbar">
     <h1>Occupation des salles – UL</h1>
     <div class="controls">
-      <input id="roomQuery" list="roomsList" placeholder="Rechercher une salle…" />
+      <!-- 1) Liste déroulante des salles -->
+      <input id="roomQuery" list="roomsList" placeholder="Choisir une salle…" />
       <datalist id="roomsList"></datalist>
-      <button id="roomCheck">Vérifier</button>
 
-      <!-- Sélecteur de jour uniquement -->
+      <!-- 2) Choix du jour (par défaut : aujourd’hui) -->
       <input id="dayPicker" type="date" />
-      <button id="todayBtn">Aujourd’hui</button>
+      <button id="todayBtn" title="Revenir à aujourd’hui">Aujourd’hui</button>
     </div>
   </header>
 
   <main class="container">
     <div id="status" class="status">Chargement…</div>
     <div id="lastUpdate" class="muted"></div>
-
-    <div id="roomStatus" class="section"></div>
-
+    <!-- plus de zone “pills vertes” ici -->
     <div id="list"></div>
   </main>
 
@@ -34,6 +32,6 @@
     <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms.js?v=4" type="module"></script>
+  <script src="assets/rooms.js?v=6" type="module"></script>
 </body>
 </html>
