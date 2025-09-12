@@ -14,12 +14,7 @@
       <input id="roomQuery" list="roomsList" placeholder="Rechercher une salle…" />
       <datalist id="roomsList"></datalist>
       <button id="roomCheck">Vérifier</button>
-      <select id="range">
-        <option value="today">Aujourd'hui</option>
-        <option value="7">7 jours</option>
-        <option value="14" selected>14 jours</option>
-        <option value="30">30 jours</option>
-      </select>
+      <!-- plus de sélecteur 7/14/30j : vue journée uniquement -->
     </div>
   </header>
 
@@ -34,6 +29,6 @@
     <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms.js?v=1" type="module"></script>
+  <script src="assets/rooms.js?v=2" type="module"></script>
 </body>
 </html>
