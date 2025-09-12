@@ -1,6 +1,6 @@
 'use strict';
 
-// ⬇️ Ce site lit le JSON spécifique de l'UL (ne pas toucher à /data/latest.json d'ADE)
+// Ce site lit le JSON spécifique UL (on ne touche pas /data/latest.json d'ADE)
 const JSON_URL = '/data/univlor.json';
 
 const $ = (id) => document.getElementById(id);
@@ -10,7 +10,6 @@ const tzEl = $('tz');
 const lastUpdateEl = $('lastUpdate');
 const roomInput = $('roomQuery');
 const roomBtn = $('roomCheck');
-const rangeSel = $('range');
 const roomsDatalist = $('roomsList');
 
 const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digit', month: 'long' });
@@ -31,7 +30,7 @@ async function init() {
     lastUpdateEl.textContent = cache.generated_at ? `Dernière mise à jour (UTC) : ${cache.generated_at}` : '';
 
     buildRoomsIndex(cache.events || []);
-    renderAgenda();
+    renderTodayAgenda();
     statusEl.textContent = '';
   } catch (e) {
     console.error(e);
@@ -40,7 +39,6 @@ async function init() {
 
   roomBtn.addEventListener('click', checkRoom);
   roomInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') checkRoom(); });
-  rangeSel.addEventListener('change', renderAgenda);
 }
 
 function buildRoomsIndex(events) {
@@ -60,6 +58,7 @@ function buildRoomsIndex(events) {
   });
 }
 
+// Vérifie "occupée maintenant" et "prochain créneau aujourd'hui"
 function checkRoom() {
   const q = (roomInput.value || '').trim();
   if (!q) {
@@ -70,12 +69,14 @@ function checkRoom() {
   const todayStart = startOfDay(now);
   const todayEnd = endOfDay(now);
 
-  const todayEvents = (cache.events || []).filter(ev => {
-    const s = new Date(ev.start), e = new Date(ev.end);
-    if (e < todayStart || s > todayEnd) return false;
-    const hay = `${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`.toLowerCase();
-    return hay.includes(q.toLowerCase());
-  }).sort((a,b) => new Date(a.start) - new Date(b.start));
+  const todayEvents = (cache.events || [])
+    .filter(ev => {
+      const s = new Date(ev.start), e = new Date(ev.end);
+      if (e < todayStart || s > todayEnd) return false;
+      const hay = `${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`.toLowerCase();
+      return hay.includes(q.toLowerCase());
+    })
+    .sort((a,b) => new Date(a.start) - new Date(b.start));
 
   const nowEvt = todayEvents.find(ev => {
     const s = new Date(ev.start), e = new Date(ev.end);
@@ -100,32 +101,32 @@ function checkRoom() {
   $('roomStatus').innerHTML = `<span class="kpi ${nowEvt ? 'bad' : 'ok'}">${nowEvt ? 'Occupée' : 'Libre'}</span> ${out}`;
 }
 
-function renderAgenda() {
-  const days = rangeSel.value === 'today' ? 1 : Number(rangeSel.value);
+// Liste de la journée uniquement
+function renderTodayAgenda() {
   const now = new Date();
-  const endLimit = new Date(startOfDay(now).getTime() + (days - 1) * 86400000 + 86399999);
+  const start = startOfDay(now);
+  const end = endOfDay(now);
 
-  const inRange = (cache.events || []).filter(ev => {
-    const s = new Date(ev.start);
-    return s <= endLimit && s >= startOfDay(now);
-  });
+  const todayEvents = (cache.events || [])
+    .filter(ev => {
+      const s = new Date(ev.start);
+      return s >= start && s <= end;
+    })
+    .sort((a,b) => new Date(a.start) - new Date(b.start));
 
-  const grouped = groupByDay(inRange);
   listEl.innerHTML = '';
 
-  for (const [dayKey, events] of grouped) {
-    const d = new Date(dayKey);
-    const day = document.createElement('div');
-    day.className = 'day';
-    day.textContent = cap(fmtDate.format(d));
-    listEl.appendChild(day);
+  const day = document.createElement('div');
+  day.className = 'day';
+  day.textContent = cap(fmtDate.format(start));
+  listEl.appendChild(day);
 
-    for (const ev of events) listEl.appendChild(renderEvent(ev));
+  if (todayEvents.length === 0) {
+    listEl.innerHTML += '<div class="status">Aucun événement aujourd’hui.</div>';
+    return;
   }
 
-  if (grouped.size === 0) {
-    listEl.innerHTML = '<div class="status">Aucun événement dans la période sélectionnée.</div>';
-  }
+  for (const ev of todayEvents) listEl.appendChild(renderEvent(ev));
 }
 
 function renderEvent(ev) {
@@ -157,17 +158,6 @@ function renderEvent(ev) {
   wrap.appendChild(time);
   wrap.appendChild(info);
   return wrap;
-}
-
-function groupByDay(events) {
-  const map = new Map();
-  for (const ev of events) {
-    const key = startOfDay(new Date(ev.start)).toISOString();
-    if (!map.has(key)) map.set(key, []);
-    map.get(key).push(ev);
-  }
-  for (const [k, arr] of map) arr.sort((a,b) => new Date(a.start) - new Date(b.start));
-  return map;
 }
 
 function startOfDay(d) { const x = new Date(d); x.setHours(0,0,0,0); return x; }
