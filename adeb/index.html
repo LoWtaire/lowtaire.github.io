@@ -15,18 +15,18 @@
       <datalist id="roomsList"></datalist>
       <button id="roomCheck">Vérifier</button>
 
-      <!-- Sélecteurs jour + heure -->
+      <!-- Sélecteur de jour uniquement -->
       <input id="dayPicker" type="date" />
-      <input id="timePicker" type="time" />
-
-      <button id="refresh">Aujourd’hui</button>
+      <button id="todayBtn">Aujourd’hui</button>
     </div>
   </header>
 
   <main class="container">
     <div id="status" class="status">Chargement…</div>
     <div id="lastUpdate" class="muted"></div>
+
     <div id="roomStatus" class="section"></div>
+
     <div id="list"></div>
   </main>
 
@@ -34,4 +34,6 @@
     <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms
+  <script src="assets/rooms.js?v=4" type="module"></script>
+</body>
+</html>
