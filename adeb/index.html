@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Occupation des salles – Univ Lorraine</title>
+  <meta name="theme-color" content="#111" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Occupation des salles – UL</h1>
+    <div class="controls">
+      <input id="roomQuery" list="roomsList" placeholder="Rechercher une salle…" />
+      <datalist id="roomsList"></datalist>
+      <button id="roomCheck">Vérifier</button>
+      <select id="range">
+        <option value="today">Aujourd'hui</option>
+        <option value="7">7 jours</option>
+        <option value="14" selected>14 jours</option>
+        <option value="30">30 jours</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="status" class="status">Chargement…</div>
+    <div id="lastUpdate" class="muted"></div>
+    <div id="roomStatus" class="section"></div>
+    <div id="list"></div>
+  </main>
+
+  <footer class="footer">
+    <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
+  </footer>
+
+  <script src="assets/rooms.js?v=1" type="module"></script>
+</body>
+</html>
