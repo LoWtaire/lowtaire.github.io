@@ -1,6 +1,6 @@
 'use strict';
 
-// Lit le JSON UL (on ne touche pas /data/latest.json d'ADE)
+// JSON UL
 const JSON_URL = '/data/univlor.json';
 
 const $ = (id) => document.getElementById(id);
@@ -18,13 +18,15 @@ const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digi
 const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', hour12: false });
 
 let cache = null;
+// Ensemble des salles connues (forme canonique des ev.location exacts)
+const knownRoomsCanon = new Set();
 
 init();
 
 async function init() {
   // Par défaut : aujourd’hui
   const now = new Date();
-  dayPicker.value = toInputDate(now);
+  if (dayPicker) dayPicker.value = toInputDate(now);
 
   statusEl.textContent = 'Chargement…';
   try {
@@ -44,38 +46,109 @@ async function init() {
   }
 
   // Écouteurs
-  dayPicker.addEventListener('change', () => {
+  dayPicker?.addEventListener('change', () => {
     renderForSelectedDay();
     checkRoomForSelectedDay(false);
   });
-  todayBtn.addEventListener('click', () => {
+  todayBtn?.addEventListener('click', () => {
     const n = new Date();
     dayPicker.value = toInputDate(n);
     renderForSelectedDay();
     checkRoomForSelectedDay();
   });
-  roomBtn.addEventListener('click', () => checkRoomForSelectedDay(true));
-  roomInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') checkRoomForSelectedDay(true); });
+
+  // Clique ≠ nécessaire : taper / choisir dans la datalist déclenche immédiatement
+  roomInput?.addEventListener('input', () => {
+    checkRoomForSelectedDay(false);
+    renderForSelectedDay();
+  });
+  roomBtn?.addEventListener('click', () => checkRoomForSelectedDay(true));
+  roomInput?.addEventListener('keydown', (e) => { if (e.key === 'Enter') checkRoomForSelectedDay(true); });
 }
 
+/* ==============================
+   Normalisation & matching
+   ============================== */
+function norm(s) {
+  return (s || '')
+    .toString()
+    .normalize('NFD').replace(/\p{Diacritic}/gu, '') // sans accents
+    .toLowerCase()
+    .replace(/[\u00AD\u200B-\u200D\uFEFF]/g, '')     // espaces invisibles
+    .replace(/[^a-z0-9]+/g, ' ')                     // ponctuation → espace
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+function collapse(s) { return norm(s).replace(/\s+/g, ''); }
+function stripKeywords(s) { return norm(s).replace(/\b(salle|amphi|amphitheatre|amphithéâtre|bat\.?|batiment|bâtiment)\b/g, '').trim(); }
+function canonical(s) { return collapse(stripKeywords(s)).toUpperCase(); }
+
+// exactLocationMode : vrai si la valeur saisie correspond exactement à un ev.location connu
+function isExactLocationQuery(qRaw) {
+  const qCanon = canonical(qRaw);
+  return knownRoomsCanon.has(qCanon);
+}
+
+// Match événement selon mode exact-location ou fuzzy
+function eventMatches(ev, qRaw) {
+  const qCanon = canonical(qRaw);
+  const exact = isExactLocationQuery(qRaw);
+
+  if (exact) {
+    // EXIGE: location exacte (canonique) = requête (canonique)
+    return canonical(ev.location || '') === qCanon;
+  }
+
+  // Sinon: recherche tolérante (location prioritaire, mais on accepte title/description)
+  const candidates = new Set();
+  if (ev.location) candidates.add(canonical(ev.location));
+
+  const hayCanon = canonical(`${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`);
+  if (candidates.has(qCanon) || hayCanon.includes(qCanon)) return true;
+
+  // tokens tous présents
+  const toks = norm(qRaw).split(' ').filter(Boolean);
+  if (toks.length > 1 && toks.every(t => norm(`${ev.location} ${ev.title} ${ev.description}`).includes(t))) {
+    return true;
+  }
+
+  return false;
+}
+
+/* ==============================
+   Datalist & index des salles
+   ============================== */
 function buildRoomsIndex(events) {
   roomsDatalist.innerHTML = '';
-  const set = new Set();
+  knownRoomsCanon.clear();
+
+  const display = [];
+  const seen = new Set();
+
   for (const ev of events) {
     const loc = (ev.location || '').trim();
-    if (loc) set.add(loc);
-    // Option : extraction sommaire depuis le titre
-    const m = (ev.title || '').match(/\b(salle|amphi|[A-Z]\d{2,3}|[A-Z]-\d{2,3})\b/gi);
-    if (m) m.forEach(x => set.add(x));
+    if (!loc) continue;
+
+    const can = canonical(loc);
+    if (can.length < 3) continue;       // ignore les trucs trop courts
+    if (seen.has(can)) continue;
+
+    seen.add(can);
+    knownRoomsCanon.add(can);
+    display.push(loc);
   }
-  Array.from(set).sort().forEach(name => {
+
+  display.sort((a,b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+  for (const name of display) {
     const opt = document.createElement('option');
     opt.value = name;
     roomsDatalist.appendChild(opt);
-  });
+  }
 }
 
-// ---------- Rendu agenda selon le jour choisi
+/* ==============================
+   Rendu agenda selon le jour (+ filtre salle)
+   ============================== */
 function renderForSelectedDay() {
   const selected = fromInputDate(dayPicker.value);
   if (!selected) return;
@@ -84,12 +157,18 @@ function renderForSelectedDay() {
   const selectedStart = startOfDay(selected);
   const selectedEnd = endOfDay(selected);
 
-  const events = (cache.events || [])
+  let events = (cache.events || [])
     .filter(ev => {
       const s = new Date(ev.start);
       return s >= selectedStart && s <= selectedEnd;
     })
     .sort((a,b) => new Date(a.start) - new Date(b.start));
+
+  // --- Filtre SALLE si une valeur est saisie ---
+  const q = (roomInput?.value || '').trim();
+  if (q) {
+    events = events.filter(ev => eventMatches(ev, q));
+  }
 
   listEl.innerHTML = '';
   const head = document.createElement('div');
@@ -98,9 +177,7 @@ function renderForSelectedDay() {
   listEl.appendChild(head);
 
   if (isSameDay(selectedStart, today)) {
-    // Aujourd’hui : seulement "en cours" et "à venir"
     const now = new Date();
-
     const current = events.filter(ev => {
       const s = new Date(ev.start), e = new Date(ev.end);
       return s <= now && now < e;
@@ -128,7 +205,6 @@ function renderForSelectedDay() {
       upcoming.forEach(ev => listEl.appendChild(renderEvent(ev)));
     }
   } else {
-    // Futur / passé : toute la journée
     if (events.length === 0) {
       listEl.innerHTML += '<div class="status">Aucun événement ce jour.</div>';
       return;
@@ -137,9 +213,11 @@ function renderForSelectedDay() {
   }
 }
 
-// ---------- Vérification d’une salle pour le jour sélectionné
+/* ==============================
+   Vérification salle (jour choisi)
+   ============================== */
 function checkRoomForSelectedDay(showPromptIfEmpty = true) {
-  const q = (roomInput.value || '').trim();
+  const q = (roomInput?.value || '').trim();
   if (!q) {
     if (showPromptIfEmpty) $('roomStatus').textContent = 'Saisis une salle pour vérifier.';
     return;
@@ -148,17 +226,16 @@ function checkRoomForSelectedDay(showPromptIfEmpty = true) {
   const selected = fromInputDate(dayPicker.value);
   if (!selected) return;
 
-  const selectedStart = startOfDay(selected);
-  const selectedEnd = endOfDay(selected);
-  const isTodayFlag = isSameDay(selectedStart, startOfDay(new Date()));
+  const selStart = startOfDay(selected);
+  const selEnd = endOfDay(selected);
+  const isTodayFlag = isSameDay(selStart, startOfDay(new Date()));
   const now = new Date();
 
   const dayEvents = (cache.events || [])
     .filter(ev => {
       const s = new Date(ev.start), e = new Date(ev.end);
-      if (e < selectedStart || s > selectedEnd) return false;
-      const hay = `${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`.toLowerCase();
-      return hay.includes(q.toLowerCase());
+      if (e < selStart || s > selEnd) return false;
+      return eventMatches(ev, q);
     })
     .sort((a,b) => new Date(a.start) - new Date(b.start));
 
@@ -184,7 +261,6 @@ function checkRoomForSelectedDay(showPromptIfEmpty = true) {
     }
     $('roomStatus').innerHTML = `<span class="kpi ${nowEvt ? 'bad' : 'ok'}">${nowEvt ? 'Occupée' : 'Libre'}</span> ${out}`;
   } else {
-    // Jour ≠ aujourd’hui : lister les créneaux de la journée pour la salle
     if (dayEvents.length === 0) {
       $('roomStatus').innerHTML = `<span class="kpi ok">Libre</span> Aucun événement pour cette salle à la date choisie.`;
       return;
@@ -194,7 +270,9 @@ function checkRoomForSelectedDay(showPromptIfEmpty = true) {
   }
 }
 
-// ---------- Rendu d’un événement
+/* ==============================
+   Rendu d’un événement
+   ============================== */
 function renderEvent(ev) {
   const wrap = document.createElement('div');
   wrap.className = 'event';
@@ -226,7 +304,9 @@ function renderEvent(ev) {
   return wrap;
 }
 
-// ---------- Helpers
+/* ==============================
+   Helpers
+   ============================== */
 function toInputDate(d) {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, '0');
