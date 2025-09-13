@@ -12,8 +12,12 @@ const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digi
 const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', hour12: false });
 
 let cache = null;
-let roomsDisplay = [];                 // libellés bruts à afficher
+let roomsDisplay = [];                 // libellés bruts à afficher (triés)
 const knownRoomsCanon = new Set();     // formes canoniques pour égalité stricte
+
+// état du menu
+let activeIndex = -1;                  // item survolé via clavier
+let filteredItems = [];               // items filtrés actuellement
 
 init();
 
@@ -38,14 +42,15 @@ async function init() {
     statusEl.textContent = 'Erreur de chargement des données.';
   }
 
-  // Ouvrir/fermer le menu SALLE
+  /* ====== SALLE : ouvrir menu partout & filtrer au clavier ====== */
   roomBox.addEventListener('click', () => {
     roomInput.focus();
-    openMenu(); populateMenu(roomInput.value);
+    openMenu();
+    populateMenu(roomInput.value);
   });
   roomInput.addEventListener('input', () => {
     populateMenu(roomInput.value);
-    renderForSelectedDay();                 // filtre en direct
+    renderForSelectedDay(); // filtre en direct
   });
   document.addEventListener('click', (e) => {
     if (!roomBox.contains(e.target)) closeMenu();
@@ -53,20 +58,32 @@ async function init() {
   roomMenu.addEventListener('click', (e) => {
     const li = e.target.closest('li[data-value]');
     if (!li) return;
-    roomInput.value = li.dataset.value;
-    closeMenu();
-    renderForSelectedDay();
+    selectMenuValue(li.dataset.value);
   });
   roomInput.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowDown') { openMenu(); e.preventDefault(); }
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'ArrowDown') {
+      openMenu();
+      moveActive(1);
+      e.preventDefault();
+    } else if (e.key === 'ArrowUp') {
+      openMenu();
+      moveActive(-1);
+      e.preventDefault();
+    } else if (e.key === 'Enter') {
+      if (!roomMenu.classList.contains('hidden') && activeIndex >= 0) {
+        selectMenuValue(filteredItems[activeIndex]);
+        e.preventDefault();
+      }
+    } else if (e.key === 'Escape') {
+      closeMenu();
+    }
   });
 
-  // Champ DATE : clic n’importe où ouvre le picker
+  /* ====== DATE : clic n’importe où ouvre le picker ====== */
   dateBox.addEventListener('click', (e) => {
     if (e.target !== dayPicker) {
-      dayPicker.showPicker?.();   // Chrome/Edge
-      dayPicker.focus();          // fallback
+      dayPicker.showPicker?.();
+      dayPicker.focus();
     }
   });
   dayPicker.addEventListener('change', renderForSelectedDay);
@@ -78,29 +95,51 @@ async function init() {
 }
 
 /* ---------- Menu salle ---------- */
-function openMenu() { roomMenu.classList.remove('hidden'); roomBox.setAttribute('aria-expanded', 'true'); }
-function closeMenu() { roomMenu.classList.add('hidden'); roomBox.setAttribute('aria-expanded', 'false'); }
-function populateMenu(filter) {
-  const q = canonical(filter || '');
-  let items = roomsDisplay;
-  if (q) items = items.filter(name => canonical(name).includes(q));
-  roomMenu.innerHTML = '';
-  if (items.length === 0) {
-    const li = document.createElement('li'); li.textContent = 'Aucune salle';
-    li.setAttribute('aria-disabled', 'true'); li.style.opacity = .6;
-    roomMenu.appendChild(li); return;
+function openMenu(){ roomMenu.classList.remove('hidden'); roomBox.setAttribute('aria-expanded','true'); }
+function closeMenu(){ roomMenu.classList.add('hidden'); roomBox.setAttribute('aria-expanded','false'); activeIndex = -1; markActive(); }
+function selectMenuValue(val){ roomInput.value = val; renderForSelectedDay(); closeMenu(); }
+function moveActive(delta){
+  if (filteredItems.length === 0) return;
+  activeIndex = Math.max(0, Math.min(filteredItems.length - 1, activeIndex + delta));
+  markActive();
+  // scroll auto vers l’item actif
+  const li = roomMenu.querySelector(`li[data-index="${activeIndex}"]`);
+  if (li) {
+    const r = li.getBoundingClientRect(), p = roomMenu.getBoundingClientRect();
+    if (r.top < p.top) roomMenu.scrollTop += r.top - p.top - 4;
+    if (r.bottom > p.bottom) roomMenu.scrollTop += r.bottom - p.bottom + 4;
   }
-  items.slice(0, 200).forEach(name => {
+}
+function markActive(){
+  roomMenu.querySelectorAll('li[aria-selected]').forEach(n => n.removeAttribute('aria-selected'));
+  if (activeIndex >= 0) {
+    const li = roomMenu.querySelector(`li[data-index="${activeIndex}"]`);
+    if (li) li.setAttribute('aria-selected','true');
+  }
+}
+function populateMenu(filter){
+  const q = canonical(filter || '');
+  filteredItems = q ? roomsDisplay.filter(name => canonical(name).includes(q)) : roomsDisplay.slice();
+  roomMenu.innerHTML = '';
+  activeIndex = -1;
+
+  if (filteredItems.length === 0) {
+    const li = document.createElement('li'); li.textContent = 'Aucune salle';
+    li.setAttribute('aria-disabled','true'); li.style.opacity = .6;
+    roomMenu.appendChild(li);
+    return;
+  }
+  filteredItems.slice(0, 400).forEach((name, i) => {
     const li = document.createElement('li');
-    li.setAttribute('role', 'option');
     li.dataset.value = name;
+    li.dataset.index = String(i);
     li.textContent = name;
     roomMenu.appendChild(li);
   });
 }
 
 /* ---------- Index des salles ---------- */
-function buildRoomsIndex(events) {
+function buildRoomsIndex(events){
   roomsDisplay = [];
   knownRoomsCanon.clear();
   const seen = new Set();
@@ -108,17 +147,17 @@ function buildRoomsIndex(events) {
     const loc = (ev.location || '').trim();
     if (!loc) continue;
     const can = canonical(loc);
-    if (can.length < 3 || seen.has(can)) continue;  // ignore “1”, “A”, etc.
+    if (can.length < 3 || seen.has(can)) continue; // évite “1”, “A”, etc.
     seen.add(can);
     knownRoomsCanon.add(can);
     roomsDisplay.push(loc);
   }
-  roomsDisplay.sort((a,b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+  roomsDisplay.sort((a,b) => a.localeCompare(b, 'fr', { sensitivity:'base' }));
   populateMenu('');
 }
 
 /* ---------- Rendu agenda (filtré salle + logique aujourd’hui) ---------- */
-function renderForSelectedDay() {
+function renderForSelectedDay(){
   const selected = fromInputDate(dayPicker.value);
   if (!selected) return;
 
@@ -186,7 +225,7 @@ function eventMatches(ev, qRaw){
   return false;
 }
 
-/* ---------- Rendu carte événement ---------- */
+/* ---------- Cartes événement ---------- */
 function renderEvent(ev){
   const wrap = document.createElement('div'); wrap.className = 'event';
   const s = new Date(ev.start), e = new Date(ev.end);
