@@ -10,13 +10,21 @@
 <body>
   <header class="topbar">
     <h1>Occupation des salles – UL</h1>
-    <div class="controls">
-      <!-- 1) Liste déroulante des salles -->
-      <input id="roomQuery" list="roomsList" placeholder="Choisir une salle…" />
-      <datalist id="roomsList"></datalist>
 
-      <!-- 2) Choix du jour (par défaut : aujourd’hui) -->
-      <input id="dayPicker" type="date" />
+    <div class="controls">
+      <!-- Champ SALLE : toute la zone est cliquable et ouvre le menu -->
+      <div class="combo" id="roomBox" aria-haspopup="listbox" aria-expanded="false">
+        <input id="roomQuery" placeholder="Choisir une salle…" autocomplete="off" aria-autocomplete="list" />
+        <span class="chevron" aria-hidden="true"></span>
+        <ul id="roomMenu" class="menu hidden" role="listbox" aria-label="Salles disponibles"></ul>
+      </div>
+
+      <!-- Champ DATE : clic n’importe où ouvre le datepicker -->
+      <div class="combo" id="dateBox">
+        <input id="dayPicker" type="date" />
+        <span class="chevron calendar" aria-hidden="true"></span>
+      </div>
+
       <button id="todayBtn" title="Revenir à aujourd’hui">Aujourd’hui</button>
     </div>
   </header>
@@ -24,7 +32,6 @@
   <main class="container">
     <div id="status" class="status">Chargement…</div>
     <div id="lastUpdate" class="muted"></div>
-    <!-- plus de zone “pills vertes” ici -->
     <div id="list"></div>
   </main>
 
@@ -32,6 +39,6 @@
     <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms.js?v=6" type="module"></script>
+  <script src="assets/rooms.js?v=7" type="module"></script>
 </body>
 </html>
