@@ -1,1 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Journal calories/pas</title>
+  <style>
+    :root{--gap:12px;--radius:12px;--shadow:0 6px 20px rgba(0,0,0,.08)}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;line-height:1.35;margin:0;background:#f7f7fb;color:#111}
+    header{padding:16px 20px;background:#111;color:#fff}
+    main{padding:20px;max-width:1100px;margin:auto}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:16px}
+    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);align-items:end}
+    .row + .row{margin-top:var(--gap)}
+    label{font-size:12px;color:#444;margin-bottom:4px;display:block}
+    input, select, textarea, button{font:inherit}
+    input, select, textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:10px;background:#fafafa}
+    input:focus, select:focus, textarea:focus{outline:none;border-color:#888;background:#fff}
+    button{padding:10px 14px;border:0;border-radius:10px;cursor:pointer}
+    .btn{background:#111;color:#fff}
+    .btn-secondary{background:#e9e9ee}
+    table{width:100%;border-collapse:separate;border-spacing:0}
+    th,td{padding:10px 12px;border-bottom:1px solid #eee;text-align:left}
+    th{font-weight:600;color:#333;background:#fafafa}
+    tr:hover td{background:#fbfbff}
+    .right{text-align:right}
+    .muted{color:#666}
+    .pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#f0f0f5}
+    .danger{background:#ffe9e9}
+    .ok{background:#e9ffef}
+    .wrap{white-space:nowrap}
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Journal calories/pas</strong>
+  </header>
+  <main>
+    <section class="card" id="settings">
+      <h3>Paramètres</h3>
+      <div class="row">
+        <div style="grid-column: span 3">
+          <label>BMR constant (kcal/jour)</label>
+          <input type="number" id="bmr" min="0" step="1" placeholder="1900" />
+        </div>
+        <div style="grid-column: span 3">
+          <label>Poids (kg)</label>
+          <input type="number" id="poids" min="1" step="0.1" placeholder="85" />
+        </div>
+        <div style="grid-column: span 3">
+          <label>Longueur de pas (m)</label>
+          <input type="number" id="pasM" min="0.1" step="0.01" placeholder="0.8" />
+        </div>
+        <div style="grid-column: span 3">
+          <label>Facteur marche</label>
+          <input type="number" id="facteur" min="0.1" step="0.05" placeholder="0.9" />
+        </div>
+      </div>
+      <div class="row">
+        <div style="grid-column: span 6">
+          <button class="btn" id="saveSettings">Enregistrer paramètres</button>
+          <span class="muted" id="saveSettingsMsg"></span>
+        </div>
+      </div>
+    </section>
 
+    <section class="card" id="menus">
+      <h3>Menus</h3>
+      <div class="row">
+        <div style="grid-column: span 4">
+          <label>Nom menu</label>
+          <input id="menuName" placeholder="sandwich_1" />
+        </div>
+        <div style="grid-column: span 3">
+          <label>kcal par unité</label>
+          <input id="menuKcal" type="number" step="0.1" min="0" placeholder="473.1" />
+        </div>
+        <div style="grid-column: span 2">
+          <button class="btn" id="addMenu">Ajouter</button>
+        </div>
+        <div style="grid-column: span 3; text-align:right">
+          <button class="btn-secondary" id="exportMenus">Exporter JSON</button>
+          <button class="btn-secondary" id="importMenus">Importer JSON</button>
+          <input type="file" id="menusFile" accept="application/json" style="display:none" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <div style="grid-column: span 12">
+          <table id="menusTable">
+            <thead><tr><th>Menu</th><th class="right">kcal/unité</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="entry">
+      <h3>Nouvelle entrée</h3>
+      <div class="row">
+        <div style="grid-column: span 3">
+          <label>Date</label>
+          <input type="date" id="date" />
+        </div>
+        <div style="grid-column: span 3">
+          <label>Menu</label>
+          <select id="menuSelect"></select>
+        </div>
+        <div style="grid-column: span 2">
+          <label>Quantité (unités)</label>
+          <input type="number" id="qty" value="1" step="0.5" min="0.1" />
+        </div>
+        <div style="grid-column: span 2">
+          <label>Nb. pas</label>
+          <input type="number" id="steps" value="0" step="100" min="0" />
+        </div>
+        <div style="grid-column: span 2">
+          <button class="btn" id="addEntry">Ajouter</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="journal">
+      <h3>Journal</h3>
+      <div class="row">
+        <div style="grid-column: span 8" class="muted">Bilan = Ingesta − BMR − Marche. Négatif = déficit.</div>
+        <div style="grid-column: span 4; text-align:right">
+          <button class="btn-secondary" id="exportEntries">Exporter JSON</button>
+          <button class="btn-secondary" id="importEntries">Importer JSON</button>
+          <input type="file" id="entriesFile" accept="application/json" style="display:none" />
+          <button class="btn-secondary" id="resetAll">Réinitialiser</button>
+        </div>
+      </div>
+      <div style="overflow:auto; margin-top:12px">
+        <table id="entriesTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Menu</th>
+              <th class="right">Quantité</th>
+              <th class="right">kcal ingérées</th>
+              <th class="right">Pas</th>
+              <th class="right">kcal marche</th>
+              <th class="right">Bilan</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" class="right">Totaux</th>
+              <th class="right" id="sumIn"></th>
+              <th class="right" id="sumSteps"></th>
+              <th class="right" id="sumWalk"></th>
+              <th class="right" id="sumNet"></th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  // --- Storage keys ---
+  const K_SETTINGS = 'jc_settings_v1';
+  const K_MENUS    = 'jc_menus_v1';
+  const K_ENTRIES  = 'jc_entries_v1';
+
+  // --- DOM helpers ---
+  const $ = sel => document.querySelector(sel);
+  const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+  // --- State ---
+  let settings = { bmr:1900, poids:85, pasM:0.8, facteur:0.9 };
+  let menus = [ { name:'sandwich_1', kcal:473.1 }, { name:'sandwich_2', kcal:290.85 } ];
+  let entries = [];
+
+  // --- Utils ---
+  const fmt = n => (Math.round(n*10)/10).toLocaleString('fr-FR');
+  const todayISO = () => new Date().toISOString().slice(0,10);
+
+  function saveAll(){
+    localStorage.setItem(K_SETTINGS, JSON.stringify(settings));
+    localStorage.setItem(K_MENUS, JSON.stringify(menus));
+    localStorage.setItem(K_ENTRIES, JSON.stringify(entries));
+  }
+  function loadAll(){
+    try{ const s = JSON.parse(localStorage.getItem(K_SETTINGS)); if(s) settings = s; }catch{}
+    try{ const m = JSON.parse(localStorage.getItem(K_MENUS)); if(m) menus = m; }catch{}
+    try{ const e = JSON.parse(localStorage.getItem(K_ENTRIES)); if(e) entries = e; }catch{}
+  }
+
+  // --- Calculs ---
+  function kcalIntake(qty, kcalPerUnit){ return qty * kcalPerUnit; }
+  function kcalWalk(steps){
+    const km = (steps * settings.pasM) / 1000;
+    return 0.9 * settings.poids * km * settings.facteur;
+  }
+  function netBalance(intake, steps){ return intake - settings.bmr - kcalWalk(steps); }
+
+  // --- Menus UI ---
+  function renderMenus(){
+    const tbody = $('#menusTable tbody');
+    tbody.innerHTML = '';
+    menus.forEach((m, idx) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${m.name}</td>
+        <td class="right">${fmt(m.kcal)}</td>
+        <td class="right"><button class="btn-secondary" data-del="${idx}">Supprimer</button></td>`;
+      tbody.appendChild(tr);
+    });
+    // select
+    const sel = $('#menuSelect');
+    sel.innerHTML = menus.map(m=>`<option value="${m.name}">${m.name}</option>`).join('');
+    // actions
+    $$('[data-del]').forEach(btn=>btn.onclick = () => { menus.splice(+btn.dataset.del,1); renderMenus(); saveAll(); });
+  }
+
+  $('#addMenu').onclick = () => {
+    const name = $('#menuName').value.trim();
+    const kcal = parseFloat($('#menuKcal').value);
+    if(!name || !Number.isFinite(kcal) || kcal < 0){ alert('Menu ou kcal invalide'); return; }
+    if(menus.some(m=>m.name === name)){ alert('Ce menu existe déjà'); return; }
+    menus.push({ name, kcal });
+    $('#menuName').value = ''; $('#menuKcal').value='';
+    renderMenus(); saveAll();
+  };
+
+  $('#exportMenus').onclick = () => downloadJSON('menus.json', menus);
+  $('#importMenus').onclick = () => $('#menusFile').click();
+  $('#menusFile').onchange = ev => importJSON(ev.target, v => { if(Array.isArray(v)){ menus = v; renderMenus(); saveAll(); } });
+
+  // --- Entries UI ---
+  function renderEntries(){
+    const tbody = $('#entriesTable tbody');
+    tbody.innerHTML = '';
+    let sumIn=0, sumSteps=0, sumWalk=0, sumNet=0;
+    entries.forEach((e, idx) => {
+      const tr = document.createElement('tr');
+      const walk = kcalWalk(e.steps);
+      const net = netBalance(e.intake, e.steps);
+      sumIn += e.intake; sumSteps += e.steps; sumWalk += walk; sumNet += net;
+      tr.innerHTML = `
+        <td class="wrap">${e.date}</td>
+        <td>${e.menu}</td>
+        <td class="right">${fmt(e.qty)}</td>
+        <td class="right">${fmt(e.intake)}</td>
+        <td class="right">${fmt(e.steps)}</td>
+        <td class="right">${fmt(walk)}</td>
+        <td class="right">${fmt(net)}</td>
+        <td class="right"><button class="btn-secondary" data-rm="${idx}">Supprimer</button></td>`;
+      tbody.appendChild(tr);
+    });
+    $('#sumIn').textContent   = fmt(sumIn);
+    $('#sumSteps').textContent= fmt(sumSteps);
+    $('#sumWalk').textContent = fmt(sumWalk);
+    $('#sumNet').textContent  = fmt(sumNet);
+    $$('[data-rm]').forEach(btn=>btn.onclick = () => { entries.splice(+btn.dataset.rm,1); renderEntries(); saveAll(); });
+  }
+
+  $('#addEntry').onclick = () => {
+    const date = $('#date').value || todayISO();
+    const menuName = $('#menuSelect').value;
+    const m = menus.find(x=>x.name===menuName);
+    if(!m){ alert('Menu introuvable'); return; }
+    const qty = parseFloat($('#qty').value);
+    const steps = parseFloat($('#steps').value);
+    if(!(qty>0) || !(steps>=0)){ alert('Quantité ou pas invalide'); return; }
+    const intake = kcalIntake(qty, m.kcal);
+    entries.push({ date, menu: menuName, qty, steps, intake });
+    renderEntries(); saveAll();
+  };
+
+  // --- Settings ---
+  function syncSettingsUI(){
+    $('#bmr').value = settings.bmr;
+    $('#poids').value = settings.poids;
+    $('#pasM').value = settings.pasM;
+    $('#facteur').value = settings.facteur;
+  }
+  $('#saveSettings').onclick = () => {
+    const bmr = parseFloat($('#bmr').value);
+    const poids = parseFloat($('#poids').value);
+    const pasM = parseFloat($('#pasM').value);
+    const facteur = parseFloat($('#facteur').value);
+    if(!(bmr>0 && poids>0 && pasM>0 && facteur>0)) { $('#saveSettingsMsg').textContent = 'Paramètres invalides'; return; }
+    settings = { bmr, poids, pasM, facteur };
+    $('#saveSettingsMsg').textContent = 'OK';
+    setTimeout(()=>$('#saveSettingsMsg').textContent='', 1200);
+    saveAll(); renderEntries();
+  };
+
+  // --- Export/Import entries ---
+  $('#exportEntries').onclick = () => downloadJSON('journal.json', entries);
+  $('#importEntries').onclick = () => $('#entriesFile').click();
+  $('#entriesFile').onchange = ev => importJSON(ev.target, v => { if(Array.isArray(v)){ entries = v; renderEntries(); saveAll(); } });
+  $('#resetAll').onclick = () => { if(confirm('Tout effacer ?')) { localStorage.clear(); loadAll(); renderMenus(); renderEntries(); syncSettingsUI(); } };
+
+  function downloadJSON(filename, data){
+    const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = filename; a.click();
+    URL.revokeObjectURL(a.href);
+  }
+  function importJSON(fileInput, onLoad){
+    const f = fileInput.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = () => { try{ const v = JSON.parse(r.result); onLoad(v);}catch{ alert('JSON invalide'); } };
+    r.readAsText(f);
+  }
+
+  // --- Init ---
+  loadAll();
+  renderMenus();
+  renderEntries();
+  syncSettingsUI();
+  $('#date').value = todayISO();
+  </script>
+</body>
+</html>
