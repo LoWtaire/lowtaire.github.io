@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-10T04:30:37.557Z",
+  "generated_at": "2025-10-10T05:27:43.018Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 73,
@@ -11,10 +11,10 @@
       "end": "2025-10-13T10:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3237332d302d37",
@@ -23,10 +23,10 @@
       "end": "2025-10-13T13:00:00+02:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31353835332d322d30",
@@ -35,10 +35,10 @@
       "end": "2025-10-13T16:30:00+02:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333336352d322d30",
@@ -47,10 +47,10 @@
       "end": "2025-10-13T18:30:00+02:00",
       "allDay": false,
       "location": "4410 A",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343430302d302d30",
@@ -59,10 +59,10 @@
       "end": "2025-10-14T12:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d312d30",
@@ -71,10 +71,10 @@
       "end": "2025-10-14T16:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343133382d302d34",
@@ -83,10 +83,10 @@
       "end": "2025-10-14T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d312d30",
@@ -95,10 +95,10 @@
       "end": "2025-10-15T12:00:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3833302d312d30",
@@ -107,10 +107,10 @@
       "end": "2025-10-15T15:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\nSimulations d'entretiens\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nSimulations d'entretiens\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3237332d302d38",
@@ -119,10 +119,10 @@
       "end": "2025-10-16T13:00:00+02:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735372d372d30",
@@ -131,10 +131,10 @@
       "end": "2025-10-16T15:30:00+02:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343131322d332d30",
@@ -143,10 +143,10 @@
       "end": "2025-10-17T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nchantier Nature\nLac de Téteghem\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nchantier Nature\nLac de Téteghem\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d322d30",
@@ -155,10 +155,10 @@
       "end": "2025-10-20T12:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343430302d302d37",
@@ -167,10 +167,10 @@
       "end": "2025-10-20T16:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333336352d372d30",
@@ -179,10 +179,10 @@
       "end": "2025-10-20T18:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343430302d302d31",
@@ -191,10 +191,10 @@
       "end": "2025-10-21T12:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735302d302d30",
@@ -203,10 +203,10 @@
       "end": "2025-10-21T17:00:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDAMAMME Véronique\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDAMAMME Véronique\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343133382d302d35",
@@ -215,10 +215,10 @@
       "end": "2025-10-21T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32323230392d332d30",
@@ -227,10 +227,10 @@
       "end": "2025-10-22T12:15:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nROCHE Catherine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nROCHE Catherine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d322d30",
@@ -239,10 +239,10 @@
       "end": "2025-10-22T16:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\nVisite de la Dune MARCHAND\nRDV en bout de digue de Bray-Dunes - immeuble château de le côte d'Opale\nBus gratuit\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nVisite de la Dune MARCHAND\nRDV en bout de digue de Bray-Dunes - immeuble château de le côte d'Opale\nBus gratuit\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d322d30",
@@ -251,10 +251,10 @@
       "end": "2025-10-23T12:00:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33343635302d372d30",
@@ -263,10 +263,10 @@
       "end": "2025-10-23T15:30:00+02:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735372d342d30",
@@ -275,10 +275,10 @@
       "end": "2025-10-23T15:30:00+02:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31313639372d302d30",
@@ -287,10 +287,10 @@
       "end": "2025-10-24T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\ncours en visio sur teams\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\ncours en visio sur teams\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31313639392d302d30",
@@ -299,10 +299,10 @@
       "end": "2025-10-24T16:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\ncours en visio sur teams\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\ncours en visio sur teams\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3237332d302d34",
@@ -311,10 +311,10 @@
       "end": "2025-11-03T13:00:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31353835332d332d30",
@@ -323,10 +323,10 @@
       "end": "2025-11-03T16:30:00+01:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333336352d332d30",
@@ -335,10 +335,10 @@
       "end": "2025-11-03T18:30:00+01:00",
       "allDay": false,
       "location": "4410 A",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343430302d302d33",
@@ -347,10 +347,10 @@
       "end": "2025-11-04T12:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d332d30",
@@ -359,10 +359,10 @@
       "end": "2025-11-04T16:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343133382d302d36",
@@ -371,10 +371,10 @@
       "end": "2025-11-04T21:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32323230392d362d30",
@@ -383,10 +383,10 @@
       "end": "2025-11-05T12:15:00+01:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nROCHE Catherine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nROCHE Catherine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735392d302d34",
@@ -395,10 +395,10 @@
       "end": "2025-11-05T17:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d332d30",
@@ -407,10 +407,10 @@
       "end": "2025-11-06T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735372d312d30",
@@ -419,10 +419,10 @@
       "end": "2025-11-06T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33343635302d362d30",
@@ -431,10 +431,10 @@
       "end": "2025-11-06T15:30:00+01:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d372d30",
@@ -443,10 +443,10 @@
       "end": "2025-11-07T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d342d30",
@@ -455,10 +455,10 @@
       "end": "2025-11-07T16:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32343738322d302d30",
@@ -467,10 +467,10 @@
       "end": "2025-11-12T13:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\nLes pratiques entrepreneuriales en économie durable et connectée\nPANIER REPAS COMPRIS\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nLes pratiques entrepreneuriales en économie durable et connectée\nPANIER REPAS COMPRIS\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313438382d322d30",
@@ -479,10 +479,10 @@
       "end": "2025-11-12T15:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d342d30",
@@ -491,10 +491,10 @@
       "end": "2025-11-13T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33343635302d392d30",
@@ -503,10 +503,10 @@
       "end": "2025-11-13T16:30:00+01:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735372d332d30",
@@ -515,10 +515,10 @@
       "end": "2025-11-13T16:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735392d302d31",
@@ -527,10 +527,10 @@
       "end": "2025-11-14T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d342d30",
@@ -539,10 +539,10 @@
       "end": "2025-11-17T12:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31353835332d362d30",
@@ -551,10 +551,10 @@
       "end": "2025-11-17T16:00:00+01:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333336352d362d30",
@@ -563,10 +563,10 @@
       "end": "2025-11-17T18:15:00+01:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343430302d302d36",
@@ -575,10 +575,10 @@
       "end": "2025-11-18T12:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBOTTE Florian\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31303738372d302d30",
@@ -587,10 +587,10 @@
       "end": "2025-11-18T20:00:00+01:00",
       "allDay": false,
       "location": "TD 103,Amphi Verschave,TD 102",
-      "description": "\n14h à 17h45: \"Fresque de l'alimentation\" (inscriptions limitées) \n17h45 à 19h30: \"Projection du film \"On mange quoi? dans le cadre des semaines de l'alimentation\"\nM1 EGEDD\nM1 PAUL\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n14h à 17h45: \"Fresque de l'alimentation\" (inscriptions limitées) \n17h45 à 19h30: \"Projection du film \"On mange quoi? dans le cadre des semaines de l'alimentation\"\nM1 EGEDD\nM1 PAUL\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735392d302d33",
@@ -599,10 +599,10 @@
       "end": "2025-11-19T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d332d30",
@@ -611,10 +611,10 @@
       "end": "2025-11-19T16:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d393536342d302d30",
@@ -623,10 +623,10 @@
       "end": "2025-11-20T16:45:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d393536342d312d30",
@@ -635,10 +635,10 @@
       "end": "2025-11-21T16:45:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d362d30",
@@ -647,10 +647,10 @@
       "end": "2025-11-24T12:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737322d302d30",
@@ -659,10 +659,10 @@
       "end": "2025-11-24T16:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353638362d342d30",
@@ -671,10 +671,10 @@
       "end": "2025-11-25T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353638362d352d30",
@@ -683,10 +683,10 @@
       "end": "2025-11-25T16:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d352d30",
@@ -695,10 +695,10 @@
       "end": "2025-11-26T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31313833352d312d30",
@@ -707,10 +707,10 @@
       "end": "2025-11-26T17:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\nVisite du RN du Romelaere\nGrange Nature de Clairmarais - EDEN 62\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nVisite du RN du Romelaere\nGrange Nature de Clairmarais - EDEN 62\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d352d30",
@@ -719,10 +719,10 @@
       "end": "2025-11-27T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33343635302d31302d30",
@@ -731,10 +731,10 @@
       "end": "2025-11-27T15:30:00+01:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735372d302d30",
@@ -743,10 +743,10 @@
       "end": "2025-11-27T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3735392d302d36",
@@ -755,10 +755,10 @@
       "end": "2025-11-28T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nGROSJEAN NADEGE\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3237332d302d39",
@@ -767,10 +767,10 @@
       "end": "2025-12-01T13:00:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nDE WOLF Daniel\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31353835332d352d30",
@@ -779,10 +779,10 @@
       "end": "2025-12-01T16:30:00+01:00",
       "allDay": false,
       "location": "TD 101",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPROMO - M1 CULTURE\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333336352d342d30",
@@ -791,10 +791,10 @@
       "end": "2025-12-01T18:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353638362d302d30",
@@ -803,10 +803,10 @@
       "end": "2025-12-02T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353638362d322d30",
@@ -815,10 +815,10 @@
       "end": "2025-12-02T16:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nVANDAELE Laetitia\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313435322d362d30",
@@ -827,10 +827,10 @@
       "end": "2025-12-03T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31313833352d322d30",
@@ -839,10 +839,10 @@
       "end": "2025-12-03T17:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\nVisite de l'ENS des dunes du Fort vert - EDEN 62\ncommune de Marck\nM1 EGEDD\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\nVisite de l'ENS des dunes du Fort vert - EDEN 62\ncommune de Marck\nM1 EGEDD\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d313330342d302d30",
@@ -851,10 +851,10 @@
       "end": "2025-12-04T17:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 MPM\nM1 SCM\nM2 MPM\nM2 SCM\nM2 EGEDD\nM2 PAUL\nM1 EGEDD\nM1 PAUL\nBAMMEZ Thierry\nINNEBEER Jérémy\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 MPM\nM1 SCM\nM2 MPM\nM2 SCM\nM2 EGEDD\nM2 PAUL\nM1 EGEDD\nM1 PAUL\nBAMMEZ Thierry\nINNEBEER Jérémy\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d323839342d382d30",
@@ -863,10 +863,10 @@
       "end": "2025-12-05T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nBURY Olivier\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3236312d31302d30",
@@ -875,10 +875,10 @@
       "end": "2025-12-05T15:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 06:30)\n",
+      "description": "\n\nM1 EGEDD\nCALVO-MENDIETA Iratxe\n(Exporté le:10/10/2025 07:27)\n",
       "status": "",
       "url": "",
-      "lastModified": "2025-10-10T06:30:37+02:00"
+      "lastModified": "2025-10-10T07:27:42+02:00"
     }
   ]
 }
