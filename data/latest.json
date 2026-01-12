@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T10:37:14.005Z",
+  "generated_at": "2026-01-12T11:31:56.226Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 88,
@@ -11,10 +11,10 @@
       "end": "2026-01-12T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313438382d332d30",
@@ -23,10 +23,10 @@
       "end": "2026-01-12T16:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313438382d312d30",
@@ -35,10 +35,10 @@
       "end": "2026-01-13T12:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313438382d342d30",
@@ -47,10 +47,10 @@
       "end": "2026-01-13T16:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nDEFFONTAINES Bruno\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334342d312d30",
@@ -59,10 +59,10 @@
       "end": "2026-01-14T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d332d30",
@@ -71,10 +71,10 @@
       "end": "2026-01-14T17:30:00+01:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d352d30",
@@ -83,10 +83,10 @@
       "end": "2026-01-15T12:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343131322d312d30",
@@ -95,10 +95,10 @@
       "end": "2026-01-16T12:30:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334352d302d31",
@@ -107,10 +107,10 @@
       "end": "2026-01-16T16:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737322d312d30",
@@ -119,10 +119,10 @@
       "end": "2026-01-19T12:00:00+01:00",
       "allDay": false,
       "location": "2308 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343038382d302d30",
@@ -131,10 +131,10 @@
       "end": "2026-01-19T16:30:00+01:00",
       "allDay": false,
       "location": "AMPHITHEATRE 1",
-      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nFRERE Severine\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373735322d302d30",
@@ -143,10 +143,10 @@
       "end": "2026-01-19T19:00:00+01:00",
       "allDay": false,
       "location": "404 A",
-      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31313833352d322d30",
@@ -155,10 +155,10 @@
       "end": "2026-01-20T13:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\nVisite de l'ENS des dunes du Fort vert - EDEN 62\ncommune de Marck\nRDV 8h place de l'Yser - départ 8h15 précise\nretour prévu à DK à 12h45\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\nVisite de l'ENS des dunes du Fort vert - EDEN 62\ncommune de Marck\nRDV 8h place de l'Yser - départ 8h15 précise\nretour prévu à DK à 12h45\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353130312d302d30",
@@ -167,10 +167,10 @@
       "end": "2026-01-20T17:00:00+01:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313330362d302d30",
@@ -179,10 +179,10 @@
       "end": "2026-01-20T20:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353834312d302d30",
@@ -191,10 +191,10 @@
       "end": "2026-01-21T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d312d30",
@@ -203,10 +203,10 @@
       "end": "2026-01-21T17:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33373636392d302d30",
@@ -215,10 +215,10 @@
       "end": "2026-01-22T13:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\nVisite de POCHECO - Forest sur Marque\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\nVisite de POCHECO - Forest sur Marque\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d302d30",
@@ -227,10 +227,10 @@
       "end": "2026-01-22T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d322d30",
@@ -239,10 +239,10 @@
       "end": "2026-01-22T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d343131322d332d30",
@@ -251,10 +251,10 @@
       "end": "2026-01-23T12:00:00+01:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737322d302d30",
@@ -263,10 +263,10 @@
       "end": "2026-01-26T12:00:00+01:00",
       "allDay": false,
       "location": "2308 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d302d30",
@@ -275,10 +275,10 @@
       "end": "2026-01-26T15:30:00+01:00",
       "allDay": false,
       "location": "1203 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373735322d312d30",
@@ -287,10 +287,10 @@
       "end": "2026-01-26T18:15:00+01:00",
       "allDay": false,
       "location": "404 A",
-      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353130312d302d31",
@@ -299,10 +299,10 @@
       "end": "2026-01-27T16:30:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353834312d302d31",
@@ -311,10 +311,10 @@
       "end": "2026-01-28T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d322d30",
@@ -323,10 +323,10 @@
       "end": "2026-01-28T17:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334342d302d30",
@@ -335,10 +335,10 @@
       "end": "2026-01-29T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d332d30",
@@ -347,10 +347,10 @@
       "end": "2026-01-29T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d392d30",
@@ -359,10 +359,10 @@
       "end": "2026-01-29T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3738392d302d30",
@@ -371,10 +371,10 @@
       "end": "2026-01-30T12:30:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3738392d312d30",
@@ -383,10 +383,10 @@
       "end": "2026-01-30T16:30:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d372d30",
@@ -395,10 +395,10 @@
       "end": "2026-02-02T12:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d332d30",
@@ -407,10 +407,10 @@
       "end": "2026-02-02T16:30:00+01:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353130312d302d32",
@@ -419,10 +419,10 @@
       "end": "2026-02-03T16:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383134312d302d30",
@@ -431,10 +431,10 @@
       "end": "2026-02-03T17:45:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d342d30",
@@ -443,10 +443,10 @@
       "end": "2026-02-04T17:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373735322d332d30",
@@ -455,10 +455,10 @@
       "end": "2026-02-05T12:00:00+01:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d332d30",
@@ -467,10 +467,10 @@
       "end": "2026-02-05T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d342d30",
@@ -479,10 +479,10 @@
       "end": "2026-02-05T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33333735392d302d30",
@@ -491,10 +491,10 @@
       "end": "2026-02-05T18:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3738392d322d30",
@@ -503,10 +503,10 @@
       "end": "2026-02-06T12:00:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3738392d332d30",
@@ -515,10 +515,10 @@
       "end": "2026-02-06T16:30:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLEBRUN Joackim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d352d30",
@@ -527,10 +527,10 @@
       "end": "2026-02-09T16:30:00+01:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383134312d312d30",
@@ -539,10 +539,10 @@
       "end": "2026-02-09T18:30:00+01:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33353130312d302d33",
@@ -551,10 +551,10 @@
       "end": "2026-02-10T16:30:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334342d322d30",
@@ -563,10 +563,10 @@
       "end": "2026-02-11T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d352d30",
@@ -575,10 +575,10 @@
       "end": "2026-02-11T17:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d342d30",
@@ -587,10 +587,10 @@
       "end": "2026-02-12T12:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d362d30",
@@ -599,10 +599,10 @@
       "end": "2026-02-12T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d362d30",
@@ -611,10 +611,10 @@
       "end": "2026-02-12T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373735322d322d30",
@@ -623,10 +623,10 @@
       "end": "2026-02-12T18:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32363632332d312d30",
@@ -635,10 +635,10 @@
       "end": "2026-02-14T08:15:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32363632332d322d30",
@@ -647,10 +647,10 @@
       "end": "2026-02-15T08:15:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d312d30",
@@ -659,10 +659,10 @@
       "end": "2026-02-16T12:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d382d30",
@@ -671,10 +671,10 @@
       "end": "2026-02-16T12:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32363632332d332d30",
@@ -683,10 +683,10 @@
       "end": "2026-02-16T19:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nM2 PAUL\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353834312d302d33",
@@ -695,10 +695,10 @@
       "end": "2026-02-17T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353834312d302d32",
@@ -707,10 +707,10 @@
       "end": "2026-02-18T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d362d30",
@@ -719,10 +719,10 @@
       "end": "2026-02-18T17:00:00+01:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d34",
@@ -731,10 +731,10 @@
       "end": "2026-02-18T21:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d332d30",
@@ -743,10 +743,10 @@
       "end": "2026-02-19T12:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d342d30",
@@ -755,10 +755,10 @@
       "end": "2026-02-19T16:30:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334352d302d32",
@@ -767,10 +767,10 @@
       "end": "2026-02-20T16:00:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d322d30",
@@ -779,10 +779,10 @@
       "end": "2026-03-02T10:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d352d30",
@@ -791,10 +791,10 @@
       "end": "2026-03-02T10:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d312d30",
@@ -803,10 +803,10 @@
       "end": "2026-03-02T16:30:00+01:00",
       "allDay": false,
       "location": "1211 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303031372d302d30",
@@ -815,10 +815,10 @@
       "end": "2026-03-03T17:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d36",
@@ -827,10 +827,10 @@
       "end": "2026-03-03T21:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334342d332d30",
@@ -839,10 +839,10 @@
       "end": "2026-03-04T12:00:00+01:00",
       "allDay": false,
       "location": "1204 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nVOLTAIRE Louinord\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313331382d302d30",
@@ -851,10 +851,10 @@
       "end": "2026-03-04T16:00:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nJACOB Amelie\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nJACOB Amelie\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383134312d322d30",
@@ -863,10 +863,10 @@
       "end": "2026-03-04T18:15:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d322d30",
@@ -875,10 +875,10 @@
       "end": "2026-03-05T12:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d382d30",
@@ -887,10 +887,10 @@
       "end": "2026-03-05T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d31302d30",
@@ -899,10 +899,10 @@
       "end": "2026-03-05T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33333735392d302d33",
@@ -911,10 +911,10 @@
       "end": "2026-03-05T18:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373735322d342d30",
@@ -923,10 +923,10 @@
       "end": "2026-03-06T12:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nTALEB Karim\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3334352d302d33",
@@ -935,10 +935,10 @@
       "end": "2026-03-06T16:00:00+01:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nLESNE Robin\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d372d30",
@@ -947,10 +947,10 @@
       "end": "2026-03-09T10:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d373538322d362d30",
@@ -959,10 +959,10 @@
       "end": "2026-03-09T16:30:00+01:00",
       "allDay": false,
       "location": "1214 ATELIER INFO",
-      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nGEFFROY Valerian\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383134312d332d30",
@@ -971,10 +971,10 @@
       "end": "2026-03-10T12:30:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\nVISITE : jardins partagés en pied d’immeuble, le jardin solidaire communal et les fermes urbaines avec production maraichère.GRANDE SYNTHE\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\nVISITE : jardins partagés en pied d’immeuble, le jardin solidaire communal et les fermes urbaines avec production maraichère.GRANDE SYNTHE\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383134312d342d30",
@@ -983,10 +983,10 @@
       "end": "2026-03-10T18:00:00+01:00",
       "allDay": false,
       "location": "TD 203",
-      "description": "\nSOUTENANCES\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\nSOUTENANCES\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33313331382d302d31",
@@ -995,10 +995,10 @@
       "end": "2026-03-11T16:00:00+01:00",
       "allDay": false,
       "location": "AMPHITHEATRE 2",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nJACOB Amelie\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nJACOB Amelie\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d35",
@@ -1007,10 +1007,10 @@
       "end": "2026-03-11T21:00:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393733372d312d30",
@@ -1019,10 +1019,10 @@
       "end": "2026-03-12T12:00:00+01:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nPHILIPPENKO Xenia\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353731312d392d30",
@@ -1031,10 +1031,10 @@
       "end": "2026-03-12T15:30:00+01:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe 2 M. Louvet EGEDD\nGroupe 2 M. Louvet PAUL\nLOUVET Michel\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3239322d342d30",
@@ -1043,10 +1043,10 @@
       "end": "2026-03-12T15:30:00+01:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nGroupe L.Hocquez EGEDD\nGroupe 1 L.Hocquez PAUL\nHOCQUEZ Laura\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33333735392d302d34",
@@ -1055,10 +1055,10 @@
       "end": "2026-03-12T18:30:00+01:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 11:37)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:12/01/2026 12:31)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-12T11:37:13+01:00"
+      "lastModified": "2026-01-12T12:31:55+01:00"
     }
   ]
 }
