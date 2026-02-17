@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Occupation des salles – Univ Lorraine</title>
+  <title>Occupation des salles – Établissements</title>
   <meta name="theme-color" content="#111" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header class="topbar">
-    <h1>Occupation des salles – UL</h1>
+    <h1>Occupation des salles – ADEB</h1>
 
     <div class="controls">
+      <select id="establishmentPicker" aria-label="Établissement"></select>
       <!-- Champ SALLE : toute la zone est cliquable et ouvre le menu -->
       <div class="combo" id="roomBox" aria-haspopup="listbox" aria-expanded="false">
   <input id="roomQuery" placeholder="Choisir une salle…" autocomplete="off" aria-autocomplete="list" />
@@ -32,12 +33,13 @@
 
   <main class="container">
     <div id="status" class="status">Chargement…</div>
+    <div id="geoStatus" class="muted"></div>
     <div id="lastUpdate" class="muted"></div>
     <div id="list"></div>
   </main>
 
   <footer class="footer">
-    <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
+    <small>Source : <code id="sourceLabel"></code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
   <script src="assets/rooms.js?v=7" type="module"></script>

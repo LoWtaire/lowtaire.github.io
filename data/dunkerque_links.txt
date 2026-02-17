@@ -1,0 +1,4 @@
+# Liste des liens ADE Dunkerque (.shu/.ics)
+# Un lien par ligne
+# Exemple:
+# https://exemple.univ/ade/edt/....shu

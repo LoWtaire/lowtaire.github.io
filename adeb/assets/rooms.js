@@ -1,10 +1,27 @@
 'use strict';
 
-/* ---------- Constantes / sélecteurs ---------- */
-const JSON_URL = '/data/univlor.json';
+/* ---------- Établissements ---------- */
+const ESTABLISHMENTS = {
+  metz: {
+    label: 'Metz',
+    jsonUrl: '/data/univlor.json',
+    coords: { lat: 49.1193, lon: 6.1757 }
+  },
+  dunkerque: {
+    label: 'Dunkerque',
+    jsonUrl: '/data/dunkerque.json',
+    coords: { lat: 51.0344, lon: 2.3768 }
+  }
+};
 
+const DEFAULT_ESTABLISHMENT = 'metz';
+
+/* ---------- Constantes / sélecteurs ---------- */
 const $ = id => document.getElementById(id);
-const listEl = $('list'), statusEl = $('status'), tzEl = $('tz'), lastUpdateEl = $('lastUpdate');
+const listEl = $('list'), statusEl = $('status'), tzEl = $('tz'), lastUpdateEl = $('lastUpdate'), sourceLabelEl = $('sourceLabel');
+
+const establishmentPicker = $('establishmentPicker');
+const geoStatusEl = $('geoStatus');
 
 const roomBox = $('roomBox'), roomInput = $('roomQuery'), roomMenu = $('roomMenu');
 const dateBox = $('dateBox'), dayPicker = $('dayPicker'), todayBtn = $('todayBtn');
@@ -14,37 +31,30 @@ const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-d
 
 /* ---------- État ---------- */
 let cache = null;
-let roomsDisplay = [];               // libellés de salles (triés)
-const knownRoomsCanon = new Set();   // formes canoniques des locations exactes
-let filteredItems = [];              // items affichés dans le menu
-let activeIndex = -1;                // index surligné au clavier
+let currentEstablishment = DEFAULT_ESTABLISHMENT;
+let roomsDisplay = [];
+const knownRoomsCanon = new Set();
+let filteredItems = [];
+let activeIndex = -1;
 
 /* ---------- Init ---------- */
 init();
 async function init() {
-  // Date par défaut : aujourd’hui
   dayPicker.value = toInputDate(new Date());
+  initEstablishmentPicker();
+  wireControls();
 
-  statusEl.textContent = 'Chargement…';
-  try {
-    const res = await fetch(`${JSON_URL}?v=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    cache = await res.json();
+  await autoSelectEstablishmentByGeolocation();
+  await loadCurrentEstablishmentData();
+}
 
-    tzEl.textContent = cache.timezone || 'Europe/Paris';
-    lastUpdateEl.textContent = cache.generated_at ? `Dernière mise à jour (UTC) : ${cache.generated_at}` : '';
+function wireControls() {
+  establishmentPicker.addEventListener('change', async () => {
+    currentEstablishment = establishmentPicker.value;
+    roomInput.value = '';
+    await loadCurrentEstablishmentData();
+  });
 
-    buildRoomsIndex(cache.events || []);
-    populateMenu('');      // prêt (fermé)
-    renderForSelectedDay();
-
-    statusEl.textContent = '';
-  } catch (e) {
-    console.error(e);
-    statusEl.textContent = 'Erreur de chargement des données.';
-  }
-
-  /* === SALLE : ouvrir, filtrer, naviguer === */
   roomBox.addEventListener('click', () => {
     roomInput.focus();
     openMenu(); populateMenu(roomInput.value);
@@ -60,7 +70,6 @@ async function init() {
     if (!roomBox.contains(e.target)) closeMenu();
   });
 
-  /* === DATE : clic sur tout le conteneur ouvre le date picker === */
   dateBox.addEventListener('click', (e) => {
     if (e.target !== dayPicker) { dayPicker.showPicker?.(); dayPicker.focus(); }
   });
@@ -68,10 +77,103 @@ async function init() {
   todayBtn.addEventListener('click', () => { dayPicker.value = toInputDate(new Date()); renderForSelectedDay(); });
 }
 
+function initEstablishmentPicker() {
+  establishmentPicker.innerHTML = '';
+  Object.entries(ESTABLISHMENTS).forEach(([key, item]) => {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = item.label;
+    establishmentPicker.appendChild(opt);
+  });
+  establishmentPicker.value = currentEstablishment;
+}
+
+async function autoSelectEstablishmentByGeolocation() {
+  if (!navigator.geolocation) {
+    geoStatusEl.textContent = 'Géolocalisation non disponible, établissement par défaut : Metz.';
+    return;
+  }
+
+  geoStatusEl.textContent = 'Détection de l’établissement le plus proche…';
+
+  try {
+    const position = await getCurrentPosition({
+      enableHighAccuracy: false,
+      maximumAge: 5 * 60 * 1000,
+      timeout: 8000
+    });
+
+    const { latitude, longitude } = position.coords;
+    currentEstablishment = findNearestEstablishment(latitude, longitude);
+    establishmentPicker.value = currentEstablishment;
+    geoStatusEl.textContent = `Établissement détecté automatiquement : ${ESTABLISHMENTS[currentEstablishment].label}.`;
+  } catch {
+    geoStatusEl.textContent = 'Autorisation refusée ou position indisponible, établissement par défaut : Metz.';
+  }
+}
+
+function getCurrentPosition(options) {
+  return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject, options));
+}
+
+function findNearestEstablishment(lat, lon) {
+  let nearestKey = DEFAULT_ESTABLISHMENT;
+  let nearestDistance = Number.POSITIVE_INFINITY;
+
+  Object.entries(ESTABLISHMENTS).forEach(([key, item]) => {
+    const distance = haversineKm(lat, lon, item.coords.lat, item.coords.lon);
+    if (distance < nearestDistance) {
+      nearestDistance = distance;
+      nearestKey = key;
+    }
+  });
+
+  return nearestKey;
+}
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const toRad = v => (v * Math.PI) / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+async function loadCurrentEstablishmentData() {
+  const conf = ESTABLISHMENTS[currentEstablishment] || ESTABLISHMENTS[DEFAULT_ESTABLISHMENT];
+  statusEl.textContent = `Chargement des données pour ${conf.label}…`;
+  lastUpdateEl.textContent = '';
+  sourceLabelEl.textContent = conf.jsonUrl;
+
+  try {
+    const res = await fetch(`${conf.jsonUrl}?v=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    cache = await res.json();
+
+    tzEl.textContent = cache.timezone || 'Europe/Paris';
+    lastUpdateEl.textContent = cache.generated_at
+      ? `Dernière mise à jour (UTC) : ${cache.generated_at}`
+      : '';
+
+    buildRoomsIndex(cache.events || []);
+    populateMenu('');
+    renderForSelectedDay();
+
+    statusEl.textContent = '';
+  } catch (e) {
+    console.error(e);
+    cache = { events: [] };
+    roomsDisplay = [];
+    knownRoomsCanon.clear();
+    listEl.innerHTML = '';
+    statusEl.textContent = `Impossible de charger les données pour ${conf.label}.`;
+  }
+}
+
 /* ---------- Menu salle ---------- */
 function openMenu() {
   roomBox.setAttribute('aria-expanded', 'true');
-  // Fallback si CSS pas encore chargé (cache) :
   roomMenu.style.display = 'block';
 }
 function closeMenu() {
@@ -124,13 +226,13 @@ function moveActive(delta) {
   const li = roomMenu.querySelector(`li[data-index="${activeIndex}"]`);
   if (li) {
     const r = li.getBoundingClientRect(), p = roomMenu.getBoundingClientRect();
-    if (r.top < p.top)    roomMenu.scrollTop += r.top - p.top - 4;
+    if (r.top < p.top) roomMenu.scrollTop += r.top - p.top - 4;
     if (r.bottom > p.bottom) roomMenu.scrollTop += r.bottom - p.bottom + 4;
   }
 }
 function markActive() {
   roomMenu.querySelectorAll('li[aria-selected]').forEach(n => n.removeAttribute('aria-selected'));
-  if (activeIndex >= 0) roomMenu.querySelector(`li[data-index="${activeIndex}"]`)?.setAttribute('aria-selected','true');
+  if (activeIndex >= 0) roomMenu.querySelector(`li[data-index="${activeIndex}"]`)?.setAttribute('aria-selected', 'true');
 }
 function selectMenuValue(val) {
   roomInput.value = val;
@@ -148,26 +250,26 @@ function buildRoomsIndex(events) {
     const loc = (ev.location || '').trim();
     if (!loc) continue;
     const can = canonical(loc);
-    if (can.length < 3 || seen.has(can)) continue; // évite “1”, “A”, etc.
+    if (can.length < 3 || seen.has(can)) continue;
     seen.add(can);
     knownRoomsCanon.add(can);
     roomsDisplay.push(loc);
   }
 
-  roomsDisplay.sort((a,b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+  roomsDisplay.sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
 }
 
-/* ---------- Rendu agenda (filtre salle + logique aujourd’hui) ---------- */
+/* ---------- Rendu agenda ---------- */
 function renderForSelectedDay() {
   const selected = fromInputDate(dayPicker.value);
-  if (!selected) return;
+  if (!selected || !cache) return;
 
   const start = startOfDay(selected), end = endOfDay(selected);
   const today = startOfDay(new Date());
 
   let events = (cache.events || [])
     .filter(ev => { const s = new Date(ev.start); return s >= start && s <= end; })
-    .sort((a,b) => new Date(a.start) - new Date(b.start));
+    .sort((a, b) => new Date(a.start) - new Date(b.start));
 
   const q = (roomInput.value || '').trim();
   if (q) events = events.filter(ev => eventMatches(ev, q));
@@ -175,13 +277,13 @@ function renderForSelectedDay() {
   listEl.innerHTML = '';
   const head = document.createElement('div');
   head.className = 'day';
-  head.textContent = cap(fmtDate.format(start));
+  head.textContent = `${cap(fmtDate.format(start))} — ${ESTABLISHMENTS[currentEstablishment].label}`;
   listEl.appendChild(head);
 
   if (isSameDay(start, today)) {
     const now = new Date();
-    const current  = events.filter(ev => new Date(ev.start) <= now && now < new Date(ev.end));
-    const upcoming = events.filter(ev => new Date(ev.start) >  now);
+    const current = events.filter(ev => new Date(ev.start) <= now && now < new Date(ev.end));
+    const upcoming = events.filter(ev => new Date(ev.start) > now);
 
     if (current.length === 0 && upcoming.length === 0) {
       listEl.innerHTML += `<div class="status">${q ? 'Aucun événement pour cette salle aujourd’hui.' : 'Aucun événement restant aujourd’hui.'}</div>`;
@@ -205,23 +307,23 @@ function renderForSelectedDay() {
 }
 
 /* ---------- Matching salle ---------- */
-function norm(s){return (s||'').toString().normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().replace(/[\u00AD\u200B-\u200D\uFEFF]/g,'').replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();}
-function collapse(s){return norm(s).replace(/\s+/g,'');}
-function stripKeywords(s){return norm(s).replace(/\b(salle|amphi|amphitheatre|amphithéâtre|bat\.?|batiment|bâtiment)\b/g,'').trim();}
-function canonical(s){return collapse(stripKeywords(s)).toUpperCase();}
-function isExactLocationQuery(q){return knownRoomsCanon.has(canonical(q));}
-function eventMatches(ev, qRaw){
+function norm(s) { return (s || '').toString().normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().replace(/[\u00AD\u200B-\u200D\uFEFF]/g, '').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+function collapse(s) { return norm(s).replace(/\s+/g, ''); }
+function stripKeywords(s) { return norm(s).replace(/\b(salle|amphi|amphitheatre|amphithéâtre|bat\.?|batiment|bâtiment)\b/g, '').trim(); }
+function canonical(s) { return collapse(stripKeywords(s)).toUpperCase(); }
+function isExactLocationQuery(q) { return knownRoomsCanon.has(canonical(q)); }
+function eventMatches(ev, qRaw) {
   const qCan = canonical(qRaw);
-  if (isExactLocationQuery(qRaw)) return canonical(ev.location||'') === qCan; // match strict si valeur datalist
-  const locCan = canonical(ev.location||''); if (locCan.includes(qCan)) return true;
-  const hay = canonical(`${ev.location||''} ${ev.title||''} ${ev.description||''}`); if (hay.includes(qCan)) return true;
+  if (isExactLocationQuery(qRaw)) return canonical(ev.location || '') === qCan;
+  const locCan = canonical(ev.location || ''); if (locCan.includes(qCan)) return true;
+  const hay = canonical(`${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`); if (hay.includes(qCan)) return true;
   const toks = norm(qRaw).split(' ').filter(Boolean);
-  if (toks.length>1 && toks.every(t => norm(`${ev.location} ${ev.title} ${ev.description}`).includes(t))) return true;
+  if (toks.length > 1 && toks.every(t => norm(`${ev.location} ${ev.title} ${ev.description}`).includes(t))) return true;
   return false;
 }
 
 /* ---------- Cartes événement ---------- */
-function renderEvent(ev){
+function renderEvent(ev) {
   const wrap = document.createElement('div'); wrap.className = 'event';
   const s = new Date(ev.start), e = new Date(ev.end);
 
@@ -242,9 +344,9 @@ function renderEvent(ev){
 }
 
 /* ---------- Helpers ---------- */
-function toInputDate(d){ const y=d.getFullYear(), m=String(d.getMonth()+1).padStart(2,'0'), day=String(d.getDate()).padStart(2,'0'); return `${y}-${m}-${day}`; }
-function fromInputDate(s){ if(!s) return null; const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
-function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
-function endOfDay(d){ const x=new Date(d); x.setHours(23,59,59,999); return x; }
-function isSameDay(a,b){ return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate(); }
-function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+function toInputDate(d) { const y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2, '0'), day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; }
+function fromInputDate(s) { if (!s) return null; const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
+function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
+function endOfDay(d) { const x = new Date(d); x.setHours(23, 59, 59, 999); return x; }
+function isSameDay(a, b) { return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
+function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }

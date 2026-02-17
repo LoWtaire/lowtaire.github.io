@@ -20,9 +20,10 @@ html, body {
 }
 .topbar h1 { margin: 0; font-size: 18px; }
 .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+#establishmentPicker { min-width: 150px; }
 
 /* ---------- Inputs / button ---------- */
-button, input {
+button, input, select {
   background: var(--card); color: var(--fg);
   border: 1px solid var(--sep); border-radius: 10px;
   padding: 10px 12px; font-size: 14px;
@@ -86,4 +87,4 @@ ul.menu li:hover, ul.menu li[aria-selected="true"] { background: #1e1e1e; }
 .title { font-weight: 700; margin-bottom: 4px; }
 .meta  { color: var(--muted); font-size: 12px; }
 
-.footer { padding: 8px 12px 24px; text-align: center; color: var(--mut)
+.footer { padding: 8px 12px 24px; text-align: center; color: var(--muted)}

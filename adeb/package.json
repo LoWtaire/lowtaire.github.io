@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/ics_to_json.mjs"
+    "generate": "node scripts/ics_to_json.mjs",
+    "generate:dunkerque": "node scripts/ics_to_json.mjs \"\" data/dunkerque_links.txt"
   },
   "dependencies": {
     "ical-expander": "^3.1.0",
