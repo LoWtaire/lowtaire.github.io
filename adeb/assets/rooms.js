@@ -32,6 +32,7 @@ let campusConfig = [];
 let selectedCampus = null;
 let selectedCampusDistanceM = null;
 let userPosition = null;
+let detectedUserCity = null;
 
 /* ---------- Init ---------- */
 init();
@@ -168,6 +169,7 @@ function updateCampusBanner({ reason = '' }) {
 }
 
 function getNearestCityLabel() {
+  if (detectedUserCity) return detectedUserCity;
   if (!userPosition) return selectedCampus?.city || selectedCampus?.name || 'indisponible';
   if (!campusConfig.length) return 'indisponible';
 
@@ -178,6 +180,27 @@ function getNearestCityLabel() {
   return nearest?.campus?.city || nearest?.campus?.name || 'indisponible';
 }
 
+async function resolveCityFromCoords(lat, lon) {
+  const endpoint = new URL('https://nominatim.openstreetmap.org/reverse');
+  endpoint.searchParams.set('format', 'jsonv2');
+  endpoint.searchParams.set('lat', String(lat));
+  endpoint.searchParams.set('lon', String(lon));
+  endpoint.searchParams.set('zoom', '10');
+  endpoint.searchParams.set('addressdetails', '1');
+
+  const res = await fetch(endpoint.toString(), {
+    headers: {
+      'Accept': 'application/json',
+      'Accept-Language': 'fr'
+    }
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+
+  const data = await res.json();
+  const a = data?.address || {};
+  return a.city || a.town || a.village || a.municipality || a.county || null;
+}
+
 async function pickCampusByGeo(campuses) {
   const fallback = { campus: campuses[0] || null, auto: false, distanceM: null, reason: 'Sélection automatique indisponible.' };
   if (!campuses.length) return fallback;
@@ -185,6 +208,12 @@ async function pickCampusByGeo(campuses) {
   try {
     const pos = await getPos();
     userPosition = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+    detectedUserCity = null;
+    try {
+      detectedUserCity = await resolveCityFromCoords(userPosition.lat, userPosition.lon);
+    } catch (e) {
+      detectedUserCity = null;
+    }
 
     const distances = campuses.map(c => ({
       campus: c,
