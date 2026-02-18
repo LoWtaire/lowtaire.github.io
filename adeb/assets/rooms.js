@@ -107,7 +107,7 @@ function startAutoTick() {
   state.tickInterval = setInterval(() => {
     if (!state.cache) return;
     renderHeaderContext();
-    if (state.activeView === 'now' || state.activeView === 'room') renderCurrentView();
+    if (state.activeView === 'now' || state.activeView === 'room' || state.activeView === 'today') renderCurrentView();
   }, 1000);
 }
 
@@ -167,12 +167,13 @@ function renderNowView() {
 function renderTodayView() {
   const target = buildTargetDate(state.targetTime);
   const durationMs = state.minDuration * 60000;
+  const now = new Date();
   const list = computeRoomSummaries()
     .filter(matchQuery)
     .map((room) => {
       const windowEnd = new Date(target.getTime() + durationMs);
       const ok = isFreeWindow(room.events, target, windowEnd);
-      const timeline = buildTimelineAt(room, target);
+      const timeline = buildTimelineAt(room, now);
       return { room, ok, timeline };
     })
     .sort((a, b) => {
@@ -418,7 +419,7 @@ function buildTimelineAt(room, referenceDate) {
 }
 
 function toTimelinePercent(msLeft) {
-  const referenceWindow = 4 * 60 * 60000;
+  const referenceWindow = 24 * 60 * 60000;
   return Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
 }
 
@@ -449,8 +450,11 @@ function buildTargetDate(hhmm) {
 }
 
 function defaultTargetTime() {
-  const d = new Date(Date.now() + 30 * 60000);
-  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+  const parisNow = new Date(Date.now() + 30 * 60000).toLocaleString('sv-SE', {
+    timeZone: 'Europe/Paris',
+    hour12: false
+  });
+  return parisNow.slice(11, 16);
 }
 
 async function loadCampusConfig() {
