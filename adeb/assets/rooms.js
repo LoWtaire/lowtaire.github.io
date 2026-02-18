@@ -169,11 +169,22 @@ function renderTodayView() {
   const durationMs = state.minDuration * 60000;
   const list = computeRoomSummaries()
     .filter(matchQuery)
-    .map((room) => ({ room, ok: isFreeWindow(room.events, target, new Date(target.getTime() + durationMs)) }))
-    .sort((a, b) => Number(b.ok) - Number(a.ok) || a.room.name.localeCompare(b.room.name));
+    .map((room) => {
+      const windowEnd = new Date(target.getTime() + durationMs);
+      const ok = isFreeWindow(room.events, target, windowEnd);
+      const timeline = buildTimelineAt(room, target);
+      return { room, ok, timeline };
+    })
+    .sort((a, b) => {
+      if (a.ok !== b.ok) return Number(b.ok) - Number(a.ok);
+      const aScore = a.timeline?.msLeft ?? -1;
+      const bScore = b.timeline?.msLeft ?? -1;
+      if (aScore !== bScore) return bScore - aScore;
+      return a.room.name.localeCompare(b.room.name);
+    });
 
   ui.todayList.innerHTML = list.length
-    ? list.map(({ room, ok }) => renderTodayRow(room, ok)).join('')
+    ? list.map(({ room, ok, timeline }) => renderTodayRow(room, ok, timeline)).join('')
     : '<div class="panel">Aucune salle trouvée.</div>';
 
   ui.todayList.querySelectorAll('[data-room]').forEach((row) => row.addEventListener('click', () => openRoom(row.dataset.room)));
@@ -264,11 +275,9 @@ function renderNowCard(room) {
   `;
 }
 
-function renderTodayRow(room, ok) {
-  const countdown = buildCountdown(room);
-  const timelineLabel = countdown
-    ? countdown.label
-    : (ok ? buildFreeBeforeBusyLabel(room) : 'Créneau indisponible');
+function renderTodayRow(room, ok, timeline) {
+  const timelineLabel = timeline?.label || (ok ? 'Libre jusqu’à demain' : 'Créneau indisponible');
+  const timelinePercent = timeline?.percent ?? (ok ? 100 : 0);
 
   return `
     <article class="row-item" data-room="${escapeAttr(room.name)}">
@@ -276,7 +285,7 @@ function renderTodayRow(room, ok) {
         <strong>${escapeHtml(room.name)}</strong>
         <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
       </div>
-      <div class="timeline"><div class="timeline-mask" style="width:${Math.max(0, 100 - timelineFillPercent(room.events))}%"></div><div class="timeline-text">${timelineLabel}</div></div>
+      <div class="timeline"><div class="timeline-mask" style="width:${Math.max(0, 100 - timelinePercent)}%"></div><div class="timeline-text">${timelineLabel}</div></div>
     </article>
   `;
 }
@@ -369,14 +378,52 @@ function buildFreeBeforeBusyLabel(room) {
 
   const msLeft = room.nextBusyStart.getTime() - Date.now();
   if (msLeft <= 0) return 'Occupation imminente';
-  if (isTomorrowOrLater(room.nextBusyStart) || msLeft >= 12 * 60 * 60000) {
+  if (isTomorrowOrLater(room.nextBusyStart, new Date())) {
     return 'Libre jusqu’à demain';
   }
   return `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
 }
 
-function isTomorrowOrLater(date) {
-  const tomorrowStart = new Date();
+function buildTimelineAt(room, referenceDate) {
+  const ref = referenceDate.getTime();
+  const current = room.events.find((e) => e.start.getTime() <= ref && ref < e.end.getTime());
+  const nextBusy = room.events.find((e) => e.start.getTime() > ref);
+
+  if (current) {
+    const msLeft = current.end.getTime() - ref;
+    return {
+      msLeft,
+      percent: toTimelinePercent(msLeft),
+      label: `Libre dans ${formatDuration(msLeft)}`
+    };
+  }
+
+  if (nextBusy) {
+    const msLeft = nextBusy.start.getTime() - ref;
+    const label = isTomorrowOrLater(nextBusy.start, referenceDate)
+      ? 'Libre jusqu’à demain'
+      : `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
+    return {
+      msLeft,
+      percent: toTimelinePercent(msLeft),
+      label
+    };
+  }
+
+  return {
+    msLeft: 24 * 60 * 60000,
+    percent: 100,
+    label: 'Libre jusqu’à demain'
+  };
+}
+
+function toTimelinePercent(msLeft) {
+  const referenceWindow = 4 * 60 * 60000;
+  return Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
+}
+
+function isTomorrowOrLater(date, referenceDate = new Date()) {
+  const tomorrowStart = new Date(referenceDate);
   tomorrowStart.setHours(24, 0, 0, 0);
   return date >= tomorrowStart;
 }
@@ -388,12 +435,6 @@ function formatDuration(ms) {
   if (h === 0) return `${m} min`;
   if (m === 0) return `${h} h`;
   return `${h} h ${m} min`;
-}
-
-function timelineFillPercent(events) {
-  const busyMs = events.reduce((acc, e) => acc + Math.max(0, e.end - e.start), 0);
-  const dayMs = 24 * 60 * 60 * 1000;
-  return Math.min(100, Math.max(3, Math.round((busyMs / dayMs) * 100)));
 }
 
 function isFreeWindow(events, start, end) {
