@@ -265,13 +265,16 @@ function renderNowCard(room) {
 }
 
 function renderTodayRow(room, ok) {
+  const countdown = buildCountdown(room);
+  const timelineLabel = countdown ? countdown.label : (ok ? 'Libre sur le créneau choisi' : 'Créneau indisponible');
+
   return `
     <article class="row-item" data-room="${escapeAttr(room.name)}">
       <div class="row-top">
         <strong>${escapeHtml(room.name)}</strong>
         <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
       </div>
-      <div class="timeline"><div class="timeline-fill" style="width:${timelineFillPercent(room.events)}%"></div></div>
+      <div class="timeline"><div class="timeline-fill" style="width:${timelineFillPercent(room.events)}%"></div><div class="timeline-text">${timelineLabel}</div></div>
     </article>
   `;
 }
