@@ -16,6 +16,7 @@ const dateBox = $('dateBox'), dayPicker = $('dayPicker'), todayBtn = $('todayBtn
 
 const campusBanner = $('campusBanner');
 const campusText = $('campusText');
+const campusGeoText = $('campusGeoText');
 const campusChangeBtn = $('campusChangeBtn');
 const campusAutoBtn = $('campusAutoBtn');
 const campusPickerWrap = $('campusPickerWrap');
@@ -206,9 +207,17 @@ function updateCampusBanner({ auto, showPicker = false, reason = '' }) {
   const km = Number.isFinite(selectedCampusDistanceM) ? ` (≈ ${Math.round(selectedCampusDistanceM / 1000)} km)` : '';
   const suffix = reason ? ` — ${reason}` : '';
   campusText.textContent = `Établissement : ${selectedCampus.name}${km}${suffix}`;
+  if (campusGeoText) campusGeoText.textContent = `Localisation : ${formatLocationText()}`;
   campusPickerWrap.hidden = !showPicker;
   campusAutoBtn.hidden = auto;
   campusBanner.hidden = false;
+}
+
+function formatLocationText() {
+  if (!userPosition) return 'indisponible';
+  const lat = userPosition.lat.toFixed(5);
+  const lon = userPosition.lon.toFixed(5);
+  return `${lat}, ${lon}`;
 }
 
 async function pickCampusByGeo(campuses) {
