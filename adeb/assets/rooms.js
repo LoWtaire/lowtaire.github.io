@@ -181,6 +181,24 @@ function getNearestCityLabel() {
 }
 
 async function resolveCityFromCoords(lat, lon) {
+  // 1) Provider browser-friendly (CORS) : BigDataCloud
+  try {
+    const bdc = new URL('https://api.bigdatacloud.net/data/reverse-geocode-client');
+    bdc.searchParams.set('latitude', String(lat));
+    bdc.searchParams.set('longitude', String(lon));
+    bdc.searchParams.set('localityLanguage', 'fr');
+
+    const bdcRes = await fetch(bdc.toString(), { headers: { 'Accept': 'application/json' } });
+    if (bdcRes.ok) {
+      const data = await bdcRes.json();
+      const city = data?.city || data?.locality || data?.principalSubdivision || data?.localityInfo?.administrative?.[0]?.name || null;
+      if (city) return city;
+    }
+  } catch (_) {
+    // fallback below
+  }
+
+  // 2) Fallback: Nominatim
   const endpoint = new URL('https://nominatim.openstreetmap.org/reverse');
   endpoint.searchParams.set('format', 'jsonv2');
   endpoint.searchParams.set('lat', String(lat));
