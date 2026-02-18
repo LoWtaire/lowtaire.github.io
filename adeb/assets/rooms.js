@@ -2,7 +2,6 @@
 
 /* ---------- Constantes / sélecteurs ---------- */
 const CAMPUS_CONFIG_URL = './campus.json';
-const FALLBACK_DATA_URL = '../data/univlor.json';
 const AUTO_DISTANCE_THRESHOLD_M = 80000;
 // Ex: endpoint Cloudflare Worker / API serverless qui résout les SHU depuis ses secrets côté backend
 const ROOMS_STATUS_API_URL = window.ROOMS_STATUS_API_URL || '';
@@ -118,7 +117,8 @@ async function fetchRoomsPayload(payload) {
     return res.json();
   }
 
-  const res = await fetch(`${FALLBACK_DATA_URL}?v=${Date.now()}`, { cache: 'no-store' });
+  const dataUrl = payload?.dataUrl || '../data/univlor.json';
+  const res = await fetch(`${dataUrl}?v=${Date.now()}`, { cache: 'no-store' });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   return res.json();
 }
@@ -136,10 +136,13 @@ async function loadCampusConfig() {
 }
 
 async function buildCampusPayload(campus) {
-  if (!campus) return { campusId: null };
+  if (!campus) return { campusId: null, dataUrl: '../data/univlor.json' };
 
   // Mode recommandé: le backend reçoit campusId et récupère les liens SHU depuis ses variables/secrets.
-  const payload = { campusId: campus.campusApiId || campus.id };
+  const payload = {
+    campusId: campus.campusApiId || campus.id,
+    dataUrl: campus.dataUrl || '../data/univlor.json'
+  };
 
   // Compat locale optionnelle: si linksUrl existe encore, on envoie links aussi.
   if (campus.linksUrl) {
@@ -156,7 +159,6 @@ async function buildCampusPayload(campus) {
 
   return payload;
 }
-
 function updateCampusBanner({ reason = '' }) {
   if (!campusBanner || !selectedCampus) return;
 

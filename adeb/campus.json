@@ -3,12 +3,16 @@
     "id": "ETAB_A",
     "campusApiId": "ETAB_A",
     "name": "ULCO Dunkerque",
+    "city": "Dunkerque",
+    "dataUrl": "../data/ulco_dunkerque.json",
     "center": { "lat": 51.037955018293864, "lon": 2.370896641563869 }
   },
   {
     "id": "ETAB_B",
     "campusApiId": "ETAB_B",
     "name": "Campus Bridoux",
+    "city": "Metz",
+    "dataUrl": "../data/univlor.json",
     "center": { "lat": 49.115096957110865, "lon": 6.213563962410853 }
   }
 ]

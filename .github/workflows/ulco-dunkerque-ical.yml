@@ -1,0 +1,57 @@
+name: Update iCal (ULCO Dunkerque)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Lundi→vendredi : veille 18:10, matin 06:10, midi 12:10 (heure de Paris)
+    - cron: '10 16 * * 1-5'  # été (UTC+2)  = 18:10 Paris
+    - cron: '10 17 * * 1-5'  # hiver (UTC+1) = 18:10 Paris
+    - cron: '10 4 * * 1-5'   # été  = 06:10 Paris
+    - cron: '10 5 * * 1-5'   # hiver = 06:10 Paris
+    - cron: '10 10 * * 1-5'  # été  = 12:10 Paris
+    - cron: '10 11 * * 1-5'  # hiver = 12:10 Paris
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ulco-dunkerque-ical
+  cancel-in-progress: true
+
+env:
+  ICS_URLS: ${{ vars.ICS_URLS_ULCO_DUNKERQUE || secrets.ICS_URLS_ULCO_DUNKERQUE }}
+  OUTPUT_FILE: data/ulco_dunkerque.json
+  TZ: Europe/Paris
+  HORIZON_DAYS: 60
+  PAST_DAYS: 7
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: github-pages
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps (adeb/)
+        run: npm ci --prefix adeb || npm i --prefix adeb
+
+      - name: Generate ulco_dunkerque.json (root/data)
+        run: node adeb/scripts/ics_to_json.mjs
+
+      - name: Prepare push (handle concurrent pushes)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ulco_dunkerque.json
+          git fetch origin
+          git status
+          (git diff --quiet --staged && echo "No changes to commit.") || (git commit -m "Update ulco_dunkerque.json ($(date -u +%FT%TZ))" && git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true && git push)
