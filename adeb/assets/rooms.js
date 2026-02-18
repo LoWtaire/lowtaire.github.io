@@ -244,7 +244,7 @@ async function pickCampusByGeo(campuses) {
       return { campus: nearest.campus, auto: true, distanceM: nearest.distanceM, reason: 'Détection automatique.' };
     }
 
-    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Hors zone : campus le plus proche sélectionné automatiquement.' };
+    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Hors zone : sélection automatiquement.' };
   } catch (err) {
     const reason = geoErrorReason(err);
     return { campus: campuses[0], auto: false, distanceM: null, reason };
