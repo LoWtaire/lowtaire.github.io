@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="topbar">
-    <h1>Occupation des salles – UL</h1>
+    <h1 id="pageTitle">Occupation des salles – Ville 2</h1>
 
     <div class="controls">
       <!-- Champ SALLE : toute la zone est cliquable et ouvre le menu -->
@@ -34,14 +34,7 @@
     <section id="campusBanner" class="campus-banner" hidden>
       <div class="campus-head">
         <div id="campusText">Établissement : --</div>
-        <div id="campusGeoText" class="campus-geo">Localisation : --</div>
-      </div>
-      <div class="campus-actions">
-        <button id="campusChangeBtn" type="button">Changer</button>
-        <button id="campusAutoBtn" type="button" hidden>Auto</button>
-      </div>
-      <div id="campusPickerWrap" class="campus-picker" hidden>
-        <select id="campusSelect" aria-label="Choisir un établissement"></select>
+        <div id="campusGeoText" class="campus-geo">Ville proche : --</div>
       </div>
     </section>
     <div id="status" class="status">Chargement…</div>
@@ -53,6 +46,6 @@
     <small>Source : <code>campus.json + API backend (secrets GitHub)</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms.js?v=10" type="module"></script>
+  <script src="assets/rooms.js?v=12" type="module"></script>
 </body>
 </html>

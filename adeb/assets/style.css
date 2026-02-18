@@ -114,16 +114,6 @@ ul.menu li:hover, ul.menu li[aria-selected="true"] { background: #1e1e1e; }
   text-align: right;
 }
 
-.campus-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.campus-picker select {
-  width: 100%;
-}
-
 @media (max-width: 560px) {
   .campus-head { grid-template-columns: 1fr; }
   .campus-geo { text-align: left; }

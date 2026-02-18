@@ -4,7 +4,6 @@
 const CAMPUS_CONFIG_URL = './campus.json';
 const FALLBACK_DATA_URL = '../data/univlor.json';
 const AUTO_DISTANCE_THRESHOLD_M = 80000;
-const CAMPUS_OVERRIDE_KEY = 'campusOverride';
 // Ex: endpoint Cloudflare Worker / API serverless qui résout les SHU depuis ses secrets côté backend
 const ROOMS_STATUS_API_URL = window.ROOMS_STATUS_API_URL || '';
 
@@ -17,10 +16,7 @@ const dateBox = $('dateBox'), dayPicker = $('dayPicker'), todayBtn = $('todayBtn
 const campusBanner = $('campusBanner');
 const campusText = $('campusText');
 const campusGeoText = $('campusGeoText');
-const campusChangeBtn = $('campusChangeBtn');
-const campusAutoBtn = $('campusAutoBtn');
-const campusPickerWrap = $('campusPickerWrap');
-const campusSelect = $('campusSelect');
+const pageTitle = $('pageTitle');
 
 const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digit', month: 'long' });
 const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', hour12: false });
@@ -70,29 +66,10 @@ function setupEventListeners() {
   dayPicker.addEventListener('change', renderForSelectedDay);
   todayBtn.addEventListener('click', () => { dayPicker.value = toInputDate(new Date()); renderForSelectedDay(); });
 
-  campusChangeBtn?.addEventListener('click', () => {
-    campusPickerWrap.hidden = !campusPickerWrap.hidden;
-  });
-  campusSelect?.addEventListener('change', async (e) => {
-    const campusId = e.target.value;
-    localStorage.setItem(CAMPUS_OVERRIDE_KEY, campusId);
-    selectedCampus = campusConfig.find(c => c.id === campusId) || campusConfig[0] || null;
-    selectedCampusDistanceM = userPosition && selectedCampus
-      ? haversine(userPosition.lat, userPosition.lon, selectedCampus.center.lat, selectedCampus.center.lon)
-      : null;
-    updateCampusBanner({ auto: false });
-    await loadAndRender();
-  });
-  campusAutoBtn?.addEventListener('click', async () => {
-    localStorage.removeItem(CAMPUS_OVERRIDE_KEY);
-    await initCampusSelection();
-    await loadAndRender();
-  });
 }
 
 async function initCampusSelection() {
   campusConfig = await loadCampusConfig();
-  populateCampusDropdown(campusConfig);
 
   if (!campusConfig.length) {
     selectedCampus = null;
@@ -101,22 +78,11 @@ async function initCampusSelection() {
     return;
   }
 
-  const overrideCampusId = localStorage.getItem(CAMPUS_OVERRIDE_KEY);
-  if (overrideCampusId) {
-    selectedCampus = campusConfig.find(c => c.id === overrideCampusId) || campusConfig[0];
-    selectedCampusDistanceM = null;
-    campusSelect.value = selectedCampus.id;
-    updateCampusBanner({ auto: false, showPicker: false, reason: 'Choix manuel mémorisé.' });
-    return;
-  }
-
   const nearest = await pickCampusByGeo(campusConfig);
   selectedCampus = nearest.campus || campusConfig[0];
   selectedCampusDistanceM = nearest.distanceM;
-  campusSelect.value = selectedCampus.id;
 
-  const mustShowPicker = !nearest.auto;
-  updateCampusBanner({ auto: nearest.auto, showPicker: mustShowPicker, reason: nearest.reason });
+  updateCampusBanner({ reason: nearest.reason });
 }
 
 async function loadAndRender() {
@@ -190,38 +156,30 @@ async function buildCampusPayload(campus) {
   return payload;
 }
 
-function populateCampusDropdown(campuses) {
-  if (!campusSelect) return;
-  campusSelect.innerHTML = '';
-  campuses.forEach((campus) => {
-    const option = document.createElement('option');
-    option.value = campus.id;
-    option.textContent = campus.name;
-    campusSelect.appendChild(option);
-  });
-}
-
-function updateCampusBanner({ auto, showPicker = false, reason = '' }) {
+function updateCampusBanner({ reason = '' }) {
   if (!campusBanner || !selectedCampus) return;
 
   const km = Number.isFinite(selectedCampusDistanceM) ? ` (≈ ${Math.round(selectedCampusDistanceM / 1000)} km)` : '';
   const suffix = reason ? ` — ${reason}` : '';
   campusText.textContent = `Établissement : ${selectedCampus.name}${km}${suffix}`;
-  if (campusGeoText) campusGeoText.textContent = `Localisation : ${formatLocationText()}`;
-  campusPickerWrap.hidden = !showPicker;
-  campusAutoBtn.hidden = auto;
+  if (campusGeoText) campusGeoText.textContent = `Ville proche : ${getNearestCityLabel()}`;
+  if (pageTitle) pageTitle.textContent = `Occupation des salles – ${selectedCampus.city || selectedCampus.name}`;
   campusBanner.hidden = false;
 }
 
-function formatLocationText() {
-  if (!userPosition) return 'indisponible';
-  const lat = userPosition.lat.toFixed(5);
-  const lon = userPosition.lon.toFixed(5);
-  return `${lat}, ${lon}`;
+function getNearestCityLabel() {
+  if (!userPosition) return selectedCampus?.city || selectedCampus?.name || 'indisponible';
+  if (!campusConfig.length) return 'indisponible';
+
+  const nearest = campusConfig
+    .map(c => ({ campus: c, distanceM: haversine(userPosition.lat, userPosition.lon, c.center.lat, c.center.lon) }))
+    .sort((a, b) => a.distanceM - b.distanceM)[0];
+
+  return nearest?.campus?.city || nearest?.campus?.name || 'indisponible';
 }
 
 async function pickCampusByGeo(campuses) {
-  const fallback = { campus: campuses[0] || null, auto: false, distanceM: null, reason: 'Sélection manuelle requise.' };
+  const fallback = { campus: campuses[0] || null, auto: false, distanceM: null, reason: 'Sélection automatique indisponible.' };
   if (!campuses.length) return fallback;
 
   try {
@@ -239,7 +197,7 @@ async function pickCampusByGeo(campuses) {
       return { campus: nearest.campus, auto: true, distanceM: nearest.distanceM, reason: 'Détection automatique.' };
     }
 
-    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Vous êtes loin des campus connus.' };
+    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Hors zone : campus le plus proche sélectionné automatiquement.' };
   } catch (err) {
     const reason = geoErrorReason(err);
     return { campus: campuses[0], auto: false, distanceM: null, reason };
