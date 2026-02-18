@@ -1,109 +1,346 @@
 'use strict';
 
-/* ---------- Constantes / sélecteurs ---------- */
 const CAMPUS_CONFIG_URL = './campus.json';
-const AUTO_DISTANCE_THRESHOLD_M = 80000;
-// Ex: endpoint Cloudflare Worker / API serverless qui résout les SHU depuis ses secrets côté backend
 const ROOMS_STATUS_API_URL = window.ROOMS_STATUS_API_URL || '';
+const AUTO_DISTANCE_THRESHOLD_M = 80000;
 
-const $ = id => document.getElementById(id);
-const listEl = $('list'), statusEl = $('status'), tzEl = $('tz'), lastUpdateEl = $('lastUpdate');
+const $ = (id) => document.getElementById(id);
 
-const roomBox = $('roomBox'), roomInput = $('roomQuery'), roomMenu = $('roomMenu');
-const dateBox = $('dateBox'), dayPicker = $('dayPicker'), todayBtn = $('todayBtn');
+const ui = {
+  pageTitle: $('pageTitle'),
+  campusLine: $('campusLine'),
+  campusBadge: $('campusBadge'),
+  lastUpdateText: $('lastUpdateText'),
+  refreshBtn: $('refreshBtn'),
+  searchInput: $('searchInput'),
+  statusBox: $('statusBox'),
+  fallbackBanner: $('fallbackBanner'),
+  tabs: [...document.querySelectorAll('.tab')],
+  viewNow: $('viewNow'),
+  viewToday: $('viewToday'),
+  viewSearch: $('viewSearch'),
+  viewRoom: $('viewRoom'),
+  targetTime: $('targetTime'),
+  durationSelect: $('durationSelect'),
+  searchDurationSelect: $('searchDurationSelect'),
+  onlyFreeCheck: $('onlyFreeCheck'),
+  todayList: $('todayList'),
+  searchList: $('searchList')
+};
 
-const campusBanner = $('campusBanner');
-const campusText = $('campusText');
-const campusGeoText = $('campusGeoText');
-const pageTitle = $('pageTitle');
+const state = {
+  campusConfig: [],
+  selectedCampus: null,
+  detection: { quality: 'unknown', message: 'Campus par défaut appliqué.', distanceM: null },
+  cache: null,
+  activeView: 'now',
+  selectedRoom: null,
+  searchQuery: '',
+  targetTime: defaultTargetTime(),
+  minDuration: 30,
+  searchMinDuration: 0,
+  onlyFree: false
+};
 
-const fmtDate = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: '2-digit', month: 'long' });
-const fmtTime = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', hour12: false });
-
-/* ---------- État ---------- */
-let cache = null;
-let roomsDisplay = [];               // libellés de salles (triés)
-const knownRoomsCanon = new Set();   // formes canoniques des locations exactes
-let filteredItems = [];              // items affichés dans le menu
-let activeIndex = -1;                // index surligné au clavier
-
-let campusConfig = [];
-let selectedCampus = null;
-let selectedCampusDistanceM = null;
-let userPosition = null;
-let detectedUserCity = null;
-
-/* ---------- Init ---------- */
 init();
+
 async function init() {
-  dayPicker.value = toInputDate(new Date());
-
-  await initCampusSelection();
-
-  setupEventListeners();
+  ui.targetTime.value = state.targetTime;
+  bindEvents();
+  await initCampus();
   await loadAndRender();
 }
 
-function setupEventListeners() {
-  roomBox.addEventListener('click', () => {
-    roomInput.focus();
-    openMenu(); populateMenu(roomInput.value);
+function bindEvents() {
+  ui.refreshBtn.addEventListener('click', loadAndRender);
+  ui.searchInput.addEventListener('input', (e) => {
+    state.searchQuery = e.target.value.trim().toLowerCase();
+    renderCurrentView();
   });
-  roomInput.addEventListener('focus', () => { openMenu(); populateMenu(roomInput.value); });
-  roomInput.addEventListener('input', () => { populateMenu(roomInput.value); renderForSelectedDay(); });
-  roomInput.addEventListener('keydown', onRoomKeydown);
-  roomMenu.addEventListener('click', (e) => {
-    const li = e.target.closest('li[data-value]'); if (!li) return;
-    selectMenuValue(li.dataset.value);
+  ui.tabs.forEach((btn) => btn.addEventListener('click', () => setView(btn.dataset.view)));
+  ui.targetTime.addEventListener('change', () => {
+    state.targetTime = ui.targetTime.value || defaultTargetTime();
+    renderTodayView();
   });
-  document.addEventListener('click', (e) => {
-    if (!roomBox.contains(e.target)) closeMenu();
+  ui.durationSelect.addEventListener('change', () => {
+    state.minDuration = Number(ui.durationSelect.value || 30);
+    renderTodayView();
   });
-
-  dateBox.addEventListener('click', (e) => {
-    if (e.target !== dayPicker) { dayPicker.showPicker?.(); dayPicker.focus(); }
+  ui.searchDurationSelect.addEventListener('change', () => {
+    state.searchMinDuration = Number(ui.searchDurationSelect.value || 0);
+    renderSearchView();
   });
-  dayPicker.addEventListener('change', renderForSelectedDay);
-  todayBtn.addEventListener('click', () => { dayPicker.value = toInputDate(new Date()); renderForSelectedDay(); });
-
+  ui.onlyFreeCheck.addEventListener('change', () => {
+    state.onlyFree = ui.onlyFreeCheck.checked;
+    renderSearchView();
+  });
 }
 
-async function initCampusSelection() {
-  campusConfig = await loadCampusConfig();
-
-  if (!campusConfig.length) {
-    selectedCampus = null;
-    selectedCampusDistanceM = null;
-    campusBanner.hidden = true;
-    return;
-  }
-
-  const nearest = await pickCampusByGeo(campusConfig);
-  selectedCampus = nearest.campus || campusConfig[0];
-  selectedCampusDistanceM = nearest.distanceM;
-
-  updateCampusBanner({ reason: nearest.reason });
+async function initCampus() {
+  state.campusConfig = await loadCampusConfig();
+  const picked = await pickCampusByGeo(state.campusConfig);
+  state.selectedCampus = picked.campus || state.campusConfig[0] || null;
+  state.detection = picked;
+  renderHeaderContext();
 }
 
 async function loadAndRender() {
   try {
-    statusEl.textContent = 'Chargement…';
-
-    const payload = await buildCampusPayload(selectedCampus);
-    cache = await fetchRoomsPayload(payload);
-
-    tzEl.textContent = cache.timezone || 'Europe/Paris';
-    lastUpdateEl.textContent = cache.generated_at ? `Dernière mise à jour (UTC) : ${cache.generated_at}` : '';
-
-    buildRoomsIndex(cache.events || []);
-    populateMenu('');
-    renderForSelectedDay();
-
-    statusEl.textContent = '';
-  } catch (e) {
-    console.error(e);
-    statusEl.textContent = 'Erreur de chargement des données.';
+    ui.statusBox.textContent = 'Chargement des données…';
+    const payload = buildCampusPayload(state.selectedCampus);
+    state.cache = await fetchRoomsPayload(payload);
+    ui.statusBox.textContent = '';
+    renderHeaderContext();
+    renderCurrentView();
+  } catch (err) {
+    console.error(err);
+    ui.statusBox.textContent = `Impossible de charger les données.\n${err?.message || ''}`;
   }
+}
+
+function renderHeaderContext() {
+  const campusName = state.selectedCampus?.name || 'Campus inconnu';
+  ui.pageTitle.textContent = 'Salles libres';
+  ui.campusLine.textContent = `Campus détecté : ${campusName}`;
+
+  const badgeClass = state.detection.quality === 'gps' ? 'badge-gps' : state.detection.quality === 'approx' ? 'badge-approx' : 'badge-unknown';
+  ui.campusBadge.className = `badge ${badgeClass}`;
+  ui.campusBadge.textContent = state.detection.quality === 'gps' ? 'GPS' : state.detection.quality === 'approx' ? 'Approx.' : 'Inconnu';
+
+  const generated = state.cache?.generated_at ? new Date(state.cache.generated_at) : null;
+  ui.lastUpdateText.textContent = `Dernière mise à jour : ${generated ? hm(generated) : '--:--'}`;
+
+  const ageMin = generated ? Math.floor((Date.now() - generated.getTime()) / 60000) : null;
+  const staleMsg = ageMin !== null && ageMin > 10 ? `Données possiblement obsolètes (maj ${ageMin} min).` : '';
+  const locationMsg = state.detection.banner || '';
+  const msg = [locationMsg, staleMsg].filter(Boolean).join(' ');
+  ui.fallbackBanner.hidden = !msg;
+  ui.fallbackBanner.textContent = msg;
+}
+
+function setView(viewName) {
+  state.activeView = viewName;
+  if (viewName !== 'room') state.selectedRoom = null;
+  ui.tabs.forEach((t) => t.classList.toggle('is-active', t.dataset.view === viewName));
+  ui.viewNow.hidden = viewName !== 'now';
+  ui.viewToday.hidden = viewName !== 'today';
+  ui.viewSearch.hidden = viewName !== 'search';
+  ui.viewRoom.hidden = viewName !== 'room';
+  renderCurrentView();
+}
+
+function renderCurrentView() {
+  if (!state.cache?.events) return;
+  if (state.activeView === 'now') return renderNowView();
+  if (state.activeView === 'today') return renderTodayView();
+  if (state.activeView === 'search') return renderSearchView();
+  if (state.activeView === 'room') return renderRoomView();
+}
+
+function renderNowView() {
+  const rooms = computeRoomSummaries();
+  const filtered = rooms.filter(matchQuery);
+  filtered.sort(sortNowCards);
+
+  if (!filtered.length) {
+    ui.viewNow.innerHTML = '<div class="panel">Aucune salle disponible avec ce filtre.</div>';
+    return;
+  }
+
+  ui.viewNow.innerHTML = `<div class="cards">${filtered.map(renderNowCard).join('')}</div>`;
+  ui.viewNow.querySelectorAll('[data-room]').forEach((card) => card.addEventListener('click', () => openRoom(card.dataset.room)));
+}
+
+function renderTodayView() {
+  const target = buildTargetDate(state.targetTime);
+  const durationMs = state.minDuration * 60000;
+  const list = computeRoomSummaries()
+    .filter(matchQuery)
+    .map((room) => ({ room, ok: isFreeWindow(room.events, target, new Date(target.getTime() + durationMs)) }))
+    .sort((a, b) => Number(b.ok) - Number(a.ok) || a.room.name.localeCompare(b.room.name));
+
+  ui.todayList.innerHTML = list.length
+    ? list.map(({ room, ok }) => renderTodayRow(room, ok)).join('')
+    : '<div class="panel">Aucune salle trouvée.</div>';
+
+  ui.todayList.querySelectorAll('[data-room]').forEach((row) => row.addEventListener('click', () => openRoom(row.dataset.room)));
+}
+
+function renderSearchView() {
+  let list = computeRoomSummaries().filter(matchQuery);
+  if (state.onlyFree) list = list.filter((r) => r.freeNow);
+  if (state.searchMinDuration > 0) {
+    const t = new Date();
+    list = list.filter((r) => isFreeWindow(r.events, t, new Date(t.getTime() + state.searchMinDuration * 60000)));
+  }
+
+  list.sort((a, b) => a.name.localeCompare(b.name));
+  ui.searchList.innerHTML = list.length ? list.map(renderSearchRow).join('') : '<div class="panel">Aucun résultat pour cette recherche.</div>';
+  ui.searchList.querySelectorAll('[data-room]').forEach((row) => row.addEventListener('click', () => openRoom(row.dataset.room)));
+}
+
+function renderRoomView() {
+  const room = computeRoomSummaries().find((r) => r.name === state.selectedRoom);
+  if (!room) {
+    ui.viewRoom.innerHTML = '<div class="panel">Salle introuvable.</div>';
+    return;
+  }
+
+  const hero = room.freeNow
+    ? `<div class="big ok">LIBRE</div><div>Libre ${room.nextBusyStart ? `jusqu’à ${hm(room.nextBusyStart)}` : 'maintenant'}.</div>`
+    : `<div class="big busy">OCCUPÉE</div><div>Occupée jusqu’à ${hm(room.busyUntil)}.</div>`;
+
+  const next = room.freeNow
+    ? `Prochaine occupation : ${room.nextBusyStart ? hm(room.nextBusyStart) : 'non connue'}`
+    : `Prochaine disponibilité : ${room.busyUntil ? hm(room.busyUntil) : 'non connue'}`;
+
+  const events = room.events.length
+    ? room.events.map((ev) => `<div class="event"><div class="time">${hm(ev.start)} → ${hm(ev.end)}</div><div>${escapeHtml(ev.title || '(Sans titre)')}</div></div>`).join('')
+    : '<div class="panel">Aucun événement aujourd’hui.</div>';
+
+  ui.viewRoom.innerHTML = `
+    <div class="room-detail">
+      <button class="btn" type="button" id="backBtn">← Retour</button>
+      <div class="hero">${hero}<div class="meta" style="margin-top:6px">${next}</div></div>
+      <div class="actions">
+        <button class="btn" id="copyBtn" type="button">Copier le nom de la salle</button>
+        <button class="btn" id="shareBtn" type="button">Partager</button>
+      </div>
+      <div class="stack">${events}</div>
+    </div>
+  `;
+
+  $('backBtn').addEventListener('click', () => setView('now'));
+  $('copyBtn').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(room.name); ui.statusBox.textContent = 'Nom de salle copié.'; }
+    catch { ui.statusBox.textContent = 'Impossible de copier le nom de salle.'; }
+  });
+  $('shareBtn').addEventListener('click', async () => {
+    const text = `Salle ${room.name} (${room.freeNow ? 'libre' : `occupée jusqu’à ${hm(room.busyUntil)}`})`;
+    if (navigator.share) {
+      try { await navigator.share({ text }); } catch {}
+      return;
+    }
+    ui.statusBox.textContent = text;
+  });
+}
+
+function openRoom(roomName) {
+  state.selectedRoom = roomName;
+  setView('room');
+}
+
+function renderNowCard(room) {
+  const line = room.freeNow
+    ? (room.nextBusyStart ? `Libre au moins jusqu’à ${hm(room.nextBusyStart)}` : 'Libre maintenant')
+    : `Occupée jusqu’à ${hm(room.busyUntil)}`;
+  return `
+    <article class="card" data-room="${escapeAttr(room.name)}">
+      <h3>${escapeHtml(room.name)}</h3>
+      <div class="line"><strong class="${room.freeNow ? 'ok' : 'busy'}">${room.freeNow ? 'Libre' : 'Occupée'}</strong></div>
+      <div class="line">${line}</div>
+      <div class="fresh">maj ${freshMinutesLabel()}</div>
+    </article>
+  `;
+}
+
+function renderTodayRow(room, ok) {
+  return `
+    <article class="row-item" data-room="${escapeAttr(room.name)}">
+      <div class="row-top">
+        <strong>${escapeHtml(room.name)}</strong>
+        <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
+      </div>
+      <div class="timeline"><div class="timeline-fill" style="width:${timelineFillPercent(room.events)}%"></div></div>
+    </article>
+  `;
+}
+
+function renderSearchRow(room) {
+  const subtitle = room.freeNow ? 'Libre maintenant' : `Occupée jusqu’à ${hm(room.busyUntil)}`;
+  return `<article class="row-item" data-room="${escapeAttr(room.name)}"><div class="row-top"><strong>${escapeHtml(room.name)}</strong><span class="meta">${subtitle}</span></div></article>`;
+}
+
+function computeRoomSummaries() {
+  const dayStart = new Date();
+  dayStart.setHours(0, 0, 0, 0);
+  const dayEnd = new Date(dayStart);
+  dayEnd.setHours(23, 59, 59, 999);
+
+  const map = new Map();
+  for (const ev of state.cache.events || []) {
+    const loc = (ev.location || '').trim();
+    if (!loc) continue;
+    const start = new Date(ev.start);
+    const end = new Date(ev.end);
+    if (end < dayStart || start > dayEnd) continue;
+    if (!map.has(loc)) map.set(loc, []);
+    map.get(loc).push({ ...ev, start, end });
+  }
+
+  const now = new Date();
+  const rooms = [];
+  for (const [name, events] of map.entries()) {
+    events.sort((a, b) => a.start - b.start);
+    const current = events.find((e) => e.start <= now && now < e.end);
+    const nextBusy = events.find((e) => e.start > now);
+    rooms.push({
+      name,
+      events,
+      freeNow: !current,
+      busyUntil: current?.end || null,
+      nextBusyStart: nextBusy?.start || null
+    });
+  }
+  return rooms;
+}
+
+function sortNowCards(a, b) {
+  if (a.freeNow !== b.freeNow) return Number(b.freeNow) - Number(a.freeNow);
+  const aUntil = a.nextBusyStart ? a.nextBusyStart.getTime() : Infinity;
+  const bUntil = b.nextBusyStart ? b.nextBusyStart.getTime() : Infinity;
+  return bUntil - aUntil;
+}
+
+function matchQuery(room) {
+  if (!state.searchQuery) return true;
+  return room.name.toLowerCase().includes(state.searchQuery);
+}
+
+function timelineFillPercent(events) {
+  const busyMs = events.reduce((acc, e) => acc + Math.max(0, e.end - e.start), 0);
+  const dayMs = 24 * 60 * 60 * 1000;
+  return Math.min(100, Math.max(3, Math.round((busyMs / dayMs) * 100)));
+}
+
+function isFreeWindow(events, start, end) {
+  return !events.some((e) => e.start < end && start < e.end);
+}
+
+function buildTargetDate(hhmm) {
+  const [h, m] = (hhmm || '12:00').split(':').map(Number);
+  const d = new Date();
+  d.setHours(h || 0, m || 0, 0, 0);
+  return d;
+}
+
+function defaultTargetTime() {
+  const d = new Date(Date.now() + 30 * 60000);
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
+
+async function loadCampusConfig() {
+  const res = await fetch(`${CAMPUS_CONFIG_URL}?v=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`campus.json HTTP ${res.status}`);
+  const data = await res.json();
+  return Array.isArray(data) ? data : [];
+}
+
+function buildCampusPayload(campus) {
+  return {
+    campusId: campus?.campusApiId || campus?.id || null,
+    dataUrl: campus?.dataUrl || '../data/univlor.json'
+  };
 }
 
 async function fetchRoomsPayload(payload) {
@@ -113,152 +350,49 @@ async function fetchRoomsPayload(payload) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.json();
   }
 
-  const dataUrl = payload?.dataUrl || '../data/univlor.json';
-  const res = await fetch(`${dataUrl}?v=${Date.now()}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const res = await fetch(`${payload.dataUrl}?v=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }
 
-async function loadCampusConfig() {
-  try {
-    const res = await fetch(`${CAMPUS_CONFIG_URL}?v=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    return Array.isArray(data) ? data : [];
-  } catch (err) {
-    console.error('Erreur config campus:', err);
-    return [];
-  }
-}
-
-async function buildCampusPayload(campus) {
-  if (!campus) return { campusId: null, dataUrl: '../data/univlor.json' };
-
-  // Mode recommandé: le backend reçoit campusId et récupère les liens SHU depuis ses variables/secrets.
-  const payload = {
-    campusId: campus.campusApiId || campus.id,
-    dataUrl: campus.dataUrl || '../data/univlor.json'
-  };
-
-  // Compat locale optionnelle: si linksUrl existe encore, on envoie links aussi.
-  if (campus.linksUrl) {
-    try {
-      const res = await fetch(`${campus.linksUrl}?v=${Date.now()}`, { cache: 'no-store' });
-      if (res.ok) {
-        const links = await res.json();
-        if (Array.isArray(links)) payload.links = links;
-      }
-    } catch (e) {
-      // Ignore silently: campusId suffit pour le backend en prod.
-    }
-  }
-
-  return payload;
-}
-function updateCampusBanner({ reason = '' }) {
-  if (!campusBanner || !selectedCampus) return;
-
-  const km = Number.isFinite(selectedCampusDistanceM) ? ` (≈ ${Math.round(selectedCampusDistanceM / 1000)} km)` : '';
-  const suffix = reason ? ` — ${reason}` : '';
-  campusText.textContent = `Établissement : ${selectedCampus.name}${km}${suffix}`;
-  if (campusGeoText) campusGeoText.textContent = `Ville proche : ${getNearestCityLabel()}`;
-  if (pageTitle) pageTitle.textContent = `Occupation des salles – ${selectedCampus.city || selectedCampus.name}`;
-  campusBanner.hidden = false;
-}
-
-function getNearestCityLabel() {
-  if (detectedUserCity) return detectedUserCity;
-  if (!userPosition) return selectedCampus?.city || selectedCampus?.name || 'indisponible';
-  if (!campusConfig.length) return 'indisponible';
-
-  const nearest = campusConfig
-    .map(c => ({ campus: c, distanceM: haversine(userPosition.lat, userPosition.lon, c.center.lat, c.center.lon) }))
-    .sort((a, b) => a.distanceM - b.distanceM)[0];
-
-  return nearest?.campus?.city || nearest?.campus?.name || 'indisponible';
-}
-
-async function resolveCityFromCoords(lat, lon) {
-  // 1) Provider browser-friendly (CORS) : BigDataCloud
-  try {
-    const bdc = new URL('https://api.bigdatacloud.net/data/reverse-geocode-client');
-    bdc.searchParams.set('latitude', String(lat));
-    bdc.searchParams.set('longitude', String(lon));
-    bdc.searchParams.set('localityLanguage', 'fr');
-
-    const bdcRes = await fetch(bdc.toString(), { headers: { 'Accept': 'application/json' } });
-    if (bdcRes.ok) {
-      const data = await bdcRes.json();
-      const city = data?.city || data?.locality || data?.principalSubdivision || data?.localityInfo?.administrative?.[0]?.name || null;
-      if (city) return city;
-    }
-  } catch (_) {
-    // fallback below
-  }
-
-  // 2) Fallback: Nominatim
-  const endpoint = new URL('https://nominatim.openstreetmap.org/reverse');
-  endpoint.searchParams.set('format', 'jsonv2');
-  endpoint.searchParams.set('lat', String(lat));
-  endpoint.searchParams.set('lon', String(lon));
-  endpoint.searchParams.set('zoom', '10');
-  endpoint.searchParams.set('addressdetails', '1');
-
-  const res = await fetch(endpoint.toString(), {
-    headers: {
-      'Accept': 'application/json',
-      'Accept-Language': 'fr'
-    }
-  });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-
-  const data = await res.json();
-  const a = data?.address || {};
-  return a.city || a.town || a.village || a.municipality || a.county || null;
-}
-
 async function pickCampusByGeo(campuses) {
-  const fallback = { campus: campuses[0] || null, auto: false, distanceM: null, reason: 'Sélection automatique indisponible.' };
-  if (!campuses.length) return fallback;
+  if (!campuses.length) return { campus: null, quality: 'unknown', banner: 'Campus par défaut appliqué (configuration manquante).' };
 
   try {
     const pos = await getPos();
-    userPosition = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-    detectedUserCity = null;
-    try {
-      detectedUserCity = await resolveCityFromCoords(userPosition.lat, userPosition.lon);
-    } catch (e) {
-      detectedUserCity = null;
+    const lat = pos.coords.latitude;
+    const lon = pos.coords.longitude;
+
+    const nearest = campuses
+      .map((c) => ({ campus: c, distanceM: haversine(lat, lon, c.center.lat, c.center.lon) }))
+      .sort((a, b) => a.distanceM - b.distanceM)[0];
+
+    if (nearest.distanceM > AUTO_DISTANCE_THRESHOLD_M) {
+      return {
+        campus: nearest.campus,
+        distanceM: nearest.distanceM,
+        quality: 'approx',
+        banner: 'Hors zone connue — données potentiellement non pertinentes.'
+      };
     }
 
-    const distances = campuses.map(c => ({
-      campus: c,
-      distanceM: haversine(userPosition.lat, userPosition.lon, c.center.lat, c.center.lon)
-    }));
-    distances.sort((a, b) => a.distanceM - b.distanceM);
-
-    const nearest = distances[0];
-    if (nearest.distanceM <= AUTO_DISTANCE_THRESHOLD_M) {
-      return { campus: nearest.campus, auto: true, distanceM: nearest.distanceM, reason: 'Détection automatique.' };
-    }
-
-    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Hors zone : sélection automatique.' };
-  } catch (err) {
-    const reason = geoErrorReason(err);
-    return { campus: campuses[0], auto: false, distanceM: null, reason };
+    return { campus: nearest.campus, distanceM: nearest.distanceM, quality: 'gps', banner: '' };
+  } catch {
+    return {
+      campus: campuses[0],
+      quality: 'unknown',
+      banner: `Campus par défaut : ${campuses[0].name} (géolocalisation indisponible).`
+    };
   }
 }
 
 function getPos() {
   return new Promise((resolve, reject) => {
-    if (!navigator.geolocation) {
-      reject(new Error('Géolocalisation indisponible'));
-      return;
-    }
+    if (!navigator.geolocation) return reject(new Error('Geolocation unavailable'));
     navigator.geolocation.getCurrentPosition(resolve, reject, {
       enableHighAccuracy: true,
       timeout: 8000,
@@ -267,200 +401,30 @@ function getPos() {
   });
 }
 
-function geoErrorReason(err) {
-  if (err?.code === 1) return 'Géolocalisation refusée.';
-  if (err?.code === 2) return 'Position indisponible.';
-  if (err?.code === 3) return 'Délai géolocalisation dépassé.';
-  return 'Géolocalisation indisponible.';
-}
-
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = (v) => (v * Math.PI) / 180;
   const R = 6371000;
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(a));
 }
 
-/* ---------- Menu salle ---------- */
-function openMenu() {
-  roomBox.setAttribute('aria-expanded', 'true');
-  roomMenu.style.display = 'block';
-}
-function closeMenu() {
-  roomBox.setAttribute('aria-expanded', 'false');
-  roomMenu.style.display = 'none';
-  activeIndex = -1; markActive();
-}
-function isOpen() { return roomBox.getAttribute('aria-expanded') === 'true'; }
-
-function populateMenu(filter) {
-  const q = canonical(filter || '');
-  filteredItems = q ? roomsDisplay.filter(n => canonical(n).includes(q)) : roomsDisplay.slice();
-  roomMenu.innerHTML = '';
-  activeIndex = -1;
-
-  if (filteredItems.length === 0) {
-    const li = document.createElement('li');
-    li.textContent = 'Aucune salle';
-    li.setAttribute('aria-disabled', 'true');
-    li.style.opacity = .6;
-    roomMenu.appendChild(li);
-    return;
-  }
-  filteredItems.slice(0, 400).forEach((name, i) => {
-    const li = document.createElement('li');
-    li.dataset.value = name;
-    li.dataset.index = i;
-    li.textContent = name;
-    roomMenu.appendChild(li);
-  });
-  markActive();
-}
-function onRoomKeydown(e) {
-  if (e.key === 'ArrowDown') {
-    if (!isOpen()) openMenu();
-    moveActive(1); e.preventDefault();
-  } else if (e.key === 'ArrowUp') {
-    if (!isOpen()) openMenu();
-    moveActive(-1); e.preventDefault();
-  } else if (e.key === 'Enter') {
-    if (isOpen() && activeIndex >= 0) { selectMenuValue(filteredItems[activeIndex]); e.preventDefault(); }
-  } else if (e.key === 'Escape') {
-    closeMenu();
-  }
-}
-function moveActive(delta) {
-  if (filteredItems.length === 0) return;
-  activeIndex = Math.max(0, Math.min(filteredItems.length - 1, activeIndex + delta));
-  markActive();
-  const li = roomMenu.querySelector(`li[data-index="${activeIndex}"]`);
-  if (li) {
-    const r = li.getBoundingClientRect(), p = roomMenu.getBoundingClientRect();
-    if (r.top < p.top) roomMenu.scrollTop += r.top - p.top - 4;
-    if (r.bottom > p.bottom) roomMenu.scrollTop += r.bottom - p.bottom + 4;
-  }
-}
-function markActive() {
-  roomMenu.querySelectorAll('li[aria-selected]').forEach(n => n.removeAttribute('aria-selected'));
-  if (activeIndex >= 0) roomMenu.querySelector(`li[data-index="${activeIndex}"]`)?.setAttribute('aria-selected', 'true');
-}
-function selectMenuValue(val) {
-  roomInput.value = val;
-  renderForSelectedDay();
-  closeMenu();
+function hm(date) {
+  if (!date) return '--:--';
+  return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 }
 
-/* ---------- Index des salles ---------- */
-function buildRoomsIndex(events) {
-  roomsDisplay = [];
-  knownRoomsCanon.clear();
-  const seen = new Set();
-
-  for (const ev of events) {
-    const loc = (ev.location || '').trim();
-    if (!loc) continue;
-    const can = canonical(loc);
-    if (can.length < 3 || seen.has(can)) continue;
-    seen.add(can);
-    knownRoomsCanon.add(can);
-    roomsDisplay.push(loc);
-  }
-
-  roomsDisplay.sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+function freshMinutesLabel() {
+  if (!state.cache?.generated_at) return '--';
+  const age = Math.max(0, Math.floor((Date.now() - new Date(state.cache.generated_at).getTime()) / 60000));
+  return `${age} min`;
 }
 
-/* ---------- Rendu agenda ---------- */
-function renderForSelectedDay() {
-  const selected = fromInputDate(dayPicker.value);
-  if (!selected || !cache) return;
-
-  const start = startOfDay(selected), end = endOfDay(selected);
-  const today = startOfDay(new Date());
-
-  let events = (cache.events || [])
-    .filter(ev => { const s = new Date(ev.start); return s >= start && s <= end; })
-    .sort((a, b) => new Date(a.start) - new Date(b.start));
-
-  const q = (roomInput.value || '').trim();
-  if (q) events = events.filter(ev => eventMatches(ev, q));
-
-  listEl.innerHTML = '';
-  const head = document.createElement('div');
-  head.className = 'day';
-  head.textContent = cap(fmtDate.format(start));
-  listEl.appendChild(head);
-
-  if (isSameDay(start, today)) {
-    const now = new Date();
-    const current = events.filter(ev => new Date(ev.start) <= now && now < new Date(ev.end));
-    const upcoming = events.filter(ev => new Date(ev.start) > now);
-
-    if (current.length === 0 && upcoming.length === 0) {
-      listEl.innerHTML += `<div class="status">${q ? 'Aucun événement pour cette salle aujourd’hui.' : 'Aucun événement restant aujourd’hui.'}</div>`;
-      return;
-    }
-    if (current.length) {
-      const h = document.createElement('div'); h.className = 'status'; h.textContent = 'En cours maintenant';
-      listEl.appendChild(h); current.forEach(ev => listEl.appendChild(renderEvent(ev)));
-    }
-    if (upcoming.length) {
-      const h2 = document.createElement('div'); h2.className = 'status'; h2.textContent = 'À venir aujourd’hui';
-      listEl.appendChild(h2); upcoming.forEach(ev => listEl.appendChild(renderEvent(ev)));
-    }
-  } else {
-    if (events.length === 0) {
-      listEl.innerHTML += `<div class="status">${q ? 'Aucun événement pour cette salle à la date choisie.' : 'Aucun événement ce jour.'}</div>`;
-      return;
-    }
-    events.forEach(ev => listEl.appendChild(renderEvent(ev)));
-  }
+function escapeHtml(v) {
+  return String(v).replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
 }
 
-/* ---------- Matching salle ---------- */
-function norm(s) { return (s || '').toString().normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().replace(/[\u00AD\u200B-\u200D\uFEFF]/g, '').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim(); }
-function collapse(s) { return norm(s).replace(/\s+/g, ''); }
-function stripKeywords(s) { return norm(s).replace(/\b(salle|amphi|amphitheatre|amphithéâtre|bat\.?|batiment|bâtiment)\b/g, '').trim(); }
-function canonical(s) { return collapse(stripKeywords(s)).toUpperCase(); }
-function isExactLocationQuery(q) { return knownRoomsCanon.has(canonical(q)); }
-function eventMatches(ev, qRaw) {
-  const qCan = canonical(qRaw);
-  if (isExactLocationQuery(qRaw)) return canonical(ev.location || '') === qCan;
-  const locCan = canonical(ev.location || ''); if (locCan.includes(qCan)) return true;
-  const hay = canonical(`${ev.location || ''} ${ev.title || ''} ${ev.description || ''}`); if (hay.includes(qCan)) return true;
-  const toks = norm(qRaw).split(' ').filter(Boolean);
-  if (toks.length > 1 && toks.every(t => norm(`${ev.location} ${ev.title} ${ev.description}`).includes(t))) return true;
-  return false;
+function escapeAttr(v) {
+  return escapeHtml(v).replace(/"/g, '&quot;');
 }
-
-/* ---------- Cartes événement ---------- */
-function renderEvent(ev) {
-  const wrap = document.createElement('div'); wrap.className = 'event';
-  const s = new Date(ev.start), e = new Date(ev.end);
-
-  const time = document.createElement('div'); time.className = 'time';
-  time.textContent = ev.allDay ? 'Toute la journée' : `${fmtTime.format(s)}\n→ ${fmtTime.format(e)}`;
-
-  const info = document.createElement('div');
-  const title = document.createElement('div'); title.className = 'title';
-  title.textContent = ev.title || '(Sans titre)';
-
-  const meta = document.createElement('div'); meta.className = 'meta';
-  const parts = []; if (ev.location) parts.push(ev.location); if (ev.status) parts.push(ev.status); if (ev.url) parts.push(ev.url);
-  if (parts.length) meta.textContent = parts.join(' · ');
-
-  info.appendChild(title); if (parts.length) info.appendChild(meta);
-  wrap.appendChild(time); wrap.appendChild(info);
-  return wrap;
-}
-
-/* ---------- Helpers ---------- */
-function toInputDate(d) { const y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2, '0'), day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; }
-function fromInputDate(s) { if (!s) return null; const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
-function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
-function endOfDay(d) { const x = new Date(d); x.setHours(23, 59, 59, 999); return x; }
-function isSameDay(a, b) { return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
-function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
