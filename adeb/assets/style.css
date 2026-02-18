@@ -86,4 +86,37 @@ ul.menu li:hover, ul.menu li[aria-selected="true"] { background: #1e1e1e; }
 .title { font-weight: 700; margin-bottom: 4px; }
 .meta  { color: var(--muted); font-size: 12px; }
 
-.footer { padding: 8px 12px 24px; text-align: center; color: var(--mut)
+.footer { padding: 8px 12px 24px; text-align: center; color: var(--muted); border-top: 1px solid var(--sep); }
+
+.campus-banner {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--sep);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+
+
+.campus-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.campus-geo {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .campus-head { grid-template-columns: 1fr; }
+  .campus-geo { text-align: left; }
+}
+
+@media (max-width: 420px) { .event { grid-template-columns: 72px 1fr; } }
