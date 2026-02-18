@@ -266,7 +266,9 @@ function renderNowCard(room) {
 
 function renderTodayRow(room, ok) {
   const countdown = buildCountdown(room);
-  const timelineLabel = countdown ? countdown.label : (ok ? 'Libre sur le créneau choisi' : 'Créneau indisponible');
+  const timelineLabel = countdown
+    ? countdown.label
+    : (ok ? buildFreeBeforeBusyLabel(room) : 'Créneau indisponible');
 
   return `
     <article class="row-item" data-room="${escapeAttr(room.name)}">
@@ -340,7 +342,7 @@ function buildCountdown(room) {
     const referenceWindow = 4 * 60 * 60000;
     const percent = Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
     return {
-      label: `Occupée dans ${formatDuration(msLeft)}`,
+      label: buildFreeBeforeBusyLabel(room),
       percent,
       variant: 'to-busy'
     };
@@ -359,6 +361,24 @@ function buildCountdown(room) {
   }
 
   return null;
+}
+
+function buildFreeBeforeBusyLabel(room) {
+  if (!room.freeNow) return 'Salle occupée';
+  if (!room.nextBusyStart) return 'Libre jusqu’à demain';
+
+  const msLeft = room.nextBusyStart.getTime() - Date.now();
+  if (msLeft <= 0) return 'Occupation imminente';
+  if (isTomorrowOrLater(room.nextBusyStart) || msLeft >= 12 * 60 * 60000) {
+    return 'Libre jusqu’à demain';
+  }
+  return `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
+}
+
+function isTomorrowOrLater(date) {
+  const tomorrowStart = new Date();
+  tomorrowStart.setHours(24, 0, 0, 0);
+  return date >= tomorrowStart;
 }
 
 function formatDuration(ms) {
