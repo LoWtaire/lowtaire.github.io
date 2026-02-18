@@ -163,7 +163,7 @@ function updateCampusBanner({ reason = '' }) {
   const km = Number.isFinite(selectedCampusDistanceM) ? ` (≈ ${Math.round(selectedCampusDistanceM / 1000)} km)` : '';
   const suffix = reason ? ` — ${reason}` : '';
   campusText.textContent = `Établissement : ${selectedCampus.name}${km}${suffix}`;
-  if (campusGeoText) campusGeoText.textContent = `Ville proche : ${getNearestCityLabel()}`;
+  if (campusGeoText) campusGeoText.textContent = `Localisation : ${getNearestCityLabel()}`;
   if (pageTitle) pageTitle.textContent = `Occupation des salles – ${selectedCampus.city || selectedCampus.name}`;
   campusBanner.hidden = false;
 }
