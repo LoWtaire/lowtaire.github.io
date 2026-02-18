@@ -31,15 +31,25 @@
   </header>
 
   <main class="container">
+    <section id="campusBanner" class="campus-banner" hidden>
+      <div id="campusText">Établissement : --</div>
+      <div class="campus-actions">
+        <button id="campusChangeBtn" type="button">Changer</button>
+        <button id="campusAutoBtn" type="button" hidden>Auto</button>
+      </div>
+      <div id="campusPickerWrap" class="campus-picker" hidden>
+        <select id="campusSelect" aria-label="Choisir un établissement"></select>
+      </div>
+    </section>
     <div id="status" class="status">Chargement…</div>
     <div id="lastUpdate" class="muted"></div>
     <div id="list"></div>
   </main>
 
   <footer class="footer">
-    <small>Source : <code>/data/univlor.json</code> • Fuseau : <span id="tz"></span></small>
+    <small>Source : <code>campus.json + API backend (secrets GitHub)</code> • Fuseau : <span id="tz"></span></small>
   </footer>
 
-  <script src="assets/rooms.js?v=7" type="module"></script>
+  <script src="assets/rooms.js?v=9" type="module"></script>
 </body>
 </html>
