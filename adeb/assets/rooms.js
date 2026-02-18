@@ -163,7 +163,7 @@ function updateCampusBanner({ reason = '' }) {
   const km = Number.isFinite(selectedCampusDistanceM) ? ` (≈ ${Math.round(selectedCampusDistanceM / 1000)} km)` : '';
   const suffix = reason ? ` — ${reason}` : '';
   campusText.textContent = `Établissement : ${selectedCampus.name}${km}${suffix}`;
-  if (campusGeoText) campusGeoText.textContent = `Localisation : ${getNearestCityLabel()}`;
+  if (campusGeoText) campusGeoText.textContent = `Ville proche : ${getNearestCityLabel()}`;
   if (pageTitle) pageTitle.textContent = `Occupation des salles – ${selectedCampus.city || selectedCampus.name}`;
   campusBanner.hidden = false;
 }
@@ -226,7 +226,7 @@ async function pickCampusByGeo(campuses) {
       return { campus: nearest.campus, auto: true, distanceM: nearest.distanceM, reason: 'Détection automatique.' };
     }
 
-    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Sélection automatique' };
+    return { campus: nearest.campus, auto: false, distanceM: nearest.distanceM, reason: 'Hors zone : campus le plus proche sélectionné automatiquement.' };
   } catch (err) {
     const reason = geoErrorReason(err);
     return { campus: campuses[0], auto: false, distanceM: null, reason };
