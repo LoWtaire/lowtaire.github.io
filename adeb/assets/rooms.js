@@ -250,7 +250,7 @@ function renderNowCard(room) {
 
   const countdown = buildCountdown(room);
   const countdownBar = countdown
-    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-fill" style="width:${countdown.percent}%"></div><div class="countdown-text">${countdown.label}</div></div>`
+    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-mask" style="width:${Math.max(0, 100 - countdown.percent)}%"></div><div class="countdown-text">${countdown.label}</div></div>`
     : '';
 
   return `
@@ -274,7 +274,7 @@ function renderTodayRow(room, ok) {
         <strong>${escapeHtml(room.name)}</strong>
         <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
       </div>
-      <div class="timeline"><div class="timeline-fill" style="width:${timelineFillPercent(room.events)}%"></div><div class="timeline-text">${timelineLabel}</div></div>
+      <div class="timeline"><div class="timeline-mask" style="width:${Math.max(0, 100 - timelineFillPercent(room.events))}%"></div><div class="timeline-text">${timelineLabel}</div></div>
     </article>
   `;
 }

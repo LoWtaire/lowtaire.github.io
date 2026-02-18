@@ -99,17 +99,13 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   height: 22px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: #0d1017;
+  background: linear-gradient(90deg, #2dc071 0%, #d6d861 40%, #f5b34a 70%, #f16666 100%);
   overflow: hidden;
 }
-.countdown-fill {
+.countdown-mask {
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 35%;
-  background: linear-gradient(90deg, rgba(45,192,113,.9), rgba(105,169,255,.9));
-}
-.countdown-bar.to-free .countdown-fill {
-  background: linear-gradient(90deg, rgba(241,102,102,.9), rgba(245,179,74,.9));
+  inset: 0 0 0 auto;
+  background: rgba(11, 13, 18, 0.72);
 }
 .countdown-text {
   position: relative;
@@ -136,10 +132,14 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   height: 22px;
   border-radius: 99px;
   overflow: hidden;
-  background: #0b0d12;
+  background: linear-gradient(90deg, #2dc071 0%, #d6d861 40%, #f5b34a 70%, #f16666 100%);
   border: 1px solid #232a37;
 }
-.timeline-fill { height: 100%; background: linear-gradient(90deg, var(--ok), var(--busy)); opacity: 0.8; }
+.timeline-mask {
+  position: absolute;
+  inset: 0 0 0 auto;
+  background: rgba(11, 13, 18, 0.72);
+}
 .timeline-text { position: absolute; inset: 0; display: grid; place-items: center; font-size: 11px; font-weight: 700; color: #d9e2f7; text-shadow: 0 1px 2px rgba(0,0,0,.7); }
 
 .stack { display: grid; gap: 8px; }
