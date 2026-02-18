@@ -39,7 +39,8 @@ const state = {
   targetTime: defaultTargetTime(),
   minDuration: 30,
   searchMinDuration: 0,
-  onlyFree: false
+  onlyFree: false,
+  tickInterval: null
 };
 
 init();
@@ -49,6 +50,7 @@ async function init() {
   bindEvents();
   await initCampus();
   await loadAndRender();
+  startAutoTick();
 }
 
 function bindEvents() {
@@ -96,6 +98,17 @@ async function loadAndRender() {
     console.error(err);
     ui.statusBox.textContent = `Impossible de charger les données.\n${err?.message || ''}`;
   }
+}
+
+
+
+function startAutoTick() {
+  if (state.tickInterval) clearInterval(state.tickInterval);
+  state.tickInterval = setInterval(() => {
+    if (!state.cache) return;
+    renderHeaderContext();
+    if (state.activeView === 'now' || state.activeView === 'room') renderCurrentView();
+  }, 1000);
 }
 
 function renderHeaderContext() {
@@ -234,11 +247,18 @@ function renderNowCard(room) {
   const line = room.freeNow
     ? (room.nextBusyStart ? `Libre au moins jusqu’à ${hm(room.nextBusyStart)}` : 'Libre maintenant')
     : `Occupée jusqu’à ${hm(room.busyUntil)}`;
+
+  const countdown = buildCountdown(room);
+  const countdownBar = countdown
+    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-fill" style="width:${countdown.percent}%"></div><div class="countdown-text">${countdown.label}</div></div>`
+    : '';
+
   return `
     <article class="card" data-room="${escapeAttr(room.name)}">
       <h3>${escapeHtml(room.name)}</h3>
       <div class="line"><strong class="${room.freeNow ? 'ok' : 'busy'}">${room.freeNow ? 'Libre' : 'Occupée'}</strong></div>
       <div class="line">${line}</div>
+      ${countdownBar}
       <div class="fresh">maj ${freshMinutesLabel()}</div>
     </article>
   `;
@@ -305,6 +325,46 @@ function sortNowCards(a, b) {
 function matchQuery(room) {
   if (!state.searchQuery) return true;
   return room.name.toLowerCase().includes(state.searchQuery);
+}
+
+
+function buildCountdown(room) {
+  const now = Date.now();
+
+  if (room.freeNow && room.nextBusyStart) {
+    const msLeft = room.nextBusyStart.getTime() - now;
+    if (msLeft <= 0) return null;
+    const referenceWindow = 4 * 60 * 60000;
+    const percent = Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
+    return {
+      label: `Occupée dans ${formatDuration(msLeft)}`,
+      percent,
+      variant: 'to-busy'
+    };
+  }
+
+  if (!room.freeNow && room.busyUntil) {
+    const msLeft = room.busyUntil.getTime() - now;
+    if (msLeft <= 0) return null;
+    const referenceWindow = 4 * 60 * 60000;
+    const percent = Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
+    return {
+      label: `Libre dans ${formatDuration(msLeft)}`,
+      percent,
+      variant: 'to-free'
+    };
+  }
+
+  return null;
+}
+
+function formatDuration(ms) {
+  const totalMin = Math.max(1, Math.ceil(ms / 60000));
+  const h = Math.floor(totalMin / 60);
+  const m = totalMin % 60;
+  if (h === 0) return `${m} min`;
+  if (m === 0) return `${h} h`;
+  return `${h} h ${m} min`;
 }
 
 function timelineFillPercent(events) {

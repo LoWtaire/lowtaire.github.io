@@ -93,6 +93,35 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .card .line strong.busy { color: var(--busy); }
 .card .fresh { margin-top: 6px; color: #8f99b1; font-size: 12px; }
 
+.countdown-bar {
+  position: relative;
+  margin-top: 8px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #0d1017;
+  overflow: hidden;
+}
+.countdown-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 35%;
+  background: linear-gradient(90deg, rgba(45,192,113,.9), rgba(105,169,255,.9));
+}
+.countdown-bar.to-free .countdown-fill {
+  background: linear-gradient(90deg, rgba(241,102,102,.9), rgba(245,179,74,.9));
+}
+.countdown-text {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f3f6ff;
+}
+
 .row-item {
   background: var(--surface);
   border: 1px solid var(--border);
