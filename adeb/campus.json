@@ -2,13 +2,13 @@
   {
     "id": "ETAB_A",
     "campusApiId": "ETAB_A",
-    "name": "__Nom établissement A__",
-    "center": { "lat": 48.6921, "lon": 6.1844 }
+    "name": "ULCO Dunkerque",
+    "center": { "lat": 51.037955018293864, "lon": 2.370896641563869 }
   },
   {
     "id": "ETAB_B",
     "campusApiId": "ETAB_B",
-    "name": "__Nom établissement B__",
-    "center": { "lat": 45.764, "lon": 4.8357 }
+    "name": "Campus Bridoux",
+    "center": { "lat": 49.115096957110865, "lon": 6.213563962410853 }
   }
 ]
