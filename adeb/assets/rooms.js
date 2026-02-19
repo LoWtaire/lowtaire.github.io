@@ -46,12 +46,21 @@ const state = {
 init();
 
 async function init() {
+  // init des valeurs UI -> state dès le démarrage
+  state.minDuration = Number(ui.durationSelect.value || 0);
+  state.searchMinDuration = Number(ui.searchDurationSelect.value || 0);
+  state.onlyFree = !!ui.onlyFreeCheck.checked;
+
+  // init heure cible
+  state.targetTime = state.targetTime || defaultTargetTime();
   ui.targetTime.value = state.targetTime;
+
   bindEvents();
   await initCampus();
   await loadAndRender();
   startAutoTick();
 }
+
 
 function bindEvents() {
   ui.refreshBtn.addEventListener('click', loadAndRender);
@@ -296,6 +305,9 @@ function renderNowCard(room) {
 }
 
 function renderTodayRow(room, nowOk, targetOk, now, target, durationMs) {
+  // Choix: badge/label basés sur l'heure cible (TARGET)
+  const ok = targetOk;
+
   const label = buildTodayLabel(room, target, durationMs, ok);
   const dayline = renderDayline(room.events, now, target, label);
 
@@ -309,6 +321,7 @@ function renderTodayRow(room, nowOk, targetOk, now, target, durationMs) {
     </article>
   `;
 }
+
 
 
 function renderSearchRow(room) {
@@ -537,7 +550,7 @@ function buildTargetDate(hhmm) {
 
 function defaultTargetTime() {
   const now = new Date();
-  const rounded = Math.ceil(now.getTime() / 60000) * 60000; // arrondi à la minute supérieure
+  const rounded = Math.ceil(now.getTime() / 60000) * 60000; // minute supérieure
   const d = new Date(rounded);
 
   return d.toLocaleTimeString('fr-FR', {
@@ -545,6 +558,7 @@ function defaultTargetTime() {
     minute: '2-digit'
   });
 }
+
 
 async function loadCampusConfig() {
   const res = await fetch(`${CAMPUS_CONFIG_URL}?v=${Date.now()}`, { cache: 'no-store' });
