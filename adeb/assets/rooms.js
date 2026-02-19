@@ -262,7 +262,7 @@ function renderNowCard(room) {
 
   const countdown = buildCountdown(room);
   const countdownBar = countdown
-    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-mask" style="width:${Math.max(0, 100 - countdown.percent)}%"></div><div class="countdown-text">${countdown.label}</div></div>`
+    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-fill" style="width:${countdown.percent}%"></div><div class="countdown-text">${countdown.label}</div></div>`
     : '';
 
   return `
@@ -278,7 +278,6 @@ function renderNowCard(room) {
 
 function renderTodayRow(room, ok, timeline) {
   const timelineLabel = timeline?.label || (ok ? 'Libre jusqu’à demain' : 'Créneau indisponible');
-  const timelinePercent = timeline?.percent ?? (ok ? 100 : 0);
 
   return `
     <article class="row-item" data-room="${escapeAttr(room.name)}">
@@ -286,7 +285,7 @@ function renderTodayRow(room, ok, timeline) {
         <strong>${escapeHtml(room.name)}</strong>
         <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
       </div>
-      <div class="timeline"><div class="timeline-mask" style="width:${Math.max(0, 100 - timelinePercent)}%"></div><div class="timeline-text">${timelineLabel}</div></div>
+      <div class="timeline"><div class="countdown-mask" style="width:XX%"></div><div class="timeline-text">${timelineLabel}</div></div>
     </article>
   `;
 }
@@ -350,7 +349,7 @@ function buildCountdown(room) {
     const msLeft = room.nextBusyStart.getTime() - now;
     if (msLeft <= 0) return null;
     const referenceWindow = 4 * 60 * 60000;
-    const percent = Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
+    const percent = Math.max(0, Math.min(100, (msLeft / referenceWindow) * 100));
     return {
       label: buildFreeBeforeBusyLabel(room),
       percent,
@@ -385,10 +384,6 @@ function buildFreeBeforeBusyLabel(room) {
   return `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
 }
 
-function buildTimelineAt(room, referenceDate) {
-  const ref = referenceDate.getTime();
-  const current = room.events.find((e) => e.start.getTime() <= ref && ref < e.end.getTime());
-  const nextBusy = room.events.find((e) => e.start.getTime() > ref);
 
   if (current) {
     const msLeft = current.end.getTime() - ref;
@@ -416,7 +411,6 @@ function buildTimelineAt(room, referenceDate) {
     percent: 100,
     label: 'Libre jusqu’à demain'
   };
-}
 
 function toTimelinePercent(msLeft) {
   const referenceWindow = 24 * 60 * 60000;
