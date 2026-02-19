@@ -37,7 +37,7 @@ const state = {
   selectedRoom: null,
   searchQuery: '',
   targetTime: defaultTargetTime(),
-  minDuration: 30,
+  minDuration: 0,
   searchMinDuration: 0,
   onlyFree: false,
   tickInterval: null
