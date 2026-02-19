@@ -65,7 +65,7 @@ function bindEvents() {
     renderTodayView();
   });
   ui.durationSelect.addEventListener('change', () => {
-    state.minDuration = Number(ui.durationSelect.value || 30);
+    state.minDuration = Number(ui.durationSelect.value || 0);
     renderTodayView();
   });
   ui.searchDurationSelect.addEventListener('change', () => {
