@@ -536,11 +536,14 @@ function buildTargetDate(hhmm) {
 }
 
 function defaultTargetTime() {
-  const parisNow = new Date(Date.now() * 60000).toLocaleString('sv-SE', {
-    timeZone: 'Europe/Paris',
-    hour12: false
+  const now = new Date();
+  const rounded = Math.ceil(now.getTime() / 60000) * 60000; // arrondi à la minute supérieure
+  const d = new Date(rounded);
+
+  return d.toLocaleTimeString('fr-FR', {
+    hour: '2-digit',
+    minute: '2-digit'
   });
-  return parisNow.slice(11, 16);
 }
 
 async function loadCampusConfig() {
