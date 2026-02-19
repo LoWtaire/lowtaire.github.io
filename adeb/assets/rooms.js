@@ -124,7 +124,7 @@ function renderHeaderContext() {
   ui.lastUpdateText.textContent = `Dernière mise à jour : ${generated ? hm(generated) : '--:--'}`;
 
   const ageMin = generated ? Math.floor((Date.now() - generated.getTime()) / 60000) : null;
-  const staleMsg = ageMin !== null && ageMin > 10 ? `Données possiblement obsolètes (maj ${ageMin} min).` : '';
+  const staleMsg = ageMin !== null && ageMin > 10 ? `Dernière mise à jour des salles : ${generated ? hm(generated) : '--:--'}` : ''; 
   const locationMsg = state.detection.banner || '';
   const msg = [locationMsg, staleMsg].filter(Boolean).join(' ');
   ui.fallbackBanner.hidden = !msg;
@@ -168,28 +168,44 @@ function renderTodayView() {
   const target = buildTargetDate(state.targetTime);
   const durationMs = state.minDuration * 60000;
   const now = new Date();
+
   const list = computeRoomSummaries()
     .filter(matchQuery)
     .map((room) => {
       const windowEnd = new Date(target.getTime() + durationMs);
       const ok = isFreeWindow(room.events, target, windowEnd);
-      const timeline = buildTimelineAt(room, now);
-      return { room, ok, timeline };
+
+      // Tri logique pour Today:
+      // - si ok: plus longtemps libre après l'heure cible = mieux
+      // - si pas ok: libération la plus proche = mieux
+      let score;
+      if (ok) {
+        const nextBusy = room.events.find((e) => e.start.getTime() >= windowEnd.getTime());
+        score = nextBusy ? (nextBusy.start.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
+      } else {
+        const blocker = room.events.find((e) => e.start < windowEnd && target < e.end);
+        score = blocker ? (blocker.end.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
+      }
+
+      return { room, ok, score };
     })
     .sort((a, b) => {
       if (a.ok !== b.ok) return Number(b.ok) - Number(a.ok);
-      const aScore = a.timeline?.msLeft ?? -1;
-      const bScore = b.timeline?.msLeft ?? -1;
-      if (aScore !== bScore) return bScore - aScore;
+      // ok d'abord, puis score
+      if (a.score !== b.score) return (b.ok ? b.score - a.score : a.score - b.score);
       return a.room.name.localeCompare(b.room.name);
     });
 
   ui.todayList.innerHTML = list.length
-    ? list.map(({ room, ok, timeline }) => renderTodayRow(room, ok, timeline)).join('')
+    ? (
+        renderDaylineScale() +
+        list.map(({ room, ok }) => renderTodayRow(room, ok, now, target, durationMs)).join('')
+      )
     : '<div class="panel">Aucune salle trouvée.</div>';
 
   ui.todayList.querySelectorAll('[data-room]').forEach((row) => row.addEventListener('click', () => openRoom(row.dataset.room)));
 }
+
 
 function renderSearchView() {
   let list = computeRoomSummaries().filter(matchQuery);
@@ -260,24 +276,19 @@ function renderNowCard(room) {
     ? (room.nextBusyStart ? `Libre au moins jusqu’à ${hm(room.nextBusyStart)}` : 'Libre maintenant')
     : `Occupée jusqu’à ${hm(room.busyUntil)}`;
 
-  const countdown = buildCountdown(room);
-  const countdownBar = countdown
-    ? `<div class="countdown-bar ${countdown.variant}"><div class="countdown-fill" style="width:${countdown.percent}%"></div><div class="countdown-text">${countdown.label}</div></div>`
-    : '';
-
   return `
     <article class="card" data-room="${escapeAttr(room.name)}">
       <h3>${escapeHtml(room.name)}</h3>
-      <div class="line"><strong class="${room.freeNow ? 'ok' : 'busy'}">${room.freeNow ? 'Libre' : 'Occupée'}</strong></div>
-      <div class="line">${line}</div>
-      ${countdownBar}
-      <div class="fresh">maj ${freshMinutesLabel()}</div>
+      <div class="line"><strong class="${room.freeNow ? 'ok' : 'busy'}">${room.freeNow ? 'Libre' : 'Occupée'}</strong></div><br>
+      <div class="line">${line}</div><br>
+
     </article>
   `;
 }
 
-function renderTodayRow(room, ok, timeline) {
-  const timelineLabel = timeline?.label || (ok ? 'Libre jusqu’à demain' : 'Créneau indisponible');
+function renderTodayRow(room, ok, now, target, durationMs) {
+  const label = buildTodayLabel(room, target, durationMs, ok);
+  const dayline = renderDayline(room.events, now, target, label);
 
   return `
     <article class="row-item" data-room="${escapeAttr(room.name)}">
@@ -285,10 +296,11 @@ function renderTodayRow(room, ok, timeline) {
         <strong>${escapeHtml(room.name)}</strong>
         <span class="${ok ? 'badge badge-gps' : 'badge badge-unknown'}">${ok ? 'Disponible' : 'Indisponible'}</span>
       </div>
-      <div class="timeline"><div class="countdown-mask" style="width:XX%"></div><div class="timeline-text">${timelineLabel}</div></div>
+      ${dayline}
     </article>
   `;
 }
+
 
 function renderSearchRow(room) {
   const subtitle = room.freeNow ? 'Libre maintenant' : `Occupée jusqu’à ${hm(room.busyUntil)}`;
@@ -341,6 +353,110 @@ function matchQuery(room) {
   return room.name.toLowerCase().includes(state.searchQuery);
 }
 
+// ===== TODAY: frise horaire 08:00 → 18:00 (blocs occupés + curseurs) =====
+const DAYLINE_START_H = 8;
+const DAYLINE_END_H = 18;
+
+function clamp(n, min, max) {
+  return Math.max(min, Math.min(max, n));
+}
+
+function getDaylineWindow(referenceDate = new Date()) {
+  const start = new Date(referenceDate);
+  start.setHours(DAYLINE_START_H, 0, 0, 0);
+
+  const end = new Date(referenceDate);
+  end.setHours(DAYLINE_END_H, 0, 0, 0);
+
+  const durationMs = end.getTime() - start.getTime();
+  const hours = DAYLINE_END_H - DAYLINE_START_H;
+
+  return { start, end, durationMs, hours };
+}
+
+function mergeIntervals(intervals) {
+  if (!intervals.length) return [];
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  const merged = [intervals[0]];
+  for (let i = 1; i < intervals.length; i++) {
+    const [s, e] = intervals[i];
+    const last = merged[merged.length - 1];
+    if (s <= last[1]) last[1] = Math.max(last[1], e);
+    else merged.push([s, e]);
+  }
+  return merged;
+}
+
+function busyIntervalsInWindow(events, winStart, winEnd) {
+  const intervals = [];
+  for (const ev of events) {
+    const s = Math.max(ev.start.getTime(), winStart.getTime());
+    const e = Math.min(ev.end.getTime(), winEnd.getTime());
+    if (s < e) intervals.push([s, e]);
+  }
+  return mergeIntervals(intervals);
+}
+
+function msToPct(ms, winStartMs, winDurationMs) {
+  const raw = ((ms - winStartMs) / winDurationMs) * 100;
+  return clamp(raw, 0, 100);
+}
+
+function renderDaylineScale() {
+  const hours = DAYLINE_END_H - DAYLINE_START_H;
+  const labels = [];
+  for (let i = 0; i <= hours; i++) {
+    const h = String(DAYLINE_START_H + i).padStart(2, '0');
+    const left = (i / hours) * 100;
+    labels.push(`<span class="dayline-scale-label" style="left:${left}%">${h}</span>`);
+  }
+  return `<div class="dayline-scale" style="--dayline-hours:${hours}">${labels.join('')}</div>`;
+}
+
+// Label utile pour Today (basé sur l'heure cible + durée minimale)
+function buildTodayLabel(room, target, durationMs, ok) {
+  const t = target.getTime();
+  const windowEnd = new Date(t + durationMs);
+
+  if (ok) {
+    const nextBusy = room.events.find((e) => e.start.getTime() >= windowEnd.getTime());
+    if (!nextBusy) return 'Libre jusqu’à demain';
+    if (isTomorrowOrLater(nextBusy.start, target)) return 'Libre jusqu’à demain';
+    return `Libre jusqu’à ${hm(nextBusy.start)}`;
+  }
+
+  const blocker = room.events.find((e) => e.start < windowEnd && target < e.end);
+  if (!blocker) return 'Créneau indisponible';
+  if (blocker.start <= target) return `Occupée jusqu’à ${hm(blocker.end)}`;
+  return `Occupée ${hm(blocker.start)} → ${hm(blocker.end)}`;
+}
+
+// Rend la frise: blocs rouges + curseur now + curseur cible
+function renderDayline(events, nowDate, targetDate, labelText) {
+  const { start, end, durationMs, hours } = getDaylineWindow(nowDate || new Date());
+  const winStartMs = start.getTime();
+
+  const busy = busyIntervalsInWindow(events, start, end);
+  const blocks = busy.map(([s, e]) => {
+    const left = msToPct(s, winStartMs, durationMs);
+    const right = msToPct(e, winStartMs, durationMs);
+    const width = Math.max(0, right - left);
+    return `<span class="dayline-busy" style="left:${left}%; width:${width}%"></span>`;
+  }).join('');
+
+  const nowPct = nowDate ? msToPct(nowDate.getTime(), winStartMs, durationMs) : 0;
+  const targetPct = targetDate ? msToPct(targetDate.getTime(), winStartMs, durationMs) : null;
+  const cls = `dayline${targetPct !== null ? ' has-target' : ''}`;
+
+  return `
+    <div class="${cls}" style="--dayline-hours:${hours}; --now-pct:${nowPct}; ${targetPct !== null ? `--target-pct:${targetPct};` : ''}">
+      ${blocks}
+      <div class="dayline-text">${escapeHtml(labelText || '')}</div>
+    </div>
+  `;
+}
+
 
 function buildCountdown(room) {
   const now = Date.now();
@@ -349,7 +465,7 @@ function buildCountdown(room) {
     const msLeft = room.nextBusyStart.getTime() - now;
     if (msLeft <= 0) return null;
     const referenceWindow = 4 * 60 * 60000;
-    const percent = Math.max(0, Math.min(100, (msLeft / referenceWindow) * 100));
+    const percent = Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
     return {
       label: buildFreeBeforeBusyLabel(room),
       percent,
@@ -382,39 +498,6 @@ function buildFreeBeforeBusyLabel(room) {
     return 'Libre jusqu’à demain';
   }
   return `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
-}
-
-
-  if (current) {
-    const msLeft = current.end.getTime() - ref;
-    return {
-      msLeft,
-      percent: toTimelinePercent(msLeft),
-      label: `Libre dans ${formatDuration(msLeft)}`
-    };
-  }
-
-  if (nextBusy) {
-    const msLeft = nextBusy.start.getTime() - ref;
-    const label = isTomorrowOrLater(nextBusy.start, referenceDate)
-      ? 'Libre jusqu’à demain'
-      : `Encore ${formatDuration(msLeft)} avant que la salle soit occupée`;
-    return {
-      msLeft,
-      percent: toTimelinePercent(msLeft),
-      label
-    };
-  }
-
-  return {
-    msLeft: 24 * 60 * 60000,
-    percent: 100,
-    label: 'Libre jusqu’à demain'
-  };
-
-function toTimelinePercent(msLeft) {
-  const referenceWindow = 24 * 60 * 60000;
-  return Math.max(5, Math.min(100, Math.round((msLeft / referenceWindow) * 100)));
 }
 
 function isTomorrowOrLater(date, referenceDate = new Date()) {
