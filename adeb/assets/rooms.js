@@ -172,34 +172,43 @@ function renderTodayView() {
   const list = computeRoomSummaries()
     .filter(matchQuery)
     .map((room) => {
-      const windowEnd = new Date(target.getTime() + durationMs);
-      const ok = isFreeWindow(room.events, target, windowEnd);
+  // 1) disponibilité NOW
+  const nowOk = isFreeWindow(room.events, now, new Date(now.getTime() + durationMs));
 
-      // Tri logique pour Today:
-      // - si ok: plus longtemps libre après l'heure cible = mieux
-      // - si pas ok: libération la plus proche = mieux
-      let score;
-      if (ok) {
-        const nextBusy = room.events.find((e) => e.start.getTime() >= windowEnd.getTime());
-        score = nextBusy ? (nextBusy.start.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
-      } else {
-        const blocker = room.events.find((e) => e.start < windowEnd && target < e.end);
-        score = blocker ? (blocker.end.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
-      }
+  // 2) disponibilité TARGET (ce que tu avais)
+  const windowEnd = new Date(target.getTime() + durationMs);
+  const targetOk = isFreeWindow(room.events, target, windowEnd);
 
-      return { room, ok, score };
-    })
-    .sort((a, b) => {
-      if (a.ok !== b.ok) return Number(b.ok) - Number(a.ok);
-      // ok d'abord, puis score
-      if (a.score !== b.score) return (b.ok ? b.score - a.score : a.score - b.score);
-      return a.room.name.localeCompare(b.room.name);
-    });
+  // score basé sur TARGET (on garde ta logique actuelle pour classer "Aujourd’hui")
+  let score;
+  if (targetOk) {
+    const nextBusy = room.events.find((e) => e.start.getTime() >= windowEnd.getTime());
+    score = nextBusy ? (nextBusy.start.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
+  } else {
+    const blocker = room.events.find((e) => e.start < windowEnd && target < e.end);
+    score = blocker ? (blocker.end.getTime() - target.getTime()) : Number.POSITIVE_INFINITY;
+  }
+
+  return { room, nowOk, targetOk, score };
+})
+.sort((a, b) => {
+  // Tri 1: NOW d’abord (cohérent avec le curseur bleu et ton badge)
+  if (a.nowOk !== b.nowOk) return Number(b.nowOk) - Number(a.nowOk);
+
+  // Tri 2: TARGET ensuite (utile pour Today)
+  if (a.targetOk !== b.targetOk) return Number(b.targetOk) - Number(a.targetOk);
+
+  // Tri 3: score TARGET (comme avant)
+  if (a.score !== b.score) return (b.targetOk ? b.score - a.score : a.score - b.score);
+
+  return a.room.name.localeCompare(b.room.name);
+});
 
   ui.todayList.innerHTML = list.length
     ? (
         renderDaylineScale() +
-        list.map(({ room, ok }) => renderTodayRow(room, ok, now, target, durationMs)).join('')
+    list.map(({ room, nowOk, targetOk }) => renderTodayRow(room, nowOk, targetOk, now, target, durationMs)).join('')
+
       )
     : '<div class="panel">Aucune salle trouvée.</div>';
 
@@ -286,7 +295,7 @@ function renderNowCard(room) {
   `;
 }
 
-function renderTodayRow(room, ok, now, target, durationMs) {
+function renderTodayRow(room, nowOk, targetOk, now, target, durationMs) {
   const label = buildTodayLabel(room, target, durationMs, ok);
   const dayline = renderDayline(room.events, now, target, label);
 
