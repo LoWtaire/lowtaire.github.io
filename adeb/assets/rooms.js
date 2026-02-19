@@ -536,7 +536,7 @@ function buildTargetDate(hhmm) {
 }
 
 function defaultTargetTime() {
-  const parisNow = new Date(Date.now() + 30 * 60000).toLocaleString('sv-SE', {
+  const parisNow = new Date(Date.now() * 60000).toLocaleString('sv-SE', {
     timeZone: 'Europe/Paris',
     hour12: false
   });
