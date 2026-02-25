@@ -43,6 +43,7 @@ const state = {
   selectedSetNames: new Set(),
   manual: {
     selectedSkinId: "",
+    selectedSkinIds: new Set(),
     pickerOpen: false,
     pickerQuery: "",
     pickerSort: "name",
@@ -441,17 +442,29 @@ function bindUi() {
   });
 
   els.addManualSkinBtn.addEventListener("click", () => {
-    const cosmeticId = state.manual.selectedSkinId;
     const account = els.manualAccountSelect.value;
-    if (!cosmeticId) return;
-    if (isCosmeticOwnedByAccount(cosmeticId, account)) {
+    const selectedIds = [...state.manual.selectedSkinIds];
+    if (selectedIds.length === 0 && state.manual.selectedSkinId) {
+      selectedIds.push(state.manual.selectedSkinId);
+    }
+    if (selectedIds.length === 0) return;
+
+    const idsToAdd = selectedIds.filter((id) => !isCosmeticOwnedByAccount(id, account));
+    const alreadyOwnedCount = selectedIds.length - idsToAdd.length;
+
+    if (idsToAdd.length === 0) {
       const accountLabel = account === "A" ? "Compte A" : "Compte B";
-      pushUiError("ajout-manuel", `Ce skin est deja ajoute dans ${accountLabel}`);
+      pushUiError("ajout-manuel", `Selection deja ajoutee dans ${accountLabel}`);
       updateManualSkinPreview();
+      if (state.manual.pickerOpen) renderSkinPickerGrid();
       renderStatus();
       return;
     }
-    addCosmeticsToLocker([cosmeticId], account);
+
+    addCosmeticsToLocker(idsToAdd, account);
+    if (alreadyOwnedCount > 0) {
+      pushUiError("ajout-manuel", `${alreadyOwnedCount} skin(s) deja ajoutes ignores`);
+    }
     updateManualSkinPreview();
     if (state.manual.pickerOpen) renderSkinPickerGrid();
     render();
@@ -701,9 +714,12 @@ function safeDiv(num, den) {
 }
 
 function buildManualSkinOptions() {
-  if (!state.manual.selectedSkinId && state.cosmetics.length > 0) {
-    state.manual.selectedSkinId = state.cosmetics[0].id;
+  if (state.manual.selectedSkinId && !state.cosmeticsById.has(state.manual.selectedSkinId)) {
+    state.manual.selectedSkinId = "";
   }
+  state.manual.selectedSkinIds = new Set(
+    [...state.manual.selectedSkinIds].filter((id) => state.cosmeticsById.has(id))
+  );
   refreshSkinPickerResults();
   updateManualSkinPreview();
 }
@@ -725,6 +741,9 @@ function createStableCosmeticId(cosmetic, index = 0) {
 }
 
 function getManualSelectedCosmetic() {
+  if ((!state.manual.selectedSkinId || !state.cosmeticsById.has(state.manual.selectedSkinId)) && state.manual.selectedSkinIds.size > 0) {
+    state.manual.selectedSkinId = [...state.manual.selectedSkinIds][state.manual.selectedSkinIds.size - 1];
+  }
   return state.cosmeticsById.get(state.manual.selectedSkinId) || null;
 }
 
@@ -745,6 +764,20 @@ function isCosmeticOwnedByAccount(cosmeticId, account = getCurrentManualAccount(
 }
 
 function updateManualSkinPreview() {
+  const selectedCount = state.manual.selectedSkinIds.size;
+  if (selectedCount > 1) {
+    const ownedCount = [...state.manual.selectedSkinIds].filter((id) => isCosmeticOwnedByAccount(id)).length;
+    els.manualSkinPreview?.classList.add("is-selected");
+    els.manualSkinPreview?.classList.remove("is-owned");
+    if (els.manualSkinPreviewName) els.manualSkinPreviewName.textContent = `${selectedCount} skins selectionnes`;
+    if (els.manualSkinPreviewMeta) {
+      els.manualSkinPreviewMeta.textContent = ownedCount > 0
+        ? `${ownedCount} deja ajoutes (${getCurrentManualAccount()})`
+        : `Compte ${getCurrentManualAccount()}`;
+    }
+    return;
+  }
+
   const cosmetic = getManualSelectedCosmetic();
   if (!cosmetic) {
     els.manualSkinPreview?.classList.remove("is-selected");
@@ -821,23 +854,19 @@ function createSkinPickerCard(cosmetic, ownedIds = getOwnedIdsForCurrentManualAc
   const rarity = cosmetic?.rarity?.value || "Common";
   const label = rarityUi[rarity]?.label || rarity;
   const icon = cosmetic?.images?.icon || cosmetic?.images?.smallIcon || "";
-  const isSelected = state.manual.selectedSkinId === id;
+  const isSelected = state.manual.selectedSkinIds.has(id);
   const isOwned = ownedIds.has(id);
 
   card.dataset.id = id;
   card.dataset.rarity = rarity;
-  card.classList.toggle("is-selected", isSelected);
-  card.classList.toggle("is-owned", isOwned);
+  card.classList.toggle("selected", isSelected);
+  card.classList.toggle("owned", isOwned);
   card.setAttribute("aria-pressed", String(isSelected));
   card.setAttribute("aria-label", `${cosmetic.name || id}${isOwned ? " - deja ajoute" : ""}`);
 
   if (nameEl) nameEl.textContent = cosmetic.name || id;
   if (badgeEl) badgeEl.textContent = label;
-  if (flagsEl) {
-    flagsEl.innerHTML = "";
-    if (isOwned) flagsEl.append(createPickerFlag("OWNED", "is-owned"));
-    if (isSelected) flagsEl.append(createPickerFlag("SELECTED", "is-selected"));
-  }
+  renderPickerCardFlags(flagsEl, { isOwned, isSelected });
   if (img) {
     img.alt = cosmetic.name || "Skin Fortnite";
     if (icon) {
@@ -848,18 +877,23 @@ function createSkinPickerCard(cosmetic, ownedIds = getOwnedIdsForCurrentManualAc
 
   card.addEventListener("click", () => {
     selectManualSkin(id);
-    closeSkinPickerModal({ restoreFocus: true });
   });
 
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       selectManualSkin(id);
-      closeSkinPickerModal({ restoreFocus: true });
     }
   });
 
   return frag;
+}
+
+function renderPickerCardFlags(flagsEl, { isOwned, isSelected }) {
+  if (!flagsEl) return;
+  flagsEl.innerHTML = "";
+  if (isOwned) flagsEl.append(createPickerFlag("OWNED", "owned"));
+  if (isSelected) flagsEl.append(createPickerFlag("SELECTED", "selected"));
 }
 
 function createPickerFlag(label, variant) {
@@ -871,11 +905,33 @@ function createPickerFlag(label, variant) {
 
 function selectManualSkin(cosmeticId) {
   if (!cosmeticId || !state.cosmeticsById.has(cosmeticId)) return;
-  state.manual.selectedSkinId = cosmeticId;
-  updateManualSkinPreview();
-  if (state.manual.pickerOpen) {
-    renderSkinPickerGrid();
+  const wasSelected = state.manual.selectedSkinIds.has(cosmeticId);
+  if (wasSelected) {
+    state.manual.selectedSkinIds.delete(cosmeticId);
+    if (state.manual.selectedSkinId === cosmeticId) {
+      state.manual.selectedSkinId = state.manual.selectedSkinIds.size > 0
+        ? [...state.manual.selectedSkinIds][state.manual.selectedSkinIds.size - 1]
+        : "";
+    }
+  } else {
+    state.manual.selectedSkinIds.add(cosmeticId);
+    state.manual.selectedSkinId = cosmeticId;
   }
+  updateManualSkinPreview();
+  if (state.manual.pickerOpen) updateSkinPickerCardVisual(cosmeticId);
+}
+
+function updateSkinPickerCardVisual(cosmeticId, ownedIds = getOwnedIdsForCurrentManualAccount()) {
+  if (!cosmeticId || !els.skinPickerGrid) return;
+  const card = els.skinPickerGrid.querySelector(`.skin-picker-card[data-id="${CSS.escape(cosmeticId)}"]`);
+  if (!card) return;
+  const isSelected = state.manual.selectedSkinIds.has(cosmeticId);
+  const isOwned = ownedIds.has(cosmeticId);
+  card.classList.toggle("selected", isSelected);
+  card.classList.toggle("owned", isOwned);
+  card.setAttribute("aria-pressed", String(isSelected));
+  const flagsEl = card.querySelector(".skin-picker-card-flags");
+  renderPickerCardFlags(flagsEl, { isOwned, isSelected });
 }
 
 function openSkinPickerModal() {
