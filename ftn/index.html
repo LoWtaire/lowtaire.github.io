@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fortnite Unified Tracker & Virtual Locker</title>
-  <meta name="description" content="Vue unifiée de deux comptes Fortnite : stats fusionnées et valeur du casier." />
+  <meta name="description" content="Vue unifiee de deux comptes Fortnite : stats fusionnees et casier virtuel deduplique." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
@@ -31,11 +31,12 @@
       </nav>
 
       <div class="sidebar-card">
-        <p class="eyebrow">Mode API</p>
+        <p class="eyebrow">API Fortnite-API.com</p>
         <p class="sidebar-text">
-          Demo locale active. Remplace <code>fetchFortniteStats()</code> dans <code>ftn/assets/app.js</code>
-          par un appel Fortnite-API.com / Tracker.
+          Comptes cibles: <code>Loriqueee</code> et <code>Dashdanlvidix</code>.<br>
+          Les statistiques et cosmetiques sont charges via REST en client-side.
         </p>
+        <p class="sidebar-text status-line" id="apiStatus">Chargement en cours...</p>
       </div>
     </aside>
 
@@ -49,8 +50,7 @@
         <div class="fusion-toggle" role="tablist" aria-label="Vue de compte">
           <button class="toggle-btn" data-view="A" role="tab" aria-selected="false">Compte A</button>
           <button class="toggle-btn is-center is-active" data-view="merged" role="tab" aria-selected="true">
-            <span class="toggle-logo">F</span>
-            Fusion
+            <span class="toggle-logo">F</span> Fusion
           </button>
           <button class="toggle-btn" data-view="B" role="tab" aria-selected="false">Compte B</button>
         </div>
@@ -59,28 +59,41 @@
       <section id="stats" class="panel">
         <div class="panel-head">
           <h3>Stats</h3>
-          <p class="panel-subtitle">Wins, Kills, Matchs et K/D calcule en vue fusionnee.</p>
+          <p class="panel-subtitle">Aggregation A+B avec K/D pondere.</p>
         </div>
 
-        <div class="stats-grid" id="statsGrid"></div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="stat-label">Wins</p>
+            <strong class="stat-value wins-val">0</strong>
+            <div class="stat-meter"><div class="stat-meter-fill" data-meter="wins"></div></div>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Kills</p>
+            <strong class="stat-value kills-val">0</strong>
+            <div class="stat-meter"><div class="stat-meter-fill" data-meter="kills"></div></div>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Matchs</p>
+            <strong class="stat-value matchs-val">0</strong>
+            <div class="stat-meter"><div class="stat-meter-fill" data-meter="matchs"></div></div>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">K/D</p>
+            <strong class="stat-value kd-val">0.00</strong>
+            <div class="stat-meter"><div class="stat-meter-fill" data-meter="kd"></div></div>
+          </article>
+        </div>
 
         <div class="progress-card">
           <div class="progress-head">
             <h4>Performance Recap</h4>
             <span id="winRateLabel">0% win rate</span>
           </div>
-          <div class="progress-track" aria-hidden="true">
-            <div class="progress-fill" id="winRateFill"></div>
-          </div>
+          <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="winRateFill"></div></div>
           <div class="circle-metrics">
-            <div class="ring" id="kdRing">
-              <span id="kdRingLabel">0.00</span>
-              <small>K/D</small>
-            </div>
-            <div class="ring" id="killsRing">
-              <span id="avgKillsLabel">0.00</span>
-              <small>Kills / match</small>
-            </div>
+            <div class="ring" id="kdRing"><span id="kdRingLabel">0.00</span><small>K/D</small></div>
+            <div class="ring" id="killsRing"><span id="avgKillsLabel">0.00</span><small>Kills / match</small></div>
           </div>
         </div>
       </section>
@@ -88,7 +101,7 @@
       <section id="locker" class="panel">
         <div class="panel-head">
           <h3>Virtual Locker</h3>
-          <p class="panel-subtitle">Selection par saisons, packs et ajout manuel avec deduplication inter-comptes.</p>
+          <p class="panel-subtitle">Saisons + sets + selection manuelle, avec deduplication A/B.</p>
         </div>
 
         <div class="locker-controls">
@@ -102,15 +115,24 @@
 
           <div class="control-block">
             <div class="block-head">
-              <h4>Packs</h4>
-              <button class="ghost-btn" id="clearPacksBtn">Effacer</button>
+              <h4>Sets</h4>
+              <button class="ghost-btn" id="clearSetsBtn">Effacer</button>
             </div>
-            <div class="chip-group" id="packChips"></div>
+            <div class="chip-group" id="setChips"></div>
+            <div class="manual-row set-row">
+              <input id="setNameInput" type="text" placeholder="Nom exact du set (set.value)" />
+              <select id="setAccountSelect" aria-label="Compte cible pour le set">
+                <option value="A">Compte A</option>
+                <option value="B">Compte B</option>
+                <option value="both">A + B</option>
+              </select>
+              <button class="primary-btn" id="addSetBtn">Ajouter le set</button>
+            </div>
           </div>
 
           <div class="control-block">
             <div class="block-head">
-              <h4>Ajouts manuels</h4>
+              <h4>Ajout manuel</h4>
               <button class="ghost-btn" id="clearManualBtn">Effacer</button>
             </div>
             <div class="manual-row">
@@ -126,22 +148,10 @@
         </div>
 
         <div class="locker-summary">
-          <div class="account-mini">
-            <p class="eyebrow">Compte A</p>
-            <strong id="countA">0 skins</strong>
-          </div>
-          <div class="account-mini">
-            <p class="eyebrow">Compte B</p>
-            <strong id="countB">0 skins</strong>
-          </div>
-          <div class="account-mini">
-            <p class="eyebrow">Unique (fusion)</p>
-            <strong id="countUnique">0 skins</strong>
-          </div>
-          <div class="account-mini duplicate">
-            <p class="eyebrow">Doublons</p>
-            <strong id="duplicateCount">0</strong>
-          </div>
+          <div class="account-mini"><p class="eyebrow">Compte A</p><strong id="countA">0 skins</strong></div>
+          <div class="account-mini"><p class="eyebrow">Compte B</p><strong id="countB">0 skins</strong></div>
+          <div class="account-mini"><p class="eyebrow">Unique (fusion)</p><strong id="countUnique">0 skins</strong></div>
+          <div class="account-mini duplicate"><p class="eyebrow">Doublons</p><strong id="duplicateCount">0</strong></div>
         </div>
 
         <div class="locker-grid-wrap">
@@ -152,7 +162,7 @@
       <section id="value" class="panel">
         <div class="panel-head">
           <h3>Value Card</h3>
-          <p class="panel-subtitle">Estimation factuelle en V-Bucks et euros (1000 V-Bucks = 8,99 EUR).</p>
+          <p class="panel-subtitle">Calcul temps reel: rarete -> V-Bucks -> EUR.</p>
         </div>
 
         <div class="value-layout">
@@ -164,27 +174,19 @@
               <p id="valueEuro">0,00 EUR</p>
             </div>
           </div>
-
           <div class="value-breakdown" id="rarityBreakdown"></div>
         </div>
       </section>
     </main>
   </div>
 
-  <template id="statCardTemplate">
-    <article class="stat-card">
-      <p class="stat-label"></p>
-      <strong class="stat-value"></strong>
-      <div class="stat-meter">
-        <div class="stat-meter-fill"></div>
-      </div>
-    </article>
-  </template>
-
   <template id="lockerItemTemplate">
-    <article class="locker-item">
+    <article class="locker-item" tabindex="0">
       <div class="locker-bg"></div>
       <div class="locker-content">
+        <div class="locker-thumb">
+          <img alt="" loading="lazy" decoding="async" />
+        </div>
         <div class="locker-title-row">
           <h4 class="locker-name"></h4>
           <span class="ownership"></span>
