@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fortnite Unified Tracker & Virtual Locker</title>
   <meta name="description" content="Vue unifiee de deux comptes Fortnite : stats fusionnees et casier virtuel deduplique." />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23111827"/><text x="50%" y="56%" text-anchor="middle" font-size="42" font-family="Arial" fill="%23ffffff">F</text></svg>'
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css" />
+  <script>
+    window.__APP_IS_DEV__ = ["localhost", "127.0.0.1"].includes(location.hostname);
+  </script>
 </head>
 <body>
   <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
@@ -97,6 +105,25 @@
           </div>
         </div>
       </section>
+      
+      <section id="value" class="panel">
+        <div class="panel-head">
+          <h3>Value Card</h3>
+          <p class="panel-subtitle">Calcul temps reel: rarete -> V-Bucks -> EUR.</p>
+        </div>
+
+        <div class="value-layout">
+          <div class="value-badge">
+            <div class="coin">V</div>
+            <div>
+              <p class="eyebrow">Valeur totale</p>
+              <strong id="valueVbucks">0 V-Bucks</strong>
+              <p id="valueEuro">0,00 EUR</p>
+            </div>
+          </div>
+          <div class="value-breakdown" id="rarityBreakdown"></div>
+        </div>
+      </section>
 
       <section id="locker" class="panel">
         <div class="panel-head">
@@ -124,7 +151,6 @@
               <select id="setAccountSelect" aria-label="Compte cible pour le set">
                 <option value="A">Compte A</option>
                 <option value="B">Compte B</option>
-                <option value="both">A + B</option>
               </select>
               <button class="primary-btn" id="addSetBtn">Ajouter le set</button>
             </div>
@@ -136,11 +162,18 @@
               <button class="ghost-btn" id="clearManualBtn">Effacer</button>
             </div>
             <div class="manual-row">
-              <select id="manualSkinSelect" aria-label="Choisir un skin"></select>
+              <div class="manual-picker-field">
+                <button class="ghost-btn manual-picker-open" id="openSkinPickerBtn" type="button" aria-haspopup="dialog" aria-controls="skinPickerModal">
+                  Choisir un skin
+                </button>
+                <div class="manual-skin-preview" id="manualSkinPreview" aria-live="polite">
+                  <strong id="manualSkinPreviewName">Aucun skin selectionne</strong>
+                  <span id="manualSkinPreviewMeta">Clique sur “Choisir un skin”</span>
+                </div>
+              </div>
               <select id="manualAccountSelect" aria-label="Compte cible">
                 <option value="A">Compte A</option>
                 <option value="B">Compte B</option>
-                <option value="both">A + B</option>
               </select>
               <button class="primary-btn" id="addManualSkinBtn">Ajouter</button>
             </div>
@@ -158,25 +191,6 @@
           <div class="locker-grid" id="lockerGrid" aria-live="polite"></div>
         </div>
       </section>
-
-      <section id="value" class="panel">
-        <div class="panel-head">
-          <h3>Value Card</h3>
-          <p class="panel-subtitle">Calcul temps reel: rarete -> V-Bucks -> EUR.</p>
-        </div>
-
-        <div class="value-layout">
-          <div class="value-badge">
-            <div class="coin">V</div>
-            <div>
-              <p class="eyebrow">Valeur totale</p>
-              <strong id="valueVbucks">0 V-Bucks</strong>
-              <p id="valueEuro">0,00 EUR</p>
-            </div>
-          </div>
-          <div class="value-breakdown" id="rarityBreakdown"></div>
-        </div>
-      </section>
     </main>
   </div>
 
@@ -189,12 +203,50 @@
         </div>
         <div class="locker-title-row">
           <h4 class="locker-name"></h4>
-          <span class="ownership"></span>
+          <div class="ownership-badges" aria-label="Comptes proprietaires"></div>
         </div>
         <p class="locker-meta"></p>
         <div class="locker-tags"></div>
       </div>
     </article>
+  </template>
+
+  <div class="modal-overlay" id="skinPickerModal" hidden aria-hidden="true">
+    <section class="modal-panel skin-picker-modal" id="skinPickerPanel" role="dialog" aria-modal="true" aria-labelledby="skinPickerTitle">
+      <div class="skin-picker-head">
+        <div>
+          <p class="eyebrow">Ajout manuel</p>
+          <h3 id="skinPickerTitle">Skin Picker</h3>
+        </div>
+        <button class="ghost-btn" id="closeSkinPickerBtn" type="button" aria-label="Fermer la fenetre">Fermer</button>
+      </div>
+
+      <div class="skin-picker-controls">
+        <input id="skinPickerSearch" type="search" placeholder="Rechercher un skin..." aria-label="Rechercher un skin" />
+        <select id="skinPickerSort" aria-label="Trier les skins">
+          <option value="name">Tri: A → Z</option>
+          <option value="rarity">Tri: Rareté</option>
+        </select>
+        <p class="skin-picker-count" id="skinPickerCount">0/0 skins</p>
+      </div>
+
+      <div class="skin-picker-grid-wrap">
+        <div class="skin-picker-grid" id="skinPickerGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <template id="skinPickerCardTemplate">
+    <button class="skin-picker-card" type="button">
+      <div class="skin-picker-card-thumb">
+        <img alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="skin-picker-card-body">
+        <div class="skin-picker-card-flags" aria-hidden="true"></div>
+        <p class="skin-picker-card-name"></p>
+        <span class="skin-picker-card-rarity"></span>
+      </div>
+    </button>
   </template>
 
   <script src="./assets/app.js" type="module"></script>

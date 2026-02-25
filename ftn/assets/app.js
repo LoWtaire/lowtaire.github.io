@@ -41,8 +41,22 @@ const state = {
   lockerB: [],
   selectedSeasonIds: new Set(["S2"]),
   selectedSetNames: new Set(),
+  manual: {
+    selectedSkinId: "",
+    pickerOpen: false,
+    pickerQuery: "",
+    pickerSort: "name",
+    pickerResults: [],
+    lastFocusedEl: null
+  },
   pendingOps: 0,
-  errors: []
+  errors: [],
+  api: {
+    rateLimitUntil: 0,
+    rateLimitSource: "",
+    statsAbortController: null,
+    statsLoadPromise: null
+  }
 };
 
 const els = {
@@ -51,7 +65,10 @@ const els = {
   setChips: document.querySelector("#setChips"),
   clearSeasonsBtn: document.querySelector("#clearSeasonsBtn"),
   clearSetsBtn: document.querySelector("#clearSetsBtn"),
-  manualSkinSelect: document.querySelector("#manualSkinSelect"),
+  openSkinPickerBtn: document.querySelector("#openSkinPickerBtn"),
+  manualSkinPreview: document.querySelector("#manualSkinPreview"),
+  manualSkinPreviewName: document.querySelector("#manualSkinPreviewName"),
+  manualSkinPreviewMeta: document.querySelector("#manualSkinPreviewMeta"),
   manualAccountSelect: document.querySelector("#manualAccountSelect"),
   addManualSkinBtn: document.querySelector("#addManualSkinBtn"),
   clearManualBtn: document.querySelector("#clearManualBtn"),
@@ -77,12 +94,288 @@ const els = {
   valueVbucks: document.querySelector("#valueVbucks"),
   valueEuro: document.querySelector("#valueEuro"),
   rarityBreakdown: document.querySelector("#rarityBreakdown"),
-  lockerItemTemplate: document.querySelector("#lockerItemTemplate")
+  lockerItemTemplate: document.querySelector("#lockerItemTemplate"),
+  skinPickerModal: document.querySelector("#skinPickerModal"),
+  skinPickerPanel: document.querySelector("#skinPickerPanel"),
+  closeSkinPickerBtn: document.querySelector("#closeSkinPickerBtn"),
+  skinPickerSearch: document.querySelector("#skinPickerSearch"),
+  skinPickerSort: document.querySelector("#skinPickerSort"),
+  skinPickerCount: document.querySelector("#skinPickerCount"),
+  skinPickerGrid: document.querySelector("#skinPickerGrid"),
+  skinPickerCardTemplate: document.querySelector("#skinPickerCardTemplate")
 };
 
-const imageObserver = createImageObserver();
+const API_MAX_CONCURRENCY = 2;
+const API_DEFAULT_RETRIES = 4;
+const API_DEFAULT_TTL_MS = 3 * 60 * 1000;
+const API_CACHE_PREFIX = "ftn-cache-v1:";
+const apiRuntime = {
+  inFlight: new Map(),
+  queue: [],
+  activeCount: 0,
+  memoryCache: new Map()
+};
 
-init();
+class RateLimitError extends Error {
+  constructor(message, { retryAfterMs = 0, status = 429, url = "" } = {}) {
+    super(message);
+    this.name = "RateLimitError";
+    this.status = status;
+    this.retryAfterMs = retryAfterMs;
+    this.url = url;
+  }
+}
+
+function isAbortError(error) {
+  return error?.name === "AbortError";
+}
+
+function isRateLimitError(error) {
+  return error instanceof RateLimitError || error?.status === 429;
+}
+
+function debounce(fn, delayMs = 350) {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delayMs);
+  };
+}
+
+function delay(ms, signal) {
+  return new Promise((resolve, reject) => {
+    if (signal?.aborted) {
+      reject(new DOMException("Aborted", "AbortError"));
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      cleanup();
+      resolve();
+    }, Math.max(0, ms));
+
+    const onAbort = () => {
+      clearTimeout(timer);
+      cleanup();
+      reject(new DOMException("Aborted", "AbortError"));
+    };
+
+    const cleanup = () => {
+      if (signal) signal.removeEventListener("abort", onAbort);
+    };
+
+    if (signal) signal.addEventListener("abort", onAbort, { once: true });
+  });
+}
+
+function parseRetryAfterMs(retryAfterHeader) {
+  if (!retryAfterHeader) return 0;
+
+  const seconds = Number(retryAfterHeader);
+  if (Number.isFinite(seconds) && seconds >= 0) {
+    return Math.round(seconds * 1000);
+  }
+
+  const dateMs = Date.parse(retryAfterHeader);
+  if (Number.isFinite(dateMs)) {
+    return Math.max(0, dateMs - Date.now());
+  }
+
+  return 0;
+}
+
+function setRateLimitStatus(source, retryAfterMs) {
+  const until = Date.now() + Math.max(0, retryAfterMs || 0);
+  state.api.rateLimitUntil = Math.max(state.api.rateLimitUntil || 0, until);
+  state.api.rateLimitSource = source || "fortnite-api.com";
+  renderStatus();
+}
+
+function getRateLimitRemainingSeconds() {
+  const ms = Math.max(0, (state.api.rateLimitUntil || 0) - Date.now());
+  return Math.ceil(ms / 1000);
+}
+
+function getLocalCache(key) {
+  try {
+    const raw = localStorage.getItem(API_CACHE_PREFIX + key);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return null;
+    if (Number(parsed.expiresAt || 0) <= Date.now()) {
+      localStorage.removeItem(API_CACHE_PREFIX + key);
+      return null;
+    }
+    return parsed.value;
+  } catch {
+    return null;
+  }
+}
+
+function setLocalCache(key, value, ttlMs) {
+  try {
+    const payload = {
+      value,
+      expiresAt: Date.now() + ttlMs
+    };
+    localStorage.setItem(API_CACHE_PREFIX + key, JSON.stringify(payload));
+  } catch {
+    // Ignore quota/private mode errors.
+  }
+}
+
+function getCachedValue(cacheKey) {
+  if (!cacheKey) return null;
+
+  const mem = apiRuntime.memoryCache.get(cacheKey);
+  if (mem && mem.expiresAt > Date.now()) return mem.value;
+  if (mem) apiRuntime.memoryCache.delete(cacheKey);
+
+  const local = getLocalCache(cacheKey);
+  if (local != null) {
+    apiRuntime.memoryCache.set(cacheKey, {
+      value: local,
+      expiresAt: Date.now() + 30_000
+    });
+    return local;
+  }
+
+  return null;
+}
+
+function setCachedValue(cacheKey, value, ttlMs = API_DEFAULT_TTL_MS) {
+  if (!cacheKey) return;
+  const expiresAt = Date.now() + ttlMs;
+  apiRuntime.memoryCache.set(cacheKey, { value, expiresAt });
+  setLocalCache(cacheKey, value, ttlMs);
+}
+
+function enqueueApiTask(taskFactory) {
+  return new Promise((resolve, reject) => {
+    apiRuntime.queue.push({ taskFactory, resolve, reject });
+    pumpApiQueue();
+  });
+}
+
+function pumpApiQueue() {
+  while (apiRuntime.activeCount < API_MAX_CONCURRENCY && apiRuntime.queue.length > 0) {
+    const item = apiRuntime.queue.shift();
+    apiRuntime.activeCount += 1;
+
+    Promise.resolve()
+      .then(item.taskFactory)
+      .then(item.resolve, item.reject)
+      .finally(() => {
+        apiRuntime.activeCount -= 1;
+        pumpApiQueue();
+      });
+  }
+}
+
+async function apiFetch(url, options = {}) {
+  const {
+    method = "GET",
+    headers = {},
+    signal,
+    dedupeKey = `${method}:${String(url)}`,
+    cacheKey = "",
+    ttlMs = 0,
+    useCache = true,
+    retries = API_DEFAULT_RETRIES,
+    parse = "json"
+  } = options;
+
+  if (useCache && cacheKey) {
+    const cached = getCachedValue(cacheKey);
+    if (cached != null) return cached;
+  }
+
+  if (apiRuntime.inFlight.has(dedupeKey)) {
+    return apiRuntime.inFlight.get(dedupeKey);
+  }
+
+  const requestPromise = enqueueApiTask(async () => {
+    let lastError = null;
+
+    for (let attempt = 1; attempt <= retries; attempt += 1) {
+      if (signal?.aborted) {
+        throw new DOMException("Aborted", "AbortError");
+      }
+
+      const res = await fetch(url, { method, headers, signal });
+
+      if (res.status !== 429) {
+        if (!res.ok) {
+          const error = new Error(`API ${res.status} (${url})`);
+          error.status = res.status;
+          throw error;
+        }
+
+        let payload;
+        if (parse === "json") payload = await res.json();
+        else if (parse === "text") payload = await res.text();
+        else payload = res;
+
+        if (useCache && cacheKey && ttlMs > 0) {
+          setCachedValue(cacheKey, payload, ttlMs);
+        }
+
+        return payload;
+      }
+
+      const retryAfterHeader = res.headers.get("Retry-After");
+      const retryAfterMs = parseRetryAfterMs(retryAfterHeader);
+      const backoffMs = retryAfterMs || Math.min(8000, 1000 * (2 ** (attempt - 1)));
+
+      setRateLimitStatus(new URL(String(url)).host, backoffMs);
+
+      lastError = new RateLimitError(
+        `Rate limit API (${new URL(String(url)).host})`,
+        { retryAfterMs: backoffMs, status: 429, url: String(url) }
+      );
+
+      if (attempt >= retries) {
+        throw lastError;
+      }
+
+      await delay(backoffMs, signal);
+    }
+
+    throw lastError || new Error("Unknown API error");
+  });
+
+  apiRuntime.inFlight.set(dedupeKey, requestPromise);
+
+  try {
+    return await requestPromise;
+  } finally {
+    if (apiRuntime.inFlight.get(dedupeKey) === requestPromise) {
+      apiRuntime.inFlight.delete(dedupeKey);
+    }
+  }
+}
+
+function pushUiError(label, message) {
+  const full = `${label}: ${message}`;
+  const last = state.errors[state.errors.length - 1];
+  if (last !== full) state.errors.push(full);
+  if (state.errors.length > 10) state.errors.shift();
+}
+
+function formatApiErrorForUi(error) {
+  if (isAbortError(error)) return "";
+  if (isRateLimitError(error)) {
+    const sec = Math.max(1, Math.ceil((error.retryAfterMs || 1000) / 1000));
+    return `Rate limit, reessaie dans ${sec}s`;
+  }
+  return error instanceof Error ? error.message : String(error);
+}
+
+const scheduleStatsReload = debounce(() => {
+  loadStats({ force: true });
+}, 450);
+
+const imageObserver = createImageObserver();
 
 async function init() {
   bindUi();
@@ -102,6 +395,10 @@ async function init() {
 }
 
 function bindUi() {
+  const debouncedPickerSearch = debounce(() => {
+    refreshSkinPickerResults();
+  }, 180);
+
   document.querySelectorAll(".toggle-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       state.view = btn.dataset.view;
@@ -144,11 +441,50 @@ function bindUi() {
   });
 
   els.addManualSkinBtn.addEventListener("click", () => {
-    const cosmeticId = els.manualSkinSelect.value;
+    const cosmeticId = state.manual.selectedSkinId;
     const account = els.manualAccountSelect.value;
     if (!cosmeticId) return;
+    if (isCosmeticOwnedByAccount(cosmeticId, account)) {
+      const accountLabel = account === "A" ? "Compte A" : "Compte B";
+      pushUiError("ajout-manuel", `Ce skin est deja ajoute dans ${accountLabel}`);
+      updateManualSkinPreview();
+      renderStatus();
+      return;
+    }
     addCosmeticsToLocker([cosmeticId], account);
+    updateManualSkinPreview();
+    if (state.manual.pickerOpen) renderSkinPickerGrid();
     render();
+  });
+
+  els.openSkinPickerBtn?.addEventListener("click", openSkinPickerModal);
+  els.closeSkinPickerBtn?.addEventListener("click", () => closeSkinPickerModal());
+  els.skinPickerModal?.addEventListener("click", (event) => {
+    if (event.target === els.skinPickerModal) closeSkinPickerModal();
+  });
+  els.skinPickerSearch?.addEventListener("input", () => {
+    state.manual.pickerQuery = els.skinPickerSearch.value || "";
+    debouncedPickerSearch();
+  });
+  els.skinPickerSort?.addEventListener("change", () => {
+    state.manual.pickerSort = els.skinPickerSort.value || "name";
+    refreshSkinPickerResults();
+  });
+  els.manualAccountSelect?.addEventListener("change", () => {
+    updateManualSkinPreview();
+    if (state.manual.pickerOpen) renderSkinPickerGrid();
+  });
+  els.skinPickerPanel?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeSkinPickerModal();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && state.manual.pickerOpen) {
+      event.preventDefault();
+      closeSkinPickerModal();
+    }
   });
 
   els.addSetBtn.addEventListener("click", () => {
@@ -221,41 +557,105 @@ function syncChipStates() {
   });
 }
 
-async function loadStats() {
-  withPending(async () => {
-    const [a, b] = await Promise.all([
-      fetchPlayerStats(ACCOUNT_A),
-      fetchPlayerStats(ACCOUNT_B)
-    ]);
-    state.statsByAccount.A = a;
-    state.statsByAccount.B = b;
+async function loadStatsImpl({ force = false } = {}) {
+  if (!force && state.api.statsLoadPromise) {
+    return state.api.statsLoadPromise;
+  }
+
+  if (state.api.statsAbortController) {
+    state.api.statsAbortController.abort();
+  }
+  const controller = new AbortController();
+  state.api.statsAbortController = controller;
+
+  const run = withPending(async () => {
+    const tasks = [
+      fetchPlayerStats(ACCOUNT_A, { signal: controller.signal, force }),
+      fetchPlayerStats(ACCOUNT_B, { signal: controller.signal, force })
+    ];
+
+    const [resultA, resultB] = await Promise.allSettled(tasks);
+
+    if (resultA.status === "fulfilled") {
+      state.statsByAccount.A = resultA.value;
+    }
+    if (resultB.status === "fulfilled") {
+      state.statsByAccount.B = resultB.value;
+    }
+
+    const failures = [];
+    if (resultA.status === "rejected" && !isAbortError(resultA.reason)) {
+      failures.push({ account: ACCOUNT_A, error: resultA.reason });
+    }
+    if (resultB.status === "rejected" && !isAbortError(resultB.reason)) {
+      failures.push({ account: ACCOUNT_B, error: resultB.reason });
+    }
+
+    if (failures.length > 0) {
+      const messages = failures.map(({ account, error }) => {
+        const uiMsg = formatApiErrorForUi(error) || "Erreur inconnue";
+        return `${account}: ${uiMsg}`;
+      });
+
+      if (failures.length < 2) {
+        pushUiError("stats", messages.join(" | "));
+        console.warn("[stats] Partial failure:", failures);
+      } else {
+        throw new Error(messages.join(" | "));
+      }
+    }
   }, "stats");
+
+  state.api.statsLoadPromise = run.finally(() => {
+    if (state.api.statsLoadPromise === run) state.api.statsLoadPromise = null;
+    if (state.api.statsAbortController === controller) state.api.statsAbortController = null;
+  });
+
+  return state.api.statsLoadPromise;
+}
+
+async function loadStats(options = {}) {
+  return loadStatsImpl(options);
 }
 
 async function loadCosmetics() {
   await withPending(async () => {
     const url = new URL("/v2/cosmetics/br", API_BASE);
-    const res = await fetch(url, {
-      headers: { Authorization: API_KEY }
+    const json = await apiFetch(url, {
+      headers: { Authorization: API_KEY },
+      dedupeKey: `GET:${url.toString()}`,
+      cacheKey: "cosmetics:br",
+      ttlMs: 60 * 60 * 1000,
+      retries: 3,
+      parse: "json"
     });
-    if (!res.ok) throw new Error(`Cosmetics API ${res.status}`);
-    const json = await res.json();
+
     const raw = Array.isArray(json?.data) ? json.data : [];
-    state.cosmetics = raw.filter((c) => (c?.type?.value || "").toLowerCase() === "outfit" && c?.id);
+    state.cosmetics = raw
+      .map((c, index) => normalizeCosmeticRecord(c, index))
+      .filter((c) => (c?.type?.value || "").toLowerCase() === "outfit" && c?.id);
     state.cosmeticsById = new Map(state.cosmetics.map((c) => [c.id, c]));
     state.cosmeticsLoaded = true;
     buildManualSkinOptions();
   }, "cosmetics");
 }
 
-async function fetchPlayerStats(username) {
+async function fetchPlayerStats(username, { signal, force = false } = {}) {
   const url = new URL("/v2/stats/br/v2", API_BASE);
   url.searchParams.set("name", username);
   url.searchParams.set("accountType", "epic");
 
-  const res = await fetch(url, { headers: { Authorization: API_KEY } });
-  if (!res.ok) throw new Error(`Stats API ${res.status} (${username})`);
-  const json = await res.json();
+  const cacheKey = `stats:epic:${String(username).trim().toLowerCase()}`;
+  const json = await apiFetch(url, {
+    headers: { Authorization: API_KEY },
+    signal,
+    dedupeKey: `GET:${url.toString()}`,
+    cacheKey,
+    ttlMs: force ? 0 : API_DEFAULT_TTL_MS,
+    useCache: !force,
+    retries: 4,
+    parse: "json"
+  });
 
   const overall =
     json?.data?.stats?.all?.overall ||
@@ -301,13 +701,209 @@ function safeDiv(num, den) {
 }
 
 function buildManualSkinOptions() {
-  const items = [...state.cosmetics].sort((a, b) => (a.name || "").localeCompare(b.name || "", "fr"));
-  els.manualSkinSelect.innerHTML = "";
-  for (const cosmetic of items) {
-    const opt = document.createElement("option");
-    opt.value = cosmetic.id;
-    opt.textContent = `${cosmetic.name} (${cosmetic.rarity?.value || "Unknown"})`;
-    els.manualSkinSelect.append(opt);
+  if (!state.manual.selectedSkinId && state.cosmetics.length > 0) {
+    state.manual.selectedSkinId = state.cosmetics[0].id;
+  }
+  refreshSkinPickerResults();
+  updateManualSkinPreview();
+}
+
+function normalizeCosmeticRecord(cosmetic, index = 0) {
+  const item = cosmetic && typeof cosmetic === "object" ? { ...cosmetic } : {};
+  if (!item.id) item.id = createStableCosmeticId(item, index);
+  return item;
+}
+
+function createStableCosmeticId(cosmetic, index = 0) {
+  const base = String(cosmetic?.name || cosmetic?.displayName || `skin-${index}`)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return base || `skin-${index}`;
+}
+
+function getManualSelectedCosmetic() {
+  return state.cosmeticsById.get(state.manual.selectedSkinId) || null;
+}
+
+function getCurrentManualAccount() {
+  const account = els.manualAccountSelect?.value;
+  return account === "B" ? "B" : "A";
+}
+
+function getOwnedIdsForCurrentManualAccount() {
+  const account = getCurrentManualAccount();
+  return new Set(account === "B" ? state.lockerB : state.lockerA);
+}
+
+function isCosmeticOwnedByAccount(cosmeticId, account = getCurrentManualAccount()) {
+  if (!cosmeticId) return false;
+  if (account === "B") return state.lockerB.includes(cosmeticId);
+  return state.lockerA.includes(cosmeticId);
+}
+
+function updateManualSkinPreview() {
+  const cosmetic = getManualSelectedCosmetic();
+  if (!cosmetic) {
+    els.manualSkinPreview?.classList.remove("is-selected");
+    els.manualSkinPreview?.classList.remove("is-owned");
+    if (els.manualSkinPreviewName) els.manualSkinPreviewName.textContent = "Aucun skin selectionne";
+    if (els.manualSkinPreviewMeta) els.manualSkinPreviewMeta.textContent = "Clique sur “Choisir un skin”";
+    return;
+  }
+
+  const rarity = cosmetic?.rarity?.value || "Common";
+  const account = getCurrentManualAccount();
+  const owned = isCosmeticOwnedByAccount(cosmetic.id, account);
+  els.manualSkinPreview?.classList.add("is-selected");
+  els.manualSkinPreview?.setAttribute("data-rarity", rarity);
+  els.manualSkinPreview?.classList.toggle("is-owned", owned);
+  if (els.manualSkinPreviewName) els.manualSkinPreviewName.textContent = cosmetic.name || cosmetic.id;
+  if (els.manualSkinPreviewMeta) {
+    const rarityLabel = rarityUi[rarity]?.label || rarity;
+    els.manualSkinPreviewMeta.textContent = owned
+      ? `${rarityLabel} • Deja ajoute (${account})`
+      : rarityLabel;
+  }
+}
+
+function getSortedFilteredPickerItems() {
+  const query = state.manual.pickerQuery.trim().toLowerCase();
+  const items = query
+    ? state.cosmetics.filter((c) => String(c?.name || "").toLowerCase().includes(query))
+    : [...state.cosmetics];
+
+  items.sort((a, b) => {
+    const sort = state.manual.pickerSort;
+    if (sort === "rarity") {
+      const vbDiff = rarityToVbucks(b?.rarity?.value) - rarityToVbucks(a?.rarity?.value);
+      if (vbDiff !== 0) return vbDiff;
+    }
+    return String(a?.name || "").localeCompare(String(b?.name || ""), "fr");
+  });
+
+  return items;
+}
+
+function refreshSkinPickerResults() {
+  state.manual.pickerResults = getSortedFilteredPickerItems();
+  renderSkinPickerGrid();
+}
+
+function renderSkinPickerGrid() {
+  if (!els.skinPickerGrid) return;
+
+  const allItems = state.manual.pickerResults || [];
+  const ownedIds = getOwnedIdsForCurrentManualAccount();
+
+  els.skinPickerGrid.innerHTML = "";
+  for (const cosmetic of allItems) {
+    els.skinPickerGrid.append(createSkinPickerCard(cosmetic, ownedIds));
+  }
+
+  if (els.skinPickerCount) {
+    const ownedCount = allItems.reduce((count, item) => count + (ownedIds.has(item.id) ? 1 : 0), 0);
+    els.skinPickerCount.textContent = `${allItems.length} skins • ${ownedCount} deja ajoutes (${getCurrentManualAccount()})`;
+  }
+}
+
+function createSkinPickerCard(cosmetic, ownedIds = getOwnedIdsForCurrentManualAccount()) {
+  const frag = els.skinPickerCardTemplate.content.cloneNode(true);
+  const card = frag.querySelector(".skin-picker-card");
+  const img = frag.querySelector("img");
+  const flagsEl = frag.querySelector(".skin-picker-card-flags");
+  const nameEl = frag.querySelector(".skin-picker-card-name");
+  const badgeEl = frag.querySelector(".skin-picker-card-rarity");
+
+  const id = cosmetic.id;
+  const rarity = cosmetic?.rarity?.value || "Common";
+  const label = rarityUi[rarity]?.label || rarity;
+  const icon = cosmetic?.images?.icon || cosmetic?.images?.smallIcon || "";
+  const isSelected = state.manual.selectedSkinId === id;
+  const isOwned = ownedIds.has(id);
+
+  card.dataset.id = id;
+  card.dataset.rarity = rarity;
+  card.classList.toggle("is-selected", isSelected);
+  card.classList.toggle("is-owned", isOwned);
+  card.setAttribute("aria-pressed", String(isSelected));
+  card.setAttribute("aria-label", `${cosmetic.name || id}${isOwned ? " - deja ajoute" : ""}`);
+
+  if (nameEl) nameEl.textContent = cosmetic.name || id;
+  if (badgeEl) badgeEl.textContent = label;
+  if (flagsEl) {
+    flagsEl.innerHTML = "";
+    if (isOwned) flagsEl.append(createPickerFlag("OWNED", "is-owned"));
+    if (isSelected) flagsEl.append(createPickerFlag("SELECTED", "is-selected"));
+  }
+  if (img) {
+    img.alt = cosmetic.name || "Skin Fortnite";
+    if (icon) {
+      img.dataset.src = icon;
+      imageObserver?.observe(img);
+    }
+  }
+
+  card.addEventListener("click", () => {
+    selectManualSkin(id);
+    closeSkinPickerModal({ restoreFocus: true });
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      selectManualSkin(id);
+      closeSkinPickerModal({ restoreFocus: true });
+    }
+  });
+
+  return frag;
+}
+
+function createPickerFlag(label, variant) {
+  const el = document.createElement("span");
+  el.className = `skin-picker-flag ${variant}`;
+  el.textContent = label;
+  return el;
+}
+
+function selectManualSkin(cosmeticId) {
+  if (!cosmeticId || !state.cosmeticsById.has(cosmeticId)) return;
+  state.manual.selectedSkinId = cosmeticId;
+  updateManualSkinPreview();
+  if (state.manual.pickerOpen) {
+    renderSkinPickerGrid();
+  }
+}
+
+function openSkinPickerModal() {
+  if (!els.skinPickerModal) return;
+  state.manual.pickerOpen = true;
+  state.manual.lastFocusedEl = document.activeElement;
+  refreshSkinPickerResults();
+  els.skinPickerModal.hidden = false;
+  els.skinPickerModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  if (els.skinPickerSort) {
+    els.skinPickerSort.value = state.manual.pickerSort;
+  }
+  if (els.skinPickerSearch) {
+    els.skinPickerSearch.value = state.manual.pickerQuery;
+    els.skinPickerSearch.focus();
+    els.skinPickerSearch.select();
+  }
+}
+
+function closeSkinPickerModal({ restoreFocus = true } = {}) {
+  if (!els.skinPickerModal || els.skinPickerModal.hidden) return;
+  state.manual.pickerOpen = false;
+  els.skinPickerModal.hidden = true;
+  els.skinPickerModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  if (restoreFocus && state.manual.lastFocusedEl && typeof state.manual.lastFocusedEl.focus === "function") {
+    state.manual.lastFocusedEl.focus();
   }
 }
 
@@ -370,9 +966,16 @@ function render() {
   renderStats();
   renderLocker();
   renderValue();
+  updateManualSkinPreview();
+  if (state.manual.pickerOpen) renderSkinPickerGrid();
 }
 
 function renderStatus() {
+  const retrySeconds = getRateLimitRemainingSeconds();
+  if (retrySeconds > 0) {
+    els.apiStatus.textContent = `Rate limit Fortnite API, reessaie dans ${retrySeconds}s...`;
+    return;
+  }
   if (state.pendingOps > 0) {
     els.apiStatus.textContent = "Chargement API en cours...";
     return;
@@ -433,14 +1036,13 @@ function renderLocker() {
     const card = cardFrag.querySelector(".locker-item");
     const img = cardFrag.querySelector("img");
     const nameEl = cardFrag.querySelector(".locker-name");
-    const ownerEl = cardFrag.querySelector(".ownership");
+    const ownerWrapEl = cardFrag.querySelector(".ownership-badges");
     const metaEl = cardFrag.querySelector(".locker-meta");
     const tagsEl = cardFrag.querySelector(".locker-tags");
 
     const id = cosmetic.id;
     const inA = state.lockerA.includes(id);
     const inB = state.lockerB.includes(id);
-    const ownerLabel = inA && inB ? "A+B" : inA ? "A" : "B";
     const rarity = cosmetic?.rarity?.value || "Common";
     const vb = rarityToVbucks(rarity);
 
@@ -449,7 +1051,11 @@ function renderLocker() {
     card.dataset.id = id;
 
     nameEl.textContent = cosmetic.name || id;
-    ownerEl.textContent = ownerLabel;
+    if (ownerWrapEl) {
+      ownerWrapEl.innerHTML = "";
+      if (inA) ownerWrapEl.append(createOwnershipBadge("A"));
+      if (inB) ownerWrapEl.append(createOwnershipBadge("B"));
+    }
     metaEl.textContent = `${rarity} • ${vb} V-Bucks`;
 
     const seasonTag = cosmetic?.introduction ? `C${cosmetic.introduction.chapter}S${cosmetic.introduction.season}` : "Legacy";
@@ -478,6 +1084,13 @@ function renderLocker() {
 
     els.lockerGrid.append(cardFrag);
   }
+}
+
+function createOwnershipBadge(label) {
+  const el = document.createElement("span");
+  el.className = "ownership";
+  el.textContent = label;
+  return el;
 }
 
 function cycleOwnership(id) {
@@ -562,15 +1175,29 @@ async function withPending(task, label) {
   try {
     await task();
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    state.errors.push(`${label}: ${message}`);
-    console.error(`[${label}]`, error);
+    if (isAbortError(error)) {
+      return;
+    }
+
+    const message = formatApiErrorForUi(error) || "Erreur inconnue";
+    pushUiError(label, message);
+
+    if (isRateLimitError(error)) {
+      console.warn(`[${label}] ${message}`);
+    } else {
+      console.error(`[${label}]`, error);
+    }
   } finally {
     state.pendingOps -= 1;
     renderStatus();
   }
 }
 
-init();
+init().catch((error) => {
+  pushUiError("init", formatApiErrorForUi(error) || "Erreur d'initialisation");
+  console.error("[init]", error);
+  renderStatus();
+});
 window.selectBySeason = selectBySeason;
 window.selectBySet = selectBySet;
+window.scheduleStatsReload = scheduleStatsReload;
