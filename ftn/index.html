@@ -119,6 +119,7 @@
               <p class="eyebrow">Valeur totale</p>
               <strong id="valueVbucks">0 V-Bucks</strong>
               <p id="valueEuro">0,00 EUR</p>
+              <p id="valueDetails" class="value-details"></p>
             </div>
           </div>
           <div class="value-breakdown" id="rarityBreakdown"></div>
@@ -129,6 +130,18 @@
         <div class="panel-head">
           <h3>Virtual Locker</h3>
           <p class="panel-subtitle">Saisons + sets + selection manuelle, avec deduplication A/B.</p>
+        <div class="locker-topbar">
+          <label class="locker-sort-label" for="lockerSortSelect">Tri</label>
+          <select id="lockerSortSelect">
+            <option value="rarity_desc">Rareté (desc)</option>
+            <option value="rarity_asc">Rareté (asc)</option>
+            <option value="season_desc">Saison (desc)</option>
+            <option value="season_asc">Saison (asc)</option>
+            <option value="added_newest">Ajouté (récent)</option>
+            <option value="added_oldest">Ajouté (ancien)</option>
+            <option value="name_asc">Nom (A→Z)</option>
+          </select>
+        </div>
         </div>
 
         <div class="locker-controls">
@@ -176,6 +189,10 @@
                 <option value="B">Compte B</option>
               </select>
               <button class="primary-btn" id="addManualSkinBtn">Ajouter</button>
+            </div>
+            <div class="manual-options">
+              <label class="toggle-opt"><input type="checkbox" id="autoSetToggle" checked> Auto set</label>
+              <label class="toggle-opt"><input type="checkbox" id="autoBPToggle"> Auto battle pass (jusqu’au skin)</label>
             </div>
           </div>
         </div>

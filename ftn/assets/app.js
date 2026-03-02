@@ -29,6 +29,11 @@ const rarityUi = {
 };
 
 const state = {
+  lockerOptions: {
+    autoExpandSetOnManualAdd: true,
+    autoExpandBattlePassOnManualAdd: false
+  },
+  lockerSort: "rarity_desc",
   view: "merged",
   statsByAccount: {
     A: null,
@@ -62,6 +67,10 @@ const state = {
 
 const els = {
   apiStatus: document.querySelector("#apiStatus"),
+  lockerSortSelect: document.querySelector("#lockerSortSelect"),
+  autoSetToggle: document.querySelector("#autoSetToggle"),
+  autoBPToggle: document.querySelector("#autoBPToggle"),
+  valueDetails: document.querySelector("#valueDetails"),
   seasonChips: document.querySelector("#seasonChips"),
   setChips: document.querySelector("#setChips"),
   clearSeasonsBtn: document.querySelector("#clearSeasonsBtn"),
@@ -443,14 +452,40 @@ function bindUi() {
 
   els.addManualSkinBtn.addEventListener("click", () => {
     const account = els.manualAccountSelect.value;
-    const selectedIds = [...state.manual.selectedSkinIds];
-    if (selectedIds.length === 0 && state.manual.selectedSkinId) {
-      selectedIds.push(state.manual.selectedSkinId);
-    }
+
+    // Sync options from UI toggles (if present)
+    if (els.autoSetToggle) state.lockerOptions.autoExpandSetOnManualAdd = !!els.autoSetToggle.checked;
+    if (els.autoBPToggle) state.lockerOptions.autoExpandBattlePassOnManualAdd = !!els.autoBPToggle.checked;
+
+    let selectedIds = [...state.manual.selectedSkinIds];
+    if (selectedIds.length === 0 && state.manual.selectedSkinId) selectedIds.push(state.manual.selectedSkinId);
     if (selectedIds.length === 0) return;
 
-    const idsToAdd = selectedIds.filter((id) => !isCosmeticOwnedByAccount(id, account));
-    const alreadyOwnedCount = selectedIds.length - idsToAdd.length;
+    // Resolve intelligent selections
+    const idsResolved = new Set(selectedIds);
+
+    if (state.lockerOptions.autoExpandSetOnManualAdd) {
+      for (const id of selectedIds) {
+        const c = getCosmeticById(id);
+        const setName = cosmeticSetName(c);
+        if (!setName) continue;
+        for (const other of state.cosmetics) {
+          if (cosmeticSetName(other).toLowerCase() === setName.toLowerCase()) idsResolved.add(other.id);
+        }
+      }
+    }
+
+    if (state.lockerOptions.autoExpandBattlePassOnManualAdd) {
+      for (const id of selectedIds) {
+        const c = getCosmeticById(id);
+        if (!c) continue;
+        if (!isBattlePassCosmetic(c)) continue;
+        for (const bid of resolveBattlePassUpTo(id)) idsResolved.add(bid);
+      }
+    }
+
+    const idsToAdd = [...idsResolved].filter((id) => !isCosmeticOwnedByAccount(id, account));
+    const alreadyOwnedCount = idsResolved.size - idsToAdd.length;
 
     if (idsToAdd.length === 0) {
       const accountLabel = account === "A" ? "Compte A" : "Compte B";
@@ -463,7 +498,8 @@ function bindUi() {
 
     addCosmeticsToLocker(idsToAdd, account);
     if (alreadyOwnedCount > 0) {
-      pushUiError("ajout-manuel", `${alreadyOwnedCount} skin(s) deja ajoutes ignores`);
+      const accountLabel = account === "A" ? "Compte A" : "Compte B";
+      pushUiError("ajout-manuel", `${alreadyOwnedCount} deja present(s) dans ${accountLabel}`);
     }
     updateManualSkinPreview();
     if (state.manual.pickerOpen) renderSkinPickerGrid();
@@ -509,6 +545,29 @@ function bindUi() {
     syncChipStates();
     render();
   });
+  if (els.lockerSortSelect) {
+    els.lockerSortSelect.value = state.lockerSort || "rarity_desc";
+    els.lockerSortSelect.addEventListener("change", () => {
+      state.lockerSort = els.lockerSortSelect.value;
+      renderLocker();
+      renderValue();
+    });
+  }
+
+  if (els.autoSetToggle) {
+    els.autoSetToggle.checked = !!state.lockerOptions.autoExpandSetOnManualAdd;
+    els.autoSetToggle.addEventListener("change", () => {
+      state.lockerOptions.autoExpandSetOnManualAdd = !!els.autoSetToggle.checked;
+    });
+  }
+
+  if (els.autoBPToggle) {
+    els.autoBPToggle.checked = !!state.lockerOptions.autoExpandBattlePassOnManualAdd;
+    els.autoBPToggle.addEventListener("change", () => {
+      state.lockerOptions.autoExpandBattlePassOnManualAdd = !!els.autoBPToggle.checked;
+    });
+  }
+
 }
 
 function buildSeasonChips() {
@@ -1166,50 +1225,173 @@ function cycleOwnership(id) {
 }
 
 function sortCosmeticsForGrid(a, b) {
-  return (rarityToVbucks(b?.rarity?.value) - rarityToVbucks(a?.rarity?.value)) ||
-    (a?.name || "").localeCompare(b?.name || "", "fr");
+  const mode = state.lockerSort || "rarity_desc";
+
+  if (mode === "rarity_desc") {
+    return (rarityToVbucks(b?.rarity?.value) - rarityToVbucks(a?.rarity?.value)) ||
+      (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  if (mode === "rarity_asc") {
+    return (rarityToVbucks(a?.rarity?.value) - rarityToVbucks(b?.rarity?.value)) ||
+      (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  if (mode === "season_desc") {
+    const ak = seasonKeyFromCosmetic(a);
+    const bk = seasonKeyFromCosmetic(b);
+    return bk.localeCompare(ak, "fr") || (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  if (mode === "season_asc") {
+    const ak = seasonKeyFromCosmetic(a);
+    const bk = seasonKeyFromCosmetic(b);
+    return ak.localeCompare(bk, "fr") || (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  if (mode === "added_oldest") {
+    return (addedTime(a) - addedTime(b)) || (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  if (mode === "added_newest") {
+    return (addedTime(b) - addedTime(a)) || (a?.name || "").localeCompare(b?.name || "", "fr");
+  }
+
+  return (a?.name || "").localeCompare(b?.name || "", "fr");
 }
 
 function renderValue() {
   const items = getLockerItems();
-  const byRarity = new Map();
-  let totalVbucks = 0;
+  const shopByRarity = new Map();
+
+  const smart = computeVbucksSmart(items);
 
   for (const cosmetic of items) {
+    if (!cosmetic || isBattlePassCosmetic(cosmetic)) continue;
     const rarity = cosmetic?.rarity?.value || "Common";
     const vb = rarityToVbucks(rarity);
-    totalVbucks += vb;
-    const current = byRarity.get(rarity) || { count: 0, vbucks: 0 };
+    const current = shopByRarity.get(rarity) || { count: 0, vbucks: 0 };
     current.count += 1;
     current.vbucks += vb;
-    byRarity.set(rarity, current);
+    shopByRarity.set(rarity, current);
   }
 
-  const totalEur = (totalVbucks / 1000) * 8.99;
-  els.valueVbucks.textContent = `${totalVbucks.toLocaleString("fr-FR")} V-Bucks`;
+  const totalEur = (smart.total / 1000) * 8.99;
+  els.valueVbucks.textContent = `${smart.total.toLocaleString("fr-FR")} V-Bucks`;
   els.valueEuro.textContent = `${totalEur.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} EUR`;
 
+  if (els.valueDetails) {
+    const bpSeasonCount = Math.max(0, smart.bpSeasons - (smart.bpBySeason?.has?.("UNKNOWN") ? 1 : 0));
+    els.valueDetails.textContent = `Shop: ${smart.shopVbucks.toLocaleString("fr-FR")} · Pass: ${smart.bpVbucks.toLocaleString("fr-FR")} (${bpSeasonCount} saisons)`;
+  }
+
   els.rarityBreakdown.innerHTML = "";
+
   for (const rarity of ["Legendary", "Epic", "Rare", "Uncommon", "Common"]) {
-    const row = byRarity.get(rarity);
-    if (!row) continue;
-    const card = document.createElement("article");
+    const item = shopByRarity.get(rarity) || { count: 0, vbucks: 0 };
+    const card = document.createElement("div");
     card.className = "break-card";
-    card.style.borderColor = `${(rarityUi[rarity]?.color || "#64748b")}66`;
-    card.style.boxShadow = `inset 0 0 0 1px ${(rarityUi[rarity]?.color || "#64748b")}22`;
     card.innerHTML = `
-      <h4>${rarityUi[rarity]?.label || rarity}</h4>
-      <p>${row.count} skin(s)</p>
-      <strong>${row.vbucks.toLocaleString("fr-FR")} V-Bucks</strong>
-      <p>${((row.vbucks / 1000) * 8.99).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} EUR</p>
+      <h4>${rarity}</h4>
+      <p>${item.count} skin(s) shop</p>
+      <strong>${item.vbucks.toLocaleString("fr-FR")} V-Bucks</strong>
     `;
-    els.rarityBreakdown.append(card);
+    els.rarityBreakdown.appendChild(card);
+  }
+
+  if (smart.bpVbucks > 0) {
+    const bpSeasonCount = Math.max(0, smart.bpSeasons - (smart.bpBySeason?.has?.("UNKNOWN") ? 1 : 0));
+    const card = document.createElement("div");
+    card.className = "break-card";
+    card.innerHTML = `
+      <h4>Battle Pass</h4>
+      <p>${bpSeasonCount} saison(s) (pool)</p>
+      <strong>${smart.bpVbucks.toLocaleString("fr-FR")} V-Bucks</strong>
+    `;
+    els.rarityBreakdown.appendChild(card);
   }
 }
 
 function rarityToVbucks(rarityValue) {
   const key = String(rarityValue || "").toLowerCase();
   return rarityValues[key] || 0;
+}
+
+
+function getCosmeticById(id) {
+  return state.cosmeticsById.get(id) || null;
+}
+
+function cosmeticSetName(c) {
+  const v = (c?.set?.value || "").trim();
+  return v ? v : "";
+}
+
+function seasonKeyFromCosmetic(c) {
+  const ch = Number(c?.introduction?.chapter);
+  const se = Number(c?.introduction?.season);
+  if (!Number.isFinite(ch) || !Number.isFinite(se)) return "";
+  return ch === 1 ? `S${se}` : `C${ch}S${se}`;
+}
+
+function isBattlePassCosmetic(c) {
+  const tags = []
+    .concat(c?.gameplayTags || [])
+    .concat(c?.metaTags || [])
+    .map((t) => String(t).toLowerCase());
+
+  if (tags.some((t) => t.includes("battlepass"))) return true;
+
+  const intro = String(c?.introduction?.text || "").toLowerCase();
+  if (intro.includes("battle pass") || intro.includes("passe de combat")) return true;
+
+  return false;
+}
+
+function addedTime(c) {
+  const t = Date.parse(c?.added);
+  return Number.isFinite(t) ? t : Number.POSITIVE_INFINITY;
+}
+
+function resolveBattlePassUpTo(id) {
+  const target = getCosmeticById(id);
+  if (!target) return [];
+  const key = seasonKeyFromCosmetic(target);
+  if (!key) return [];
+
+  const targetTime = addedTime(target);
+  const pool = state.cosmetics
+    .filter((c) => seasonKeyFromCosmetic(c) === key)
+    .filter((c) => isBattlePassCosmetic(c));
+
+  pool.sort((a, b) => (addedTime(a) - addedTime(b)) || (a?.name || "").localeCompare(b?.name || "", "fr"));
+
+  const picked = pool.filter((c) => addedTime(c) <= targetTime);
+  return picked.map((c) => c.id);
+}
+
+function computeVbucksSmart(items) {
+  const BP_POOL_VBUCKS = 950;
+  let shopVbucks = 0;
+  const bpBySeason = new Map();
+
+  for (const c of items) {
+    if (!c) continue;
+    if (isBattlePassCosmetic(c)) {
+      const k = seasonKeyFromCosmetic(c) || "UNKNOWN";
+      bpBySeason.set(k, (bpBySeason.get(k) || 0) + 1);
+    } else {
+      shopVbucks += rarityToVbucks(c?.rarity?.value);
+    }
+  }
+
+  let bpVbucks = 0;
+  for (const [k, count] of bpBySeason.entries()) {
+    if (k === "UNKNOWN") continue;
+    if (count > 0) bpVbucks += BP_POOL_VBUCKS;
+  }
+
+  return { total: shopVbucks + bpVbucks, shopVbucks, bpVbucks, bpSeasons: bpBySeason.size, bpBySeason };
 }
 
 function createImageObserver() {
