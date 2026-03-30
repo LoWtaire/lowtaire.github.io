@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T11:12:40.051Z",
+  "generated_at": "2026-03-30T12:03:25.644Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 12,
@@ -11,10 +11,10 @@
       "end": "2026-03-30T11:30:00+02:00",
       "allDay": false,
       "location": "TD 204",
-      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\nMARTINSH Kristina\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34323239332d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-03-30T16:00:00+02:00",
       "allDay": false,
       "location": "1417 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d37",
@@ -35,10 +35,10 @@
       "end": "2026-03-30T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34393435352d302d30",
@@ -47,10 +47,10 @@
       "end": "2026-03-31T12:00:00+02:00",
       "allDay": false,
       "location": "404 B",
-      "description": "\nsurveillante: Fatna\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\nsurveillante: Fatna\nM1 EGEDD\nM1 PAUL\nFRERE Severine\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353834322d302d30",
@@ -59,10 +59,10 @@
       "end": "2026-03-31T16:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nMONTEIRO Marie-Evelyne\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\nMONTEIRO Marie-Evelyne\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3739302d302d30",
@@ -71,10 +71,10 @@
       "end": "2026-04-01T12:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383539392d302d30",
@@ -83,10 +83,10 @@
       "end": "2026-04-01T16:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383738372d302d30",
@@ -95,10 +95,10 @@
       "end": "2026-04-02T12:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323238372d302d30",
@@ -107,10 +107,10 @@
       "end": "2026-04-02T15:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d33",
@@ -119,10 +119,10 @@
       "end": "2026-04-13T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d30",
@@ -131,10 +131,10 @@
       "end": "2026-04-20T20:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
@@ -143,10 +143,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 13:12)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:30/03/2026 14:03)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-30T13:12:39+02:00"
+      "lastModified": "2026-03-30T14:03:25+02:00"
     }
   ]
 }
