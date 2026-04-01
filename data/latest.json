@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T06:50:46.815Z",
+  "generated_at": "2026-04-01T11:09:22.128Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 7,
@@ -11,10 +11,10 @@
       "end": "2026-04-01T12:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383539392d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-04-01T16:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nBURY Olivier\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383738372d302d30",
@@ -35,10 +35,10 @@
       "end": "2026-04-02T12:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323238372d302d30",
@@ -47,10 +47,10 @@
       "end": "2026-04-02T15:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d33",
@@ -59,10 +59,10 @@
       "end": "2026-04-13T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d30",
@@ -71,10 +71,10 @@
       "end": "2026-04-20T20:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
@@ -83,10 +83,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 08:50)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:01/04/2026 13:09)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-01T08:50:46+02:00"
+      "lastModified": "2026-04-01T13:09:22+02:00"
     }
   ]
 }
