@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T05:45:53.245Z",
+  "generated_at": "2026-04-02T06:16:08.004Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 5,
@@ -11,10 +11,10 @@
       "end": "2026-04-02T12:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:02/04/2026 07:45)\n",
+      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:02/04/2026 08:16)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T07:45:52+02:00"
+      "lastModified": "2026-04-02T08:16:07+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323238372d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-04-02T15:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:02/04/2026 07:45)\n",
+      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:02/04/2026 08:16)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T07:45:52+02:00"
+      "lastModified": "2026-04-02T08:16:07+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d33",
@@ -35,10 +35,10 @@
       "end": "2026-04-13T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 07:45)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 08:16)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T07:45:52+02:00"
+      "lastModified": "2026-04-02T08:16:07+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d30",
@@ -47,10 +47,10 @@
       "end": "2026-04-20T20:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 07:45)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 08:16)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T07:45:52+02:00"
+      "lastModified": "2026-04-02T08:16:07+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
@@ -59,10 +59,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 07:45)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 08:16)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T07:45:52+02:00"
+      "lastModified": "2026-04-02T08:16:07+02:00"
     }
   ]
 }
