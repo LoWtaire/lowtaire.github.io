@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T10:56:57.120Z",
+  "generated_at": "2026-04-03T11:51:39.864Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 3,
@@ -11,10 +11,10 @@
       "end": "2026-04-13T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 12:56)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 13:51)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-03T12:56:56+02:00"
+      "lastModified": "2026-04-03T13:51:39+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-04-20T20:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 12:56)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 13:51)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-03T12:56:56+02:00"
+      "lastModified": "2026-04-03T13:51:39+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
@@ -35,10 +35,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 12:56)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 13:51)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-03T12:56:56+02:00"
+      "lastModified": "2026-04-03T13:51:39+02:00"
     }
   ]
 }
