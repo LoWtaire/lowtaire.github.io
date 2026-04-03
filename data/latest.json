@@ -1,33 +1,9 @@
 {
-  "generated_at": "2026-04-02T17:57:57.928Z",
+  "generated_at": "2026-04-03T05:46:16.482Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
-  "count": 5,
+  "count": 3,
   "events": [
-    {
-      "id": "ADE60554c434f323032352d323032362d33383738372d302d30",
-      "title": "Risques et Territoires (Examens)",
-      "start": "2026-04-02T09:30:00+02:00",
-      "end": "2026-04-02T12:30:00+02:00",
-      "allDay": false,
-      "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM1 EGEDD\nPHILIPPENKO Xenia\n(Exporté le:02/04/2026 19:57)\n",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-02T19:57:57+02:00"
-    },
-    {
-      "id": "ADE60554c434f323032352d323032362d35323238372d302d30",
-      "title": "anglais - Contrôle continu",
-      "start": "2026-04-02T13:30:00+02:00",
-      "end": "2026-04-02T15:30:00+02:00",
-      "allDay": false,
-      "location": "2401 SALLE DE COURS",
-      "description": "\n\nM1 EGEDD\nM1 PAUL\nLOUVET Michel\nHOCQUEZ Laura\n(Exporté le:02/04/2026 19:57)\n",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-02T19:57:57+02:00"
-    },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d33",
       "title": "Comptabilité environnementale et finance soutenanble",
@@ -35,10 +11,10 @@
       "end": "2026-04-13T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 19:57)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 07:46)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T19:57:57+02:00"
+      "lastModified": "2026-04-03T07:46:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d30",
@@ -47,10 +23,10 @@
       "end": "2026-04-20T20:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 19:57)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 07:46)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T19:57:57+02:00"
+      "lastModified": "2026-04-03T07:46:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
@@ -59,10 +35,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:02/04/2026 19:57)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:03/04/2026 07:46)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-02T19:57:57+02:00"
+      "lastModified": "2026-04-03T07:46:16+02:00"
     }
   ]
 }
