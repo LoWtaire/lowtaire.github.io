@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T17:13:09.176Z",
+  "generated_at": "2026-04-22T18:11:28.524Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 1,
@@ -11,10 +11,10 @@
       "end": "2026-04-27T21:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:22/04/2026 19:13)\n",
+      "description": "\n\nM1 EGEDD\n(Exporté le:22/04/2026 20:11)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-22T19:13:08+02:00"
+      "lastModified": "2026-04-22T20:11:27+02:00"
     }
   ]
 }
