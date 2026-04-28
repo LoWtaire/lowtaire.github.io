@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-04-27T18:17:28.825Z",
+  "generated_at": "2026-04-28T06:38:35.273Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
-  "count": 1,
-  "events": [
-    {
-      "id": "ADE60554c434f323032352d323032362d34303530362d302d31",
-      "title": "Comptabilité environnementale et finance soutenanble",
-      "start": "2026-04-27T18:00:00+02:00",
-      "end": "2026-04-27T21:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\nM1 EGEDD\n(Exporté le:27/04/2026 20:17)\n",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-27T20:17:28+02:00"
-    }
-  ]
+  "count": 0,
+  "events": []
 }
