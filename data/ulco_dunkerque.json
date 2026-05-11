@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-11T12:47:53.427Z",
+  "generated_at": "2026-05-11T13:50:24.581Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
-  "count": 211,
+  "count": 212,
   "events": [
     {
       "id": "ADE60554c434f323032352d323032362d31333531332d322d30",
@@ -11,10 +11,10 @@
       "end": "2026-05-11T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353034332d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-05-11T11:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 LETTRES  - PROMO\nMANTION Stéphanie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nMANTION Stéphanie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343637332d302d30",
@@ -35,10 +35,10 @@
       "end": "2026-05-11T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n4302 A\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n4302 A\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34313239352d302d30",
@@ -47,10 +47,10 @@
       "end": "2026-05-11T11:45:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nLEYSSENS Agathe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nLEYSSENS Agathe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34373334342d31322d30",
@@ -59,10 +59,10 @@
       "end": "2026-05-11T11:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313233342d302d30",
@@ -71,10 +71,10 @@
       "end": "2026-05-11T11:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nSalle 2401\nL1 PHYSIQUE CHIMIE - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nSalle 2401\nL1 PHYSIQUE CHIMIE - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313034362d302d30",
@@ -83,10 +83,10 @@
       "end": "2026-05-11T11:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333638322d302d30",
@@ -95,10 +95,10 @@
       "end": "2026-05-11T11:30:00+02:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nL1 HUMANITES - PROMO\nBOUQUET Aurélie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nBOUQUET Aurélie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343939392d302d30",
@@ -107,10 +107,10 @@
       "end": "2026-05-11T11:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nDAGRON Edouard\nDIEU Louis\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nDAGRON Edouard\nDIEU Louis\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34333430362d302d32",
@@ -119,10 +119,10 @@
       "end": "2026-05-11T16:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313034372d302d30",
@@ -131,10 +131,10 @@
       "end": "2026-05-11T11:45:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383032322d302d36",
@@ -143,10 +143,10 @@
       "end": "2026-05-11T14:30:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353331322d33352d30",
@@ -155,10 +155,10 @@
       "end": "2026-05-11T15:00:00+02:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\nK.BENRABAH\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nK.BENRABAH\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343938362d302d30",
@@ -167,10 +167,10 @@
       "end": "2026-05-11T15:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 HUMANITES - PROMO\nC2 : L1 LETTRES  OPTION CULTURE GENERALE\nDIEU Louis\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nC2 : L1 LETTRES  OPTION CULTURE GENERALE\nDIEU Louis\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313233382d302d30",
@@ -179,10 +179,10 @@
       "end": "2026-05-11T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nSalle 2401\nL1 PHYSIQUE CHIMIE - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nSalle 2401\nL1 PHYSIQUE CHIMIE - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313035312d302d30",
@@ -191,10 +191,10 @@
       "end": "2026-05-11T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n2401 SALLE DE COURS\nL2 PHYSIQUE-CHIMIE OPTION PHYSIQUE DE L'ENVIRONNEMENT\nDIEUDONNE Elsa\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n2401 SALLE DE COURS\nL2 PHYSIQUE-CHIMIE OPTION PHYSIQUE DE L'ENVIRONNEMENT\nDIEUDONNE Elsa\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313035352d302d30",
@@ -203,10 +203,10 @@
       "end": "2026-05-11T15:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL2 PHYSIQUE-CHIMIE OPTION CHIMIE ORGANIQUE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 PHYSIQUE-CHIMIE OPTION CHIMIE ORGANIQUE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34323538392d302d30",
@@ -215,10 +215,10 @@
       "end": "2026-05-11T16:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nPROMO L2 MATHS PPPE\nSMOCH Laurent\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\nSMOCH Laurent\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333736392d302d30",
@@ -227,10 +227,10 @@
       "end": "2026-05-11T16:30:00+02:00",
       "allDay": false,
       "location": "2411 SALLE DE COURS",
-      "description": "\nKUEHN Thibaut\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nKUEHN Thibaut\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343636332d302d30",
@@ -239,10 +239,10 @@
       "end": "2026-05-11T17:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32373135312d33312d30",
@@ -251,10 +251,10 @@
       "end": "2026-05-11T16:30:00+02:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\nK.BENRABAH\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nK.BENRABAH\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313035322d302d30",
@@ -263,10 +263,10 @@
       "end": "2026-05-11T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n2401 SALLE DE COURS\nL2 PHYSIQUE-CHIMIE OPTION PHYSIQUE DE L'ENVIRONNEMENT\nDIEUDONNE Elsa\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n2401 SALLE DE COURS\nL2 PHYSIQUE-CHIMIE OPTION PHYSIQUE DE L'ENVIRONNEMENT\nDIEUDONNE Elsa\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313035362d302d30",
@@ -275,10 +275,10 @@
       "end": "2026-05-11T16:45:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL2 PHYSIQUE-CHIMIE OPTION CHIMIE ORGANIQUE\nDOUARD LoreleÏ\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 PHYSIQUE-CHIMIE OPTION CHIMIE ORGANIQUE\nDOUARD LoreleÏ\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31333533302d302d32",
@@ -287,10 +287,10 @@
       "end": "2026-05-12T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353034312d302d30",
@@ -299,10 +299,10 @@
       "end": "2026-05-12T10:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL1 LETTRES  - PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34323738312d302d30",
@@ -311,10 +311,10 @@
       "end": "2026-05-12T17:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL1 STAPS - Parcours LAS\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 STAPS - Parcours LAS\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32373135312d33322d30",
@@ -323,10 +323,10 @@
       "end": "2026-05-12T11:30:00+02:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\n\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393933362d31312d30",
@@ -335,10 +335,10 @@
       "end": "2026-05-12T11:30:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\nK.BENRABAH\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nK.BENRABAH\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343938352d302d30",
@@ -347,10 +347,10 @@
       "end": "2026-05-12T11:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 HUMANITES - PROMO\nETHUIN Philippe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nETHUIN Philippe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343637342d302d30",
@@ -359,10 +359,10 @@
       "end": "2026-05-12T12:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333736342d312d30",
@@ -371,10 +371,10 @@
       "end": "2026-05-12T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nCOURS AU LYCEE\nsalle A114\nPROMO L2 MATHS PPPE\nGENSANE Thierry\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nCOURS AU LYCEE\nsalle A114\nPROMO L2 MATHS PPPE\nGENSANE Thierry\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313331342d302d30",
@@ -383,10 +383,10 @@
       "end": "2026-05-12T18:00:00+02:00",
       "allDay": false,
       "location": "1504-SALLE DE CHIMIE",
-      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\nMASSELIN Pascal\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 PHYSIQUE-CHIMIE PROMO\nMASSELIN Pascal\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303234372d302d30",
@@ -395,10 +395,10 @@
       "end": "2026-05-12T15:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nETHUIN Philippe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nETHUIN Philippe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32353331322d33362d30",
@@ -407,10 +407,22 @@
       "end": "2026-05-12T15:30:00+02:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\nK BENRABAH\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nK BENRABAH\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
+    },
+    {
+      "id": "ADE60554c434f323032352d323032362d34373932322d302d30",
+      "title": "MU6 Algèbre",
+      "start": "2026-05-12T14:15:00+02:00",
+      "end": "2026-05-12T15:45:00+02:00",
+      "allDay": false,
+      "location": "2414 SALLE DE COURS",
+      "description": "\nREPORT 1 du 22/05\nPROMO L2 MATHS PPPE\nGENSANE Thierry\n(Exporté le:11/05/2026 15:50)\n",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343637322d302d30",
@@ -419,10 +431,10 @@
       "end": "2026-05-12T18:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nLE LAN Nadège\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nLE LAN Nadège\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353034382d302d30",
@@ -431,10 +443,10 @@
       "end": "2026-05-12T17:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32373135312d33332d30",
@@ -443,10 +455,10 @@
       "end": "2026-05-12T17:00:00+02:00",
       "allDay": false,
       "location": "1210 SALLE DE COURS",
-      "description": "\nK.BENRABAH\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nK.BENRABAH\nGR2 - DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343337352d302d30",
@@ -455,10 +467,10 @@
       "end": "2026-05-12T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nCRL\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nCRL\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333635302d312d30",
@@ -467,10 +479,10 @@
       "end": "2026-05-12T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nSALLE CRL, 4426\nDU PASSERELLE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nSALLE CRL, 4426\nDU PASSERELLE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31333531332d302d30",
@@ -479,10 +491,10 @@
       "end": "2026-05-13T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333637372d302d30",
@@ -491,10 +503,10 @@
       "end": "2026-05-13T12:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 LETTRES  - PROMO\nBERQUIN Francois\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nBERQUIN Francois\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343637372d302d30",
@@ -503,10 +515,10 @@
       "end": "2026-05-13T12:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n4302 A\nL3 LETTRES PROMO\nTILLIETTE Marie-Agathe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n4302 A\nL3 LETTRES PROMO\nTILLIETTE Marie-Agathe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333934322d302d30",
@@ -515,10 +527,10 @@
       "end": "2026-05-13T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nORLANE/KARIMA\nDU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nORLANE/KARIMA\nDU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34323738312d302d31",
@@ -527,10 +539,10 @@
       "end": "2026-05-13T17:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL1 STAPS - Parcours LAS\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 STAPS - Parcours LAS\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33373936312d302d30",
@@ -539,10 +551,10 @@
       "end": "2026-05-13T11:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nLEVEQUE Gilles\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nLEVEQUE Gilles\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313431362d302d30",
@@ -551,10 +563,10 @@
       "end": "2026-05-13T12:30:00+02:00",
       "allDay": false,
       "location": "1503-TP CHIMIE ORGA.",
-      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333934322d302d31",
@@ -563,10 +575,10 @@
       "end": "2026-05-13T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nDU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333637382d302d30",
@@ -575,10 +587,10 @@
       "end": "2026-05-13T15:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 HUMANITES - PROMO\nC2 : L1 LETTRES  OPTION PHILOSOPHIE GENERALE\nLEVEQUE Gilles\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nC2 : L1 LETTRES  OPTION PHILOSOPHIE GENERALE\nLEVEQUE Gilles\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313431372d302d30",
@@ -587,10 +599,10 @@
       "end": "2026-05-13T15:30:00+02:00",
       "allDay": false,
       "location": "1503-TP CHIMIE ORGA.",
-      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333737362d302d30",
@@ -599,10 +611,22 @@
       "end": "2026-05-13T16:30:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
+    },
+    {
+      "id": "ADE60554c434f323032352d323032362d34373932322d31302d30",
+      "title": "MU6 Algèbre",
+      "start": "2026-05-13T14:15:00+02:00",
+      "end": "2026-05-13T15:45:00+02:00",
+      "allDay": false,
+      "location": "2303 SALLE DE COURS",
+      "description": "\nREPORT 2 du 22/05\nPROMO L2 MATHS PPPE\nGENSANE Thierry\n(Exporté le:11/05/2026 15:50)\n",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343636342d302d30",
@@ -611,10 +635,10 @@
       "end": "2026-05-13T18:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nDUSSUEIL Valentine\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nDUSSUEIL Valentine\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323433372d312d30",
@@ -623,10 +647,10 @@
       "end": "2026-05-13T18:30:00+02:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS",
-      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:51+02:00"
+      "lastModified": "2026-05-11T15:50:21+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313431382d302d30",
@@ -635,10 +659,10 @@
       "end": "2026-05-13T16:15:00+02:00",
       "allDay": false,
       "location": "1503-TP CHIMIE ORGA.",
-      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 PHYSIQUE CHIMIE - PROMO\nDEGUINE Alexandre\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31333533352d302d30",
@@ -647,10 +671,10 @@
       "end": "2026-05-14T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333331322d302d30",
@@ -659,10 +683,10 @@
       "end": "2026-05-14T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393237312d302d30",
@@ -671,10 +695,10 @@
       "end": "2026-05-15T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333330322d302d30",
@@ -683,10 +707,10 @@
       "end": "2026-05-15T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343935382d302d30",
@@ -695,10 +719,10 @@
       "end": "2026-05-18T12:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 LETTRES  - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343637352d302d30",
@@ -707,10 +731,10 @@
       "end": "2026-05-18T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n4302 A\nL3 LETTRES PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n4302 A\nL3 LETTRES PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34393333312d302d30",
@@ -719,10 +743,10 @@
       "end": "2026-05-18T11:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nLEYSSENS Agathe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nLEYSSENS Agathe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353335312d302d30",
@@ -731,10 +755,10 @@
       "end": "2026-05-18T09:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338322d302d30",
@@ -743,10 +767,10 @@
       "end": "2026-05-18T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35303930332d302d30",
@@ -755,10 +779,10 @@
       "end": "2026-05-18T11:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nPOISSON Pierre\nRENARD Patrycja\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nPOISSON Pierre\nRENARD Patrycja\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336312d302d30",
@@ -767,10 +791,10 @@
       "end": "2026-05-18T11:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo L1 LEA\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo L1 LEA\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339382d302d30",
@@ -779,10 +803,10 @@
       "end": "2026-05-18T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339342d302d30",
@@ -791,10 +815,10 @@
       "end": "2026-05-18T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337362d302d30",
@@ -803,10 +827,10 @@
       "end": "2026-05-18T12:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339332d302d30",
@@ -815,10 +839,10 @@
       "end": "2026-05-18T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339372d302d30",
@@ -827,10 +851,10 @@
       "end": "2026-05-18T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383032322d302d39",
@@ -839,10 +863,10 @@
       "end": "2026-05-18T14:30:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333737392d302d30",
@@ -851,10 +875,10 @@
       "end": "2026-05-18T16:00:00+02:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nPROMO L3 GEO\nPHILIPPENKO Xenia\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 GEO\nPHILIPPENKO Xenia\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353030312d302d30",
@@ -863,10 +887,10 @@
       "end": "2026-05-18T15:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\nGIBOUT Christophe\nL2 HUMANITES - OPTION ANALYSE POLITIQUE\nL3 HUMANITES -PROMO\nBOUREL Margaux\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nGIBOUT Christophe\nL2 HUMANITES - OPTION ANALYSE POLITIQUE\nL3 HUMANITES -PROMO\nBOUREL Margaux\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336342d302d30",
@@ -875,10 +899,10 @@
       "end": "2026-05-18T14:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339302d302d30",
@@ -887,10 +911,10 @@
       "end": "2026-05-18T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339362d302d30",
@@ -899,10 +923,10 @@
       "end": "2026-05-18T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333534392d302d30",
@@ -911,10 +935,10 @@
       "end": "2026-05-18T16:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L1 GEO\nGIBOUT Christophe\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nGIBOUT Christophe\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303238362d302d30",
@@ -923,10 +947,10 @@
       "end": "2026-05-18T17:30:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343636382d302d30",
@@ -935,10 +959,10 @@
       "end": "2026-05-18T16:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nLIERE Audrey\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336372d302d30",
@@ -947,10 +971,10 @@
       "end": "2026-05-18T16:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430302d302d30",
@@ -959,10 +983,10 @@
       "end": "2026-05-18T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 espagnol\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 espagnol\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339352d302d30",
@@ -971,10 +995,10 @@
       "end": "2026-05-18T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353335392d302d30",
@@ -983,10 +1007,10 @@
       "end": "2026-05-18T17:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nLEA1 Hispanistes\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA1 Hispanistes\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353335352d302d30",
@@ -995,10 +1019,10 @@
       "end": "2026-05-19T09:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338372d302d30",
@@ -1007,10 +1031,10 @@
       "end": "2026-05-19T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353034342d302d30",
@@ -1019,10 +1043,10 @@
       "end": "2026-05-19T10:30:00+02:00",
       "allDay": false,
       "location": "Amphi extension Citadelle",
-      "description": "\n\nL1 LETTRES  - PROMO\nL2 LETTRES PROMO\nL3 LETTRES PROMO\nHOCQUEZ Laura\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nL2 LETTRES PROMO\nL3 LETTRES PROMO\nHOCQUEZ Laura\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333738302d302d30",
@@ -1031,10 +1055,10 @@
       "end": "2026-05-19T12:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\nMARIE GRESSIER\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nMARIE GRESSIER\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333332392d302d30",
@@ -1043,10 +1067,10 @@
       "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
       "location": "2301 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nDEGUINE Alexandre\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nDEGUINE Alexandre\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393933362d31302d30",
@@ -1055,10 +1079,10 @@
       "end": "2026-05-19T11:30:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333432392d302d30",
@@ -1067,10 +1091,10 @@
       "end": "2026-05-19T12:00:00+02:00",
       "allDay": false,
       "location": "2303 SALLE DE COURS",
-      "description": "\n\nPROMO L2 GEO\nABOU SLEIMAN Perla\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 GEO\nABOU SLEIMAN Perla\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33362d362d30",
@@ -1079,10 +1103,10 @@
       "end": "2026-05-19T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353335332d302d30",
@@ -1091,10 +1115,10 @@
       "end": "2026-05-19T11:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363531392d302d30",
@@ -1103,10 +1127,10 @@
       "end": "2026-05-19T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353335372d302d30",
@@ -1115,10 +1139,10 @@
       "end": "2026-05-19T12:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338352d302d30",
@@ -1127,10 +1151,10 @@
       "end": "2026-05-19T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433302d302d30",
@@ -1139,10 +1163,10 @@
       "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 GEO\nJOUVENEL Anthony\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 GEO\nJOUVENEL Anthony\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433312d302d30",
@@ -1151,10 +1175,10 @@
       "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nJOUVENEL Anthony \nSALLE 2401\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nJOUVENEL Anthony \nSALLE 2401\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333737302d302d30",
@@ -1163,10 +1187,10 @@
       "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
       "location": "2411 SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336352d302d30",
@@ -1175,10 +1199,10 @@
       "end": "2026-05-19T14:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430332d302d30",
@@ -1187,10 +1211,10 @@
       "end": "2026-05-19T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353030382d302d30",
@@ -1199,10 +1223,10 @@
       "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nTERNISIEN Caecilia\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nTERNISIEN Caecilia\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336382d302d30",
@@ -1211,10 +1235,10 @@
       "end": "2026-05-19T16:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430342d302d30",
@@ -1223,10 +1247,10 @@
       "end": "2026-05-19T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430352d302d30",
@@ -1235,10 +1259,10 @@
       "end": "2026-05-19T17:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337372d302d30",
@@ -1247,10 +1271,10 @@
       "end": "2026-05-19T17:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333638352d302d30",
@@ -1259,10 +1283,10 @@
       "end": "2026-05-20T12:00:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 HUMANITES - GROUPE OPTION LE ROMAN\nL3 HUMANITES - OPTION THEATRE ET SOCIETES\nL3 LETTRES MODULE OPTIONNEL THEATRE ET SOCIETE\nDOURET Matthieu\nBIRAZ Tina\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - GROUPE OPTION LE ROMAN\nL3 HUMANITES - OPTION THEATRE ET SOCIETES\nL3 LETTRES MODULE OPTIONNEL THEATRE ET SOCIETE\nDOURET Matthieu\nBIRAZ Tina\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353034322d302d30",
@@ -1271,10 +1295,10 @@
       "end": "2026-05-20T11:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL1 LETTRES  - PROMO\nSIKORA Dorota\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\nSIKORA Dorota\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313735342d302d30",
@@ -1283,10 +1307,10 @@
       "end": "2026-05-20T11:30:00+02:00",
       "allDay": false,
       "location": "Amphi extension Citadelle",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303832362d31302d30",
@@ -1295,10 +1319,10 @@
       "end": "2026-05-20T12:00:00+02:00",
       "allDay": false,
       "location": "2411 SALLE DE COURS",
-      "description": "\n\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34393733362d302d30",
@@ -1307,10 +1331,10 @@
       "end": "2026-05-20T16:30:00+02:00",
       "allDay": false,
       "location": "4302 A",
-      "description": "\n\nL1 HUMANITES - GROUPE LE THEATRE\nL2 HUMANITES - OPTION HISTOIRE DES INSTITUTIONS\nNOISETTE Valentin\nBIRAZ Tina\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - GROUPE LE THEATRE\nL2 HUMANITES - OPTION HISTOIRE DES INSTITUTIONS\nNOISETTE Valentin\nBIRAZ Tina\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333535342d302d30",
@@ -1319,10 +1343,10 @@
       "end": "2026-05-20T15:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L2 GEO\nBLAISE Emmanuel\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 GEO\nBLAISE Emmanuel\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333738362d302d30",
@@ -1331,10 +1355,10 @@
       "end": "2026-05-20T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n2402 SALLE DE COURS\nPROMO L3 GEO\nPHILIPPENKO Xenia\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n2402 SALLE DE COURS\nPROMO L3 GEO\nPHILIPPENKO Xenia\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34333032332d342d30",
@@ -1343,10 +1367,10 @@
       "end": "2026-05-20T16:45:00+02:00",
       "allDay": false,
       "location": "2309 SALLE DE COURS",
-      "description": "\nREPORT DU 22/05\nPROMO L3 MATHS PPPE\nBENOIT Antoine\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nREPORT DU 22/05\nPROMO L3 MATHS PPPE\nBENOIT Antoine\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33373035352d302d30",
@@ -1355,10 +1379,10 @@
       "end": "2026-05-20T16:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\nEXAMEN ORAL\nPROMO L1 GEO\nDESQUIREZ Frédéric\nJOAN Jean-Marc\nJOUVENEL Anthony\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nEXAMEN ORAL\nPROMO L1 GEO\nDESQUIREZ Frédéric\nJOAN Jean-Marc\nJOUVENEL Anthony\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343636392d302d30",
@@ -1367,10 +1391,10 @@
       "end": "2026-05-20T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n4410 C SALLE DE COURS\nL2 LETTRES PROMO\nSIKORA Dorota\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n4410 C SALLE DE COURS\nL2 LETTRES PROMO\nSIKORA Dorota\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353037342d302d30",
@@ -1379,10 +1403,10 @@
       "end": "2026-05-20T17:00:00+02:00",
       "allDay": false,
       "location": "4410 C",
-      "description": "\n\nL3 LETTRES PROMO\nKOROLEVA Elena\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nKOROLEVA Elena\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383032322d302d3131",
@@ -1391,10 +1415,10 @@
       "end": "2026-05-20T17:00:00+02:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323433372d302d30",
@@ -1403,10 +1427,10 @@
       "end": "2026-05-20T18:30:00+02:00",
       "allDay": false,
       "location": "2411 SALLE DE COURS",
-      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\nDONSE Francky\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:51+02:00"
+      "lastModified": "2026-05-11T15:50:21+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383734332d302d35",
@@ -1415,10 +1439,10 @@
       "end": "2026-05-21T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353037332d302d30",
@@ -1427,10 +1451,10 @@
       "end": "2026-05-21T11:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nDONSE Francky\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nDONSE Francky\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336392d302d30",
@@ -1439,10 +1463,10 @@
       "end": "2026-05-21T09:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430362d302d30",
@@ -1451,10 +1475,10 @@
       "end": "2026-05-21T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433332d302d30",
@@ -1463,10 +1487,10 @@
       "end": "2026-05-21T12:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L2 GEO\nPROMO L3 GEO\nJOAN Jean-Marc\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 GEO\nPROMO L3 GEO\nJOAN Jean-Marc\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303439392d302d30",
@@ -1475,10 +1499,10 @@
       "end": "2026-05-21T11:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nDAVANSANT Frédéric\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nDAVANSANT Frédéric\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333638302d302d30",
@@ -1487,10 +1511,10 @@
       "end": "2026-05-21T11:00:00+02:00",
       "allDay": false,
       "location": "Amphi extension Citadelle",
-      "description": "\n\nL1 HUMANITES - PROMO\nHOCQUEZ Laura\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nHOCQUEZ Laura\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33362d32312d30",
@@ -1499,10 +1523,10 @@
       "end": "2026-05-21T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337302d302d30",
@@ -1511,10 +1535,10 @@
       "end": "2026-05-21T11:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430372d302d30",
@@ -1523,10 +1547,10 @@
       "end": "2026-05-21T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337312d302d30",
@@ -1535,10 +1559,10 @@
       "end": "2026-05-21T12:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo L1 LEA\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo L1 LEA\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430322d302d30",
@@ -1547,10 +1571,10 @@
       "end": "2026-05-21T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34353136382d302d30",
@@ -1559,10 +1583,10 @@
       "end": "2026-05-21T19:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS,2305 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333432372d302d30",
@@ -1571,10 +1595,10 @@
       "end": "2026-05-21T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n2402 SALLE DE COURS\nPROMO L1 GEO\nCOHEN Olivier\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n2402 SALLE DE COURS\nPROMO L1 GEO\nCOHEN Olivier\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333535372d302d30",
@@ -1583,10 +1607,10 @@
       "end": "2026-05-21T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nLORIN Amaury\n2402 SALLE DE COURS\nPROMO L2 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nLORIN Amaury\n2402 SALLE DE COURS\nPROMO L2 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333432382d302d30",
@@ -1595,10 +1619,10 @@
       "end": "2026-05-21T16:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337322d302d30",
@@ -1607,10 +1631,10 @@
       "end": "2026-05-21T14:45:00+02:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\npromo LEA 1\nVINDEVOGEL Franck\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\nVINDEVOGEL Franck\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31343431392d31302d30",
@@ -1619,10 +1643,10 @@
       "end": "2026-05-21T16:00:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34343636362d302d30",
@@ -1631,10 +1655,10 @@
       "end": "2026-05-21T17:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nL2 LETTRES PROMO\nLIBAERT Alycya\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL2 LETTRES PROMO\nLIBAERT Alycya\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336362d302d30",
@@ -1643,10 +1667,10 @@
       "end": "2026-05-21T16:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo L1 LEA\nDRUEL Jocelyn\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo L1 LEA\nDRUEL Jocelyn\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338362d302d30",
@@ -1655,10 +1679,10 @@
       "end": "2026-05-21T16:15:00+02:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nLEA 2 promo\nVINDEVOGEL Franck\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 2 promo\nVINDEVOGEL Franck\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333434352d302d30",
@@ -1667,10 +1691,10 @@
       "end": "2026-05-21T17:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337382d302d30",
@@ -1679,10 +1703,10 @@
       "end": "2026-05-22T09:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338342d302d30",
@@ -1691,22 +1715,10 @@
       "end": "2026-05-22T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
-    },
-    {
-      "id": "ADE60554c434f323032352d323032362d34373932322d312d30",
-      "title": "MU6 Algèbre",
-      "start": "2026-05-22T08:45:00+02:00",
-      "end": "2026-05-22T12:00:00+02:00",
-      "allDay": false,
-      "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L2 MATHS PPPE\nGENSANE Thierry\n(Exporté le:11/05/2026 14:47)\n",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303238362d342d30",
@@ -1715,10 +1727,10 @@
       "end": "2026-05-22T12:00:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32343631332d332d30",
@@ -1727,10 +1739,10 @@
       "end": "2026-05-22T12:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L1 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\nBRACCO Anne\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383734312d302d39",
@@ -1739,10 +1751,10 @@
       "end": "2026-05-22T13:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM1 LETTRES ( MEEF)   - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:51+02:00"
+      "lastModified": "2026-05-11T15:50:21+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333737372d302d30",
@@ -1751,10 +1763,10 @@
       "end": "2026-05-22T11:30:00+02:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nBARD Audrey\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nBARD Audrey\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433322d302d30",
@@ -1763,10 +1775,10 @@
       "end": "2026-05-22T12:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L1 GEO\nBOISSONADE Jerome\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nBOISSONADE Jerome\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333931332d302d30",
@@ -1775,10 +1787,10 @@
       "end": "2026-05-22T12:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:19+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337392d302d30",
@@ -1787,10 +1799,10 @@
       "end": "2026-05-22T11:15:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338332d302d30",
@@ -1799,10 +1811,10 @@
       "end": "2026-05-22T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338302d302d30",
@@ -1811,10 +1823,10 @@
       "end": "2026-05-22T12:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353339392d302d30",
@@ -1823,10 +1835,10 @@
       "end": "2026-05-22T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA2 espagnol\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA2 espagnol\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34353137302d302d30",
@@ -1835,10 +1847,10 @@
       "end": "2026-05-22T19:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS,2305 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433352d302d30",
@@ -1847,10 +1859,10 @@
       "end": "2026-05-22T15:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L1 GEO\nLUCAS Leopold\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nLUCAS Leopold\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35333433342d302d30",
@@ -1859,10 +1871,10 @@
       "end": "2026-05-22T15:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nLUCAS Leopold\nSALLE 2402\nPROMO L2 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nLUCAS Leopold\nSALLE 2402\nPROMO L2 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353336332d302d30",
@@ -1871,10 +1883,10 @@
       "end": "2026-05-22T14:45:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\npromo LEA 1\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353430312d302d30",
@@ -1883,10 +1895,10 @@
       "end": "2026-05-22T14:45:00+02:00",
       "allDay": false,
       "location": "4301 Labo de langues",
-      "description": "\n\nLEA2 espagnol\nNIETO Moïses\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA2 espagnol\nNIETO Moïses\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353337342d302d30",
@@ -1895,10 +1907,10 @@
       "end": "2026-05-22T16:15:00+02:00",
       "allDay": false,
       "location": "4307 Labo de langues",
-      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGroupe LEA1  Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353338392d302d30",
@@ -1907,10 +1919,10 @@
       "end": "2026-05-22T15:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nS.2414\nLEA 2 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:49+02:00"
+      "lastModified": "2026-05-11T15:50:18+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31333534332d302d30",
@@ -1919,10 +1931,10 @@
       "end": "2026-05-25T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\nPROMO L2 GEO\nPROMO L3 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31363531302d302d30",
@@ -1931,10 +1943,10 @@
       "end": "2026-05-25T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL3 LETTRES PROMO\nL1 LETTRES  - PROMO\nL2 LETTRES PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nL1 LETTRES  - PROMO\nL2 LETTRES PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333330302d312d30",
@@ -1943,10 +1955,10 @@
       "end": "2026-05-25T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\nPROMO L2 MATHS PPPE\nPROMO L3 MATHS PPPE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303238362d332d30",
@@ -1955,10 +1967,10 @@
       "end": "2026-05-26T12:00:00+02:00",
       "allDay": false,
       "location": "1417 SALLE DE COURS",
-      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nDU TREMPLIN COURT\nDU TREMPLIN LONG\nBAUDUIN MARIE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32393933362d312d30",
@@ -1967,10 +1979,10 @@
       "end": "2026-05-26T11:30:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR1 -DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34353137312d302d30",
@@ -1979,10 +1991,10 @@
       "end": "2026-05-26T18:30:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS,2306 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nL3 LETTRES PROMO\nDEVAUX Jean\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34393332382d302d30",
@@ -1991,10 +2003,10 @@
       "end": "2026-05-27T11:30:00+02:00",
       "allDay": false,
       "location": "2414 SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nBARD Audrey\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nBARD Audrey\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303832362d392d30",
@@ -2003,10 +2015,10 @@
       "end": "2026-05-28T12:30:00+02:00",
       "allDay": false,
       "location": "2309 SALLE DE COURS",
-      "description": "\n\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR1 -DU Passerelle\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34333430362d302d33",
@@ -2015,10 +2027,10 @@
       "end": "2026-05-28T16:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31343431392d31362d30",
@@ -2027,10 +2039,10 @@
       "end": "2026-05-28T16:00:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d33383735372d332d30",
@@ -2039,10 +2051,10 @@
       "end": "2026-05-29T11:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L1 MATHS PPPE\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:48+02:00"
+      "lastModified": "2026-05-11T15:50:17+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34333430362d302d30",
@@ -2051,10 +2063,10 @@
       "end": "2026-06-01T16:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343138302d302d30",
@@ -2063,10 +2075,10 @@
       "end": "2026-06-02T11:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nSMOCH Laurent\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nSMOCH Laurent\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303534382d302d30",
@@ -2075,10 +2087,10 @@
       "end": "2026-06-03T18:00:00+02:00",
       "allDay": false,
       "location": "2306 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\nLEFEBVRE Laurie\nPREVOST Christine\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\nLEFEBVRE Laurie\nPREVOST Christine\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34303531312d302d30",
@@ -2087,10 +2099,10 @@
       "end": "2026-06-03T18:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343337302d302d30",
@@ -2099,10 +2111,10 @@
       "end": "2026-06-04T17:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 SCM\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM1 SCM\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:51+02:00"
+      "lastModified": "2026-05-11T15:50:22+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d31343431392d322d30",
@@ -2111,10 +2123,10 @@
       "end": "2026-06-04T16:00:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nGR2 - DU Passerelle\nFOURNIER Mylène\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343138332d302d30",
@@ -2123,10 +2135,10 @@
       "end": "2026-06-05T11:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nPROMO L3 MATHS PPPE\nBENOIT Antoine\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\nBENOIT Antoine\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35323433312d302d30",
@@ -2135,10 +2147,10 @@
       "end": "2026-06-05T16:15:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\nExamen Oral\nPROMO L3 MATHS PPPE\nWECKSTEEN Sandrine\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\nExamen Oral\nPROMO L3 MATHS PPPE\nWECKSTEEN Sandrine\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d34333430362d302d31",
@@ -2147,10 +2159,10 @@
       "end": "2026-06-08T16:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM2 LETTRES (MEEF) - PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:52+02:00"
+      "lastModified": "2026-05-11T15:50:23+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431312d302d30",
@@ -2159,10 +2171,10 @@
       "end": "2026-06-15T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 PROMO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 PROMO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431322d302d30",
@@ -2171,10 +2183,10 @@
       "end": "2026-06-15T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431332d302d30",
@@ -2183,10 +2195,10 @@
       "end": "2026-06-15T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431342d302d30",
@@ -2195,10 +2207,10 @@
       "end": "2026-06-15T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353433392d302d30",
@@ -2207,10 +2219,10 @@
       "end": "2026-06-15T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435392d302d30",
@@ -2219,10 +2231,10 @@
       "end": "2026-06-15T17:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431382d302d30",
@@ -2231,10 +2243,10 @@
       "end": "2026-06-16T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353432312d302d30",
@@ -2243,10 +2255,10 @@
       "end": "2026-06-16T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353432302d302d30",
@@ -2255,10 +2267,10 @@
       "end": "2026-06-16T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353432322d302d30",
@@ -2267,10 +2279,10 @@
       "end": "2026-06-16T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353433382d302d30",
@@ -2279,10 +2291,10 @@
       "end": "2026-06-16T16:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431362d302d30",
@@ -2291,10 +2303,10 @@
       "end": "2026-06-16T17:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353434362d302d30",
@@ -2303,10 +2315,10 @@
       "end": "2026-06-18T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353434322d302d30",
@@ -2315,10 +2327,10 @@
       "end": "2026-06-18T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435302d302d30",
@@ -2327,10 +2339,10 @@
       "end": "2026-06-18T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353434382d302d30",
@@ -2339,10 +2351,10 @@
       "end": "2026-06-18T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 Espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 Espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435312d302d30",
@@ -2351,10 +2363,10 @@
       "end": "2026-06-18T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435332d302d30",
@@ -2363,10 +2375,10 @@
       "end": "2026-06-18T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435372d302d30",
@@ -2375,10 +2387,10 @@
       "end": "2026-06-18T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435342d302d30",
@@ -2387,10 +2399,10 @@
       "end": "2026-06-18T14:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435322d302d30",
@@ -2399,10 +2411,10 @@
       "end": "2026-06-18T15:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353431352d302d30",
@@ -2411,10 +2423,10 @@
       "end": "2026-06-18T17:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435352d302d30",
@@ -2423,10 +2435,10 @@
       "end": "2026-06-19T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 allemand\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353435362d302d30",
@@ -2435,10 +2447,10 @@
       "end": "2026-06-19T09:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353434352d302d30",
@@ -2447,10 +2459,10 @@
       "end": "2026-06-19T11:15:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353434392d302d30",
@@ -2459,10 +2471,10 @@
       "end": "2026-06-19T12:45:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nLEA 3 groupe espagnol\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nLEA 3 groupe espagnol\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:50+02:00"
+      "lastModified": "2026-05-11T15:50:20+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d30",
@@ -2471,10 +2483,10 @@
       "end": "2026-06-22T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d32363738322d302d30",
@@ -2483,10 +2495,10 @@
       "end": "2026-06-22T17:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 ITM promo\nM2 ITM promo\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nM1 ITM promo\nM2 ITM promo\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:51+02:00"
+      "lastModified": "2026-05-11T15:50:21+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d31",
@@ -2495,10 +2507,10 @@
       "end": "2026-06-23T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d32",
@@ -2507,10 +2519,10 @@
       "end": "2026-06-24T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d33",
@@ -2519,10 +2531,10 @@
       "end": "2026-06-25T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d34",
@@ -2531,10 +2543,10 @@
       "end": "2026-06-26T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 14:47)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:11/05/2026 15:50)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-11T14:47:47+02:00"
+      "lastModified": "2026-05-11T15:50:16+02:00"
     }
   ]
 }
