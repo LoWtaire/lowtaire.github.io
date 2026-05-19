@@ -1,45 +1,9 @@
 {
-  "generated_at": "2026-05-19T12:51:44.161Z",
+  "generated_at": "2026-05-19T14:05:18.840Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 337,
   "events": [
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32312d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-19T08:00:00+02:00",
-      "end": "2026-05-19T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:28:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32392d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-19T08:00:00+02:00",
-      "end": "2026-05-19T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 16:13)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-07T16:13:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d393131332d302d38",
-      "title": "EI 1 EC 203.2 Chimie des solutions aqueuses",
-      "start": "2026-05-19T08:00:00+02:00",
-      "end": "2026-05-19T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 1",
-      "description": "\n\nMEUX Éric\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:17/02/2026 09:04)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-17T09:04:00+01:00"
-    },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d33",
       "title": "ORAUX BLACS PASS/LAS 1 4 salles",
@@ -51,18 +15,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-13T16:17:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32362d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-05-19T08:00:00+02:00",
-      "end": "2026-05-19T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343335382d312d30",
@@ -77,6 +29,54 @@
       "lastModified": "2026-04-02T11:51:00+02:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d393131332d302d38",
+      "title": "EI 1 EC 203.2 Chimie des solutions aqueuses",
+      "start": "2026-05-19T08:00:00+02:00",
+      "end": "2026-05-19T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 1",
+      "description": "\n\nMEUX Éric\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:17/02/2026 09:04)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-17T09:04:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32312d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-19T08:00:00+02:00",
+      "end": "2026-05-19T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:28:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32362d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-05-19T08:00:00+02:00",
+      "end": "2026-05-19T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32392d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-19T08:00:00+02:00",
+      "end": "2026-05-19T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 16:13)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-07T16:13:00+02:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d33",
       "title": "ORAUX BLACS PASS/LAS 1 4 salles",
       "start": "2026-05-19T08:00:00+02:00",
@@ -87,18 +87,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-13T16:17:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39343238352d322d30",
-      "title": "TD ME1062 Gérer une classe, avoir une apporoche réflexive",
-      "start": "2026-05-19T08:30:00+02:00",
-      "end": "2026-05-19T11:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Start up 2 D16",
-      "description": "\n\nROTH David\nM2 MEEF EPS\n\n(Modifié le:22/09/2025 11:05)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-09-22T11:05:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d31303938352d302d30",
@@ -113,16 +101,28 @@
       "lastModified": "2026-05-06T10:46:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d322d30",
-      "title": "Réservation de salle tiers-temps ALIMOHAMMADZADEH TAHER",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39343238352d322d30",
+      "title": "TD ME1062 Gérer une classe, avoir une apporoche réflexive",
+      "start": "2026-05-19T08:30:00+02:00",
+      "end": "2026-05-19T11:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Start up 2 D16",
+      "description": "\n\nROTH David\nM2 MEEF EPS\n\n(Modifié le:22/09/2025 11:05)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-09-22T11:05:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3136373933302d302d32",
+      "title": "TP ME872 Réfléxi. epistémo.à partir des expérimen. historiques2",
       "start": "2026-05-19T09:00:00+02:00",
       "end": "2026-05-19T12:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:09/03/2026 16:37)",
+      "location": "Bridoux_TP Hertz H13",
+      "description": "\n\nCODA-BOUCHOT Virginie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:07/11/2025 10:46)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-09T16:37:00+01:00"
+      "lastModified": "2025-11-07T10:46:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d392d30",
@@ -137,6 +137,18 @@
       "lastModified": "2026-03-09T16:30:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d322d30",
+      "title": "Réservation de salle tiers-temps ALIMOHAMMADZADEH TAHER",
+      "start": "2026-05-19T09:00:00+02:00",
+      "end": "2026-05-19T12:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:09/03/2026 16:37)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-09T16:37:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032322d302d33",
       "title": "TP C EC 205.2 Pratique expérimentale chimie des solutions",
       "start": "2026-05-19T09:00:00+02:00",
@@ -149,16 +161,16 @@
       "lastModified": "2026-02-18T12:23:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3136373933302d302d32",
-      "title": "TP ME872 Réfléxi. epistémo.à partir des expérimen. historiques2",
-      "start": "2026-05-19T09:00:00+02:00",
-      "end": "2026-05-19T12:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343830372d302d37",
+      "title": "TD 402.1 Thermodynamique",
+      "start": "2026-05-19T10:15:00+02:00",
+      "end": "2026-05-19T12:15:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Hertz H13",
-      "description": "\n\nCODA-BOUCHOT Virginie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:07/11/2025 10:46)",
+      "location": "Bridoux_TD 8",
+      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 PC\nL2 PC LAS\nL2 Physique PE\nL2 PC PE\nTD L2 Physique\nXU Hong\n\n(Modifié le:28/11/2025 15:19)",
       "status": "",
       "url": "",
-      "lastModified": "2025-11-07T10:46:00+01:00"
+      "lastModified": "2025-11-28T15:19:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303833302d32352d30",
@@ -185,18 +197,6 @@
       "lastModified": "2026-01-27T12:14:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343830372d302d37",
-      "title": "TD 402.1 Thermodynamique",
-      "start": "2026-05-19T10:15:00+02:00",
-      "end": "2026-05-19T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 8",
-      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 PC\nL2 PC LAS\nL2 Physique PE\nL2 PC PE\nTD L2 Physique\nXU Hong\n\n(Modifié le:28/11/2025 15:19)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-11-28T15:19:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343335372d302d30",
       "title": "CM UE 907 EC 2 Informatique affective",
       "start": "2026-05-19T10:15:00+02:00",
@@ -219,18 +219,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-11T12:01:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383839342d322d30",
-      "title": "EI 1 EC 202.1 Electromagnétisme ",
-      "start": "2026-05-19T13:30:00+02:00",
-      "end": "2026-05-19T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 18",
-      "description": "\n\nTP A Portail PC\nTP B Portail PC\nWAX Jean-François\n\n(Modifié le:30/01/2026 13:01)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:01:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303738332d32352d30",
@@ -257,16 +245,16 @@
       "lastModified": "2025-12-16T12:26:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343932382d322d30",
-      "title": "CM 401.1 Analyse 4",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343333372d322d30",
+      "title": "EI UE 906 EC 2 Maintien à domicile et aménagement du logement",
       "start": "2026-05-19T13:30:00+02:00",
-      "end": "2026-05-19T14:30:00+02:00",
+      "end": "2026-05-19T16:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\nANCARANI Lorenzo\n\n(Modifié le:07/05/2026 11:40)",
+      "location": "Bridoux_TP Start up 1 D14BIS",
+      "description": "\n\nM2 A3R\nCABRERA Chloé\n\n(Modifié le:31/03/2026 18:12)",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-07T11:40:00+02:00"
+      "lastModified": "2026-03-31T18:12:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383733372d302d31",
@@ -281,16 +269,28 @@
       "lastModified": "2026-01-27T12:13:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343333372d322d30",
-      "title": "EI UE 906 EC 2 Maintien à domicile et aménagement du logement",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383839342d322d30",
+      "title": "EI 1 EC 202.1 Electromagnétisme ",
       "start": "2026-05-19T13:30:00+02:00",
-      "end": "2026-05-19T16:30:00+02:00",
+      "end": "2026-05-19T15:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Start up 1 D14BIS",
-      "description": "\n\nM2 A3R\nCABRERA Chloé\n\n(Modifié le:31/03/2026 18:12)",
+      "location": "Bridoux_TD 18",
+      "description": "\n\nTP A Portail PC\nTP B Portail PC\nWAX Jean-François\n\n(Modifié le:30/01/2026 13:01)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-31T18:12:00+02:00"
+      "lastModified": "2026-01-30T13:01:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343932382d322d30",
+      "title": "CM 401.1 Analyse 4",
+      "start": "2026-05-19T13:30:00+02:00",
+      "end": "2026-05-19T14:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 17",
+      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\nANCARANI Lorenzo\n\n(Modifié le:07/05/2026 11:40)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-07T11:40:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233323838392d302d30",
@@ -377,6 +377,30 @@
       "lastModified": "2026-03-11T12:02:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383436352d322d30",
+      "title": "TP Gr1 EC 402.1 Microcontroleurs",
+      "start": "2026-05-20T08:00:00+02:00",
+      "end": "2026-05-20T12:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Info4 C11",
+      "description": "\n\nTANOUGAST Camel\nTP Gr1 L2 SPI (UE301 et 304)\n\n(Modifié le:20/01/2026 11:26)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-20T11:26:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32372d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-05-20T08:00:00+02:00",
+      "end": "2026-05-20T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32322d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-20T08:00:00+02:00",
@@ -399,30 +423,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-07T11:46:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233313338392d302d30",
-      "title": "TP ME1041 Pratiques expérimentale en PC2",
-      "start": "2026-05-20T08:00:00+02:00",
-      "end": "2026-05-20T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Hertz H13",
-      "description": "\n\nM2 M-PC\nM2 MEEF PC\nCARPENTIERI Christelle\n\n(Modifié le:27/01/2026 10:56)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-27T10:56:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32382d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-20T08:00:00+02:00",
-      "end": "2026-05-20T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d302d30",
@@ -449,28 +449,40 @@
       "lastModified": "2026-02-18T12:23:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32372d30",
-      "title": "stockage matériel BU ",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233313338392d302d30",
+      "title": "TP ME1041 Pratiques expérimentale en PC2",
+      "start": "2026-05-20T08:00:00+02:00",
+      "end": "2026-05-20T12:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Hertz H13",
+      "description": "\n\nM2 M-PC\nM2 MEEF PC\nCARPENTIERI Christelle\n\n(Modifié le:27/01/2026 10:56)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-27T10:56:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32382d30",
+      "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-20T08:00:00+02:00",
       "end": "2026-05-20T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383436352d322d30",
-      "title": "TP Gr1 EC 402.1 Microcontroleurs",
-      "start": "2026-05-20T08:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333234392d31302d30",
+      "title": "TP ME840 Savoir mettre en perspective les savoirs des LC2",
+      "start": "2026-05-20T09:00:00+02:00",
       "end": "2026-05-20T12:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Info4 C11",
-      "description": "\n\nTANOUGAST Camel\nTP Gr1 L2 SPI (UE301 et 304)\n\n(Modifié le:20/01/2026 11:26)",
+      "location": "Bridoux_TP Delesse A3",
+      "description": "\n\nLEGEAI Sophie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:28/04/2026 13:50)",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-20T11:26:00+01:00"
+      "lastModified": "2026-04-28T13:50:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032392d302d35",
@@ -509,18 +521,6 @@
       "lastModified": "2026-05-06T16:21:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333234392d31302d30",
-      "title": "TP ME840 Savoir mettre en perspective les savoirs des LC2",
-      "start": "2026-05-20T09:00:00+02:00",
-      "end": "2026-05-20T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Delesse A3",
-      "description": "\n\nLEGEAI Sophie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:28/04/2026 13:50)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-28T13:50:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d362d30",
       "title": "Manon BADURAUX",
       "start": "2026-05-20T10:00:00+02:00",
@@ -543,6 +543,42 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-09T16:37:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130333939362d342d30",
+      "title": "EI 4 EC 203.1 Introduction à la chimie organique",
+      "start": "2026-05-20T10:15:00+02:00",
+      "end": "2026-05-20T12:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 15",
+      "description": "\n\nTD 4 Portail PC\nBUHAIBEH Ruqaya\n\n(Modifié le:16/12/2025 13:03)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-16T13:03:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353730352d312d30",
+      "title": "EI 3 EC 203.1 Introduction à la chimie organique",
+      "start": "2026-05-20T10:15:00+02:00",
+      "end": "2026-05-20T12:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 1",
+      "description": "\n\nTP F Portail PC\nTP E Portail PC\nCOMOY Corinne\n\n(Modifié le:27/01/2026 12:14)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-27T12:14:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343335382d302d30",
+      "title": "EI UE 907 EC 2 Informatique affective",
+      "start": "2026-05-20T10:15:00+02:00",
+      "end": "2026-05-20T12:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Start up 1 D14BIS",
+      "description": "\n\nBOUSEFSAF Frédéric\nM2 A3R\n\n(Modifié le:01/12/2025 12:01)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-01T12:01:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343932382d302d30",
@@ -581,54 +617,6 @@
       "lastModified": "2026-05-06T12:30:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343335382d302d30",
-      "title": "EI UE 907 EC 2 Informatique affective",
-      "start": "2026-05-20T10:15:00+02:00",
-      "end": "2026-05-20T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Start up 1 D14BIS",
-      "description": "\n\nBOUSEFSAF Frédéric\nM2 A3R\n\n(Modifié le:01/12/2025 12:01)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-01T12:01:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130333939362d342d30",
-      "title": "EI 4 EC 203.1 Introduction à la chimie organique",
-      "start": "2026-05-20T10:15:00+02:00",
-      "end": "2026-05-20T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 15",
-      "description": "\n\nTD 4 Portail PC\nBUHAIBEH Ruqaya\n\n(Modifié le:16/12/2025 13:03)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T13:03:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353730352d312d30",
-      "title": "EI 3 EC 203.1 Introduction à la chimie organique",
-      "start": "2026-05-20T10:15:00+02:00",
-      "end": "2026-05-20T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 1",
-      "description": "\n\nTP F Portail PC\nTP E Portail PC\nCOMOY Corinne\n\n(Modifié le:27/01/2026 12:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-27T12:14:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032362d302d31",
-      "title": "TP B EC 205.2 Pratique expérimentale chimie des solutions",
-      "start": "2026-05-20T13:30:00+02:00",
-      "end": "2026-05-20T16:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Malaprade A2",
-      "description": "\n\nTP B Portail PC\nLEGEAI Sophie\n\n(Modifié le:30/01/2026 13:01)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:01:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343334342d302d30",
       "title": "EI UE 907 EC 1 Domotique, santé connectée et outils d’assistance",
       "start": "2026-05-20T13:30:00+02:00",
@@ -639,6 +627,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-19T13:34:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353435362d31352d30",
+      "title": "EI 2 EC 202.1 Electromagnétisme ",
+      "start": "2026-05-20T13:30:00+02:00",
+      "end": "2026-05-20T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 15",
+      "description": "\n\nTP C Portail PC\nTP D Portail PC\nDALMASSO Stéphane\n\n(Modifié le:18/02/2026 12:23)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-18T12:23:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3136373932362d302d33",
@@ -653,6 +653,18 @@
       "lastModified": "2026-01-14T11:00:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032362d302d31",
+      "title": "TP B EC 205.2 Pratique expérimentale chimie des solutions",
+      "start": "2026-05-20T13:30:00+02:00",
+      "end": "2026-05-20T16:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Malaprade A2",
+      "description": "\n\nTP B Portail PC\nLEGEAI Sophie\n\n(Modifié le:30/01/2026 13:01)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-30T13:01:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d302d30",
       "title": "Réservation Victor",
       "start": "2026-05-20T13:30:00+02:00",
@@ -663,18 +675,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-05T17:55:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353435362d31352d30",
-      "title": "EI 2 EC 202.1 Electromagnétisme ",
-      "start": "2026-05-20T13:30:00+02:00",
-      "end": "2026-05-20T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 15",
-      "description": "\n\nTP C Portail PC\nTP D Portail PC\nDALMASSO Stéphane\n\n(Modifié le:18/02/2026 12:23)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-18T12:23:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d342d30",
@@ -701,30 +701,6 @@
       "lastModified": "2026-03-09T16:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313934312d302d30",
-      "title": "EI 4 UE 201 Mathématiques 2",
-      "start": "2026-05-21T08:00:00+02:00",
-      "end": "2026-05-21T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 9",
-      "description": "\n\nTD 4 Portail PC\nFARDET Anne-Laure\n\n(Modifié le:16/12/2025 12:26)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T12:26:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39323539362d302d30",
-      "title": "Seconde chance EC 601.2 Introduction à la physique du solide",
-      "start": "2026-05-21T08:00:00+02:00",
-      "end": "2026-05-21T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 13",
-      "description": "\n\nPOSTNIKOV Andrey\nL3 Physique FC\nL3 Physique LAS\nTD L3 Physique\n\n(Modifié le:03/12/2025 16:33)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-03T16:33:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32382d30",
       "title": "stockage matériel BU ",
       "start": "2026-05-21T08:00:00+02:00",
@@ -737,16 +713,16 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39323933322d352d30",
-      "title": "TD ME871 Construire une posture réflexive à travers la recher.",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32332d30",
+      "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-21T08:00:00+02:00",
-      "end": "2026-05-21T12:00:00+02:00",
+      "end": "2026-05-21T18:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Start up 2 D16",
-      "description": "\n\nMASTAGLI Maxime\nPrépa CAPES STAPS EDT M1\nM1 MEEF EPS - Groupe A\nM1 MEEF EPS - Groupe B\n\n(Modifié le:08/04/2026 17:55)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-08T17:55:00+02:00"
+      "lastModified": "2026-03-06T13:28:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133313936382d31332d30",
@@ -785,28 +761,40 @@
       "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32332d30",
-      "title": "Travaux service technique - changement des luminaires",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39323933322d352d30",
+      "title": "TD ME871 Construire une posture réflexive à travers la recher.",
       "start": "2026-05-21T08:00:00+02:00",
-      "end": "2026-05-21T18:00:00+02:00",
+      "end": "2026-05-21T12:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
+      "location": "Bridoux_TP Start up 2 D16",
+      "description": "\n\nMASTAGLI Maxime\nPrépa CAPES STAPS EDT M1\nM1 MEEF EPS - Groupe A\nM1 MEEF EPS - Groupe B\n\n(Modifié le:08/04/2026 17:55)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:28:00+01:00"
+      "lastModified": "2026-04-08T17:55:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d31303938352d372d30",
-      "title": "TD EC 406.1 Main à la Pâte",
-      "start": "2026-05-21T08:30:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313934312d302d30",
+      "title": "EI 4 UE 201 Mathématiques 2",
+      "start": "2026-05-21T08:00:00+02:00",
       "end": "2026-05-21T10:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_ TP Ampère H2",
-      "description": "\n\nL2 PC\nCOURILLEAU-GOBRY Anne\n\n(Modifié le:06/05/2026 10:46)",
+      "location": "Bridoux_TD 9",
+      "description": "\n\nTD 4 Portail PC\nFARDET Anne-Laure\n\n(Modifié le:16/12/2025 12:26)",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-06T10:46:00+02:00"
+      "lastModified": "2025-12-16T12:26:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39323539362d302d30",
+      "title": "Seconde chance EC 601.2 Introduction à la physique du solide",
+      "start": "2026-05-21T08:00:00+02:00",
+      "end": "2026-05-21T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 13",
+      "description": "\n\nPOSTNIKOV Andrey\nL3 Physique FC\nL3 Physique LAS\nTD L3 Physique\n\n(Modifié le:03/12/2025 16:33)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-03T16:33:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231393937332d31302d30",
@@ -819,6 +807,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-04-24T12:46:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d31303938352d372d30",
+      "title": "TD EC 406.1 Main à la Pâte",
+      "start": "2026-05-21T08:30:00+02:00",
+      "end": "2026-05-21T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_ TP Ampère H2",
+      "description": "\n\nL2 PC\nCOURILLEAU-GOBRY Anne\n\n(Modifié le:06/05/2026 10:46)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-06T10:46:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d31342d30",
@@ -857,18 +857,6 @@
       "lastModified": "2026-05-18T10:55:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138383034302d302d38",
-      "title": "UE 606 TP ANGLAIS - GR. B",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTP ANGLAIS - GR B\n\n(Modifié le:13/05/2025 13:51)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T13:51:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d31393037312d302d31",
       "title": "TP B 403.3 Optique Physique TP",
       "start": "2026-05-21T13:30:00+02:00",
@@ -879,78 +867,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-02T10:32:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303736372d392d30",
-      "title": "EI 2 UE 201 Mathématiques 2",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 1",
-      "description": "\n\nTP C Portail PC\nTP D Portail PC\nGLEIZE Jérôme\n\n(Modifié le:29/04/2026 12:05)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-29T12:05:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303833302d32382d30",
-      "title": "EI 1 UE 201 Mathématiques 2",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 12",
-      "description": "\n\nGRANDCOLAS Michel\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:30/01/2026 13:01)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:01:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133313030342d392d30",
-      "title": "EI 3 EC 202.1 Electromagnétisme",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 9",
-      "description": "\n\nTP E Portail PC\nTP F Portail PC\nGREFFIER Olivier\n\n(Modifié le:02/02/2026 18:50)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:50:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231393937332d342d30",
-      "title": "EP Anne-Laure ",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:21/04/2026 18:12)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-21T18:12:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d363334392d302d38",
-      "title": "UE 606 TP ANGLAIS - GR. A",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nUBASSY Mickaël\nTP ANGLAIS - GR A\n\n(Modifié le:13/05/2025 13:55)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T13:55:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333234392d362d30",
-      "title": "TP ME840 Savoir mettre en perspective les savoirs des LC2",
-      "start": "2026-05-21T13:30:00+02:00",
-      "end": "2026-05-21T16:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Delesse A3",
-      "description": "\n\nLEGEAI Sophie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:12/12/2025 11:54)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-12T11:54:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d312d30",
@@ -965,16 +881,88 @@
       "lastModified": "2025-12-16T12:42:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d372d30",
-      "title": "Réservation de salle tiers-temps ALIMOHAMMADZADEH TAHER",
-      "start": "2026-05-21T14:00:00+02:00",
-      "end": "2026-05-21T17:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231393937332d342d30",
+      "title": "EP Anne-Laure ",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:09/03/2026 16:38)",
+      "description": "\n\n\n\n(Modifié le:21/04/2026 18:12)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-09T16:38:00+01:00"
+      "lastModified": "2026-04-21T18:12:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303833302d32382d30",
+      "title": "EI 1 UE 201 Mathématiques 2",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 12",
+      "description": "\n\nGRANDCOLAS Michel\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:30/01/2026 13:01)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-30T13:01:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333234392d362d30",
+      "title": "TP ME840 Savoir mettre en perspective les savoirs des LC2",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T16:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Delesse A3",
+      "description": "\n\nLEGEAI Sophie\nM1 MEEF PC\nM1 MEEF M-PC\n\n(Modifié le:12/12/2025 11:54)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-12T11:54:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303736372d392d30",
+      "title": "EI 2 UE 201 Mathématiques 2",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 1",
+      "description": "\n\nTP C Portail PC\nTP D Portail PC\nGLEIZE Jérôme\n\n(Modifié le:29/04/2026 12:05)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-04-29T12:05:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d363334392d302d38",
+      "title": "UE 606 TP ANGLAIS - GR. A",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 17",
+      "description": "\n\nUBASSY Mickaël\nTP ANGLAIS - GR A\n\n(Modifié le:13/05/2025 13:55)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T13:55:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138383034302d302d38",
+      "title": "UE 606 TP ANGLAIS - GR. B",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTP ANGLAIS - GR B\n\n(Modifié le:13/05/2025 13:51)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T13:51:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133313030342d392d30",
+      "title": "EI 3 EC 202.1 Electromagnétisme",
+      "start": "2026-05-21T13:30:00+02:00",
+      "end": "2026-05-21T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 9",
+      "description": "\n\nTP E Portail PC\nTP F Portail PC\nGREFFIER Olivier\n\n(Modifié le:02/02/2026 18:50)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:50:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34393336382d302d30",
@@ -999,6 +987,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-16T12:47:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d372d30",
+      "title": "Réservation de salle tiers-temps ALIMOHAMMADZADEH TAHER",
+      "start": "2026-05-21T14:00:00+02:00",
+      "end": "2026-05-21T17:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:09/03/2026 16:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-09T16:38:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d31362d30",
@@ -1061,16 +1061,16 @@
       "lastModified": "2026-01-27T12:14:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32342d30",
-      "title": "Travaux service technique - changement des luminaires",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133313031322d31312d30",
+      "title": "EI 2 EC 202.1 Electromagnétisme ",
       "start": "2026-05-22T08:00:00+02:00",
-      "end": "2026-05-22T18:00:00+02:00",
+      "end": "2026-05-22T10:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
+      "location": "Bridoux_TD 9",
+      "description": "\n\nTP C Portail PC\nTP D Portail PC\nDALMASSO Stéphane\n\n(Modifié le:08/04/2026 15:51)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:28:00+01:00"
+      "lastModified": "2026-04-08T15:51:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d32392d30",
@@ -1085,18 +1085,6 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133313031322d31312d30",
-      "title": "EI 2 EC 202.1 Electromagnétisme ",
-      "start": "2026-05-22T08:00:00+02:00",
-      "end": "2026-05-22T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 9",
-      "description": "\n\nTP C Portail PC\nTP D Portail PC\nDALMASSO Stéphane\n\n(Modifié le:08/04/2026 15:51)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-08T15:51:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33302d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-22T08:00:00+02:00",
@@ -1107,6 +1095,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-07T16:14:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32342d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-22T08:00:00+02:00",
+      "end": "2026-05-22T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:28)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:28:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d34313231302d382d30",
@@ -1157,16 +1157,16 @@
       "lastModified": "2026-03-25T12:09:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39383839322d332d30",
-      "title": "Concours blanc M1 PC",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393236352d302d30",
+      "title": "Correction CC Algébre",
       "start": "2026-05-22T13:30:00+02:00",
-      "end": "2026-05-22T17:30:00+02:00",
+      "end": "2026-05-22T15:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 28",
-      "description": "\n\nHESSE Stéphanie\nM1 MEEF PC\n\n(Modifié le:28/04/2026 16:45)",
+      "location": "Bridoux_TD 16",
+      "description": "\n\nGRANDATI Yves\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\n\n(Modifié le:18/05/2026 14:08)",
       "status": "",
       "url": "",
-      "lastModified": "2026-04-28T16:45:00+02:00"
+      "lastModified": "2026-05-18T14:08:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233313338392d312d30",
@@ -1181,16 +1181,16 @@
       "lastModified": "2026-01-27T10:56:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393236352d302d30",
-      "title": "Correction CC Algébre",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39383839322d332d30",
+      "title": "Concours blanc M1 PC",
       "start": "2026-05-22T13:30:00+02:00",
-      "end": "2026-05-22T15:30:00+02:00",
+      "end": "2026-05-22T17:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nGRANDATI Yves\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\n\n(Modifié le:18/05/2026 14:08)",
+      "location": "Bridoux_TD 28",
+      "description": "\n\nHESSE Stéphanie\nM1 MEEF PC\n\n(Modifié le:28/04/2026 16:45)",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-18T14:08:00+02:00"
+      "lastModified": "2026-04-28T16:45:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393136352d302d30",
@@ -1217,18 +1217,6 @@
       "lastModified": "2026-05-11T12:21:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33302d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-05-25T08:00:00+02:00",
-      "end": "2026-05-25T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33312d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-25T08:00:00+02:00",
@@ -1241,16 +1229,28 @@
       "lastModified": "2026-03-06T13:30:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33312d30",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33302d30",
       "title": "stockage matériel BU ",
-      "start": "2026-05-26T08:00:00+02:00",
-      "end": "2026-05-26T18:00:00+02:00",
+      "start": "2026-05-25T08:00:00+02:00",
+      "end": "2026-05-25T18:00:00+02:00",
       "allDay": false,
       "location": "",
       "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3236313333312d312d30",
+      "title": "TD ME1051 Concevoir, mettre en ?uvre, réguler et évaluer - Natation - Oral 2",
+      "start": "2026-05-26T08:00:00+02:00",
+      "end": "2026-05-26T11:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 2",
+      "description": "\n\nNatation M1 + M2 ( METZ)\nCREMONI Jerome\n\n(Modifié le:17/03/2026 16:16)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-17T16:16:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33312d30",
@@ -1265,16 +1265,16 @@
       "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3236313333312d312d30",
-      "title": "TD ME1051 Concevoir, mettre en ?uvre, réguler et évaluer - Natation - Oral 2",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3136373932392d332d30",
+      "title": "TD ME871 Construire une posture réflexive : mémoire - 2",
       "start": "2026-05-26T08:00:00+02:00",
-      "end": "2026-05-26T11:00:00+02:00",
+      "end": "2026-05-26T12:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 2",
-      "description": "\n\nNatation M1 + M2 ( METZ)\nCREMONI Jerome\n\n(Modifié le:17/03/2026 16:16)",
+      "location": "Bridoux_TD 29",
+      "description": "\n\nM1 MEEF PC\nM1 MEEF M-PC\nHESSE Stéphanie\n\n(Modifié le:28/04/2026 16:17)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-17T16:16:00+01:00"
+      "lastModified": "2026-04-28T16:17:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33322d30",
@@ -1301,18 +1301,6 @@
       "lastModified": "2026-05-13T16:20:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3136373932392d332d30",
-      "title": "TD ME871 Construire une posture réflexive : mémoire - 2",
-      "start": "2026-05-26T08:00:00+02:00",
-      "end": "2026-05-26T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 29",
-      "description": "\n\nM1 MEEF PC\nM1 MEEF M-PC\nHESSE Stéphanie\n\n(Modifié le:28/04/2026 16:17)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-28T16:17:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d30",
       "title": "ORAUX BLACS PASS/LAS 1 4 salles",
       "start": "2026-05-26T08:00:00+02:00",
@@ -1323,6 +1311,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-13T16:20:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33312d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-05-26T08:00:00+02:00",
+      "end": "2026-05-26T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233383138312d302d30",
@@ -1349,18 +1349,6 @@
       "lastModified": "2026-05-04T12:35:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353834392d302d30",
-      "title": "CC UE 206/OS Remédiation en chimie 1",
-      "start": "2026-05-26T10:00:00+02:00",
-      "end": "2026-05-26T11:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 9",
-      "description": "\n\nCOURILLEAU-GOBRY Anne\nTD 4 Portail PC\n\n(Modifié le:27/04/2026 12:06)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-04-27T12:06:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231393937332d352d30",
       "title": "EP Anne-Laure ",
       "start": "2026-05-26T10:00:00+02:00",
@@ -1371,6 +1359,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-04-21T18:16:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353834392d302d30",
+      "title": "CC UE 206/OS Remédiation en chimie 1",
+      "start": "2026-05-26T10:00:00+02:00",
+      "end": "2026-05-26T11:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 9",
+      "description": "\n\nCOURILLEAU-GOBRY Anne\nTD 4 Portail PC\n\n(Modifié le:27/04/2026 12:06)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-04-27T12:06:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233383138342d302d30",
@@ -1385,18 +1385,6 @@
       "lastModified": "2026-05-07T15:59:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303833302d32392d30",
-      "title": "EI 1 UE 201 Mathématiques 2",
-      "start": "2026-05-26T10:15:00+02:00",
-      "end": "2026-05-26T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 13",
-      "description": "\n\nGRANDCOLAS Michel\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:30/01/2026 13:01)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:01:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353639302d302d30",
       "title": "EI 3 EC 202.1 Electromagnétisme ",
       "start": "2026-05-26T10:15:00+02:00",
@@ -1407,6 +1395,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-01-27T12:14:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303833302d32392d30",
+      "title": "EI 1 UE 201 Mathématiques 2",
+      "start": "2026-05-26T10:15:00+02:00",
+      "end": "2026-05-26T12:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 13",
+      "description": "\n\nGRANDCOLAS Michel\nTP A Portail PC\nTP B Portail PC\n\n(Modifié le:30/01/2026 13:01)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-30T13:01:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343739362d302d32",
@@ -1421,18 +1421,6 @@
       "lastModified": "2025-11-28T15:28:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138303536362d302d30",
-      "title": "SI 103 O2 (basket-ball)",
-      "start": "2026-05-26T11:00:00+02:00",
-      "end": "2026-05-26T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 1",
-      "description": "\n\nCREMONI Jerome\nGOBERT THEO\nROBIN ALEXIS\nTERIIPAIA RAIARII\n\n(Modifié le:17/03/2026 16:22)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-17T16:22:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233383138322d302d30",
       "title": "SI-105 - Soutenance L.KOVALENKO",
       "start": "2026-05-26T11:00:00+02:00",
@@ -1443,6 +1431,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-07T15:59:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138303536362d302d30",
+      "title": "SI 103 O2 (basket-ball)",
+      "start": "2026-05-26T11:00:00+02:00",
+      "end": "2026-05-26T12:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 1",
+      "description": "\n\nCREMONI Jerome\nGOBERT THEO\nROBIN ALEXIS\nTERIIPAIA RAIARII\n\n(Modifié le:17/03/2026 16:22)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-17T16:22:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137393638352d312d30",
@@ -1469,18 +1469,6 @@
       "lastModified": "2026-03-17T09:44:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303738332d302d30",
-      "title": "EI 3 UE 201 Mathématiques 2",
-      "start": "2026-05-26T13:30:00+02:00",
-      "end": "2026-05-26T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 13",
-      "description": "\n\nTP E Portail PC\nTP F Portail PC\nLIU Gang\n\n(Modifié le:27/01/2026 12:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-27T12:14:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137313136312d312d30",
       "title": "TD ME1051 Concevoir, mettre en ?uvre, réguler et évaluer - Danses O2",
       "start": "2026-05-26T13:30:00+02:00",
@@ -1505,30 +1493,6 @@
       "lastModified": "2026-01-27T12:13:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313934312d32392d30",
-      "title": "EI 4 UE 201 Mathématiques 2",
-      "start": "2026-05-26T13:30:00+02:00",
-      "end": "2026-05-26T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nTD 4 Portail PC\nFARDET Anne-Laure\n\n(Modifié le:16/12/2025 12:26)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T12:26:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383839342d312d30",
-      "title": "EI 1 EC 202.1 Electromagnétisme ",
-      "start": "2026-05-26T13:30:00+02:00",
-      "end": "2026-05-26T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 12",
-      "description": "\n\nTP A Portail PC\nTP B Portail PC\nWAX Jean-François\n\n(Modifié le:11/03/2026 12:02)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-11T12:02:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383436352d312d30",
       "title": "TP Gr1 EC 402.1 Microcontroleurs",
       "start": "2026-05-26T13:30:00+02:00",
@@ -1551,6 +1515,42 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-18T10:56:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303738332d302d30",
+      "title": "EI 3 UE 201 Mathématiques 2",
+      "start": "2026-05-26T13:30:00+02:00",
+      "end": "2026-05-26T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 13",
+      "description": "\n\nTP E Portail PC\nTP F Portail PC\nLIU Gang\n\n(Modifié le:27/01/2026 12:14)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-27T12:14:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383839342d312d30",
+      "title": "EI 1 EC 202.1 Electromagnétisme ",
+      "start": "2026-05-26T13:30:00+02:00",
+      "end": "2026-05-26T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 12",
+      "description": "\n\nTP A Portail PC\nTP B Portail PC\nWAX Jean-François\n\n(Modifié le:11/03/2026 12:02)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-11T12:02:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313934312d32392d30",
+      "title": "EI 4 UE 201 Mathématiques 2",
+      "start": "2026-05-26T13:30:00+02:00",
+      "end": "2026-05-26T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 17",
+      "description": "\n\nTD 4 Portail PC\nFARDET Anne-Laure\n\n(Modifié le:16/12/2025 12:26)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-16T12:26:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393032342d302d30",
@@ -1601,16 +1601,16 @@
       "lastModified": "2026-03-17T16:21:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39353732382d302d33",
-      "title": "UE 1001 TD EC2 Perspectives professionnelles",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138363031362d302d30",
+      "title": "SI 103 O2 Danses",
       "start": "2026-05-26T16:30:00+02:00",
-      "end": "2026-05-26T18:30:00+02:00",
+      "end": "2026-05-26T18:15:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Start up 1 D14BIS,En direct à distance",
-      "description": "\n\nLANGLET Cécile\nPromo complète M2 FA\nPromo complète M2 FI/FC\n\n(Modifié le:06/03/2026 13:30)",
+      "location": "Bridoux_TD 2",
+      "description": "\n\nDELPLANQUE MAXIME\nFLOREAN EMMA\nFRANCK Marie-Odile\n\n(Modifié le:16/02/2026 09:14)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:30:00+01:00"
+      "lastModified": "2026-02-16T09:14:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3135303137372d302d30",
@@ -1625,49 +1625,13 @@
       "lastModified": "2026-05-07T13:39:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138363031362d302d30",
-      "title": "SI 103 O2 Danses",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d39353732382d302d33",
+      "title": "UE 1001 TD EC2 Perspectives professionnelles",
       "start": "2026-05-26T16:30:00+02:00",
-      "end": "2026-05-26T18:15:00+02:00",
+      "end": "2026-05-26T18:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 2",
-      "description": "\n\nDELPLANQUE MAXIME\nFLOREAN EMMA\nFRANCK Marie-Odile\n\n(Modifié le:16/02/2026 09:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-16T09:14:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d31342d30",
-      "title": "EI 4 EC 202.1 Electromagnétisme",
-      "start": "2026-05-27T08:00:00+02:00",
-      "end": "2026-05-27T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 28",
-      "description": "\n\nTD 4 Portail PC\nWAX Jean-François\n\n(Modifié le:16/12/2025 12:42)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T12:42:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33342d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-05-27T08:00:00+02:00",
-      "end": "2026-05-27T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33342d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-27T08:00:00+02:00",
-      "end": "2026-05-27T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
+      "location": "Bridoux_TP Start up 1 D14BIS,En direct à distance",
+      "description": "\n\nLANGLET Cécile\nPromo complète M2 FA\nPromo complète M2 FI/FC\n\n(Modifié le:06/03/2026 13:30)",
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:30:00+01:00"
@@ -1685,6 +1649,42 @@
       "lastModified": "2026-05-04T10:59:00+02:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33342d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-05-27T08:00:00+02:00",
+      "end": "2026-05-27T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d31342d30",
+      "title": "EI 4 EC 202.1 Electromagnétisme",
+      "start": "2026-05-27T08:00:00+02:00",
+      "end": "2026-05-27T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 28",
+      "description": "\n\nTD 4 Portail PC\nWAX Jean-François\n\n(Modifié le:16/12/2025 12:42)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-16T12:42:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33342d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-27T08:00:00+02:00",
+      "end": "2026-05-27T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:30:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33342d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-27T08:00:00+02:00",
@@ -1695,18 +1695,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-07T16:14:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3234313536322d302d30",
-      "title": "Charlène Hubsch",
-      "start": "2026-05-27T09:00:00+02:00",
-      "end": "2026-05-27T11:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 13:52)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-07T13:52:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232303334372d302d30",
@@ -1721,28 +1709,16 @@
       "lastModified": "2026-05-06T10:47:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130333939362d322d30",
-      "title": "EI 4 EC 203.1 Introduction à la chimie organique",
-      "start": "2026-05-27T10:15:00+02:00",
-      "end": "2026-05-27T12:15:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 1",
-      "description": "\n\nTD 4 Portail PC\nBUHAIBEH Ruqaya\n\n(Modifié le:16/12/2025 13:03)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T13:03:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d392d30",
-      "title": "Réservation Victor",
-      "start": "2026-05-27T10:15:00+02:00",
-      "end": "2026-05-27T12:15:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3234313536322d302d30",
+      "title": "Charlène Hubsch",
+      "start": "2026-05-27T09:00:00+02:00",
+      "end": "2026-05-27T11:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nCC2 406.1 AL\n\n\n(Modifié le:27/01/2026 09:40)",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 13:52)",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-27T09:40:00+01:00"
+      "lastModified": "2026-05-07T13:52:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303736372d312d30",
@@ -1769,6 +1745,30 @@
       "lastModified": "2026-02-02T18:51:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130333939362d322d30",
+      "title": "EI 4 EC 203.1 Introduction à la chimie organique",
+      "start": "2026-05-27T10:15:00+02:00",
+      "end": "2026-05-27T12:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 1",
+      "description": "\n\nTD 4 Portail PC\nBUHAIBEH Ruqaya\n\n(Modifié le:16/12/2025 13:03)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-16T13:03:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d392d30",
+      "title": "Réservation Victor",
+      "start": "2026-05-27T10:15:00+02:00",
+      "end": "2026-05-27T12:15:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\nCC2 406.1 AL\n\n\n(Modifié le:27/01/2026 09:40)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-27T09:40:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130343830372d302d35",
       "title": "TD 402.1 Thermodynamique",
       "start": "2026-05-27T13:30:00+02:00",
@@ -1793,16 +1793,16 @@
       "lastModified": "2026-05-04T15:40:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33352d30",
-      "title": "Travaux service technique - changement des luminaires",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303735372d31352d30",
+      "title": "EI 2 EC 203.2 Chimie des solutions aqueuses",
       "start": "2026-05-28T08:00:00+02:00",
-      "end": "2026-05-28T18:00:00+02:00",
+      "end": "2026-05-28T10:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
+      "location": "Bridoux_TD 18",
+      "description": "\n\nTP C Portail PC\nTP D Portail PC\nACHARD Christian\n\n(Modifié le:04/03/2026 09:38)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:30:00+01:00"
+      "lastModified": "2026-03-04T09:38:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33352d30",
@@ -1817,28 +1817,16 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303735372d31352d30",
-      "title": "EI 2 EC 203.2 Chimie des solutions aqueuses",
-      "start": "2026-05-28T08:00:00+02:00",
-      "end": "2026-05-28T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 18",
-      "description": "\n\nTP C Portail PC\nTP D Portail PC\nACHARD Christian\n\n(Modifié le:04/03/2026 09:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-04T09:38:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33322d30",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33352d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-05-28T08:00:00+02:00",
       "end": "2026-05-28T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-07T16:14:00+02:00"
+      "lastModified": "2026-03-06T13:30:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d383436352d302d30",
@@ -1851,6 +1839,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-05-18T12:56:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33322d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-28T08:00:00+02:00",
+      "end": "2026-05-28T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3139393133322d302d37",
@@ -1937,54 +1937,6 @@
       "lastModified": "2025-11-28T15:29:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233323338382d302d30",
-      "title": "TP A 403.3 Optique Physique TP",
-      "start": "2026-05-28T13:30:00+02:00",
-      "end": "2026-05-28T17:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP  Fresnel G16",
-      "description": "\n\nJOHANN Luc\nL2 Physique FC\nTP A L2 Physique\n\n(Modifié le:30/03/2026 11:44)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-30T11:44:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032392d302d30",
-      "title": "TP A EC 205.2 Pratique expérimentale chimie des solutions",
-      "start": "2026-05-28T13:30:00+02:00",
-      "end": "2026-05-28T16:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Malaprade A2",
-      "description": "\n\nTP A Portail PC\nGHARRED Nawres\n\n(Modifié le:05/05/2026 17:17)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-05T17:17:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393231312d302d30",
-      "title": "SI-105 - Soutenance - Y.NICOLAS",
-      "start": "2026-05-28T13:30:00+02:00",
-      "end": "2026-05-28T14:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Start up 2 D16",
-      "description": "\n\nLANGLET Cécile\nNICOLAS YONA\nHAUBER-MULLER Thomas\n\n(Modifié le:19/05/2026 13:41)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-19T13:41:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d322d30",
-      "title": "EI 4 EC 202.1 Electromagnétisme",
-      "start": "2026-05-28T13:30:00+02:00",
-      "end": "2026-05-28T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 15",
-      "description": "\n\nTD 4 Portail PC\nWAX Jean-François\n\n(Modifié le:16/12/2025 12:42)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-16T12:42:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d393130312d322d30",
       "title": "EI 2 EC 203.1 Introduction à la chimie organique ",
       "start": "2026-05-28T13:30:00+02:00",
@@ -2007,6 +1959,54 @@
       "status": "",
       "url": "",
       "lastModified": "2026-01-27T12:14:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032392d302d30",
+      "title": "TP A EC 205.2 Pratique expérimentale chimie des solutions",
+      "start": "2026-05-28T13:30:00+02:00",
+      "end": "2026-05-28T16:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Malaprade A2",
+      "description": "\n\nTP A Portail PC\nGHARRED Nawres\n\n(Modifié le:05/05/2026 17:17)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-05T17:17:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130313936302d322d30",
+      "title": "EI 4 EC 202.1 Electromagnétisme",
+      "start": "2026-05-28T13:30:00+02:00",
+      "end": "2026-05-28T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 15",
+      "description": "\n\nTD 4 Portail PC\nWAX Jean-François\n\n(Modifié le:16/12/2025 12:42)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-16T12:42:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393231312d302d30",
+      "title": "SI-105 - Soutenance - Y.NICOLAS",
+      "start": "2026-05-28T13:30:00+02:00",
+      "end": "2026-05-28T14:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Start up 2 D16",
+      "description": "\n\nLANGLET Cécile\nNICOLAS YONA\nHAUBER-MULLER Thomas\n\n(Modifié le:19/05/2026 13:41)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-19T13:41:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233323338382d302d30",
+      "title": "TP A 403.3 Optique Physique TP",
+      "start": "2026-05-28T13:30:00+02:00",
+      "end": "2026-05-28T17:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP  Fresnel G16",
+      "description": "\n\nJOHANN Luc\nL2 Physique FC\nTP A L2 Physique\n\n(Modifié le:30/03/2026 11:44)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-30T11:44:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134383334382d302d30",
@@ -2081,30 +2081,6 @@
       "lastModified": "2026-05-12T15:20:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33362d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-29T08:00:00+02:00",
-      "end": "2026-05-29T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-07T16:14:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34302d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-05-29T08:00:00+02:00",
-      "end": "2026-05-29T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:30:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d32353130322d322d30",
       "title": "TP Gr2 EC 402.1 Microcontroleurs",
       "start": "2026-05-29T08:00:00+02:00",
@@ -2129,16 +2105,28 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032362d302d35",
-      "title": "TP B EC 205.2 Pratique expérimentale chimie des solutions",
-      "start": "2026-05-29T09:00:00+02:00",
-      "end": "2026-05-29T12:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34302d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-29T08:00:00+02:00",
+      "end": "2026-05-29T18:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TP Malaprade A2",
-      "description": "\n\nTP B Portail PC\nGHARRED Nawres\n\n(Modifié le:05/05/2026 17:18)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:30)",
       "status": "",
       "url": "",
-      "lastModified": "2026-05-05T17:18:00+02:00"
+      "lastModified": "2026-03-06T13:30:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33362d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-05-29T08:00:00+02:00",
+      "end": "2026-05-29T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133353730352d31352d30",
@@ -2151,6 +2139,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-01-27T12:14:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3132363032362d302d35",
+      "title": "TP B EC 205.2 Pratique expérimentale chimie des solutions",
+      "start": "2026-05-29T09:00:00+02:00",
+      "end": "2026-05-29T12:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Malaprade A2",
+      "description": "\n\nTP B Portail PC\nGHARRED Nawres\n\n(Modifié le:05/05/2026 17:18)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-05T17:18:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3133303736372d31342d30",
@@ -2177,6 +2177,18 @@
       "lastModified": "2026-04-21T18:20:00+02:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32352d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-01T08:00:00+02:00",
+      "end": "2026-06-01T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:31:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3131343039382d302d30",
       "title": "SI 83 - Oraux",
       "start": "2026-06-01T08:00:00+02:00",
@@ -2189,28 +2201,16 @@
       "lastModified": "2026-05-06T10:43:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3131343039382d302d30",
-      "title": "SI 83 - Oraux",
-      "start": "2026-06-01T08:00:00+02:00",
-      "end": "2026-06-01T18:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Delesse A3,Bridoux_TP Perrin A9",
-      "description": "\n\nM1 MEEF PC\nLEGEAI Sophie\n\n(Modifié le:06/05/2026 10:43)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-06T10:43:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32352d30",
-      "title": "Travaux service technique - changement des luminaires",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33322d30",
+      "title": "stockage matériel BU ",
       "start": "2026-06-01T08:00:00+02:00",
       "end": "2026-06-01T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:31:00+01:00"
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32362d30",
@@ -2225,16 +2225,16 @@
       "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33322d30",
-      "title": "stockage matériel BU ",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3131343039382d302d30",
+      "title": "SI 83 - Oraux",
       "start": "2026-06-01T08:00:00+02:00",
       "end": "2026-06-01T18:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "location": "Bridoux_TP Delesse A3,Bridoux_TP Perrin A9",
+      "description": "\n\nM1 MEEF PC\nLEGEAI Sophie\n\n(Modifié le:06/05/2026 10:43)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2026-05-06T10:43:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3234303536362d302d30",
@@ -2261,18 +2261,6 @@
       "lastModified": "2026-05-06T10:48:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32362d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-02T08:00:00+02:00",
-      "end": "2026-06-02T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:31:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33332d30",
       "title": "stockage matériel BU ",
       "start": "2026-06-02T08:00:00+02:00",
@@ -2283,18 +2271,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32342d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-02T08:00:00+02:00",
-      "end": "2026-06-02T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d31",
@@ -2309,16 +2285,16 @@
       "lastModified": "2026-05-13T16:22:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393934342d302d30",
-      "title": "Seconde chance 403.1 Electromagnétisme 3",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d32342d30",
+      "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-02T08:00:00+02:00",
-      "end": "2026-06-02T09:30:00+02:00",
+      "end": "2026-06-02T18:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 15",
-      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 PC\nL2 PC LAS\nL2 Physique PE\nL2 PC PE\nTD L2 Physique\nMESSINA René\n\n(Modifié le:08/12/2025 12:41)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:07/05/2026 16:14)",
       "status": "",
       "url": "",
-      "lastModified": "2025-12-08T12:41:00+01:00"
+      "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d342d30",
@@ -2331,6 +2307,30 @@
       "status": "",
       "url": "",
       "lastModified": "2025-12-09T12:37:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393934342d302d30",
+      "title": "Seconde chance 403.1 Electromagnétisme 3",
+      "start": "2026-06-02T08:00:00+02:00",
+      "end": "2026-06-02T09:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 15",
+      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 PC\nL2 PC LAS\nL2 Physique PE\nL2 PC PE\nTD L2 Physique\nMESSINA René\n\n(Modifié le:08/12/2025 12:41)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-08T12:41:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32362d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-02T08:00:00+02:00",
+      "end": "2026-06-02T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:31:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d31",
@@ -2417,18 +2417,6 @@
       "lastModified": "2026-01-27T10:56:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33372d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-03T08:00:00+02:00",
-      "end": "2026-06-03T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32372d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-03T08:00:00+02:00",
@@ -2453,6 +2441,18 @@
       "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33372d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-03T08:00:00+02:00",
+      "end": "2026-06-03T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37343636352d302d30",
       "title": "Seconde chance UE 403.1 Chimie organique 3",
       "start": "2026-06-03T10:15:00+02:00",
@@ -2463,6 +2463,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-04T15:35:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32382d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-04T08:00:00+02:00",
+      "end": "2026-06-04T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:31:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33382d30",
@@ -2501,18 +2513,6 @@
       "lastModified": "2026-05-13T18:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32382d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-04T08:00:00+02:00",
-      "end": "2026-06-04T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:31:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37343638352d302d30",
       "title": "Seconde chance UE 402.2 Chimie minérale 2",
       "start": "2026-06-04T10:15:00+02:00",
@@ -2523,18 +2523,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-18T12:25:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137313335342d322d30",
-      "title": "TP ME1051 Concevoir une transposition didactique en LC2",
-      "start": "2026-06-04T13:30:00+02:00",
-      "end": "2026-06-04T17:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TP Delesse A3",
-      "description": "\n\nCOURILLEAU-GOBRY Anne\nM2 M-PC\nM2 MEEF PC\n\n(Modifié le:13/05/2026 18:14)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-13T18:14:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37343732302d302d30",
@@ -2549,16 +2537,28 @@
       "lastModified": "2026-05-13T10:17:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33392d30",
-      "title": "stockage matériel BU ",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137313335342d322d30",
+      "title": "TP ME1051 Concevoir une transposition didactique en LC2",
+      "start": "2026-06-04T13:30:00+02:00",
+      "end": "2026-06-04T17:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TP Delesse A3",
+      "description": "\n\nCOURILLEAU-GOBRY Anne\nM2 M-PC\nM2 MEEF PC\n\n(Modifié le:13/05/2026 18:14)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-05-13T18:14:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32392d30",
+      "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-05T08:00:00+02:00",
       "end": "2026-06-05T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2026-03-06T13:31:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d33392d30",
@@ -2573,16 +2573,16 @@
       "lastModified": "2026-05-07T16:14:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d32392d30",
-      "title": "Travaux service technique - changement des luminaires",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d33392d30",
+      "title": "stockage matériel BU ",
       "start": "2026-06-05T08:00:00+02:00",
       "end": "2026-06-05T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:31)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:31:00+01:00"
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233313338392d352d30",
@@ -2669,16 +2669,16 @@
       "lastModified": "2026-05-13T16:22:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393933392d302d30",
-      "title": "Seconde chance 401.1 Analyse 4",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d372d30",
+      "title": "Réservation Victor",
       "start": "2026-06-09T08:00:00+02:00",
-      "end": "2026-06-09T09:30:00+02:00",
+      "end": "2026-06-09T10:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 4",
-      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\nMÜLLER Martin\nANCARANI Lorenzo\n\n(Modifié le:28/11/2025 15:32)",
+      "location": "",
+      "description": "\nSeconde chance 401.1 MM\n\n\n(Modifié le:09/12/2025 12:37)",
       "status": "",
       "url": "",
-      "lastModified": "2025-11-28T15:32:00+01:00"
+      "lastModified": "2025-12-09T12:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343337382d332d30",
@@ -2693,6 +2693,18 @@
       "lastModified": "2026-02-12T12:22:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393933392d302d30",
+      "title": "Seconde chance 401.1 Analyse 4",
+      "start": "2026-06-09T08:00:00+02:00",
+      "end": "2026-06-09T09:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 4",
+      "description": "\n\nL2 Physique FC\nL2 Physique LAS\nL2 Physique PE\nTD L2 Physique\nMÜLLER Martin\nANCARANI Lorenzo\n\n(Modifié le:28/11/2025 15:32)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-11-28T15:32:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33332d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-09T08:00:00+02:00",
@@ -2703,30 +2715,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:33:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d372d30",
-      "title": "Réservation Victor",
-      "start": "2026-06-09T08:00:00+02:00",
-      "end": "2026-06-09T10:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\nSeconde chance 401.1 MM\n\n\n(Modifié le:09/12/2025 12:37)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-12-09T12:37:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d32",
-      "title": "ORAUX BLACS PASS/LAS 1 4 salles",
-      "start": "2026-06-09T08:00:00+02:00",
-      "end": "2026-06-09T19:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 12,Bridoux_TD 13,Bridoux_TD 14,Bridoux_TD 15",
-      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:13/05/2026 16:22)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-05-13T16:22:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34312d30",
@@ -2741,16 +2729,16 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393931332d302d30",
-      "title": "Seconde chance 404.1 Mécanique des fluides",
-      "start": "2026-06-09T10:15:00+02:00",
-      "end": "2026-06-09T11:45:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233393033342d302d32",
+      "title": "ORAUX BLACS PASS/LAS 1 4 salles",
+      "start": "2026-06-09T08:00:00+02:00",
+      "end": "2026-06-09T19:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 4",
-      "description": "\n\nL2 Physique PE\nTD L2 Physique\nBECU Lydiane\nXU Hong\n\n(Modifié le:08/12/2025 12:45)",
+      "location": "Bridoux_TD 12,Bridoux_TD 13,Bridoux_TD 14,Bridoux_TD 15",
+      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:13/05/2026 16:22)",
       "status": "",
       "url": "",
-      "lastModified": "2025-12-08T12:45:00+01:00"
+      "lastModified": "2026-05-13T16:22:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3230393936332d322d30",
@@ -2777,6 +2765,18 @@
       "lastModified": "2026-03-31T18:12:00+02:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393931332d302d30",
+      "title": "Seconde chance 404.1 Mécanique des fluides",
+      "start": "2026-06-09T10:15:00+02:00",
+      "end": "2026-06-09T11:45:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 4",
+      "description": "\n\nL2 Physique PE\nTD L2 Physique\nBECU Lydiane\nXU Hong\n\n(Modifié le:08/12/2025 12:45)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-12-08T12:45:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d36343335382d322d30",
       "title": "EI UE 907 EC 2 Informatique affective",
       "start": "2026-06-09T13:30:00+02:00",
@@ -2787,6 +2787,18 @@
       "status": "",
       "url": "",
       "lastModified": "2025-12-01T12:02:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34322d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-10T08:00:00+02:00",
+      "end": "2026-06-10T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3130393934312d302d30",
@@ -2811,18 +2823,6 @@
       "status": "",
       "url": "",
       "lastModified": "2025-12-09T12:37:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34322d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-10T08:00:00+02:00",
-      "end": "2026-06-10T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33362d30",
@@ -2873,18 +2873,6 @@
       "lastModified": "2026-03-19T13:33:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3436",
-      "title": "Prêt salle IFSI TD 17 MU",
-      "start": "2026-06-11T08:00:00+02:00",
-      "end": "2026-06-11T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:05)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T13:05:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3233353430362d302d30",
       "title": "Résa Bénédicte ",
       "start": "2026-06-11T08:00:00+02:00",
@@ -2895,30 +2883,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-04-30T18:30:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34332d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-11T08:00:00+02:00",
-      "end": "2026-06-11T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33372d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-11T08:00:00+02:00",
-      "end": "2026-06-11T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:33)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:33:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3435",
@@ -2933,16 +2897,40 @@
       "lastModified": "2025-05-13T12:33:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3436",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-11T10:00:00+02:00",
-      "end": "2026-06-11T12:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33372d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-11T08:00:00+02:00",
+      "end": "2026-06-11T18:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:33)",
       "status": "",
       "url": "",
-      "lastModified": "2025-05-13T12:38:00+02:00"
+      "lastModified": "2026-03-06T13:33:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3436",
+      "title": "Prêt salle IFSI TD 17 MU",
+      "start": "2026-06-11T08:00:00+02:00",
+      "end": "2026-06-11T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 17",
+      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:05)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T13:05:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34332d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-11T08:00:00+02:00",
+      "end": "2026-06-11T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3437",
@@ -2955,6 +2943,18 @@
       "status": "",
       "url": "",
       "lastModified": "2025-05-13T13:05:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3436",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-11T10:00:00+02:00",
+      "end": "2026-06-11T12:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T12:38:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231393937332d392d30",
@@ -2993,6 +2993,18 @@
       "lastModified": "2026-03-06T13:33:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34352d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-15T08:00:00+02:00",
+      "end": "2026-06-15T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33392d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-15T08:00:00+02:00",
@@ -3005,10 +3017,10 @@
       "lastModified": "2026-03-06T13:35:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34352d30",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34362d30",
       "title": "stockage matériel BU ",
-      "start": "2026-06-15T08:00:00+02:00",
-      "end": "2026-06-15T18:00:00+02:00",
+      "start": "2026-06-16T08:00:00+02:00",
+      "end": "2026-06-16T18:00:00+02:00",
       "allDay": false,
       "location": "",
       "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
@@ -3027,18 +3039,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:36:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34362d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-16T08:00:00+02:00",
-      "end": "2026-06-16T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d312d30",
@@ -3065,18 +3065,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3438",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-16T13:30:00+02:00",
-      "end": "2026-06-16T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:28)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:28:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3439",
       "title": "Prêt salle IFSI TD 17 MU",
       "start": "2026-06-16T13:30:00+02:00",
@@ -3084,6 +3072,18 @@
       "allDay": false,
       "location": "Bridoux_TD 17",
       "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:30/01/2026 13:28)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-30T13:28:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3438",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-16T13:30:00+02:00",
+      "end": "2026-06-16T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:28)",
       "status": "",
       "url": "",
       "lastModified": "2026-01-30T13:28:00+01:00"
@@ -3113,18 +3113,6 @@
       "lastModified": "2026-01-30T13:29:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34322d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-17T08:00:00+02:00",
-      "end": "2026-06-17T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:36)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:36:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d362d30",
       "title": "EXAMENS L2/L3STAPS JUIN 2026",
       "start": "2026-06-17T08:00:00+02:00",
@@ -3149,10 +3137,46 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34322d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-17T08:00:00+02:00",
+      "end": "2026-06-17T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:36)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:36:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d302d30",
       "title": "EXAMENS L2/L3STAPS JUIN 2026",
       "start": "2026-06-17T13:15:00+02:00",
       "end": "2026-06-17T17:15:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_Salle des Actes B14",
+      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:05/02/2026 11:31)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-05T11:31:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3439",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-18T08:00:00+02:00",
+      "end": "2026-06-18T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T12:38:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d322d30",
+      "title": "EXAMENS L2/L3STAPS JUIN 2026",
+      "start": "2026-06-18T08:00:00+02:00",
+      "end": "2026-06-18T12:00:00+02:00",
       "allDay": false,
       "location": "Bridoux_Salle des Actes B14",
       "description": "\n\nPrêt salles et amphi\n\n(Modifié le:05/02/2026 11:31)",
@@ -3183,30 +3207,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3439",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-18T08:00:00+02:00",
-      "end": "2026-06-18T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T12:38:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d322d30",
-      "title": "EXAMENS L2/L3STAPS JUIN 2026",
-      "start": "2026-06-18T08:00:00+02:00",
-      "end": "2026-06-18T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_Salle des Actes B14",
-      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:05/02/2026 11:31)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34332d30",
@@ -3257,18 +3257,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34392d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-19T08:00:00+02:00",
-      "end": "2026-06-19T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34342d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-19T08:00:00+02:00",
@@ -3291,6 +3279,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-05T11:31:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34392d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-19T08:00:00+02:00",
+      "end": "2026-06-19T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d332d30",
@@ -3449,18 +3449,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35322d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-24T08:00:00+02:00",
-      "end": "2026-06-24T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d31312d30",
       "title": "EXAMENS L2/L3STAPS JUIN 2026",
       "start": "2026-06-24T08:00:00+02:00",
@@ -3483,6 +3471,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:36:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35322d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-24T08:00:00+02:00",
+      "end": "2026-06-24T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333532342d302d30",
@@ -3509,6 +3509,18 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35332d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-25T08:00:00+02:00",
+      "end": "2026-06-25T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35332d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-25T08:00:00+02:00",
@@ -3519,18 +3531,6 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:36:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3531",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-25T08:00:00+02:00",
-      "end": "2026-06-25T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T12:38:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3532",
@@ -3545,16 +3545,28 @@
       "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35332d30",
-      "title": "stockage matériel BU ",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3531",
+      "title": "Prêt salle IFSI TD 16 SN",
       "start": "2026-06-25T08:00:00+02:00",
-      "end": "2026-06-25T18:00:00+02:00",
+      "end": "2026-06-25T10:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2025-05-13T12:38:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333533312d302d30",
+      "title": "Seconde chance UE 203.2 Chimie des solutions aqueuses",
+      "start": "2026-06-25T10:00:00+02:00",
+      "end": "2026-06-25T11:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_Einstein,Bridoux_TD 14",
+      "description": "\n\nACHARD Christian\nTP A Portail PC\nTP B Portail PC\nTP C Portail PC\nTP D Portail PC\nTP E Portail PC\nTP F Portail PC\nTP G Portail PC\nMEUX Éric\nHATIM Oumaima\n\n(Modifié le:13/03/2026 12:00)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-13T12:00:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3532",
@@ -3581,16 +3593,16 @@
       "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333533312d302d30",
-      "title": "Seconde chance UE 203.2 Chimie des solutions aqueuses",
-      "start": "2026-06-25T10:00:00+02:00",
-      "end": "2026-06-25T11:30:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3535",
+      "title": "Prêt salle IFSI TD 17 MU",
+      "start": "2026-06-25T13:30:00+02:00",
+      "end": "2026-06-25T15:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_Einstein,Bridoux_TD 14",
-      "description": "\n\nACHARD Christian\nTP A Portail PC\nTP B Portail PC\nTP C Portail PC\nTP D Portail PC\nTP E Portail PC\nTP F Portail PC\nTP G Portail PC\nMEUX Éric\nHATIM Oumaima\n\n(Modifié le:13/03/2026 12:00)",
+      "location": "Bridoux_TD 17",
+      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:06)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-13T12:00:00+01:00"
+      "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3533",
@@ -3603,18 +3615,6 @@
       "status": "",
       "url": "",
       "lastModified": "2025-05-13T12:38:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3535",
-      "title": "Prêt salle IFSI TD 17 MU",
-      "start": "2026-06-25T13:30:00+02:00",
-      "end": "2026-06-25T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:06)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3536",
@@ -3641,18 +3641,6 @@
       "lastModified": "2025-05-13T12:35:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35342d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-26T08:00:00+02:00",
-      "end": "2026-06-26T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:36)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:36:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35342d30",
       "title": "stockage matériel BU ",
       "start": "2026-06-26T08:00:00+02:00",
@@ -3665,16 +3653,16 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35352d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-29T08:00:00+02:00",
-      "end": "2026-06-29T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35342d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-26T08:00:00+02:00",
+      "end": "2026-06-26T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:36)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2026-03-06T13:36:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35352d30",
@@ -3687,6 +3675,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:37:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35352d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-29T08:00:00+02:00",
+      "end": "2026-06-29T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137343738382d302d30",
@@ -3737,18 +3737,6 @@
       "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35372d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-01T08:00:00+02:00",
-      "end": "2026-07-01T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:37:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35372d30",
       "title": "stockage matériel BU ",
       "start": "2026-07-01T08:00:00+02:00",
@@ -3761,16 +3749,16 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35382d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-02T08:00:00+02:00",
-      "end": "2026-07-02T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35372d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-01T08:00:00+02:00",
+      "end": "2026-07-01T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:54)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:54:00+01:00"
+      "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35382d30",
@@ -3785,16 +3773,16 @@
       "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35392d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-03T08:00:00+02:00",
-      "end": "2026-07-03T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35382d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-02T08:00:00+02:00",
+      "end": "2026-07-02T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:54)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:37:00+01:00"
+      "lastModified": "2026-02-02T18:54:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d342d30",
@@ -3809,16 +3797,16 @@
       "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d372d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-06T08:00:00+02:00",
-      "end": "2026-07-06T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35392d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-03T08:00:00+02:00",
+      "end": "2026-07-03T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:55:00+01:00"
+      "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d36302d30",
@@ -3833,16 +3821,16 @@
       "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d36312d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-07T08:00:00+02:00",
-      "end": "2026-07-07T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d372d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-06T08:00:00+02:00",
+      "end": "2026-07-06T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:37:00+01:00"
+      "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d352d30",
@@ -3857,16 +3845,16 @@
       "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d362d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-08T08:00:00+02:00",
-      "end": "2026-07-08T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d36312d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-07T08:00:00+02:00",
+      "end": "2026-07-07T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:55:00+01:00"
+      "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d302d30",
@@ -3881,16 +3869,16 @@
       "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d312d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-09T08:00:00+02:00",
-      "end": "2026-07-09T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d362d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-08T08:00:00+02:00",
+      "end": "2026-07-08T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:38:00+01:00"
+      "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31322d30",
@@ -3903,6 +3891,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:55:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d312d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-09T08:00:00+02:00",
+      "end": "2026-07-09T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31352d30",
@@ -3929,18 +3929,6 @@
       "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31332d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-13T08:00:00+02:00",
-      "end": "2026-07-13T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:56:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d352d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-07-13T08:00:00+02:00",
@@ -3951,6 +3939,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:38:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31332d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-13T08:00:00+02:00",
+      "end": "2026-07-13T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:56:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31372d30",
@@ -4001,18 +4001,6 @@
       "lastModified": "2026-02-02T18:56:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d32332d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-16T08:00:00+02:00",
-      "end": "2026-07-16T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:56:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d392d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-07-16T08:00:00+02:00",
@@ -4023,6 +4011,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:38:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d32332d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-16T08:00:00+02:00",
+      "end": "2026-07-16T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:56:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d31302d30",
