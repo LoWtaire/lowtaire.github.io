@@ -1,45 +1,9 @@
 {
-  "generated_at": "2026-06-15T20:32:42.738Z",
+  "generated_at": "2026-06-16T09:33:16.947Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
-  "count": 117,
+  "count": 114,
   "events": [
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d33392d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-15T08:00:00+02:00",
-      "end": "2026-06-15T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:35)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:35:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34352d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-15T08:00:00+02:00",
-      "end": "2026-06-15T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3234333733352d312d30",
-      "title": "Consultation des copies L1",
-      "start": "2026-06-15T08:30:00+02:00",
-      "end": "2026-06-15T09:30:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:10/06/2026 15:18)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-06-10T15:18:00+02:00"
-    },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34362d30",
       "title": "stockage matériel BU ",
@@ -101,18 +65,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3438",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-16T13:30:00+02:00",
-      "end": "2026-06-16T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:28)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-01-30T13:28:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3439",
       "title": "Prêt salle IFSI TD 17 MU",
       "start": "2026-06-16T13:30:00+02:00",
@@ -125,16 +77,16 @@
       "lastModified": "2026-01-30T13:28:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3437",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3438",
       "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-16T15:30:00+02:00",
-      "end": "2026-06-16T17:30:00+02:00",
+      "start": "2026-06-16T13:30:00+02:00",
+      "end": "2026-06-16T15:30:00+02:00",
       "allDay": false,
       "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:29)",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:28)",
       "status": "",
       "url": "",
-      "lastModified": "2026-01-30T13:29:00+01:00"
+      "lastModified": "2026-01-30T13:28:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3438",
@@ -144,6 +96,18 @@
       "allDay": false,
       "location": "Bridoux_TD 17",
       "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:30/01/2026 13:29)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-01-30T13:29:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3437",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-16T15:30:00+02:00",
+      "end": "2026-06-16T17:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:30/01/2026 13:29)",
       "status": "",
       "url": "",
       "lastModified": "2026-01-30T13:29:00+01:00"
@@ -197,18 +161,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34382d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-18T08:00:00+02:00",
-      "end": "2026-06-18T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3530",
       "title": "Prêt salle IFSI TD 17 MU",
       "start": "2026-06-18T08:00:00+02:00",
@@ -233,6 +185,30 @@
       "lastModified": "2026-03-06T13:36:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d34382d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-18T08:00:00+02:00",
+      "end": "2026-06-18T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3439",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-18T08:00:00+02:00",
+      "end": "2026-06-18T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T12:38:00+02:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d322d30",
       "title": "EXAMENS L2/L3STAPS JUIN 2026",
       "start": "2026-06-18T08:00:00+02:00",
@@ -245,10 +221,10 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3439",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3530",
       "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-18T08:00:00+02:00",
-      "end": "2026-06-18T10:00:00+02:00",
+      "start": "2026-06-18T10:00:00+02:00",
+      "end": "2026-06-18T12:00:00+02:00",
       "allDay": false,
       "location": "Bridoux_TD 16",
       "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
@@ -267,18 +243,6 @@
       "status": "",
       "url": "",
       "lastModified": "2025-05-13T13:06:00+02:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3530",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-18T10:00:00+02:00",
-      "end": "2026-06-18T12:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T12:38:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d352d30",
@@ -341,16 +305,16 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d382d30",
-      "title": "EXAMENS L2/L3STAPS JUIN 2026",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35302d30",
+      "title": "stockage matériel BU ",
       "start": "2026-06-22T08:00:00+02:00",
-      "end": "2026-06-22T12:00:00+02:00",
+      "end": "2026-06-22T18:00:00+02:00",
       "allDay": false,
-      "location": "Bridoux_Salle des Actes B14",
-      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:05/02/2026 11:31)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-05T11:31:00+01:00"
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d34372d30",
@@ -365,16 +329,16 @@
       "lastModified": "2026-03-06T13:36:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35302d30",
-      "title": "stockage matériel BU ",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d382d30",
+      "title": "EXAMENS L2/L3STAPS JUIN 2026",
       "start": "2026-06-22T08:00:00+02:00",
-      "end": "2026-06-22T18:00:00+02:00",
+      "end": "2026-06-22T12:00:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "location": "Bridoux_Salle des Actes B14",
+      "description": "\n\nPrêt salles et amphi\n\n(Modifié le:05/02/2026 11:31)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
+      "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32302d30",
@@ -401,18 +365,6 @@
       "lastModified": "2026-02-05T11:31:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232363532372d302d30",
-      "title": "Seconde chance  206/ OS Remédiation en physique et en chimie 1",
-      "start": "2026-06-22T14:00:00+02:00",
-      "end": "2026-06-22T15:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 12",
-      "description": "\n\nDALMASSO Stéphane\nTP G Portail PC\nCOURILLEAU-GOBRY Anne\n\n(Modifié le:10/02/2026 15:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-10T15:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32382d30",
       "title": "Manon BADURAUX",
       "start": "2026-06-22T14:00:00+02:00",
@@ -423,6 +375,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-06-11T13:40:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232363532372d302d30",
+      "title": "Seconde chance  206/ OS Remédiation en physique et en chimie 1",
+      "start": "2026-06-22T14:00:00+02:00",
+      "end": "2026-06-22T15:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 12",
+      "description": "\n\nDALMASSO Stéphane\nTP G Portail PC\nCOURILLEAU-GOBRY Anne\n\n(Modifié le:10/02/2026 15:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-10T15:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32332d30",
@@ -437,18 +401,6 @@
       "lastModified": "2026-06-11T13:40:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35312d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-23T08:00:00+02:00",
-      "end": "2026-06-23T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35302d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-23T08:00:00+02:00",
@@ -459,6 +411,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:36:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35312d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-23T08:00:00+02:00",
+      "end": "2026-06-23T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d31322d30",
@@ -545,18 +509,6 @@
       "lastModified": "2026-05-26T15:47:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35322d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-06-24T08:00:00+02:00",
-      "end": "2026-06-24T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35312d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-24T08:00:00+02:00",
@@ -567,6 +519,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:36:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35322d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-06-24T08:00:00+02:00",
+      "end": "2026-06-24T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3231313031372d31312d30",
@@ -641,6 +605,18 @@
       "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3531",
+      "title": "Prêt salle IFSI TD 16 SN",
+      "start": "2026-06-25T08:00:00+02:00",
+      "end": "2026-06-25T10:00:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_TD 16",
+      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2025-05-13T12:38:00+02:00"
+    },
+    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35332d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-06-25T08:00:00+02:00",
@@ -665,18 +641,6 @@
       "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3531",
-      "title": "Prêt salle IFSI TD 16 SN",
-      "start": "2026-06-25T08:00:00+02:00",
-      "end": "2026-06-25T10:00:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_TD 16",
-      "description": "\n\nNAVARRO Sylvain\nTD IFSI PRET SALLE\n\n(Modifié le:13/05/2025 12:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2025-05-13T12:38:00+02:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32392d30",
       "title": "Manon BADURAUX",
       "start": "2026-06-25T09:00:00+02:00",
@@ -687,6 +651,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-06-11T13:41:00+02:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333533312d302d30",
+      "title": "Seconde chance UE 203.2 Chimie des solutions aqueuses",
+      "start": "2026-06-25T10:00:00+02:00",
+      "end": "2026-06-25T11:30:00+02:00",
+      "allDay": false,
+      "location": "Bridoux_Einstein,Bridoux_TD 14",
+      "description": "\n\nACHARD Christian\nTP A Portail PC\nTP B Portail PC\nTP C Portail PC\nTP D Portail PC\nTP E Portail PC\nTP F Portail PC\nTP G Portail PC\nMEUX Éric\nHATIM Oumaima\n\n(Modifié le:13/03/2026 12:00)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-13T12:00:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3533",
@@ -713,28 +689,16 @@
       "lastModified": "2025-05-13T12:38:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3134333533312d302d30",
-      "title": "Seconde chance UE 203.2 Chimie des solutions aqueuses",
-      "start": "2026-06-25T10:00:00+02:00",
-      "end": "2026-06-25T11:30:00+02:00",
-      "allDay": false,
-      "location": "Bridoux_Einstein,Bridoux_TD 14",
-      "description": "\n\nACHARD Christian\nTP A Portail PC\nTP B Portail PC\nTP C Portail PC\nTP D Portail PC\nTP E Portail PC\nTP F Portail PC\nTP G Portail PC\nMEUX Éric\nHATIM Oumaima\n\n(Modifié le:13/03/2026 12:00)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-13T12:00:00+01:00"
-    },
-    {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32312d30",
-      "title": "Manon BADURAUX",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3535",
+      "title": "Prêt salle IFSI TD 17 MU",
       "start": "2026-06-25T13:30:00+02:00",
       "end": "2026-06-25T15:30:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:11/06/2026 13:42)",
+      "location": "Bridoux_TD 17",
+      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:06)",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-11T13:42:00+02:00"
+      "lastModified": "2025-05-13T13:06:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3533",
@@ -749,16 +713,16 @@
       "lastModified": "2025-05-13T12:38:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3138353239322d302d3535",
-      "title": "Prêt salle IFSI TD 17 MU",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d33373532392d32312d30",
+      "title": "Manon BADURAUX",
       "start": "2026-06-25T13:30:00+02:00",
       "end": "2026-06-25T15:30:00+02:00",
       "allDay": false,
-      "location": "Bridoux_TD 17",
-      "description": "\n\nTD IFSI PRET SALLE\nUBASSY Mickaël\n\n(Modifié le:13/05/2025 13:06)",
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:11/06/2026 13:42)",
       "status": "",
       "url": "",
-      "lastModified": "2025-05-13T13:06:00+02:00"
+      "lastModified": "2026-06-11T13:42:00+02:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37333937362d302d3534",
@@ -941,18 +905,6 @@
       "lastModified": "2026-06-04T17:52:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35362d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-06-30T08:00:00+02:00",
-      "end": "2026-06-30T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:37:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35362d30",
       "title": "stockage matériel BU ",
       "start": "2026-06-30T08:00:00+02:00",
@@ -963,6 +915,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:53:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35362d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-06-30T08:00:00+02:00",
+      "end": "2026-06-30T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3137343233332d372d30",
@@ -1037,18 +1001,6 @@
       "lastModified": "2026-06-04T18:41:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35372d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-01T08:00:00+02:00",
-      "end": "2026-07-01T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:53:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35372d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-07-01T08:00:00+02:00",
@@ -1061,16 +1013,16 @@
       "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35382d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-02T08:00:00+02:00",
-      "end": "2026-07-02T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35372d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-01T08:00:00+02:00",
+      "end": "2026-07-01T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:53)",
       "status": "",
       "url": "",
-      "lastModified": "2026-03-06T13:37:00+01:00"
+      "lastModified": "2026-02-02T18:53:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131322d35382d30",
@@ -1083,6 +1035,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:54:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35382d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-02T08:00:00+02:00",
+      "end": "2026-07-02T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:37)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:37:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738302d35392d30",
@@ -1157,18 +1121,6 @@
       "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d302d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-08T08:00:00+02:00",
-      "end": "2026-07-08T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:38:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d362d30",
       "title": "stockage matériel BU ",
       "start": "2026-07-08T08:00:00+02:00",
@@ -1179,6 +1131,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-02-02T18:55:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d302d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-08T08:00:00+02:00",
+      "end": "2026-07-08T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d37393235392d302d30",
@@ -1193,18 +1157,6 @@
       "lastModified": "2026-06-10T16:21:00+02:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d312d30",
-      "title": "Travaux service technique - changement des luminaires",
-      "start": "2026-07-09T08:00:00+02:00",
-      "end": "2026-07-09T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-03-06T13:38:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31322d30",
       "title": "stockage matériel BU ",
       "start": "2026-07-09T08:00:00+02:00",
@@ -1217,16 +1169,16 @@
       "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31352d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-10T08:00:00+02:00",
-      "end": "2026-07-10T18:00:00+02:00",
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d312d30",
+      "title": "Travaux service technique - changement des luminaires",
+      "start": "2026-07-09T08:00:00+02:00",
+      "end": "2026-07-09T18:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
+      "description": "\n\n\n\n(Modifié le:06/03/2026 13:38)",
       "status": "",
       "url": "",
-      "lastModified": "2026-02-02T18:55:00+01:00"
+      "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d322d30",
@@ -1239,6 +1191,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:38:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31352d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-10T08:00:00+02:00",
+      "end": "2026-07-10T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:55)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:55:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31332d30",
@@ -1265,18 +1229,6 @@
       "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31372d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-14T08:00:00+02:00",
-      "end": "2026-07-14T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:56:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d362d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-07-14T08:00:00+02:00",
@@ -1287,6 +1239,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:38:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d31372d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-14T08:00:00+02:00",
+      "end": "2026-07-14T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:56:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d32312d30",
@@ -1313,18 +1277,6 @@
       "lastModified": "2026-03-06T13:38:00+01:00"
     },
     {
-      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d32332d30",
-      "title": "stockage matériel BU ",
-      "start": "2026-07-16T08:00:00+02:00",
-      "end": "2026-07-16T18:00:00+02:00",
-      "allDay": false,
-      "location": "",
-      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
-      "status": "",
-      "url": "",
-      "lastModified": "2026-02-02T18:56:00+01:00"
-    },
-    {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d392d30",
       "title": "Travaux service technique - changement des luminaires",
       "start": "2026-07-16T08:00:00+02:00",
@@ -1335,6 +1287,18 @@
       "status": "",
       "url": "",
       "lastModified": "2026-03-06T13:38:00+01:00"
+    },
+    {
+      "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232353131342d32332d30",
+      "title": "stockage matériel BU ",
+      "start": "2026-07-16T08:00:00+02:00",
+      "end": "2026-07-16T18:00:00+02:00",
+      "allDay": false,
+      "location": "",
+      "description": "\n\n\n\n(Modifié le:02/02/2026 18:56)",
+      "status": "",
+      "url": "",
+      "lastModified": "2026-02-02T18:56:00+01:00"
     },
     {
       "id": "ADE60312e706c616e6e696e67554c5f323032355f323032362d3232393738342d31302d30",
