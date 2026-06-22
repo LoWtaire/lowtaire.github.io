@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T15:29:29.499Z",
+  "generated_at": "2026-06-22T15:58:58.629Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 2,
@@ -11,10 +11,10 @@
       "end": "2026-06-22T18:00:00+02:00",
       "allDay": false,
       "location": "TD 203,TD 204",
-      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:22/06/2026 17:29)\n",
+      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:22/06/2026 17:58)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-22T17:29:29+02:00"
+      "lastModified": "2026-06-22T17:58:58+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363338312d312d30",
@@ -23,10 +23,10 @@
       "end": "2026-06-23T18:00:00+02:00",
       "allDay": false,
       "location": "TD 203,TD 204",
-      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:22/06/2026 17:29)\n",
+      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:22/06/2026 17:58)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-22T17:29:29+02:00"
+      "lastModified": "2026-06-22T17:58:58+02:00"
     }
   ]
 }
