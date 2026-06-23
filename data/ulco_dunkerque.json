@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T07:57:06.339Z",
+  "generated_at": "2026-06-23T08:36:06.625Z",
   "timezone": "Europe/Paris",
   "horizon_days": 60,
   "count": 66,
@@ -11,10 +11,10 @@
       "end": "2026-06-23T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35313637322d302d30",
@@ -23,10 +23,10 @@
       "end": "2026-06-23T10:15:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nLEULIET Lucas\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nLEULIET Lucas\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737302d382d30",
@@ -35,10 +35,10 @@
       "end": "2026-06-23T12:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363139342d302d30",
@@ -47,10 +47,10 @@
       "end": "2026-06-23T10:30:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nHAMAN Catherine\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nL3 LETTRES PROMO\nHAMAN Catherine\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363231352d302d30",
@@ -59,10 +59,10 @@
       "end": "2026-06-23T11:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL3 LETTRES PROMO\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nL3 LETTRES PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363338312d312d30",
@@ -71,10 +71,10 @@
       "end": "2026-06-23T18:00:00+02:00",
       "allDay": false,
       "location": "TD 203,TD 204",
-      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 EGEDD\nM2 EGEDD\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138362d302d30",
@@ -83,10 +83,10 @@
       "end": "2026-06-23T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343839302d302d30",
@@ -95,10 +95,10 @@
       "end": "2026-06-23T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nsalle 406\nPROMO L2 ECO GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\nsalle 406\nPROMO L2 ECO GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438342d302d30",
@@ -107,10 +107,10 @@
       "end": "2026-06-23T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438332d302d30",
@@ -119,10 +119,10 @@
       "end": "2026-06-23T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363437382d302d30",
@@ -131,10 +131,10 @@
       "end": "2026-06-23T11:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343836332d302d30",
@@ -143,10 +143,10 @@
       "end": "2026-06-23T12:45:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nLEULIET Lucas\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nLEULIET Lucas\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343839322d302d30",
@@ -155,10 +155,10 @@
       "end": "2026-06-23T15:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\nsalle 406\nPROMO L2 ECO GESTION\nFANKAM TCHOUMBOU Jean-Marcellin\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\nsalle 406\nPROMO L2 ECO GESTION\nFANKAM TCHOUMBOU Jean-Marcellin\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737302d392d30",
@@ -167,10 +167,10 @@
       "end": "2026-06-23T16:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438352d302d30",
@@ -179,10 +179,10 @@
       "end": "2026-06-23T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363437392d302d30",
@@ -191,10 +191,10 @@
       "end": "2026-06-23T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138362d312d30",
@@ -203,10 +203,10 @@
       "end": "2026-06-23T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343836382d302d30",
@@ -215,10 +215,10 @@
       "end": "2026-06-23T15:45:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d32",
@@ -227,10 +227,10 @@
       "end": "2026-06-24T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737302d31302d30",
@@ -239,10 +239,10 @@
       "end": "2026-06-24T12:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363230382d302d30",
@@ -251,10 +251,10 @@
       "end": "2026-06-24T11:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nL1 LETTRES  - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL1 LETTRES  - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138362d322d30",
@@ -263,10 +263,10 @@
       "end": "2026-06-24T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837312d302d30",
@@ -275,10 +275,10 @@
       "end": "2026-06-24T11:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nBOTTE Florian\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nBOTTE Florian\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343839362d302d30",
@@ -287,10 +287,10 @@
       "end": "2026-06-24T11:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438362d302d30",
@@ -299,10 +299,10 @@
       "end": "2026-06-24T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930312d302d30",
@@ -311,10 +311,10 @@
       "end": "2026-06-24T15:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nBOTTE Florian\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nBOTTE Florian\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737302d31312d30",
@@ -323,10 +323,10 @@
       "end": "2026-06-24T16:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438372d302d30",
@@ -335,10 +335,10 @@
       "end": "2026-06-24T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438302d302d30",
@@ -347,10 +347,10 @@
       "end": "2026-06-24T15:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138362d332d30",
@@ -359,10 +359,10 @@
       "end": "2026-06-24T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 SCM\nM1 MPM\nBOYABE Jean-Bernard\nKILANI Moez\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d33",
@@ -371,10 +371,10 @@
       "end": "2026-06-25T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837322d302d30",
@@ -383,10 +383,10 @@
       "end": "2026-06-25T11:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nCHEHIH Abdelkader\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nCHEHIH Abdelkader\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d3737302d31322d30",
@@ -395,10 +395,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL2 HUMANITES - PROMO\nL3 HUMANITES -PROMO\nL1 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363338322d302d30",
@@ -407,10 +407,10 @@
       "end": "2026-06-25T17:00:00+02:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS,2301 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM2 PAUL\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 PAUL\nM2 PAUL\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363239312d302d30",
@@ -419,10 +419,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "4414",
-      "description": "\n\nM2 SIDE promo\nM1 SIDE promo\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM2 SIDE promo\nM1 SIDE promo\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:04+02:00"
+      "lastModified": "2026-06-23T10:36:05+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138382d302d30",
@@ -431,10 +431,10 @@
       "end": "2026-06-25T12:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM2 MPM\nM2 SCM\nKILANI Moez\nBOYABE Jean-Bernard\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM2 MPM\nM2 SCM\nKILANI Moez\nBOYABE Jean-Bernard\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:05+02:00"
+      "lastModified": "2026-06-23T10:36:05+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363634322d302d30",
@@ -443,10 +443,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "2411 SALLE DE COURS",
-      "description": "\n\nPROMO L1 MATHS PPPE\nBRACCO Anne\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\nBRACCO Anne\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930322d302d30",
@@ -455,10 +455,10 @@
       "end": "2026-06-25T11:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438382d302d30",
@@ -467,10 +467,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438312d302d30",
@@ -479,10 +479,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363536382d302d30",
@@ -491,10 +491,10 @@
       "end": "2026-06-25T12:00:00+02:00",
       "allDay": false,
       "location": "1414 SALLE DE COURS",
-      "description": "\nAudrey BUTAYE\nLEA 3 promo\nMARTEEL Grégory\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\nAudrey BUTAYE\nLEA 3 promo\nMARTEEL Grégory\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:01+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837332d302d30",
@@ -503,10 +503,10 @@
       "end": "2026-06-25T15:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930332d302d30",
@@ -515,10 +515,10 @@
       "end": "2026-06-25T15:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343738352d302d30",
@@ -527,10 +527,10 @@
       "end": "2026-06-25T16:30:00+02:00",
       "allDay": false,
       "location": "2402B SALLE DE COURS",
-      "description": "\n\nL1 HUMANITES - PROMO\nL2 HUMANITES - PROMO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nL1 HUMANITES - PROMO\nL2 HUMANITES - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363634332d302d30",
@@ -539,10 +539,10 @@
       "end": "2026-06-25T15:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 MATHS PPPE\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438392d302d30",
@@ -551,10 +551,10 @@
       "end": "2026-06-25T15:00:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L2 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:00+02:00"
+      "lastModified": "2026-06-23T10:36:02+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363438322d302d30",
@@ -563,10 +563,10 @@
       "end": "2026-06-25T14:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nPROMO L3 MATHS PPPE\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35353138382d312d30",
@@ -575,10 +575,10 @@
       "end": "2026-06-25T16:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nM2 MPM\nM2 SCM\nKILANI Moez\nBOYABE Jean-Bernard\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM2 MPM\nM2 SCM\nKILANI Moez\nBOYABE Jean-Bernard\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:05+02:00"
+      "lastModified": "2026-06-23T10:36:05+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d333837372d302d34",
@@ -587,10 +587,10 @@
       "end": "2026-06-26T18:30:00+02:00",
       "allDay": false,
       "location": "",
-      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 GEO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837342d302d30",
@@ -599,10 +599,10 @@
       "end": "2026-06-26T11:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nDEVOS Dylan\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nDEVOS Dylan\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363338322d312d30",
@@ -611,10 +611,10 @@
       "end": "2026-06-26T17:00:00+02:00",
       "allDay": false,
       "location": "2302 SALLE DE COURS,2301 SALLE DE COURS",
-      "description": "\n\nM1 PAUL\nM2 PAUL\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nM1 PAUL\nM2 PAUL\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:03+02:00"
+      "lastModified": "2026-06-23T10:36:04+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930342d302d30",
@@ -623,10 +623,10 @@
       "end": "2026-06-26T11:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363139352d302d30",
@@ -635,10 +635,10 @@
       "end": "2026-06-26T11:00:00+02:00",
       "allDay": false,
       "location": "2305 SALLE DE COURS",
-      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nL3 LETTRES PROMO\nLEFEBVRE Laurie\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363133352d302d30",
@@ -647,10 +647,10 @@
       "end": "2026-06-26T11:00:00+02:00",
       "allDay": false,
       "location": "1504-SALLE DE CHIMIE",
-      "description": "\n\nLP Chimie Industrielle - PROMO\n(Exporté le:23/06/2026 09:57)\n",
+      "description": "\n\nLP Chimie Industrielle - PROMO\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:57:02+02:00"
+      "lastModified": "2026-06-23T10:36:03+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837362d302d30",
@@ -659,10 +659,10 @@
       "end": "2026-06-26T15:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nVOLTAIRE Louinord\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nVOLTAIRE Louinord\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930352d302d30",
@@ -671,10 +671,10 @@
       "end": "2026-06-26T16:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nGBADOE Kayi Charlotte\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nGBADOE Kayi Charlotte\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343837392d302d30",
@@ -682,11 +682,11 @@
       "start": "2026-06-29T09:30:00+02:00",
       "end": "2026-06-29T10:30:00+02:00",
       "allDay": false,
-      "location": "",
-      "description": "\n\nPROMO L1 ECO-GESTION\nCHEHIH Abdelkader\n(Exporté le:23/06/2026 09:56)\n",
+      "location": "406 SALLE DE COURS",
+      "description": "\n\nPROMO L1 ECO-GESTION\nCHEHIH Abdelkader\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930362d302d30",
@@ -695,10 +695,10 @@
       "end": "2026-06-29T11:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343838302d302d30",
@@ -707,10 +707,10 @@
       "end": "2026-06-29T15:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35363539382d302d30",
@@ -719,10 +719,10 @@
       "end": "2026-06-29T15:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nNAPOLEON Constantin\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930382d302d30",
@@ -731,10 +731,10 @@
       "end": "2026-06-30T11:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nMENDEZ Rodrigue\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nMENDEZ Rodrigue\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343838312d302d30",
@@ -743,10 +743,10 @@
       "end": "2026-06-30T11:30:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nLENOIR Delphine\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343838332d302d30",
@@ -755,10 +755,10 @@
       "end": "2026-06-30T15:00:00+02:00",
       "allDay": false,
       "location": "406 SALLE DE COURS",
-      "description": "\n\nPROMO L1 ECO-GESTION\nBOISSONADE Jerome\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L1 ECO-GESTION\nBOISSONADE Jerome\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:58+02:00"
+      "lastModified": "2026-06-23T10:36:00+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343930392d302d30",
@@ -767,10 +767,10 @@
       "end": "2026-06-30T15:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nDECROIX Jean François\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nDECROIX Jean François\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343931302d302d30",
@@ -779,10 +779,10 @@
       "end": "2026-07-01T11:00:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     },
     {
       "id": "ADE60554c434f323032352d323032362d35343931312d302d30",
@@ -791,10 +791,10 @@
       "end": "2026-07-01T15:30:00+02:00",
       "allDay": false,
       "location": "2401 SALLE DE COURS",
-      "description": "\n\nPROMO L2 ECO GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 09:56)\n",
+      "description": "\n\nPROMO L2 ECO GESTION\nBRAUD Herve\n(Exporté le:23/06/2026 10:36)\n",
       "status": "",
       "url": "",
-      "lastModified": "2026-06-23T09:56:59+02:00"
+      "lastModified": "2026-06-23T10:36:01+02:00"
     }
   ]
 }
