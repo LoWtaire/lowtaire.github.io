@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contrôle eau — Spa Brome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B1F2A;
+    --panel:#112C3A;
+    --panel-2:#15384A;
+    --line: rgba(255,255,255,0.07);
+    --text:#E7F6F8;
+    --text-dim:#7FA8B3;
+    --accent:#22D3EE;
+    --ok:#34D399;
+    --warn:#FBBF24;
+    --bad:#F87171;
+    --track: rgba(255,255,255,0.08);
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:24px 14px 60px;
+  }
+
+  .device{ width:100%; max-width:480px; }
+
+  /* ---- Bezel / LCD header (signature element) ---- */
+  .bezel{
+    background:radial-gradient(120% 160% at 50% -20%, #103645 0%, var(--panel) 60%);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:20px 20px 22px;
+    margin-bottom:16px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bezel::before{
+    content:"";
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(
+      to bottom,
+      rgba(34,211,238,0.035) 0px,
+      rgba(34,211,238,0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    pointer-events:none;
+  }
+  .bezel-row{
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    color:var(--text-dim);
+    margin-bottom:10px;
+  }
+  .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 8px var(--accent);
+  }
+  h1.lcd{
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:.03em;
+    line-height:1.3;
+    margin:0 0 8px;
+    color:var(--accent);
+    text-shadow:0 0 14px rgba(34,211,238,0.45);
+  }
+  .sub{
+    margin:0;
+    color:var(--text-dim);
+    font-size:13.5px;
+    line-height:1.5;
+    position:relative;
+  }
+
+  /* ---- Info / disclosure ---- */
+  details.info{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:16px;
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--text-dim);
+  }
+  details.info summary{
+    cursor:pointer;
+    color:var(--text);
+    font-weight:600;
+    font-size:14px;
+  }
+  details.info p{ margin:10px 0 0; }
+  details.info strong{ color:var(--text); }
+
+  /* ---- Rows ---- */
+  .rows{ display:flex; flex-direction:column; gap:12px; margin-bottom:16px; }
+
+  .row{
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px 16px;
+  }
+  .row-top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .row-id{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .order{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--text-dim);
+  }
+  .label{ font-weight:600; font-size:14.5px; }
+  .target{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--text-dim);
+    white-space:nowrap;
+  }
+
+  .input-line{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+  }
+  input.value{
+    flex:1;
+    min-width:0;
+    background:transparent;
+    border:none;
+    color:var(--text);
+    font-family:'JetBrains Mono', monospace;
+    font-size:26px;
+    font-weight:500;
+    text-align:right;
+    padding:2px 0;
+  }
+  input.value::placeholder{ color:rgba(231,246,248,0.18); }
+  input.value:focus{ outline:none; }
+  .unit{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--text-dim);
+    white-space:nowrap;
+  }
+
+  .gauge{
+    position:relative;
+    height:8px;
+    background:var(--track);
+    border-radius:999px;
+    margin-top:14px;
+  }
+  .gauge .zone{
+    position:absolute; top:0; bottom:0;
+    background:rgba(52,211,153,0.30);
+    border-radius:999px;
+  }
+  .gauge .marker{
+    position:absolute; top:-4px;
+    width:4px; height:16px; border-radius:2px;
+    background:var(--text-dim);
+    transform:translateX(-50%);
+    opacity:0;
+    transition:left .25s ease, background-color .25s ease, opacity .15s ease;
+  }
+
+  .row-bottom{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:10px;
+  }
+  .note{
+    font-size:12px;
+    color:var(--text-dim);
+    margin:0;
+    line-height:1.4;
+    max-width:70%;
+  }
+  .badge{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .badge.empty{ color:var(--text-dim); border-color:var(--line); }
+  .badge.ok{ color:var(--ok); background:rgba(52,211,153,0.12); border-color:rgba(52,211,153,0.35); }
+  .badge.warn{ color:var(--warn); background:rgba(251,191,36,0.12); border-color:rgba(251,191,36,0.35); }
+  .badge.bad{ color:var(--bad); background:rgba(248,113,113,0.12); border-color:rgba(248,113,113,0.35); }
+
+  .action{
+    margin:10px 0 0;
+    padding:9px 12px;
+    border-radius:8px;
+    border-left:3px solid var(--line);
+    background:rgba(255,255,255,0.03);
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--text-dim);
+  }
+  .action.empty{ border-left-color:var(--line); }
+  .action.ok{ border-left-color:var(--ok); color:var(--text-dim); }
+  .action.warn{ border-left-color:var(--warn); color:var(--text); }
+  .action.bad{ border-left-color:var(--bad); color:var(--text); }
+
+  /* ---- Derived / computed values ---- */
+  .derived-title{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--text-dim);
+    margin:0 0 10px 4px;
+  }
+  .derived{ display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
+  .drow{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px 14px;
+  }
+  .drow-top{
+    display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+  }
+  .dlabel{ font-size:13.5px; font-weight:600; }
+  .dvalue{
+    font-family:'JetBrains Mono', monospace;
+    font-size:17px;
+    font-weight:600;
+    color:var(--accent);
+    white-space:nowrap;
+  }
+  .dnote{ margin:6px 0 0; font-size:12px; line-height:1.45; color:var(--text-dim); }
+  .dnote.ok{ color:var(--text-dim); }
+  .dnote.warn{ color:var(--warn); }
+  .dnote.bad{ color:var(--bad); }
+
+  /* ---- Summary & actions ---- */
+  .summary{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--text-dim);
+    margin-bottom:14px;
+    line-height:1.6;
+  }
+  .summary b{ color:var(--text); }
+  .summary .ok{ color:var(--ok); }
+  .summary .warn{ color:var(--warn); }
+  .summary .bad{ color:var(--bad); }
+
+  button.reset{
+    width:100%;
+    background:transparent;
+    color:var(--text-dim);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  button.reset:hover{ color:var(--text); border-color:rgba(255,255,255,0.18); }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+  <main class="device">
+
+    <header class="bezel">
+      <div class="bezel-row">
+        <span>YINMIK · 7-EN-1</span>
+        <span class="dot" aria-hidden="true"></span>
+      </div>
+      <h1 class="lcd">CONTRÔLE EAU SPA — BROME</h1>
+      <p class="sub">Entre les valeurs dans l'ordre où l'appareil les affiche. Le retour se met à jour à chaque champ.</p>
+    </header>
+
+    <details class="info">
+      <summary>Repères et limites de l'appareil</summary>
+      <p>Le canal <strong>FAC</strong> de cet appareil est calibré chlore, pas brome. La cible 1,3–2,2 ppm correspond à un brome réel de 3–5 ppm via la conversion FAC × 2,25.</p>
+      <p>Des retours utilisateurs signalent des écarts notables sur les canaux chlore et ORP de ce modèle. Traite ces deux valeurs comme indicatives et recoupe-les de temps en temps avec une bandelette brome.</p>
+    </details>
+
+    <section class="rows" id="rows" aria-label="Paramètres de l'eau"></section>
+
+    <h2 class="derived-title">Valeurs calculées</h2>
+    <section class="derived" id="derived" aria-label="Valeurs indirectes">
+      <div class="drow">
+        <div class="drow-top">
+          <span class="dlabel">Brome réel estimé</span>
+          <span class="dvalue" id="dval-bromereal">—</span>
+        </div>
+        <p class="dnote" id="dnote-bromereal">Renseigne le FAC pour estimer le brome réel (FAC × 2,25).</p>
+      </div>
+      <div class="drow">
+        <div class="drow-top">
+          <span class="dlabel">Part du sel dans le TDS</span>
+          <span class="dvalue" id="dval-saltshare">—</span>
+        </div>
+        <p class="dnote" id="dnote-saltshare">Renseigne le sel (ppm) et le TDS pour voir la composition de l'eau.</p>
+      </div>
+      <div class="drow">
+        <div class="drow-top">
+          <span class="dlabel">Cohérence sel ppm / %</span>
+          <span class="dvalue" id="dval-saltcons">—</span>
+        </div>
+        <p class="dnote" id="dnote-saltcons">Renseigne les deux lectures de sel pour vérifier leur cohérence.</p>
+      </div>
+    </section>
+
+    <p class="summary" id="summary" aria-live="polite"></p>
+
+    <button class="reset" id="reset" type="button">Réinitialiser</button>
+
+  </main>
+
+<script>
+  const PARAMS = [
+    { id:'ph', order:1, label:'pH', unit:'', min:7.2, max:7.6, softMax:7.8, displayMin:6.0, displayMax:9.0, step:'0.01', placeholder:'7,40',
+      actionOk:"Eau dans la cible — rien à faire.",
+      actionLow:"Ajoute du pH+ par petites doses, laisse circuler 1 à 2 h, puis reteste avant d'en remettre.",
+      actionHigh:"Ajoute du pH- par petites doses, laisse circuler 1 à 2 h, puis reteste avant d'en remettre.",
+      actionWarnHigh:"Limite haute : surveille. Une petite dose de pH- suffit souvent à le ramener sous 7,6." },
+    { id:'ec', order:2, label:'Conductivité', unit:'µS/cm', min:250, max:1000, displayMin:0, displayMax:1500, step:'1', placeholder:'650',
+      actionOk:"Eau dans la cible — rien à faire.",
+      actionLow:"Rarement gênant en soi. Vérifie juste que ce n'est pas lié à un remplissage très récent à l'eau adoucie.",
+      actionHigh:"Eau chargée en minéraux dissous. Une vidange partielle (30–50 %) suivie d'un appoint d'eau claire fait redescendre la conductivité." },
+    { id:'tds', order:3, label:'TDS', unit:'ppm', min:0, max:1000, displayMin:0, displayMax:1500, step:'1', placeholder:'520',
+      actionOk:"Eau dans la cible — rien à faire.",
+      actionHigh:"TDS élevé : l'eau accumule des résidus dissous avec le temps. Programme une vidange partielle, ou totale si l'eau a plus de 3 mois." },
+    { id:'selppm', order:4, label:'Sel', unit:'ppm', min:0, max:500, displayMin:0, displayMax:800, step:'1', placeholder:'180',
+      actionOk:"Eau dans la cible — rien à faire.",
+      actionHigh:"Taux de sel élevé pour un usage sans électrolyseur. Vérifie l'origine (eau adoucie, produits ajoutés) ; une vidange partielle dilue le taux." },
+    { id:'selpct', order:5, label:'Sel', unit:'%', min:0, max:0.05, displayMin:0, displayMax:0.08, step:'0.001', placeholder:'0,018',
+      actionOk:"Eau dans la cible — rien à faire.",
+      actionHigh:"Même lecture que le sel en ppm : vidange partielle si ça reste élevé après vérification." },
+    { id:'orp', order:6, label:'ORP', unit:'mV', min:400, max:500, displayMin:0, displayMax:700, step:'1', placeholder:'450',
+      actionOk:"Pouvoir désinfectant correct — rien à faire.",
+      actionLow:"Pouvoir désinfectant insuffisant. Augmente la dose de brome ; si ça reste bas après 24 h, fais un choc oxydant non chloré.",
+      actionHigh:"Eau très oxydée, rarement gênant. Laisse simplement le taux redescendre avant la prochaine baignade." },
+    { id:'fac', order:7, label:'FAC', unit:'ppm', min:1.3, max:2.2, displayMin:0, displayMax:3.5, step:'0.01', placeholder:'1,80',
+      note:'Canal chlore — brome réel ≈ FAC × 2,25',
+      actionOk:"Brome réel dans la cible — rien à faire.",
+      actionLow:"Brome réel sous la cible (≈ "+"FAC × 2,25). Ajoute une pastille ou augmente le dosage du brominateur, puis reteste dans quelques heures.",
+      actionHigh:"Brome réel au-dessus de la cible. Réduis le dosage et attends que le taux redescende avant de te baigner." },
+  ];
+
+  const rowsEl = document.getElementById('rows');
+  const summaryEl = document.getElementById('summary');
+  const resetBtn = document.getElementById('reset');
+
+  function clampPct(v, lo, hi){
+    const pct = ((v - lo) / (hi - lo)) * 100;
+    return Math.max(0, Math.min(100, pct));
+  }
+
+  function fmtTarget(p){
+    const fmt = n => Number.isInteger(n) ? n : n.toString().replace('.', ',');
+    if (p.min === 0 && p.max !== undefined && p.softMax === undefined && p.id !== 'selpct'){
+      return `cible < ${fmt(p.max)}`;
+    }
+    return `cible ${fmt(p.min)}–${fmt(p.max)}`;
+  }
+
+  function statusFor(p, value){
+    if (value === null) return { state:'empty', text:'—', dir:null };
+    if (value < p.min){
+      if (p.softMin !== undefined && value >= p.softMin) return { state:'warn', text:'Bas (limite)', dir:'low' };
+      return { state:'bad', text:'Bas', dir:'low' };
+    }
+    if (value > p.max){
+      if (p.softMax !== undefined && value <= p.softMax) return { state:'warn', text:'Haut (limite)', dir:'high' };
+      return { state:'bad', text:'Haut', dir:'high' };
+    }
+    return { state:'ok', text:'OK', dir:null };
+  }
+
+  function actionFor(p, status){
+    if (status.state === 'empty') return 'Renseigne la valeur pour obtenir une recommandation.';
+    if (status.state === 'ok') return p.actionOk || 'Eau dans la cible — rien à faire.';
+    if (status.dir === 'low'){
+      if (status.state === 'warn' && p.actionWarnLow) return p.actionWarnLow;
+      return p.actionLow || 'Valeur basse — surveille et reteste prochainement.';
+    }
+    if (status.state === 'warn' && p.actionWarnHigh) return p.actionWarnHigh;
+    return p.actionHigh || 'Valeur haute — surveille et reteste prochainement.';
+  }
+
+  function parseValue(str){
+    if (!str) return null;
+    const cleaned = str.replace(',', '.').trim();
+    if (cleaned === '') return null;
+    const n = parseFloat(cleaned);
+    return Number.isNaN(n) ? null : n;
+  }
+
+  rowsEl.innerHTML = PARAMS.map(p => {
+    const zoneLeft = clampPct(p.min, p.displayMin, p.displayMax);
+    const zoneRight = clampPct(p.max, p.displayMin, p.displayMax);
+    const zoneWidth = zoneRight - zoneLeft;
+    return `
+      <div class="row" data-id="${p.id}">
+        <div class="row-top">
+          <div class="row-id">
+            <span class="order">${p.order}</span>
+            <span class="label">${p.label}</span>
+          </div>
+          <span class="target">${fmtTarget(p)}</span>
+        </div>
+        <div class="input-line">
+          <input class="value" id="input-${p.id}" type="text" inputmode="decimal"
+                 placeholder="${p.placeholder}" aria-label="${p.label} en ${p.unit || 'unité'}">
+          <span class="unit">${p.unit}</span>
+        </div>
+        <div class="gauge">
+          <div class="zone" style="left:${zoneLeft}%; width:${zoneWidth}%;"></div>
+          <div class="marker" id="marker-${p.id}"></div>
+        </div>
+        <div class="row-bottom">
+          <p class="note">${p.note || ''}</p>
+          <span class="badge empty" id="badge-${p.id}">—</span>
+        </div>
+        <p class="action empty" id="action-${p.id}">Renseigne la valeur pour obtenir une recommandation.</p>
+      </div>
+    `;
+  }).join('');
+
+  function updateRow(p){
+    const input = document.getElementById(`input-${p.id}`);
+    const marker = document.getElementById(`marker-${p.id}`);
+    const badge = document.getElementById(`badge-${p.id}`);
+    const action = document.getElementById(`action-${p.id}`);
+    const value = parseValue(input.value);
+    const status = statusFor(p, value);
+
+    badge.textContent = status.text;
+    badge.className = `badge ${status.state}`;
+    action.textContent = actionFor(p, status);
+    action.className = `action ${status.state}`;
+
+    if (value === null){
+      marker.style.opacity = '0';
+    } else {
+      const pct = clampPct(value, p.displayMin, p.displayMax);
+      marker.style.left = `${pct}%`;
+      marker.style.opacity = '1';
+      const color = status.state === 'ok' ? 'var(--ok)' : status.state === 'warn' ? 'var(--warn)' : 'var(--bad)';
+      marker.style.backgroundColor = color;
+    }
+    return status.state;
+  }
+
+  function updateSummary(){
+    const counts = { ok:0, warn:0, bad:0, empty:0 };
+    PARAMS.forEach(p => {
+      const input = document.getElementById(`input-${p.id}`);
+      const value = parseValue(input.value);
+      counts[statusFor(p, value).state]++;
+    });
+    summaryEl.innerHTML =
+      `<span class="ok">${counts.ok} OK</span> · ` +
+      `<span class="warn">${counts.warn} limite</span> · ` +
+      `<span class="bad">${counts.bad} hors cible</span> · ` +
+      `<b>${counts.empty}</b> à renseigner`;
+  }
+
+  function updateDerived(){
+    const fac = parseValue(document.getElementById('input-fac').value);
+    const selppm = parseValue(document.getElementById('input-selppm').value);
+    const selpct = parseValue(document.getElementById('input-selpct').value);
+    const tds = parseValue(document.getElementById('input-tds').value);
+
+    const bromeVal = document.getElementById('dval-bromereal');
+    const bromeNote = document.getElementById('dnote-bromereal');
+    if (fac === null){
+      bromeVal.textContent = '—';
+      bromeNote.textContent = "Renseigne le FAC pour estimer le brome réel (FAC × 2,25).";
+      bromeNote.className = 'dnote';
+    } else {
+      const real = fac * 2.25;
+      bromeVal.textContent = real.toFixed(2).replace('.', ',') + ' ppm';
+      if (real < 3){
+        bromeNote.textContent = "Sous la cible (3–5 ppm) — ajoute une pastille ou augmente le dosage.";
+        bromeNote.className = 'dnote bad';
+      } else if (real > 5){
+        bromeNote.textContent = "Au-dessus de la cible (3–5 ppm) — réduis le dosage.";
+        bromeNote.className = 'dnote bad';
+      } else {
+        bromeNote.textContent = "Dans la cible (3–5 ppm).";
+        bromeNote.className = 'dnote ok';
+      }
+    }
+
+    const shareVal = document.getElementById('dval-saltshare');
+    const shareNote = document.getElementById('dnote-saltshare');
+    if (selppm === null || tds === null || tds === 0){
+      shareVal.textContent = '—';
+      shareNote.textContent = "Renseigne le sel (ppm) et le TDS pour voir la composition de l'eau.";
+      shareNote.className = 'dnote';
+    } else {
+      const share = (selppm / tds) * 100;
+      shareVal.textContent = share.toFixed(0) + ' %';
+      if (share > 100){
+        shareNote.textContent = "Le sel dépasse le TDS total : vérifie les deux lectures sur l'appareil.";
+        shareNote.className = 'dnote warn';
+      } else if (share < 30){
+        shareNote.textContent = "Le TDS vient surtout de résidus autres que le sel (matière organique, traitement). Une vidange clarifie l'eau si ça persiste.";
+        shareNote.className = 'dnote';
+      } else {
+        shareNote.textContent = "Le TDS reflète surtout le sel dissous, peu de résidus organiques.";
+        shareNote.className = 'dnote ok';
+      }
+    }
+
+    const consVal = document.getElementById('dval-saltcons');
+    const consNote = document.getElementById('dnote-saltcons');
+    if (selppm === null || selpct === null){
+      consVal.textContent = '—';
+      consNote.textContent = "Renseigne les deux lectures de sel pour vérifier leur cohérence.";
+      consNote.className = 'dnote';
+    } else {
+      const expectedPct = selppm / 10000;
+      const diff = Math.abs(selpct - expectedPct);
+      const tolerance = Math.max(0.003, expectedPct * 0.15);
+      consVal.textContent = expectedPct.toFixed(3).replace('.', ',') + ' % attendu';
+      if (diff <= tolerance){
+        consNote.textContent = "Cohérent avec la lecture en ppm.";
+        consNote.className = 'dnote ok';
+      } else {
+        consNote.textContent = "Écart avec la lecture en ppm — probablement un arrondi de l'appareil, pas forcément une erreur de lecture.";
+        consNote.className = 'dnote warn';
+      }
+    }
+  }
+
+  PARAMS.forEach(p => {
+    const input = document.getElementById(`input-${p.id}`);
+    input.addEventListener('input', () => { updateRow(p); updateSummary(); updateDerived(); });
+    updateRow(p);
+  });
+  updateSummary();
+  updateDerived();
+
+  resetBtn.addEventListener('click', () => {
+    PARAMS.forEach(p => {
+      document.getElementById(`input-${p.id}`).value = '';
+      updateRow(p);
+    });
+    updateSummary();
+    updateDerived();
+  });
+</script>
+</body>
+</html>
