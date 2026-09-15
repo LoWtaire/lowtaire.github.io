@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan interactif des salles — Campus Bridoux</title>
+  <style>
+    :root{color-scheme:light;--ink:#172033;--line:#687386;--unknown:#fff;--green:#b9efc3;--red:#ffb8b8}
+    *{box-sizing:border-box}body{margin:0;background:#f4f6f9;color:var(--ink);font-family:Inter,Arial,sans-serif}
+    main{max-width:1500px;margin:auto;padding:22px}.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+    h1{font-size:clamp(20px,2.2vw,32px);margin:0 auto 0 0}.button{border:1px solid #c5ccd6;border-radius:9px;background:#fff;padding:9px 13px;font-weight:700;cursor:pointer}
+    input[type=file]{display:none}.status{font-size:14px;color:#5a6575}.plan-wrap{background:white;border:1px solid #d8dde6;border-radius:14px;padding:14px;box-shadow:0 8px 30px #27324813;overflow:auto}
+    svg{display:block;min-width:1100px;width:100%;height:auto}.room .surface{fill:var(--unknown);stroke:var(--line);stroke-width:1.25;vector-effect:non-scaling-stroke;transition:fill .25s ease}
+    .room[data-state="vert"] .surface{fill:var(--green)}.room[data-state="rouge"] .surface{fill:var(--red)}
+    .room text{font-size:8px;font-weight:700;fill:#172033;text-anchor:middle;pointer-events:none}.room:hover .surface{stroke:#111827;stroke-width:2.4}.room{cursor:pointer}
+    .room.inactive{cursor:default;pointer-events:none}.room.inactive .surface{fill:#d6dae1;stroke:#8992a1}.room.inactive:hover .surface{stroke:#8992a1;stroke-width:1.25}
+    .room.inactive.fixed-orange .surface{fill:#ef7427;stroke:#8d3d15}.room.inactive.fixed-violet .surface{fill:#a532a8;stroke:#681b6a}
+    .road{font-size:12px;font-weight:800;letter-spacing:.7px;fill:#3e4858;text-anchor:middle}.minor text{font-size:6.2px}.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:13px;font-size:14px}.swatch{width:17px;height:17px;border:1px solid #687386;display:inline-block;vertical-align:-4px;margin-right:6px}.help{margin:10px 2px 0;color:#596579;font-size:13px}
+    #tooltip{position:fixed;display:none;pointer-events:none;background:#172033;color:white;padding:7px 9px;border-radius:7px;font-size:13px;z-index:5;box-shadow:0 5px 16px #0003}
+  </style>
+</head>
+<body>
+<main>
+  <div class="bar">
+    <h1>Campus Bridoux — état des salles</h1>
+    <a class="button" href="../">Accueil</a>
+    <label class="button" for="jsonFile">Charger un fichier JSON</label>
+    <input id="jsonFile" type="file" accept="application/json,.json">
+    <button class="button" id="reset" type="button">Réinitialiser</button>
+    <span id="status" class="status">Aucune donnée chargée</span>
+  </div>
+  <div class="plan-wrap">
+    <svg id="plan" viewBox="0 0 1080 450" role="img" aria-label="Plan interactif des salles du campus Bridoux">
+      <text x="540" y="14" class="road">AVENUE DU GÉNÉRAL DELESTRAINT</text>
+      <g id="rooms"></g>
+    </svg>
+  </div>
+  <div class="legend">
+    <span><i class="swatch" style="background:var(--green)"></i>Libre</span>
+    <span><i class="swatch" style="background:var(--red)"></i>Occupée</span>
+    <span><i class="swatch" style="background:white"></i>État inconnu</span>
+    <span><i class="swatch" style="background:#d6dae1"></i>Local non interactif</span>
+    <span><i class="swatch" style="background:#ef7427"></i>Salle des actes</span>
+    <span><i class="swatch" style="background:#a532a8"></i>Accueil</span>
+  </div>
+  <p class="help">Le plan utilise automatiquement les données ADE du campus Bridoux. Le chargement manuel d’un fichier JSON reste disponible pour les essais.</p>
+</main>
+<div id="tooltip"></div>
+<script>
+const rooms = [
+  // Bloc chimie — les vides correspondent aux cours et aux couloirs du plan source.
+  ['local_technique_ouest',20,22,90,46,['Local technique','Accès réservé']],
+  ['tp_chimie_delesse',110,22,72,46,['TP Chimie','Delesse']],
+  ['preparation_chimie_1',182,22,20,46,['Prépa.','chimie'],'minor'],
+  ['tp_chimie_perrin',202,22,98,46,['TP Chimie','Perrin']],
+  ['tp_chimie_malaprade',50,80,118,43,['TP Chimie','Malaprade']],
+  ['preparation_chimie_2',168,80,25,43,['Prépa.','chimie'],'minor'],
+  ['tp_chimie_gingnard',193,80,107,43,['TP Chimie','Gingnard']],
+  ['tp_l_cuenot',50,132,62,113,['TP','L. Cuénot']],
+  ['tp_r_dutrochet',112,190,84,55,['TP','R. Dutrochet']],
+  ['tp_j_monod',196,190,104,55,['TP','J. Monod']],
+  ['tp_l_lanvier',20,265,92,45,['TP','L. Lanvier']],
+  ['preparation_biologie_1',112,265,25,45,['Prépa.','bio'],'minor'],
+  ['tp_p_grasse',137,265,73,45,['TP','P. Grassé']],
+  ['preparation_biologie_2',210,265,25,45,['Prépa.','bio'],'minor'],
+  ['tp_p_bert',235,265,65,45,['TP','P. Bert']],
+  ['td_1',20,370,45,48,['TD 1']],['td_2',65,370,45,48,['TD 2']],['td_3',110,370,45,48,['TD 3']],
+  ['td_4',155,370,45,48,['TD 4']],['td_5',200,370,45,48,['TD 5']],['td_6',245,370,55,48,['TD 6']],
+
+  // Bloc central gauche.
+  ['td_24',320,22,48,46,['TD 24']],['td_25',368,22,48,46,['TD 25','PACES']],
+  ['td_26',416,22,48,46,['TD 26','PACES']],['td_27',464,22,48,46,['TD 27']],
+  ['wc_sumps_1',320,80,25,23,['WC'],'minor'],['wc_sumps_2',320,103,25,23,['WC'],'minor'],
+  ['service_medecine',345,80,145,46,['Service de médecine','SUMPPS']],
+  ['accueil',500,80,50,66,['Accueil'],'minor'],['salle_actes',490,146,60,54,['Salle','Actes']],
+  ['wc_doc_1',320,200,25,22,['WC'],'minor'],['wc_doc_2',320,222,25,23,['WC'],'minor'],
+  ['reserve_doc',345,200,38,45,['Réserve','doc'],'minor'],['doc',383,200,167,45,['« doc »']],
+  ['tp_info_6',320,265,55,48,['TP','Info 6']],['tp_l_mangin',375,265,100,48,['TP','L. Mangin']],
+  ['preparation_biologie_3',475,265,25,48,['Prépa.','bio'],'minor'],['salle_associations',500,265,50,48,['Salle des','associations']],
+  ['laboratoire_langues',500,313,50,20,['Laboratoire','de langues']],['multimedia_langues_1',500,333,50,22,['Multimédia','Langues 1']],
+  ['wc_langues_1',492,355,58,23,['WC'],'minor'],
+  ['td_7',320,388,45,30,['TD 7']],['td_8',365,388,45,30,['TD 8']],['td_9',410,388,45,30,['TD 9']],['td_10',455,388,45,30,['TD 10']],
+
+  // Administration et informatique : le passage central est volontairement laissé vide.
+  ['tp_info_1',592,22,50,46,['TP','Info 1']],['tp_info_2',642,22,50,46,['TP','Info 2']],
+  ['libre_acces_1',692,22,50,46,['Libre accès','1']],['tp_info_3',742,22,50,46,['TP','Info 3']],
+  ['scolarite_etudiants',532,80,110,46,['Scolarité','Étudiants']],
+  ['imprimerie',642,80,25,46,['Imprimerie'],'minor'],['bureau_informatique',667,80,25,46,['Bureau','info'],'minor'],
+  ['salle_reunion_info',692,80,65,46,['Salle de réunion','informatique']],['local_technique_info',757,80,33,23,['Local tech.'],'minor'],
+  ['wc_info',757,103,33,23,['WC'],'minor'],
+  ['archives',532,138,28,55,['Archives'],'minor'],['scolarite',560,138,83,55,['Scolarité']],
+  ['secretariat_emploi_temps',532,193,113,52,['Secrétariat','Emploi du temps']],
+  ['bureau_vie_etudiante',645,193,25,52,['Vie ét.'],'minor'],['bureau_enseignants',670,193,25,52,['Bureau','ens.'],'minor'],
+  ['bureau_directeur',695,193,25,52,['Bureau','directeur'],'minor'],['service_financier',720,193,70,52,['Service financier']],
+  ['wc_finance',770,160,20,33,['WC'],'minor'],
+  ['bureau_fc',532,265,100,25,['Bureau FC']],['salle_pause_personnel',532,290,100,25,['Salle de pause','du personnel']],
+  ['archives_admin',632,265,25,75,['Archives'],'minor'],['salle_conseil',657,265,63,75,['Salle du conseil']],
+  ['tp_a_fresnel',720,265,70,75,['TP Physique','A. Fresnel']],
+  ['bureaux_langues',532,315,80,20,['Bureaux','Langues']],['multimedia_langues_2',532,335,80,20,['Multimédia','Langues 2']],
+  ['wc_langues_2',532,355,58,23,['WC'],'minor'],['salle_etudiants',532,388,60,30,['Salle étudiants'],'minor'],
+  ['td_12',592,388,55,30,['TD 12']],['td_13',647,388,55,30,['TD 13']],['td_14',702,388,55,30,['TD 14']],
+
+  // Bloc physique / STAPS.
+  ['local_technique_est',810,22,55,46,['Local technique']],['salle_tp_est',865,22,55,46,['Salle TP']],
+  ['salle_startup',920,22,58,46,['Start-up']],['bureaux_staps_nord',978,22,52,46,['Bureaux STAPS']],
+  ['bureaux_staps',810,80,58,45,['Bureaux STAPS']],['salle_innovation',868,80,52,45,['Salle innovation']],
+  ['bureau_staps',920,80,25,45,['STAPS'],'minor'],['tp_info_7',945,80,65,96,['TP','Info 7']],
+  ['tp_physique_hertz',945,176,65,69,['TP Physique','H. Hertz']],
+  ['instrumentation',810,190,22,55,['Instrumentation'],'minor'],['bureau_rd',832,190,22,55,['Bureau R&amp;D'],'minor'],
+  ['bureau_metrologie',854,190,22,55,['Métrologie'],'minor'],['tp_electronique_edison',876,190,69,55,['TP Électronique','T. Edison']],
+  ['tp_a_ampere',810,265,65,45,['TP Physique','A. Ampère']],['tp_l_carnot',875,265,65,45,['TP Physique','L. Carnot']],
+  ['td_29',940,265,48,45,['TD 29','PACES']],['td_28',988,265,42,45,['TD 28']],
+  ['td_15',810,370,44,48,['TD 15']],['td_16',854,370,44,48,['TD 16']],['td_17',898,370,44,48,['TD 17']],
+  ['td_18',942,370,48,48,['TD 18']],['staps_sud',990,370,40,48,['STAPS']]
+];
+
+const svgNS='http://www.w3.org/2000/svg';
+const container=document.querySelector('#rooms');
+const tooltip=document.querySelector('#tooltip');
+const INACTIVE_ROOMS=new Set([
+  'wc_sumps_1','wc_sumps_2','wc_doc_1','wc_doc_2','wc_info','wc_finance','wc_langues_1','wc_langues_2',
+  'preparation_chimie_1','preparation_chimie_2','preparation_biologie_1','preparation_biologie_2','preparation_biologie_3',
+  'accueil','scolarite_etudiants','scolarite','bureau_vie_etudiante','salle_pause_personnel',
+  'laboratoire_langues','multimedia_langues_1','bureaux_langues','multimedia_langues_2',
+  'doc','reserve_doc','imprimerie',
+  'salle_actes','local_technique_est','bureau_informatique','salle_reunion_info','local_technique_info',
+  'archives','secretariat_emploi_temps','bureau_enseignants','bureau_directeur','service_financier',
+  'instrumentation','bureau_rd','bureau_metrologie','salle_associations','bureau_fc','archives_admin',
+  'salle_conseil','salle_etudiants'
+]);
+
+const RIGHT_HALF_OFFSET=48;
+
+const ADE_LOCATIONS = {
+  tp_chimie_delesse:['Bridoux_TP Delesse A3'],
+  tp_chimie_perrin:['Bridoux_TP Perrin A9'],
+  tp_chimie_malaprade:['Bridoux_TP Malaprade A2'],
+  tp_chimie_gingnard:['Bridoux_TP Grignard A8'],
+  tp_l_cuenot:['Bridoux_TP Cuenot E1'],
+  tp_r_dutrochet:['Bridoux_ TP Dutrochet E3'],
+  tp_j_monod:['Bridoux_ TP Monod E7'],
+  tp_l_lanvier:['Bridoux_TP Ranvier E2'],
+  tp_p_grasse:['Bridoux_TP Grassé E8'],
+  tp_p_bert:['Bridoux_TP Bert E16'],
+  tp_info_1:['Bridoux_TP Info1 C1'],
+  tp_info_2:['Bridoux_TP Info2 C5'],
+  tp_info_3:['Bridoux_TP Info3 C7'],
+  tp_info_6:['Bridoux_TP Info6 F2'],
+  tp_l_mangin:['Bridoux_TP Mangin F6'],
+  salle_startup:['Bridoux_TP Start up 1 D14BIS','Bridoux_TP Start up 2 D16'],
+  tp_physique_hertz:['Bridoux_TP Hertz H13'],
+  tp_electronique_edison:['Bridoux_TP  Edison H7'],
+  tp_a_ampere:['Bridoux_ TP Ampère H2'],
+  tp_l_carnot:['Bridoux_TP Carnot H6'],
+  tp_a_fresnel:['Bridoux_TP  Fresnel G16'],
+  ...Object.fromEntries([1,2,3,4,5,6,7,8,9,12,13,14,15,16,17,18,24,25,26,27,28,29]
+    .map(number=>[`td_${number}`,[`Bridoux_TD ${number}`]]))
+};
+
+function renderRoom([id,x,y,w,h,lines,extra='']){
+  // Le plan source est constitué de deux moitiés séparées par un couloir vertical.
+  if(x>=532) x+=RIGHT_HALF_OFFSET;
+  const g=document.createElementNS(svgNS,'g');
+  g.classList.add('room');
+  if(extra) g.classList.add(extra);
+  if(INACTIVE_ROOMS.has(id)) g.classList.add('inactive');
+  if(id==='salle_actes') g.classList.add('fixed-orange');
+  if(id==='accueil') g.classList.add('fixed-violet');
+  g.dataset.room=id; g.dataset.state='inconnu';
+  const rect=document.createElementNS(svgNS,'rect'); rect.setAttribute('class','surface'); rect.setAttribute('x',x);rect.setAttribute('y',y);rect.setAttribute('width',w);rect.setAttribute('height',h);
+  g.append(rect);
+  const text=document.createElementNS(svgNS,'text'); const step=extra==='minor'?7:9; const start=y+h/2-((lines.length-1)*step/2);
+  lines.forEach((line,i)=>{const t=document.createElementNS(svgNS,'tspan');t.setAttribute('x',x+w/2);t.setAttribute('y',start+i*step);t.innerHTML=line;text.append(t)});
+  g.append(text);
+  if(!INACTIVE_ROOMS.has(id)){
+    g.addEventListener('mousemove',e=>{tooltip.style.display='block';tooltip.style.left=e.clientX+12+'px';tooltip.style.top=e.clientY+12+'px';tooltip.textContent=`${lines.join(' ')} — ${g.dataset.state}`});
+    g.addEventListener('mouseleave',()=>tooltip.style.display='none');
+  }
+  container.append(g);
+}
+rooms.forEach(renderRoom);
+
+function normalize(value){
+  value=(value&&typeof value==='object'&&'etat' in value)?value.etat:value;
+  if(value===true||value===1||['vert','green','ok','libre','disponible'].includes(String(value).toLowerCase())) return 'vert';
+  if(value===false||value===0||['rouge','red','ko','occupe','occupée','indisponible'].includes(String(value).toLowerCase())) return 'rouge';
+  return 'inconnu';
+}
+function applyData(json,source='fichier'){
+  if(Array.isArray(json.events)) return applySchedule(json,source);
+  const data=json.salles??json; let changed=0;
+  document.querySelectorAll('.room').forEach(room=>{if(room.classList.contains('inactive'))return;room.dataset.state=normalize(data[room.dataset.room]);if(room.dataset.state!=='inconnu') changed++});
+  document.querySelector('#status').textContent=`${changed} salle(s) mise(s) à jour depuis ${source}`;
+}
+
+function applySchedule(payload,source='ADE'){
+  const now=Date.now();
+  const events=payload.events.map(event=>({
+    ...event,
+    startMs:new Date(event.start).getTime(),
+    endMs:new Date(event.end).getTime(),
+    locations:String(event.location||'').split(/[,;]+/).map(value=>value.trim())
+  }));
+  let changed=0;
+  document.querySelectorAll('.room').forEach(room=>{
+    if(room.classList.contains('inactive')) return;
+    const locations=ADE_LOCATIONS[room.dataset.room];
+    if(!locations){
+      room.dataset.state='inconnu';
+      return;
+    }
+    const occupied=events.some(event=>
+      event.startMs<=now && now<event.endMs &&
+      locations.some(location=>event.locations.includes(location))
+    );
+    room.dataset.state=occupied?'rouge':'vert';
+    changed++;
+  });
+  const generated=payload.generated_at
+    ? new Date(payload.generated_at).toLocaleString('fr-FR',{dateStyle:'short',timeStyle:'short'})
+    : 'date inconnue';
+  document.querySelector('#status').textContent=`${changed} salle(s) suivie(s) — données générées le ${generated}`;
+}
+document.querySelector('#jsonFile').addEventListener('change',async e=>{
+  try{applyData(JSON.parse(await e.target.files[0].text()),e.target.files[0].name)}catch(err){document.querySelector('#status').textContent='JSON invalide : '+err.message}
+});
+document.querySelector('#reset').addEventListener('click',()=>{document.querySelectorAll('.room').forEach(r=>r.dataset.state='inconnu');document.querySelector('#status').textContent='Plan réinitialisé'});
+if(location.protocol!=='file:') {
+  fetch('../data/univlor.json',{cache:'no-store'})
+    .then(response=>{if(!response.ok) throw Error(`HTTP ${response.status}`); return response.json()})
+    .then(payload=>applySchedule(payload))
+    .catch(error=>{document.querySelector('#status').textContent='Données ADE indisponibles : '+error.message});
+}
+</script>
+</body>
+</html>
