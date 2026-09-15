@@ -47,13 +47,13 @@ jobs:
           node-version: 22
 
       - name: Installer les dépendances
-        run: npm install --prefix IsAnEmptyRoom/adeb --no-audit --no-fund
+        run: npm ci --prefix IsAnEmptyRoom --no-audit --no-fund
 
       - name: Actualiser Université de Lorraine
-        working-directory: IsAnEmptyRoom/adeb
+        working-directory: IsAnEmptyRoom
         env:
           ICS_URL: ${{ env.UNIVLOR_ICS_URL }}
-          OUTPUT_FILE: ../data/univlor.json
+          OUTPUT_FILE: data/univlor.json
         run: npm run generate
 
       - name: Contrôler les données
@@ -64,17 +64,11 @@ jobs:
       - name: Préparer le site
         shell: bash
         run: |
-          mkdir -p _site/adeb _site/data
-
-          cp IsAnEmptyRoom/index.html _site/
-
-          cp IsAnEmptyRoom/adeb/index.html \
-             IsAnEmptyRoom/adeb/campus.json \
-             _site/adeb/
-
-          cp -R IsAnEmptyRoom/adeb/assets _site/adeb/
-          cp -R IsAnEmptyRoom/plan _site/
-          cp IsAnEmptyRoom/data/univlor.json _site/data/
+          mkdir -p _site/IsAnEmptyRoom/data
+          cp index.html app.js styles.css _site/
+          cp IsAnEmptyRoom/index.html _site/IsAnEmptyRoom/
+          cp IsAnEmptyRoom/data/univlor.json _site/IsAnEmptyRoom/data/
+          node IsAnEmptyRoom/scripts/validate-data.mjs _site/IsAnEmptyRoom/data/univlor.json
 
           touch _site/.nojekyll
 

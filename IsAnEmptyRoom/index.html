@@ -38,7 +38,7 @@
     <span><i class="swatch" style="background:white"></i>État inconnu</span>
     <span><i class="swatch" style="background:#d6dae1"></i>Local non interactif</span>
   </div>
-  <p class="help">Le fichier peut contenir directement les identifiants des salles, ou un objet <code>salles</code>. Le fichier <code>etat_salles.json</code> est chargé automatiquement lorsque la page est servie par un serveur web.</p>
+  <p class="help">Les réservations sont chargées depuis <code>data/univlor.json</code>. Vert : libre actuellement ; rouge : occupée ; blanc : salle absente des données. Les états sont recalculés chaque minute.</p>
 </main>
 <div id="tooltip"></div>
 <script>
@@ -157,11 +157,50 @@ function applyData(json,source='fichier'){
   document.querySelectorAll('.room').forEach(room=>{if(room.classList.contains('inactive'))return;room.dataset.state=normalize(data[room.dataset.room]);if(room.dataset.state!=='inconnu') changed++});
   document.querySelector('#status').textContent=`${changed} salle(s) mise(s) à jour depuis ${source}`;
 }
-document.querySelector('#jsonFile').addEventListener('change',async e=>{
-  try{applyData(JSON.parse(await e.target.files[0].text()),e.target.files[0].name)}catch(err){document.querySelector('#status').textContent='JSON invalide : '+err.message}
-});
-document.querySelector('#reset').addEventListener('click',()=>{document.querySelectorAll('.room').forEach(r=>r.dataset.state='inconnu');document.querySelector('#status').textContent='Plan réinitialisé'});
-if(location.protocol!=='file:') fetch('etat_salles.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(j=>applyData(j,'etat_salles.json')).catch(()=>{});
+const aliases = {
+  tp_chimie_delesse:'delesse', tp_chimie_perrin:'perrin', tp_chimie_malaprade:'malaprade',
+  tp_chimie_gingnard:'grignard', tp_l_cuenot:'cuenot', tp_r_dutrochet:'dutrochet',
+  tp_j_monod:'monod', tp_l_lanvier:'ranvier', tp_p_grasse:'grasse', tp_p_bert:'bert',
+  tp_l_mangin:'mangin', tp_a_fresnel:'fresnel', tp_physique_hertz:'hertz',
+  tp_electronique_edison:'edison', tp_a_ampere:'ampere', tp_l_carnot:'carnot',
+  salle_actes:'salle des actes', salle_startup:'start up'
+};
+function plain(text){return String(text).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function matchesRoom(id,location){
+  return String(location||'').split(',').some(part=>{
+    const name=plain(part);
+    if(!name.startsWith('bridoux '))return false;
+    const td=id.match(/^td_(\d+)$/), info=id.match(/^tp_info_(\d+)$/);
+    if(td)return new RegExp('\\btd *'+td[1]+'\\b').test(name);
+    if(info)return new RegExp('\\binfo *'+info[1]+'\\b').test(name);
+    return Boolean(aliases[id]&&(' '+name+' ').includes(' '+aliases[id]+' '));
+  });
+}
+let calendar=null;
+function applyCalendar(payload,now=Date.now()){
+  if(!Array.isArray(payload.events)||!payload.events.length)throw Error('Aucune réservation reçue');
+  const states={};
+  for(const [id] of rooms){
+    if(INACTIVE_ROOMS.has(id))continue;
+    const events=payload.events.filter(e=>matchesRoom(id,e.location));
+    if(events.length)states[id]=events.some(e=>String(e.status).toUpperCase()!=='CANCELLED'&&Date.parse(e.start)<=now&&now<Date.parse(e.end))?'rouge':'vert';
+  }
+  applyData(states,'data/univlor.json');
+}
+async function loadCalendar(){
+  try{
+    const response=await fetch('./data/univlor.json',{cache:'no-store'});
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const payload=await response.json();
+    applyCalendar(payload); calendar=payload;
+  }catch(error){document.querySelector('#status').textContent='Chargement des réservations impossible : '+error.message}
+}
+document.querySelector('#reset').textContent='Actualiser';
+document.querySelector('#reset').addEventListener('click',loadCalendar);
+if(location.protocol!=='file:')loadCalendar();
+else document.querySelector('#status').textContent='Ouvrez la carte via un serveur web pour charger les réservations.';
+setInterval(()=>{if(calendar)applyCalendar(calendar)},60000);
+setInterval(loadCalendar,5*60000);
 </script>
 </body>
 </html>
