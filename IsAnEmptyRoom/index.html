@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plan interactif des salles - Campus Bridoux</title>
   <style>
-    :root{color-scheme:light;--ink:#172033;--line:#687386;--unknown:#fff;--green:#b9efc3;--red:#ffb8b8}
-    *{box-sizing:border-box}body{margin:0;background:#f4f6f9;color:var(--ink);font-family:Inter,Arial,sans-serif}
+    :root{color-scheme:light;--ink:#ebedf3;--line:#687386;--unknown:#fff;--green:#b9efc3;--red:#ffb8b8}
+    *{box-sizing:border-box}body{margin:0;background:#2d2931;color:var(--ink);font-family:Inter,Arial,sans-serif}
     main{max-width:1500px;margin:auto;padding:22px}.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
     h1{font-size:clamp(20px,2.2vw,32px);margin:0 auto 0 0}.button{border:1px solid #c5ccd6;border-radius:9px;background:#fff;padding:9px 13px;font-weight:700;cursor:pointer}
-    input[type=file]{display:none}.status{font-size:14px;color:#5a6575}.plan-wrap{background:white;border:1px solid #d8dde6;border-radius:14px;padding:14px;box-shadow:0 8px 30px #27324813;overflow:auto}
+    input[type=file]{display:none}.status{font-size:14px;color:#eef1f5}.plan-wrap{background:white;border:1px solid #d8dde6;border-radius:14px;padding:14px;box-shadow:0 8px 30px #27324813;overflow:auto}
     svg{display:block;min-width:1100px;width:100%;height:auto}.room .surface{fill:var(--unknown);stroke:var(--line);stroke-width:1.25;vector-effect:non-scaling-stroke;transition:fill .25s ease}
     .room[data-state="vert"] .surface{fill:var(--green)}.room[data-state="rouge"] .surface{fill:var(--red)}
     .room text{font-size:8px;font-weight:700;fill:#172033;text-anchor:middle;pointer-events:none}.room:hover .surface{stroke:#111827;stroke-width:2.4}.room{cursor:pointer}
@@ -139,7 +139,7 @@ function renderRoom([id,x,y,w,h,lines,extra='']){
   lines.forEach((line,i)=>{const t=document.createElementNS(svgNS,'tspan');t.setAttribute('x',x+w/2);t.setAttribute('y',start+i*step);t.innerHTML=line;text.append(t)});
   g.append(text);
   if(!INACTIVE_ROOMS.has(id)){
-    g.addEventListener('mousemove',e=>{tooltip.style.display='block';tooltip.style.left=e.clientX+12+'px';tooltip.style.top=e.clientY+12+'px';tooltip.textContent=`${lines.join(' ')} — ${g.dataset.state}`});
+    g.addEventListener('mousemove',e=>{tooltip.style.display='block';tooltip.style.left=e.clientX+12+'px';tooltip.style.top=e.clientY+12+'px';tooltip.textContent=`${lines.join(' ')} — ${roomAvailability(id)}`});
     g.addEventListener('mouseleave',()=>tooltip.style.display='none');
   }
   container.append(g);
@@ -176,9 +176,41 @@ function matchesRoom(id,location){
     return Boolean(aliases[id]&&(' '+name+' ').includes(' '+aliases[id]+' '));
   });
 }
+function roomAvailability(id,now=Date.now()){
+  const generated=Date.parse(calendar?.generated_at);
+  if(!calendar || !Number.isFinite(generated) || now-generated>36*3600000 || generated-now>5*60000 || !calendar.events.some(e=>Date.parse(e.end)>now))return 'Disponibilité inconnue';
+  const matching=calendar.events.filter(e=>matchesRoom(id,e.location));
+  if(!matching.length)return 'Disponibilité inconnue';
+  const periods=matching.filter(e=>String(e.status).toUpperCase()!=='CANCELLED')
+    .map(e=>({start:Date.parse(e.start),end:Date.parse(e.end)}))
+    .filter(e=>Number.isFinite(e.start)&&Number.isFinite(e.end)&&e.end>e.start&&e.end>now)
+    .sort((a,b)=>a.start-b.start);
+  let busyUntil=now;
+  for(const period of periods){
+    if(period.start>busyUntil)break;
+    busyUntil=Math.max(busyUntil,period.end);
+  }
+  if(busyUntil>now){
+    const minutes=Math.ceil((busyUntil-now)/60000);
+    const hours=Math.floor(minutes/60), rest=minutes%60;
+    return 'Libre dans '+(hours ? hours+' h'+(rest ? ' '+rest+' min' : '') : minutes+' min');
+  }
+  const next=periods.find(e=>e.start>now);
+  if(!next)return 'Libre — aucune autre réservation prévue';
+  const day=date=>new Date(date).toLocaleDateString('fr-FR',{timeZone:'Europe/Paris'});
+  const time=new Date(next.start).toLocaleTimeString('fr-FR',{timeZone:'Europe/Paris',hour:'2-digit',minute:'2-digit'}).replace(':',' h ');
+  return (day(next.start)===day(now) ? 'Libre jusqu’à '+time : 'Libre jusqu’au '+day(next.start)+' à '+time);
+}
 let calendar=null;
 function applyCalendar(payload,now=Date.now()){
   if(!Array.isArray(payload.events)||!payload.events.length)throw Error('Aucune réservation reçue');
+  const generated = Date.parse(payload.generated_at);
+  const stamp = Number.isFinite(generated) ? new Date(generated).toLocaleString('fr-FR', {timeZone:'Europe/Paris'}) : 'date inconnue';
+  if (!Number.isFinite(generated) || now-generated > 36*3600000 || generated-now > 5*60000 || !payload.events.some(event=>Date.parse(event.end)>now)) {
+    applyData({});
+    document.querySelector('#status').textContent='Données périmées ou invalides (générées le '+stamp+') : disponibilités inconnues.';
+    return;
+  }
   const states={};
   for(const [id] of rooms){
     if(INACTIVE_ROOMS.has(id))continue;
@@ -186,6 +218,7 @@ function applyCalendar(payload,now=Date.now()){
     if(events.length)states[id]=events.some(e=>String(e.status).toUpperCase()!=='CANCELLED'&&Date.parse(e.start)<=now&&now<Date.parse(e.end))?'rouge':'vert';
   }
   applyData(states,'data/univlor.json');
+  document.querySelector('#status').textContent+=' — Mise à jour : '+stamp+' (heure de Paris)';
 }
 async function loadCalendar(){
   try{
@@ -193,7 +226,7 @@ async function loadCalendar(){
     if(!response.ok)throw Error('HTTP '+response.status);
     const payload=await response.json();
     applyCalendar(payload); calendar=payload;
-  }catch(error){document.querySelector('#status').textContent='Chargement des réservations impossible : '+error.message}
+  }catch(error){calendar=null;applyData({});document.querySelector('#status').textContent='Chargement des réservations impossible : '+error.message}
 }
 document.querySelector('#reset').textContent='Actualiser';
 document.querySelector('#reset').addEventListener('click',loadCalendar);

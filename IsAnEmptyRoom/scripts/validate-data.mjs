@@ -7,6 +7,8 @@ if (!files.length) {
   process.exit(1);
 }
 
+const maxAgeHours = Number(process.env.MAX_DATA_AGE_HOURS || 36);
+if (!Number.isFinite(maxAgeHours) || maxAgeHours <= 0) throw new Error('MAX_DATA_AGE_HOURS invalide');
 let hasError = false;
 
 for (const file of files) {
@@ -19,6 +21,14 @@ for (const file of files) {
     }
     if (!payload.generated_at || Number.isNaN(Date.parse(payload.generated_at))) {
       throw new Error('generated_at absent ou invalide');
+    }
+
+    const age = Date.now() - Date.parse(payload.generated_at);
+    if (age < -5 * 60 * 1000 || age > maxAgeHours * 3600000) {
+      throw new Error('JSON hors date : generated_at=' + payload.generated_at);
+    }
+    if (!payload.events.some(event => Date.parse(event.end) > Date.now())) {
+      throw new Error('Le calendrier ne contient que des reservations passees');
     }
 
     for (const [index, event] of payload.events.entries()) {

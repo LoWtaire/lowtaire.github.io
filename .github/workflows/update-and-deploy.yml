@@ -27,6 +27,7 @@ jobs:
       TZ: Europe/Paris
       HORIZON_DAYS: "60"
       PAST_DAYS: "1"
+      MAX_DATA_AGE_HOURS: "1"
       UNIVLOR_ICS_URL: ${{ secrets.ICS_URL_UNIVLOR || vars.ICS_URL_UNIVLOR }}
 
     steps:
@@ -54,7 +55,9 @@ jobs:
         env:
           ICS_URL: ${{ env.UNIVLOR_ICS_URL }}
           OUTPUT_FILE: data/univlor.json
-        run: npm run generate
+        run: |
+          rm -f data/univlor.json
+          npm run generate
 
       - name: Contrôler les données
         run: |
