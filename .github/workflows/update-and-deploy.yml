@@ -22,6 +22,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     env:
       TZ: Europe/Paris
       HORIZON_DAYS: "60"
@@ -35,17 +36,18 @@ jobs:
       - name: Vérifier la configuration ADE
         shell: bash
         run: |
-          test -n "$UNIVLOR_ICS_URL" || { echo "::error::ICS_URL_UNIVLOR est absente"; exit 1; }
+          test -n "$UNIVLOR_ICS_URL" || {
+            echo "::error::ICS_URL_UNIVLOR est absente"
+            exit 1
+          }
 
       - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: adeb/package-lock.json
 
       - name: Installer les dépendances
-        run: npm ci --prefix adeb
+        run: npm install --prefix adeb --no-audit --no-fund
 
       - name: Actualiser Université de Lorraine
         env:
