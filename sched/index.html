@@ -1,1 +1,37 @@
-
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f0"><meta name="description" content="Ton emploi du temps M2 EGEDD à l’ULCO. Cours, salles et semaines, simplement.">
+  <title>Campus — Mon emploi du temps</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="Campus, accueil"><span class="brand-icon">c<span>•</span></span><span>campus<span class="brand-dot">.</span></span></a>
+      <div class="side-middle"><p class="eyebrow">MON ESPACE</p><button class="nav-item active" id="side-agenda"><span data-icon="calendar"></span> Emploi du temps</button><div class="semester"><span class="small-dot"></span> Année 2026 — 2027</div></div>
+      <div class="side-bottom"><div class="school-logo">ULCO</div><p>Université du Littoral<br><b>Côte d’Opale</b></p><span class="side-line"></span><small>Un peu moins de charge mentale.</small></div>
+    </aside>
+    <main>
+      <header class="topbar"><div class="mobile-brand">campus<span>•</span></div><div class="breadcrumb">Mon espace <span>/</span> Emploi du temps</div><div class="top-actions"><button class="icon-button" id="theme" aria-label="Changer le thème"><span data-icon="moon"></span></button><button class="avatar" id="open-settings" aria-label="Ouvrir les préférences">M2</button></div></header>
+      <div class="content">
+        <div class="heading"><div><p class="eyebrow"><span class="small-dot"></span> M2 EGEDD · ULCO</p><h1>À chaque jour,<br class="mobile-only"> son programme<span>.</span></h1><p class="intro">Tes cours, tes salles. Tout au même endroit.</p></div><button class="outline-button desktop-only" id="export"><span data-icon="download"></span> Exporter le calendrier</button></div>
+        <section class="overview" aria-label="Aperçu"><div class="overview-main"><div class="overline" id="hero-label">À SUIVRE</div><h2 id="next-title">On prépare ta journée…</h2><div id="next-meta" class="next-meta">Chargement du calendrier</div><button id="next-detail" class="hero-link" hidden>Voir le cours <span>↗</span></button><div class="hero-decoration" aria-hidden="true"><span></span><span></span><span></span></div></div><div class="week-summary"><span class="summary-icon" data-icon="calendar"></span><p>CETTE SEMAINE</p><div><strong id="week-hours">—</strong><span> de cours</span></div><small id="week-count">Chargement…</small><div class="mini-bars" id="mini-bars" aria-hidden="true"></div></div></section>
+        <section class="schedule-section" aria-label="Emploi du temps">
+          <div class="toolbar"><div class="tabs" role="tablist" aria-label="Vue du calendrier"><button role="tab" data-view="day" class="selected" aria-selected="true">Journée</button><button role="tab" data-view="week" aria-selected="false">Semaine</button></div><div class="tools"><button class="icon-button" id="search-toggle" aria-label="Rechercher un cours"><span data-icon="search"></span></button><button class="icon-button" id="filters" aria-label="Filtrer les groupes"><span data-icon="sliders"></span></button><button class="icon-button" id="refresh" aria-label="Recharger le calendrier"><span data-icon="refresh"></span></button></div></div>
+          <div id="search-box" hidden><label class="search-field"><span data-icon="search"></span><input id="search" type="search" placeholder="Matière, enseignant, salle…" aria-label="Rechercher dans les cours"></label></div>
+          <div class="date-navigation"><div class="month-title"><label for="date-picker" id="month-label">Novembre 2026</label><input type="date" id="date-picker" aria-label="Choisir une date"></div><div class="date-actions"><button id="today">Aujourd’hui</button><button class="icon-button" id="previous" aria-label="Semaine précédente"><span data-icon="left"></span></button><button class="icon-button" id="following" aria-label="Semaine suivante"><span data-icon="right"></span></button></div></div>
+          <div class="days" id="days" aria-label="Jours de la semaine"></div>
+          <div class="day-heading"><h2 id="day-title"></h2><span id="day-total"></span></div><div id="filter-notice" class="filter-notice" hidden></div><div id="schedule" aria-live="polite"><div class="empty">Chargement des cours…</div></div>
+        </section>
+        <footer><div id="sync-status" role="status">Lecture du calendrier…</div><a href="https://edt.univ-littoral.fr/jsp/custom/modules/plannings/m32a1PWk.shu">Source ULCO <span>↗</span></a><p>Horaires de Paris · Les changements dépendent du flux de l’université.</p></footer>
+      </div>
+      <nav class="mobile-nav" aria-label="Navigation"><button id="mobile-agenda" class="active"><span data-icon="calendar"></span>Planning</button><button id="mobile-today"><span data-icon="today"></span>Aujourd’hui</button><button id="mobile-settings"><span data-icon="sliders"></span>Préférences</button></nav>
+    </main>
+  </div>
+  <dialog id="details"><div class="dialog-top"><p class="eyebrow">DÉTAIL DU COURS</p><button class="icon-button close-dialog" aria-label="Fermer"><span data-icon="close"></span></button></div><div id="detail-content"></div><button class="primary-button close-dialog">C’est noté</button></dialog>
+  <dialog id="settings"><div class="dialog-top"><p class="eyebrow">À TA FAÇON</p><button class="icon-button close-dialog" aria-label="Fermer"><span data-icon="close"></span></button></div><h2>Ton planning, tes préférences.</h2><p class="settings-copy">Le flux contient les deux groupes d’anglais. Choisis celui à afficher.</p><label class="field-label" for="english-group">Groupe d’anglais</label><select id="english-group"><option value="all">Tous les groupes</option><option value="1">Groupe 1 · G. Capelle</option><option value="2">Groupe 2 · M. Louvet</option></select><p class="hint">Tous les autres cours restent affichés. Ce choix est enregistré sur cet appareil.</p><div class="settings-info"><span data-icon="refresh"></span><p>Le calendrier publié est actualisé par GitHub environ toutes les heures une fois le déploiement configuré. Le bouton ↻ recharge la dernière version publiée.</p></div><a class="outline-button full" href="./data/calendar.ics" download="emploi-du-temps-ulco.ics"><span data-icon="download"></span> Télécharger le calendrier complet</a><button class="primary-button close-dialog">Enregistrer</button></dialog>
+</body>
+</html>
